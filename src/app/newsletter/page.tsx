@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "The Concierge — Our Weekly Newsletter",
@@ -45,16 +46,7 @@ export default function Newsletter() {
             Join 40,000 discerning travellers who trust The Hotel Life to find the stays
             worth the airfare. Free, weekly, and worth opening.
           </p>
-          <form className="flex max-w-md overflow-hidden rounded-full border border-paper/25 bg-white/5">
-            <input
-              type="email"
-              placeholder="you@email.com"
-              className="min-w-0 flex-1 bg-transparent px-5 py-3.5 text-sm text-paper placeholder:text-paper/40 focus:outline-none"
-            />
-            <button className="bg-brass px-6 text-xs font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-paper">
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm tone="dark" source="newsletter-hero" className="max-w-md" />
           <p className="text-xs text-paper/40">No spam. Unsubscribe anytime.</p>
         </div>
       </section>

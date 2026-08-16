@@ -55,11 +55,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        {/* AdSense loader — beforeInteractive so it lands in the initial
+            HTML for site verification, and Auto Ads can place units early. */}
         {ADSENSE_CLIENT && (
           <Script
             id="adsbygoogle-init"
+            strategy="beforeInteractive"
             async
-            strategy="afterInteractive"
             crossOrigin="anonymous"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 const COLUMNS = [
   {
@@ -42,19 +43,7 @@ export default function Footer() {
               An editorial guide to the world&apos;s most extraordinary hotels — the
               stays worth crossing the planet for.
             </p>
-            <form className="mt-6 flex max-w-xs overflow-hidden rounded-full border border-paper/25">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="min-w-0 flex-1 bg-transparent px-4 py-2.5 text-sm text-paper placeholder:text-paper/40 focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-brass px-4 text-xs font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-paper"
-              >
-                Join
-              </button>
-            </form>
+            <NewsletterForm tone="dark" source="footer" buttonLabel="Join" className="mt-6 max-w-xs" />
           </div>
 
           {COLUMNS.map((col) => (

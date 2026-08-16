@@ -18,7 +18,6 @@
  * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
 import Link from "next/link";
-import AdSenseUnit from "./AdSenseUnit";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
@@ -41,16 +40,15 @@ const SIZES: Record<NonNullable<AdSenseProps["format"]>, { h: number; label: str
 export function AdSense({ slot, format = "responsive", className = "" }: AdSenseProps) {
   const size = SIZES[format];
 
-  // Live mode — real AdSense unit.
-  if (ADSENSE_CLIENT && slot) {
-    return (
-      <div className={`w-full ${className}`}>
-        <AdSenseUnit client={ADSENSE_CLIENT} slot={slot} format={format} minHeight={size.h} />
-      </div>
-    );
-  }
+  // Live mode: Google Auto Ads is enabled (loader present + toggled in the
+  // AdSense dashboard). Auto Ads chooses placements itself, so we render
+  // nothing here — no empty manual slots, no policy risk. `slot` is kept in
+  // the API for a future switch back to manual units.
+  void slot;
+  if (ADSENSE_CLIENT) return null;
 
-  // Preview placeholder — reserves the same vertical space (no CLS).
+  // Preview placeholder — only when no publisher ID is configured (local dev).
+  // Shows where ad inventory lives without shipping empty boxes to production.
   return (
     <div className={`w-full ${className}`}>
       <div className="ad-slot rounded-sm" style={{ minHeight: size.h }}>

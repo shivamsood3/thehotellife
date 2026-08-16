@@ -3,6 +3,7 @@ import Link from "next/link";
 import { hotels, getFeatured, regions } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
   const featured = getFeatured();
@@ -172,16 +173,7 @@ export default function Home() {
           Join 40,000 readers who trust The Hotel Life to find the stays worth the airfare.
           No spam, ever.
         </p>
-        <form className="mx-auto mt-8 flex max-w-md overflow-hidden rounded-full border border-ink/20 bg-white">
-          <input
-            type="email"
-            placeholder="you@email.com"
-            className="min-w-0 flex-1 bg-transparent px-5 py-3.5 text-sm focus:outline-none"
-          />
-          <button className="bg-ink px-6 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep">
-            Subscribe
-          </button>
-        </form>
+        <NewsletterForm tone="light" source="homepage" className="mx-auto mt-8 max-w-md" />
       </section>
     </div>
   );
