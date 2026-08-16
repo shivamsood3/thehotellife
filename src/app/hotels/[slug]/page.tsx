@@ -19,10 +19,10 @@ export async function generateMetadata({
   const hotel = getHotel(slug);
   if (!hotel) return { title: "Not found" };
   return {
-    title: `${hotel.name}, ${hotel.city} — Review`,
+    title: `${hotel.name}, ${hotel.city}: Review`,
     description: hotel.excerpt,
     openGraph: {
-      title: `${hotel.name} — The Hotel Life`,
+      title: `${hotel.name} · The Hotel Life`,
       description: hotel.excerpt,
       images: [hotel.heroImage],
     },
@@ -120,7 +120,7 @@ export default async function HotelPage({
               Check Availability
             </button>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
-              We may earn a commission — it never affects our reviews.
+              We may earn a commission. It never affects our reviews.
             </p>
           </div>
 

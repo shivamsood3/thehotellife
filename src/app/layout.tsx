@@ -26,11 +26,11 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "The Hotel Life — The World's Most Extraordinary Hotels",
+    default: "The Hotel Life: The World's Most Extraordinary Hotels",
     template: "%s · The Hotel Life",
   },
   description:
-    "An editorial guide to the world's most extraordinary hotels — honest reviews, insider intelligence, and the stays worth crossing the planet for.",
+    "An editorial guide to the world's most extraordinary hotels. Honest reviews, insider intelligence, and the stays worth crossing the planet for.",
   keywords: [
     "luxury hotels",
     "hotel reviews",
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
-        {/* AdSense loader — beforeInteractive so it lands in the initial
+        {/* AdSense loader, beforeInteractive so it lands in the initial
             HTML for site verification, and Auto Ads can place units early. */}
         {ADSENSE_CLIENT && (
           <Script

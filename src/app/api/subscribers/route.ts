@@ -25,7 +25,7 @@ export async function GET(req: Request) {
       ok: true,
       count: 0,
       subscribers: [],
-      note: "Vercel KV not connected yet — signups are in the function logs until you connect a store.",
+      note: "Vercel KV not connected yet - signups are in the function logs until you connect a store.",
     });
   }
 

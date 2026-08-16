@@ -1,5 +1,5 @@
 /**
- * Newsletter subscriber storage — Vercel KV (Upstash Redis), no third parties.
+ * Newsletter subscriber storage - Vercel KV (Upstash Redis), no third parties.
  *
  * Talks to the KV REST API with plain fetch, so there's no SDK dependency and
  * it works whether the store injects KV_REST_API_* or UPSTASH_REDIS_REST_*.
@@ -7,8 +7,8 @@
  * connect to this project) and these env vars appear automatically.
  *
  * Data model:
- *   newsletter:subscribers  — a SET of unique emails (auto-dedupes)
- *   newsletter:log          — a LIST of {email, ts, source} for the audit trail
+ *   newsletter:subscribers  - a SET of unique emails (auto-dedupes)
+ *   newsletter:log          - a LIST of {email, ts, source} for the audit trail
  */
 
 const REDIS_URL =

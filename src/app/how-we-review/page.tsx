@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How We Review — The Hotel Life",
+  title: "How We Review · The Hotel Life",
   description:
     "Our hotel review methodology: how we book, what we test, and how we score. The same standard for a $200 room and a $3,000 suite.",
 };
@@ -11,7 +11,7 @@ const criteria = [
   {
     weight: "25%",
     title: "The Room",
-    body: "Space, light, bed and bathroom, soundproofing, the small details of comfort — and crucially, the gap between the entry-level room and the suite the press shots always show.",
+    body: "Space, light, bed and bathroom, soundproofing, the small details of comfort, and, crucially, the gap between the entry-level room and the suite the press shots always show.",
   },
   {
     weight: "20%",
@@ -21,22 +21,22 @@ const criteria = [
   {
     weight: "20%",
     title: "Service",
-    body: "Warmth over stiffness, anticipation over box-ticking. We test it in small ways — a special request, an odd hour, a problem — and see how the hotel responds.",
+    body: "Warmth over stiffness, anticipation over box-ticking. We test it in small ways, with a special request, an odd hour or a problem, and see how the hotel responds.",
   },
   {
     weight: "15%",
     title: "Food & Drink",
-    body: "Breakfast is the meal that reveals a hotel. We also assess the flagship restaurant and the bar — the room where a hotel shows its personality.",
+    body: "Breakfast is the meal that reveals a hotel. We also assess the flagship restaurant and the bar, the room where a hotel shows its personality.",
   },
   {
     weight: "10%",
     title: "The Extras",
-    body: "Spa, pool, grounds, and the signature experiences — the things that turn a good night's sleep into a reason to travel.",
+    body: "Spa, pool, grounds, and the signature experiences: the things that turn a good night's sleep into a reason to travel.",
   },
   {
     weight: "10%",
     title: "Value",
-    body: "Not whether it's cheap — almost nothing we cover is — but whether the price is honest for what you actually receive.",
+    body: "Not whether it's cheap, because almost nothing we cover is, but whether the price is honest for what you actually get.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function HowWeReview() {
             Wherever possible we reserve anonymously and pay the going rate, arriving as an
             ordinary guest rather than an announced critic. It&apos;s the only way to see a
             hotel as you will see it. When a stay is hosted or complimentary, we say so
-            clearly at the top of the review — and we hold it to exactly the same standard.
+            clearly at the top of the review, and we hold it to exactly the same standard.
           </p>
           <h2>We test, we don&apos;t tour</h2>
           <p>
@@ -100,7 +100,7 @@ export default function HowWeReview() {
       <section className="mx-auto mt-16 max-w-2xl text-center">
         <p className="font-display text-2xl font-medium leading-snug text-ink">
           A five-star score isn&apos;t about price. It&apos;s about a hotel doing exactly
-          what it sets out to do, flawlessly — and leaving you longing to return.
+          what it sets out to do, flawlessly, and leaving you longing to return.
         </p>
         <Link
           href="/hotels"

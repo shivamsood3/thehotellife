@@ -2,9 +2,9 @@
  * Ad system for The Hotel Life
  * ------------------------------------------------------------------
  * Monetization surfaces:
- *   1. Google AdSense  — <AdSense /> responsive display units
- *   2. Hacoco          — <HacocoBanner /> top leaderboard (direct-sold)
- *   3. The AntiAlias   — <AntialiasRail /> side skyscraper (direct-sold)
+ *   1. Google AdSense  - <AdSense /> responsive display units
+ *   2. Hacoco          - <HacocoBanner /> top leaderboard (direct-sold)
+ *   3. The AntiAlias   - <AntialiasRail /> side skyscraper (direct-sold)
  *
  * To go live with AdSense:
  *   - set NEXT_PUBLIC_ADSENSE_CLIENT (e.g. "ca-pub-XXXXXXXXXXXXXXXX")
@@ -42,12 +42,12 @@ export function AdSense({ slot, format = "responsive", className = "" }: AdSense
 
   // Live mode: Google Auto Ads is enabled (loader present + toggled in the
   // AdSense dashboard). Auto Ads chooses placements itself, so we render
-  // nothing here — no empty manual slots, no policy risk. `slot` is kept in
+  // nothing here - no empty manual slots, no policy risk. `slot` is kept in
   // the API for a future switch back to manual units.
   void slot;
   if (ADSENSE_CLIENT) return null;
 
-  // Preview placeholder — only when no publisher ID is configured (local dev).
+  // Preview placeholder - only when no publisher ID is configured (local dev).
   // Shows where ad inventory lives without shipping empty boxes to production.
   return (
     <div className={`w-full ${className}`}>
@@ -58,7 +58,7 @@ export function AdSense({ slot, format = "responsive", className = "" }: AdSense
   );
 }
 
-/** Top-of-page leaderboard — house creative for Hacoco. */
+/** Top-of-page leaderboard - house creative for Hacoco. */
 export function HacocoBanner() {
   return (
     <div className="w-full border-b border-line bg-paper-2">
@@ -68,13 +68,13 @@ export function HacocoBanner() {
           target="_blank"
           rel="sponsored noopener noreferrer"
           className="group block"
-          aria-label="Advertisement — Hacoco"
+          aria-label="Advertisement - Hacoco"
         >
           <div className="relative mx-auto w-full max-w-[970px] overflow-hidden rounded-sm">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/ads/hacoco-leaderboard.svg"
-              alt="Hacoco — Private Real Estate Capital"
+              alt="Hacoco - Private Real Estate Capital"
               width={970}
               height={90}
               className="h-auto w-full transition-opacity group-hover:opacity-90"
@@ -86,7 +86,7 @@ export function HacocoBanner() {
   );
 }
 
-/** Sticky side skyscraper — house creative for The AntiAlias. Desktop only. */
+/** Sticky side skyscraper - house creative for The AntiAlias. Desktop only. */
 export function AntialiasRail() {
   return (
     <aside className="hidden xl:block w-[300px] shrink-0 py-10">
@@ -96,13 +96,13 @@ export function AntialiasRail() {
           target="_blank"
           rel="sponsored noopener noreferrer"
           className="group block"
-          aria-label="Advertisement — The AntiAlias"
+          aria-label="Advertisement - The AntiAlias"
         >
           <div className="overflow-hidden rounded-sm">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/ads/antialias-skyscraper.svg"
-              alt="The AntiAlias — a design & brand studio"
+              alt="The AntiAlias - a design & brand studio"
               width={300}
               height={600}
               className="block h-auto w-[300px] transition-opacity group-hover:opacity-90"

@@ -41,12 +41,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true, alreadySubscribed: !isNew });
     }
 
-    // No store connected yet — never lose the signup; capture in function logs.
+    // No store connected yet - never lose the signup; capture in function logs.
     console.log("[newsletter] signup (KV not connected):", JSON.stringify({ email, ...meta }));
     await notifyInbox(email, meta).catch(() => {});
     return NextResponse.json({ ok: true, stored: false });
   } catch (err) {
-    // Storage hiccup — log so the signup is recoverable, still thank the user.
+    // Storage hiccup - log so the signup is recoverable, still thank the user.
     console.error("[newsletter] store error:", err);
     console.log("[newsletter] signup (fallback):", JSON.stringify({ email, ...meta }));
     return NextResponse.json({ ok: true, stored: false });

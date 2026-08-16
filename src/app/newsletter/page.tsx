@@ -3,7 +3,7 @@ import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "The Concierge — Our Weekly Newsletter",
+  title: "The Concierge · Our Weekly Newsletter",
   description:
     "One extraordinary hotel in your inbox every Sunday. Join 40,000 readers of The Hotel Life's weekly newsletter, The Concierge.",
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const perks = [
   {
     title: "One hotel, done properly",
-    body: "Each Sunday we go deep on a single extraordinary stay — the room to book, the catch to know, the reason to go.",
+    body: "Each Sunday we go deep on a single extraordinary stay: the room to book, the catch to know, the reason to go.",
   },
   {
     title: "The insider's list",

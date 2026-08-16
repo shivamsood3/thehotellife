@@ -33,7 +33,7 @@ export default function Home() {
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/85">
               <Stars rating={hero.rating} />
               <span className="text-sm">
-                {hero.name} — {hero.city}, {hero.country}
+                {hero.name}, {hero.city}, {hero.country}
               </span>
             </div>
             <Link
@@ -50,7 +50,7 @@ export default function Home() {
       <section className="mx-auto mt-14 max-w-3xl text-center">
         <span className="eyebrow">An honest guide to extraordinary hotels</span>
         <p className="font-display mt-4 text-2xl font-medium leading-snug text-ink sm:text-[1.75rem]">
-          We stay so you don&apos;t have to guess. No sponsored fluff — just the hotels
+          We stay so you don&apos;t have to guess. No sponsored fluff, just the hotels
           around the world worth crossing a continent for, reviewed the way we&apos;d
           brief a friend.
         </p>
@@ -80,7 +80,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* In-feed AdSense — high-value placement between content rows */}
+        {/* In-feed AdSense, high-value placement between content rows */}
         <div className="my-12">
           <AdSense format="leaderboard" slot="1000000001" />
         </div>

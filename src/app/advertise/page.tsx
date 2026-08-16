@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Advertise — The Hotel Life",
+  title: "Advertise · The Hotel Life",
   description:
     "Reach an affluent, high-intent travel audience. Display, sponsorship and newsletter formats on The Hotel Life.",
 };
@@ -18,7 +18,7 @@ const formats = [
     name: "Leaderboard Takeover",
     partner: "as run by Hacoco",
     spec: "970 × 90 · sitewide, above the masthead",
-    body: "Our most visible unit — the first thing every reader sees, on every page, sticky through the scroll. Sold as an exclusive sitewide sponsorship by the month.",
+    body: "Our most visible unit. The first thing every reader sees, on every page, sticky through the scroll. Sold as an exclusive sitewide sponsorship by the month.",
     price: "from $4,500 / mo",
   },
   {
@@ -63,7 +63,7 @@ export default function Advertise() {
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-paper/70">
             The Hotel Life reaches an affluent, high-intent audience actively planning
-            luxury travel — and trusting us to tell them where to go.
+            luxury travel, and trusting us to tell them where to go.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function Advertise() {
           </h2>
           <p className="mt-3 text-base leading-relaxed text-ink-soft">
             From high-impact sitewide takeovers to native, contextual display. All rates are
-            indicative — we&apos;ll build a package around your campaign.
+            indicative, and we&apos;ll build a package around your campaign.
           </p>
         </div>
 

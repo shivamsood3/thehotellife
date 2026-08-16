@@ -80,7 +80,7 @@ export default async function GuidePage({
           ))}
         </div>
 
-        {/* Where to stay — links into hotel reviews */}
+        {/* Where to stay - links into hotel reviews */}
         {stayHotels.length > 0 && (
           <div className="mt-14 rounded-md border border-line bg-white p-6 sm:p-8">
             <span className="eyebrow">Where to Stay</span>

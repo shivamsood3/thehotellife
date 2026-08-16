@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About — The Hotel Life",
+  title: "About · The Hotel Life",
   description:
     "The Hotel Life is an independent editorial guide to the world's most extraordinary hotels, written by travellers who pay their own way and tell the truth.",
 };
@@ -15,7 +15,7 @@ const values = [
   },
   {
     title: "We tell the truth",
-    body: "If a famous hotel is coasting on its reputation, we say so. Our loyalty is to the reader deciding where to spend a small fortune — not to the hotel.",
+    body: "If a famous hotel is coasting on its reputation, we say so. Our loyalty is to the reader deciding where to spend a small fortune, never to the hotel.",
   },
   {
     title: "We go deep, not wide",
@@ -57,7 +57,7 @@ export default function About() {
             about to spend a month&apos;s rent on a single night&apos;s stay.
           </p>
           <p>
-            So we set out to build the opposite — an independent guide to the world&apos;s
+            So we set out to build the opposite: an independent guide to the world&apos;s
             most extraordinary hotels, written the way we&apos;d actually brief a friend.
             Which room to book and which to avoid. Whether the famous view lives up to the
             photographs. When a grand old name is worth it, and when you&apos;re just paying
@@ -66,7 +66,7 @@ export default function About() {
           <p>
             We cover the icons and the unknowns alike, from the grande dames of Europe to a
             manor in Nairobi where the giraffes join you for breakfast. What connects them
-            is simple: they&apos;re the stays worth crossing a continent for — and we&apos;ll
+            is simple: they&apos;re the stays worth crossing a continent for, and we&apos;ll
             always tell you honestly when they&apos;re not.
           </p>
         </div>

@@ -6,9 +6,9 @@ import { hotels } from "@/content/hotels";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
-  title: "Destinations — The World's Great Hotels, by Region",
+  title: "Destinations: The World's Great Hotels, by Region",
   description:
-    "Explore the world's most extraordinary hotels by region — Europe, Asia, the Americas, and the Middle East & Africa.",
+    "Explore the world's most extraordinary hotels by region: Europe, Asia, the Americas, and the Middle East & Africa.",
 };
 
 export default function DestinationsIndex() {

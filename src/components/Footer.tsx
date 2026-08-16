@@ -40,7 +40,7 @@ export default function Footer() {
           <div>
             <span className="font-display text-2xl font-medium">The Hotel Life</span>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper/60">
-              An editorial guide to the world&apos;s most extraordinary hotels — the
+              An editorial guide to the world&apos;s most extraordinary hotels, and the
               stays worth crossing the planet for.
             </p>
             <NewsletterForm tone="dark" source="footer" buttonLabel="Join" className="mt-6 max-w-xs" />

@@ -22,7 +22,7 @@ export async function generateMetadata({
   const dest = getDestination(region);
   if (!dest) return { title: "Not found" };
   return {
-    title: `${dest.name} — Where to Stay`,
+    title: `${dest.name}: Where to Stay`,
     description: dest.dek,
     openGraph: { title: `${dest.name} · The Hotel Life`, description: dest.dek, images: [dest.heroImage] },
   };

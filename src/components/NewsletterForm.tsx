@@ -16,7 +16,7 @@ export default function NewsletterForm({
   className?: string;
 }) {
   const [email, setEmail] = useState("");
-  const [website, setWebsite] = useState(""); // honeypot — humans leave this empty
+  const [website, setWebsite] = useState(""); // honeypot - humans leave this empty
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -38,7 +38,7 @@ export default function NewsletterForm({
         setStatus("ok");
         setMessage(
           data.alreadySubscribed
-            ? "You're already on the list — thank you!"
+            ? "You're already on the list. Thank you!"
             : "You're in. Look out for The Concierge this Sunday."
         );
         setEmail("");

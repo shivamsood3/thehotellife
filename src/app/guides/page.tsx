@@ -4,9 +4,9 @@ import GuideCard from "@/components/GuideCard";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
-  title: "Travel Guides — Where to Go, When, and Where to Stay",
+  title: "Travel Guides: Where to Go, When, and Where to Stay",
   description:
-    "In-depth, honest travel guides from The Hotel Life — from 48 hours in Tokyo to choosing the right island in the Maldives.",
+    "In-depth, honest travel guides from The Hotel Life, from 48 hours in Tokyo to choosing the right island in the Maldives.",
 };
 
 export default function GuidesIndex() {
@@ -20,7 +20,7 @@ export default function GuidesIndex() {
           Travel Guides
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-          The practical companion to our hotel reviews — how to go, when to go, and how to
+          The practical companion to our hotel reviews: how to go, when to go, and how to
           have the great destinations of the world on your own terms.
         </p>
       </header>

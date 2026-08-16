@@ -24,7 +24,7 @@ export default function Header() {
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
           {/* Wordmark */}
           <Link href="/" className="group flex flex-col leading-none" onClick={() => setOpen(false)}>
-            <span className="eyebrow text-[0.6rem] text-ink-muted">Est. 2026</span>
+            <span className="eyebrow text-[0.6rem] text-ink-muted">Est. 2016</span>
             <span className="font-display text-2xl font-medium tracking-tight text-ink sm:text-[1.7rem]">
               The Hotel Life
             </span>

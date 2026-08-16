@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact — The Hotel Life",
+  title: "Contact · The Hotel Life",
   description:
-    "Get in touch with The Hotel Life — editorial tips, corrections, partnerships and press.",
+    "Get in touch with The Hotel Life about editorial tips, corrections, partnerships and press.",
 };
 
 const channels = [
@@ -20,7 +20,7 @@ const channels = [
   {
     title: "Press & General",
     email: "hello@thehotellife.com",
-    body: "Everything else — press requests, syndication, and the occasional kind word.",
+    body: "Everything else: press requests, syndication, and the occasional kind word.",
   },
 ];
 

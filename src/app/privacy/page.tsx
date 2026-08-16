@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — The Hotel Life",
+  title: "Privacy Policy · The Hotel Life",
   description: "How The Hotel Life collects, uses and protects your information.",
 };
 
@@ -30,8 +30,8 @@ export default function Privacy() {
         </p>
         <p>
           <strong>Information collected automatically.</strong> Like most websites, we log
-          standard technical data — IP address, browser type, pages visited and referring
-          site — to understand how the site is used and to keep it secure.
+          standard technical data such as IP address, browser type, pages visited and
+          referring site, to understand how the site is used and to keep it secure.
         </p>
 
         <h2>Cookies &amp; advertising</h2>
@@ -53,8 +53,8 @@ export default function Privacy() {
         <h2>Sharing</h2>
         <p>
           We do not sell your personal information. We share data only with the service
-          providers who help us operate the site — for example our email and analytics
-          providers and advertising partners — and only as needed to provide those services,
+          providers who help us operate the site, for example our email and analytics
+          providers and advertising partners, and only as needed to provide those services,
           or where required by law.
         </p>
 

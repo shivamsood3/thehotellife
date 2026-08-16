@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — The Hotel Life",
+  title: "Terms of Use · The Hotel Life",
   description: "The terms that govern your use of The Hotel Life.",
 };
 
@@ -31,7 +31,7 @@ export default function Terms() {
 
         <h2>Use of content</h2>
         <p>
-          All content on this site — text, photography, design and logos — is owned by The
+          All content on this site, including text, photography, design and logos, is owned by The
           Hotel Life or its licensors and is protected by copyright. You may share links and
           brief quotations with attribution, but you may not republish, resell or reproduce
           our content in substance without written permission.
@@ -39,7 +39,7 @@ export default function Terms() {
 
         <h2>Accuracy &amp; affiliate links</h2>
         <p>
-          We work hard to keep details — prices, openings, amenities — accurate, but hotels
+          We work hard to keep details like prices, openings and amenities accurate, but hotels
           change and errors happen; we make no warranty that everything is current or
           complete. Some links may be affiliate links, meaning we may earn a commission if
           you book through them. This never affects our reviews or what we choose to cover,
@@ -57,7 +57,7 @@ export default function Terms() {
         <p>
           The site and its content are provided &ldquo;as is&rdquo; for general information.
           To the fullest extent permitted by law, The Hotel Life is not liable for any loss
-          arising from your use of, or reliance on, the site — including any travel or
+          arising from your use of, or reliance on, the site, including any travel or
           booking decisions you make based on our content.
         </p>
 

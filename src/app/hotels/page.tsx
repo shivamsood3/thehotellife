@@ -4,7 +4,7 @@ import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
-  title: "All Hotels — The World's Most Extraordinary Stays",
+  title: "All Hotels · The World's Most Extraordinary Stays",
   description:
     "Every hotel we've reviewed, from grande dames to safari lodges. Honest, in-depth guides to the best places to stay around the world.",
 };
@@ -18,7 +18,7 @@ export default function HotelsIndex() {
           Every Hotel, Reviewed
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-          The complete index of stays worth crossing the world for — from a silent
+          The complete index of stays worth crossing the world for, from a silent
           tower above Tokyo to a palazzo hung over the Amalfi Coast.
         </p>
       </header>

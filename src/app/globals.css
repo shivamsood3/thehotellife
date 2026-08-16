@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /* ============================================================
-   The Hotel Life — Editorial Luxury Design System
+   The Hotel Life - Editorial Luxury Design System
    ============================================================ */
 
 :root {
-  /* Core palette — warm paper, deep ink, brass accent */
+  /* Core palette - warm paper, deep ink, brass accent */
   --paper: #faf8f4;
   --paper-2: #f2ede4;
   --ink: #1a1714;
