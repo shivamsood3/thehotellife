@@ -46,6 +46,8 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "The Hotel Life",
   },
+  // Google AdSense ownership verification (<meta name="google-adsense-account">)
+  ...(ADSENSE_CLIENT ? { other: { "google-adsense-account": ADSENSE_CLIENT } } : {}),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
