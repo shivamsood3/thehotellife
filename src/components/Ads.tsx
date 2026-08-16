@@ -18,6 +18,7 @@
  * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
 import Link from "next/link";
+import AdSenseUnit from "./AdSenseUnit";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
@@ -44,15 +45,7 @@ export function AdSense({ slot, format = "responsive", className = "" }: AdSense
   if (ADSENSE_CLIENT && slot) {
     return (
       <div className={`w-full ${className}`}>
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", minHeight: size.h }}
-          data-ad-client={ADSENSE_CLIENT}
-          data-ad-slot={slot}
-          data-ad-format={format === "in-article" ? "fluid" : "auto"}
-          data-ad-layout={format === "in-article" ? "in-article" : undefined}
-          data-full-width-responsive="true"
-        />
+        <AdSenseUnit client={ADSENSE_CLIENT} slot={slot} format={format} minHeight={size.h} />
       </div>
     );
   }

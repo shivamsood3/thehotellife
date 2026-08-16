@@ -14,10 +14,12 @@ const GOOGLE_ADS = [
   "https://pagead2.googlesyndication.com",
   "https://*.googlesyndication.com",
   "https://*.googleadservices.com",
+  "https://www.googletagservices.com",
   "https://*.google.com",
   "https://*.doubleclick.net",
   "https://*.gstatic.com",
   "https://adservice.google.com",
+  "https://*.adtrafficquality.google",
 ].join(" ");
 
 const csp = [
