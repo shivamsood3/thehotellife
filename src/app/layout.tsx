@@ -18,8 +18,10 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thehotellife.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "The Hotel Life — The World's Most Extraordinary Hotels",
     template: "%s · The Hotel Life",

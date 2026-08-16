@@ -4,7 +4,7 @@
  * Monetization surfaces:
  *   1. Google AdSense  — <AdSense /> responsive display units
  *   2. Hacoco          — <HacocoBanner /> top leaderboard (direct-sold)
- *   3. Antialias       — <AntialiasRail /> side skyscraper (direct-sold)
+ *   3. The AntiAlias   — <AntialiasRail /> side skyscraper (direct-sold)
  *
  * To go live with AdSense:
  *   - set NEXT_PUBLIC_ADSENSE_CLIENT (e.g. "ca-pub-XXXXXXXXXXXXXXXX")
@@ -13,13 +13,15 @@
  * Until a client ID is present, units render a styled placeholder so
  * the layout (and reserved space, to avoid layout shift) is preview-safe.
  *
- * Direct banners (Hacoco / Antialias): drop the creative image into
- * /public/ads and point `href` at the advertiser's landing page.
+ * Direct banners (Hacoco / AntiAlias) ship with house creatives in
+ * /public/ads. Override the click-through URLs with
+ * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
-import Image from "next/image";
 import Link from "next/link";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
+const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
+const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
 
 type AdSenseProps = {
   slot?: string;
@@ -65,70 +67,56 @@ export function AdSense({ slot, format = "responsive", className = "" }: AdSense
   );
 }
 
-/** Top-of-page leaderboard sold directly to Hacoco. */
+/** Top-of-page leaderboard — house creative for Hacoco. */
 export function HacocoBanner() {
-  const creative = "/ads/hacoco-leaderboard.jpg"; // drop creative here
-  const href = "https://hacoco.example.com"; // advertiser landing page
-  const hasCreative = false; // flip to true once creative is in /public/ads
-
   return (
     <div className="w-full border-b border-line bg-paper-2">
       <div className="mx-auto max-w-[1400px] px-4 py-2 sm:px-6 lg:px-10">
         <Link
-          href={href}
+          href={HACOCO_URL}
           target="_blank"
-          rel="sponsored noopener"
+          rel="sponsored noopener noreferrer"
           className="group block"
           aria-label="Advertisement — Hacoco"
         >
-          {hasCreative ? (
-            <div className="relative mx-auto h-[90px] w-full max-w-[970px] overflow-hidden rounded-sm">
-              <Image src={creative} alt="Hacoco" fill className="object-cover" sizes="970px" />
-            </div>
-          ) : (
-            <div className="ad-slot mx-auto h-[90px] w-full max-w-[970px] rounded-sm">
-              <span className="text-xs tracking-widest">
-                HACOCO · TOP BANNER · 970 × 90
-              </span>
-            </div>
-          )}
+          <div className="relative mx-auto w-full max-w-[970px] overflow-hidden rounded-sm">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/ads/hacoco-leaderboard.svg"
+              alt="Hacoco — Private Real Estate Capital"
+              width={970}
+              height={90}
+              className="h-auto w-full transition-opacity group-hover:opacity-90"
+            />
+          </div>
         </Link>
       </div>
     </div>
   );
 }
 
-/** Sticky side skyscraper sold directly to Antialias. Desktop only. */
+/** Sticky side skyscraper — house creative for The AntiAlias. Desktop only. */
 export function AntialiasRail() {
-  const creative = "/ads/antialias-skyscraper.jpg";
-  const href = "https://antialias.example.com";
-  const hasCreative = false;
-
   return (
     <aside className="hidden xl:block w-[300px] shrink-0 py-10">
       <div className="sticky top-28 space-y-6">
         <Link
-          href={href}
+          href={ANTIALIAS_URL}
           target="_blank"
-          rel="sponsored noopener"
+          rel="sponsored noopener noreferrer"
           className="group block"
-          aria-label="Advertisement — Antialias"
+          aria-label="Advertisement — The AntiAlias"
         >
-          {hasCreative ? (
-            <div className="relative h-[600px] w-[300px] overflow-hidden rounded-sm">
-              <Image src={creative} alt="Antialias" fill className="object-cover" sizes="300px" />
-            </div>
-          ) : (
-            <div className="ad-slot h-[600px] w-[300px] rounded-sm">
-              <span className="rotate-0 text-center text-xs leading-relaxed tracking-widest">
-                ANTIALIAS
-                <br />
-                SIDE RAIL
-                <br />
-                300 × 600
-              </span>
-            </div>
-          )}
+          <div className="overflow-hidden rounded-sm">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/ads/antialias-skyscraper.svg"
+              alt="The AntiAlias — a design & brand studio"
+              width={300}
+              height={600}
+              className="block h-auto w-[300px] transition-opacity group-hover:opacity-90"
+            />
+          </div>
         </Link>
         {/* Secondary AdSense rectangle below the direct-sold unit */}
         <AdSense format="rectangle" slot="0000000001" />
