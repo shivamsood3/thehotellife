@@ -170,7 +170,7 @@ export default function Home() {
           One extraordinary hotel in your inbox, every Sunday.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
-          Join 40,000 readers who trust The Hotel Life to find the stays worth the airfare.
+          Join 20,000 readers who trust The Hotel Life to find the stays worth the airfare.
           No spam, ever.
         </p>
         <NewsletterForm tone="light" source="homepage" className="mx-auto mt-8 max-w-md" />
