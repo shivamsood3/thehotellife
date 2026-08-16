@@ -41,7 +41,7 @@ export default async function GuidePage({
     <article className="pb-8">
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
-        <div className="relative aspect-[16/10] w-full sm:aspect-[16/7]">
+        <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image src={guide.heroImage} alt={guide.title} fill priority className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">

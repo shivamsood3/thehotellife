@@ -15,7 +15,7 @@ export default function Home() {
     <div className="pb-8">
       {/* ============ HERO ============ */}
       <section className="relative mt-6 overflow-hidden rounded-md">
-        <div className="relative aspect-[16/10] w-full sm:aspect-[16/8] lg:aspect-[16/7]">
+        <div className="relative aspect-[3/4] w-full sm:aspect-[16/8] lg:aspect-[16/7]">
           <Image
             src={hero.heroImage}
             alt={hero.name}

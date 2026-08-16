@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { AntialiasRail } from "@/components/Ads";
+import { AntialiasRail, MobileRail } from "@/components/Ads";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
@@ -77,6 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <AntialiasRail />
           </div>
         </div>
+        <MobileRail />
         <Footer />
         <Analytics />
       </body>

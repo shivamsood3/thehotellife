@@ -44,7 +44,7 @@ export default async function RegionPage({
     <div className="pb-8">
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
-        <div className="relative aspect-[16/9] w-full sm:aspect-[16/6]">
+        <div className="relative aspect-[3/4] w-full sm:aspect-[16/6]">
           <Image src={dest.heroImage} alt={dest.name} fill priority className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">

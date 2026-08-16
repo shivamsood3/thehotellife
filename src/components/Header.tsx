@@ -44,7 +44,17 @@ export default function Header() {
           </nav>
 
           {/* CTA + mobile toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              href="/search"
+              aria-label="Search"
+              className="flex h-9 w-9 items-center justify-center text-ink transition-colors hover:text-brass-deep"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.8" />
+                <path d="m20 20-3.2-3.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </Link>
             <Link
               href="/newsletter"
               className="hidden rounded-full border border-ink px-5 py-2 text-xs font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-ink hover:text-paper sm:inline-block"

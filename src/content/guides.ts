@@ -276,6 +276,169 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "sri-lanka-in-ten-days",
+    title: "Sri Lanka in Ten Days: Tea, Temples and the South Coast",
+    destination: "Sri Lanka",
+    region: "Asia",
+    dek: "One small island packs in ancient cities, misty tea country, leopards and a coastline of perfect beaches. Here's how to string it together.",
+    excerpt:
+      "Sri Lanka rewards a loop rather than a single base. Our ten-day route runs from the cultural triangle down through the hills to the south coast, with the train ride everyone talks about in the middle.",
+    author: "The Hotel Life Editors",
+    readTime: 8,
+    date: "February 2026",
+    heroImage: U("1566296314736-6eaac1ca0cb9", 2000),
+    cardImage: U("1566296314736-6eaac1ca0cb9", 1000),
+    hotelSlugs: ["weligama-bay-marriott"],
+    sections: [
+      {
+        body: [
+          "Sri Lanka is small on the map and enormous in variety. In the space of a single week you can climb an ancient rock fortress, ride through cloud forest on a train, track leopards in a national park and end up flat on a beach with a king coconut in hand. The trick is not to try to see all of it, but to run one clean loop and let the island's rhythms carry you.",
+        ],
+      },
+      {
+        heading: "Start in the Cultural Triangle",
+        body: [
+          "Begin in the centre, around Sigiriya and Dambulla. Climb the Lion Rock early, before the heat and the crowds, and give an afternoon to the cave temples. This is the deep-history part of the trip, and two or three days is plenty before you start moving south.",
+        ],
+      },
+      {
+        heading: "Take the Train Through Tea Country",
+        body: [
+          "The stretch from Kandy to Ella is one of the world's great train journeys, hours of tea terraces, waterfalls and green hills sliding past an open door. Book a seat in advance, then base yourself in the hills for a couple of nights of cool air, tea-estate walks and early starts.",
+        ],
+      },
+      {
+        heading: "Finish on the South Coast",
+        body: [
+          "Come down to the coast for the final few days. The south is a string of beaches, surf towns and the lovely old fort city of Galle, with whale watching off Mirissa in season. This is where you stop moving and simply enjoy the island.",
+        ],
+      },
+      {
+        heading: "Where to Stay",
+        body: [
+          "For the south-coast leg, the Weligama Bay Marriott is an easy, comfortable base right on a calm surf bay, well placed for Mirissa, Galle and a lot of very good beaches.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "barcelona-beyond-the-sagrada",
+    title: "Barcelona Beyond the Sagrada: A Local's Rhythm",
+    destination: "Barcelona, Spain",
+    region: "Europe",
+    dek: "See the Gaudi landmarks, of course. But the city really opens up when you learn to eat late, walk the back streets and follow the neighbourhoods.",
+    excerpt:
+      "Barcelona is more than its famous church. A guide to the barrios, the market stalls and the unhurried Mediterranean rhythm that turns a sightseeing trip into something closer to living there.",
+    author: "The Hotel Life Editors",
+    readTime: 6,
+    date: "April 2026",
+    heroImage: U("1583422409516-2895a77efded", 2000),
+    cardImage: U("1583422409516-2895a77efded", 1000),
+    hotelSlugs: [],
+    sections: [
+      {
+        body: [
+          "Almost everyone arrives in Barcelona with the same short list: the Sagrada Familia, Park Guell, a wander down Las Ramblas. Do them, early and with tickets booked. Then set the checklist aside, because the city Barcelonins actually live in reveals itself only once you slow to its pace, which means eating late, walking a lot, and treating whole afternoons as optional.",
+        ],
+      },
+      {
+        heading: "Follow the Neighbourhoods",
+        body: [
+          "Barcelona is a city of distinct barrios, and choosing one to wander is better than trying to see everything. The Gothic Quarter and El Born give you medieval lanes and tiny bars; Gracia feels like a village of leafy squares; the Eixample is all wide avenues and Modernista facades. Pick one a day and get pleasantly lost.",
+        ],
+      },
+      {
+        heading: "Eat Like a Local, Late",
+        body: [
+          "Lunch is the big meal and it starts around two; dinner rarely before nine. Skip the tourist traps on Las Ramblas and head for a neighbourhood vermuteria or a bar with a market counter. La Boqueria is wonderful but touristy, so try the quieter Mercat de Santa Caterina or Sant Antoni for the same colour with fewer selfie sticks.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "koh-samui-unhurried",
+    title: "Koh Samui, Unhurried: Beaches, Waterfalls and Where to Stay",
+    destination: "Koh Samui, Thailand",
+    region: "Asia",
+    dek: "Samui can be a party or a hideaway. Here's how to find the quiet coves, the jungle interior, and the right beach for the trip you actually want.",
+    excerpt:
+      "Thailand's second-biggest island has a beach for every mood, from the buzz of Chaweng to the calm of the north shore. A guide to picking your patch and slowing right down.",
+    author: "The Hotel Life Editors",
+    readTime: 6,
+    date: "June 2026",
+    heroImage: U("1604999565976-8913ad2ddb7c", 2000),
+    cardImage: U("1604999565976-8913ad2ddb7c", 1000),
+    hotelSlugs: ["w-koh-samui"],
+    sections: [
+      {
+        body: [
+          "Koh Samui gets an unfair reputation as either a full-moon party island or a package-holiday cliche. The truth is more interesting. It's big enough and green enough to be whatever you want, from a lively beach break to a genuinely restful hideaway, as long as you choose the right coast.",
+        ],
+      },
+      {
+        heading: "Choose Your Coast",
+        body: [
+          "Chaweng and Lamai on the east are the busy beaches, all bars, restaurants and nightlife. The north shore around Maenam and Bophut is calmer, with soft sand, sunset views and a foodie old town. The south and west are quieter still. Decide how much buzz you want before you book, because on Samui your beach is your whole trip.",
+        ],
+      },
+      {
+        heading: "Get Off the Sand",
+        body: [
+          "Give at least one day to the interior. Rent a car or take a tour up to the Na Muang waterfalls, the mountaintop viewpoints and the quiet inland temples. The contrast between the jungly heart of the island and its beaches is what makes Samui more than just another resort strip.",
+        ],
+      },
+      {
+        heading: "Where to Stay",
+        body: [
+          "For a design-led hideaway on the calmer north shore, W Koh Samui gives you a private pool villa even at entry level, with one of the island's best beach bars just down the hill.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "bali-two-ways",
+    title: "Bali, Two Ways: Jungle and Sea",
+    destination: "Bali, Indonesia",
+    region: "Asia",
+    dek: "The classic Bali trip splits the island in half: a few days inland around Ubud, a few more on the coast. Here's how to balance the two.",
+    excerpt:
+      "Bali does two very different holidays at once, spiritual and green inland, sun-and-sea on the coast. The best trips do both. A guide to splitting your time and skipping the crowds.",
+    author: "The Hotel Life Editors",
+    readTime: 7,
+    date: "June 2026",
+    heroImage: U("1518548419970-58e3b4079ab2", 2000),
+    cardImage: U("1518548419970-58e3b4079ab2", 1000),
+    hotelSlugs: ["amankila-bali", "four-seasons-bali-sayan"],
+    sections: [
+      {
+        body: [
+          "Bali has been loved almost to breaking point in places, and first-timers often come away either enchanted or exhausted, depending on where they spent their time. The fix is simple: treat Bali as two trips in one. Start inland, in the green and the temples, then move to the coast to unwind. Do it in that order and you leave relaxed rather than frazzled.",
+        ],
+      },
+      {
+        heading: "Inland: Ubud and the Green Heart",
+        body: [
+          "Ubud is the cultural centre, surrounded by rice terraces, river valleys, yoga studios and temples. Base yourself just outside the town rather than in its busy middle, wake early for the terraces before the tour buses, and give yourself time for a proper spa day and a river walk. This is the restorative half of the trip.",
+        ],
+      },
+      {
+        heading: "The Coast: Choose Quiet",
+        body: [
+          "For the beach half, skip the traffic of Seminyak and Canggu unless nightlife is the point. The east and the Bukit peninsula are calmer and more beautiful, with dramatic cliffs, better swimming and a fraction of the crowds. It's a short drive for a completely different mood.",
+        ],
+      },
+      {
+        heading: "Where to Stay",
+        body: [
+          "Split your stay to match the trip: Four Seasons Sayan for the jungle-and-river magic near Ubud, then Amankila on the serene east coast for cliffs, privacy and that famous three-tiered pool.",
+        ],
+      },
+    ],
+    featured: true,
+  },
 ];
 
 // ---- helpers -------------------------------------------------------------

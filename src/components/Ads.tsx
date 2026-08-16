@@ -98,12 +98,14 @@ function RailAd({
   alt,
   width,
   height,
+  imgClassName = "w-[300px]",
 }: {
   href: string;
   src: string;
   alt: string;
   width: number;
   height: number;
+  imgClassName?: string;
 }) {
   return (
     <Link
@@ -120,7 +122,7 @@ function RailAd({
           alt={alt}
           width={width}
           height={height}
-          className="block h-auto w-[300px] transition-opacity group-hover:opacity-90"
+          className={`block h-auto transition-opacity group-hover:opacity-90 ${imgClassName}`}
         />
       </div>
     </Link>
@@ -147,5 +149,35 @@ export function AntialiasRail() {
         />
       </div>
     </aside>
+  );
+}
+
+/**
+ * Mobile / tablet version of the side-rail banners. The rail is hidden below xl,
+ * so this renders the same house banners inline near the foot of the page so
+ * they still get seen on phones. Banners scale to the container.
+ */
+export function MobileRail() {
+  return (
+    <section className="xl:hidden mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10">
+      <div className="mx-auto flex max-w-[360px] flex-col items-center gap-6">
+        <RailAd
+          href={ANTIALIAS_URL}
+          src="/ads/antialias-skyscraper.svg"
+          alt="The AntiAlias - a design & brand studio"
+          width={300}
+          height={600}
+          imgClassName="w-full max-w-[300px]"
+        />
+        <RailAd
+          href={NIKHAAR_URL}
+          src="/ads/nikhaar-foundation.svg"
+          alt="Nikhaar Foundation"
+          width={300}
+          height={420}
+          imgClassName="w-full max-w-[300px]"
+        />
+      </div>
+    </section>
   );
 }

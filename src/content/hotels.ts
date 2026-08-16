@@ -917,6 +917,775 @@ export const hotels: Hotel[] = [
     ],
     featured: true,
   },
+  {
+    slug: "khyber-himalayan-gulmarg",
+    name: "The Khyber Himalayan Resort & Spa",
+    city: "Gulmarg",
+    country: "India",
+    region: "Asia",
+    category: "Mountain Retreat",
+    tagline: "A cedar-and-stone lodge at 8,500 feet, with the Pir Panjal filling every window",
+    excerpt:
+      "Kashmir's grandest mountain hotel sits right by the Gulmarg gondola, wrapped in deodar forest and snow for half the year. Ski in winter, trek in summer, and warm up by the fire either way.",
+    rating: 4.6,
+    priceFrom: 300,
+    year: "January 2026",
+    heroImage: U("1548574505-5e239809ee19", 2000),
+    cardImage: U("1548574505-5e239809ee19", 1000),
+    standout:
+      "A butler lighting the wood stove in your room while fresh snow piles up on the balcony and the Pir Panjal range glows in the last of the light.",
+    quickFacts: [
+      { label: "Location", value: "Gulmarg, Kashmir" },
+      { label: "Rooms", value: "85 rooms & suites" },
+      { label: "Opened", value: "2012" },
+      { label: "Best for", value: "Skiing, mountain air, honeymoons" },
+    ],
+    sections: [
+      {
+        body: [
+          "Gulmarg is one of the highest ski resorts in the world, and for years there was nowhere really luxurious to stay in it. The Khyber changed that. Built from local stone and deodar cedar, it sits a snowball's throw from the famous gondola, close enough that you can be on the slopes minutes after breakfast.",
+          "Inside it's all Kashmiri craft, from the hand-knotted carpets to the papier-mache detailing and the crackling fireplaces in the lounges. In winter it's a ski lodge in the grand sense; in summer it's a green, flower-strewn base for trekking and cool Himalayan air when the plains are baking.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most comfortable bed in the Indian Himalayas, in one of its most beautiful settings. Come for the snow, but the summer here is a quiet secret worth keeping.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "weligama-bay-marriott",
+    name: "Weligama Bay Marriott Resort & Spa",
+    city: "Weligama",
+    country: "Sri Lanka",
+    region: "Asia",
+    category: "Beach Resort",
+    tagline: "A surf-town resort on Sri Lanka's south coast, built for slow days by the sea",
+    excerpt:
+      "Overlooking the gentle crescent of Weligama Bay, this is an easy, family-friendly base for the island's best beaches, whale watching off Mirissa, and learning to surf.",
+    rating: 4.6,
+    priceFrom: 240,
+    year: "February 2026",
+    heroImage: U("1571536802807-30451e3955d8", 2000),
+    cardImage: U("1571536802807-30451e3955d8", 1000),
+    standout:
+      "Breakfast on the terrace watching first-time surfers tumble off longboards in the calm bay, then a blue-whale boat out of nearby Mirissa.",
+    quickFacts: [
+      { label: "Location", value: "Weligama, South Coast" },
+      { label: "Rooms", value: "199 rooms & suites" },
+      { label: "Opened", value: "2017" },
+      { label: "Best for", value: "Families, surfers, beach time" },
+    ],
+    sections: [
+      {
+        body: [
+          "Weligama Bay is where half of Sri Lanka learns to surf, thanks to its soft, forgiving waves, and this resort has the best seat in the house. It's a big, comfortable, contemporary place rather than a boutique hideaway, and that's rather the point: it works beautifully for families and for anyone who wants the south coast made easy.",
+          "The bay is a natural crescent, calm and safe, and the wider region is one of Sri Lanka's richest, close to the whale grounds off Mirissa, the fort town of Galle, and a string of beaches that get quieter the further you wander.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Not the most characterful stay on the island, but one of the most practical and comfortable bases for the south coast. Use it to surf, eat, and slow right down.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "jai-mahal-palace-jaipur",
+    name: "Jai Mahal Palace",
+    city: "Jaipur",
+    country: "India",
+    region: "Asia",
+    category: "Palace Hotel",
+    tagline: "A 260-year-old palace and eighteen acres of Mughal garden in the middle of the Pink City",
+    excerpt:
+      "A gentler, greener alternative to Jaipur's grander palace hotels, this Taj property wraps you in history and formal gardens a short drive from the bazaars and forts.",
+    rating: 4.6,
+    priceFrom: 200,
+    year: "March 2026",
+    heroImage: U("1524492412937-b28074a5d7da", 2000),
+    cardImage: U("1524492412937-b28074a5d7da", 1000),
+    standout:
+      "A gin and tonic on the lawn at dusk as the palace facade turns amber and peacocks pick their way across eighteen acres of clipped Mughal garden.",
+    quickFacts: [
+      { label: "Location", value: "Civil Lines, Jaipur" },
+      { label: "Rooms", value: "100 rooms & suites" },
+      { label: "Opened", value: "1745 · hotel 1980s" },
+      { label: "Best for", value: "First-time Rajasthan, gardens" },
+    ],
+    sections: [
+      {
+        body: [
+          "Jaipur is India's palace-hotel capital, and while the Rambagh gets the headlines, the Jai Mahal quietly offers a lot of the same romance for rather less. The building dates to 1745, its facade a fine piece of Indo-Saracenic architecture, and its eighteen acres of formal Mughal gardens are among the loveliest hotel grounds in the city.",
+          "Rooms are traditional and comfortable rather than cutting-edge, but the setting does the heavy lifting. You are minutes from the Hawa Mahal, the City Palace and the chaos of the bazaars, then back behind the walls to green calm.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "A wonderful, well-priced introduction to the Rajasthani palace experience. Save the splurge for a suite at the Rambagh another time; start your love affair with the Pink City here.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pashan-garh-taj-safari",
+    name: "Pashan Garh, A Taj Safari",
+    city: "Panna",
+    country: "India",
+    region: "Asia",
+    category: "Safari Lodge",
+    tagline: "A dry-stone safari lodge on the edge of Panna's tiger country",
+    excerpt:
+      "Twelve private stone cottages above a wooded valley in Madhya Pradesh, and one of the best chances in central India to track tiger, leopard and the gharial-rich Ken River.",
+    rating: 4.7,
+    priceFrom: 320,
+    priceNote: "full board",
+    year: "April 2026",
+    heroImage: U("1516426122078-c23e76319801", 2000),
+    cardImage: U("1516426122078-c23e76319801", 1000),
+    standout:
+      "Coming back from a dawn drive to breakfast on your private stone terrace, the valley below still full of birdsong and mist.",
+    quickFacts: [
+      { label: "Location", value: "Panna National Park, MP" },
+      { label: "Rooms", value: "12 stone cottages" },
+      { label: "Opened", value: "2010" },
+      { label: "Best for", value: "Tiger safari, wild solitude" },
+    ],
+    sections: [
+      {
+        body: [
+          "Panna is one of India's great conservation comeback stories: tigers vanished here in the 2000s and were painstakingly reintroduced, and today the park is thriving again. Pashan Garh is the place to base yourself for it, a run of twelve dry-stone cottages inspired by African bush lodges but built entirely from local rock.",
+          "The pace is all early drives and long, lazy afternoons, with expert naturalists reading the forest for you. Beyond the big cats there are sloth bears, the Ken River full of gharial and mugger crocodile, and the extraordinary temples of Khajuraho within reach.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "A serene, design-led safari lodge in a park that fewer travellers know, which is exactly its appeal. Pair it with Khajuraho for one of central India's most rewarding trips.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "oberoi-new-delhi",
+    name: "The Oberoi, New Delhi",
+    city: "New Delhi",
+    country: "India",
+    region: "Asia",
+    category: "Urban Grande Dame",
+    tagline: "The capital's most polished city hotel, looking out over the Delhi Golf Club and Humayun's Tomb",
+    excerpt:
+      "After a top-to-bottom rebuild, the Oberoi is once again the address in Delhi: serene, tech-forward, and run with the quiet precision the group is famous for.",
+    rating: 4.7,
+    priceFrom: 300,
+    year: "May 2026",
+    heroImage: U("1477587458883-47145ed94245", 2000),
+    cardImage: U("1477587458883-47145ed94245", 1000),
+    standout:
+      "A cocktail on the rooftop as the sun drops behind Humayun's Tomb and the green of the golf course fades into the vast, humming city beyond.",
+    quickFacts: [
+      { label: "Location", value: "Golf Links, New Delhi" },
+      { label: "Rooms", value: "220 rooms & suites" },
+      { label: "Opened", value: "1965 · rebuilt 2018" },
+      { label: "Best for", value: "Business, service, calm in the city" },
+    ],
+    sections: [
+      {
+        body: [
+          "Delhi can overwhelm, and the Oberoi is the antidote. A three-year rebuild stripped the 1960s original back to its bones and rebuilt it as a calm, glass-and-stone sanctuary, with rooms that look out over the rare green of the Delhi Golf Club and the domes of Humayun's Tomb.",
+          "Service is the real signature. The Oberoi group trains some of the best hotel staff in the world, and it shows in the small anticipations, the flawless food, and a spa and rooftop that make the heat and noise of the city melt away.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most refined base in the capital, and a masterclass in Indian hospitality. If you can, book a room on the tomb side and watch the light change over one of the world's great monuments.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "w-goa",
+    name: "W Goa",
+    city: "Goa",
+    country: "India",
+    region: "Asia",
+    category: "Beach Resort",
+    tagline: "Goa's party-and-poolside flagship, perched above the sands of Vagator",
+    excerpt:
+      "Bold colour, a clifftop pool and a DJ-driven beach club, all above one of North Goa's best beaches. This is the loud, glamorous end of the Goan spectrum, and it's a lot of fun.",
+    rating: 4.5,
+    priceFrom: 300,
+    year: "December 2026",
+    heroImage: U("1582719508461-905c673771fd", 2000),
+    cardImage: U("1582719508461-905c673771fd", 1000),
+    standout:
+      "Sundowners at the clifftop pool as the DJ warms up and the Arabian Sea turns copper below the red laterite headland of Vagator.",
+    quickFacts: [
+      { label: "Location", value: "Vagator, North Goa" },
+      { label: "Rooms", value: "160 rooms & villas" },
+      { label: "Opened", value: "2016" },
+      { label: "Best for", value: "Nightlife, poolside, groups" },
+    ],
+    sections: [
+      {
+        body: [
+          "Goa has always had two moods: sleepy and hedonistic. W Goa leans hard into the second. It sits on the headland above Vagator, all clashing colour and clever design, with a beach club, a great spa, and a pool scene that runs from lazy afternoons to full-volume nights.",
+          "This is not the place for a quiet retreat, and it doesn't pretend to be. It's for travellers who want North Goa's energy on tap, with a stylish, well-run resort to come home to.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most fun you can have in North Goa without leaving your hotel. Come with friends, come in season, and don't expect an early night.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "w-koh-samui",
+    name: "W Koh Samui",
+    city: "Koh Samui",
+    country: "Thailand",
+    region: "Asia",
+    category: "Villa Resort",
+    tagline: "An all-villa playground on Samui's northern shore, every villa with its own pool",
+    excerpt:
+      "Every room here is a private pool villa, spilling down a lush hillside to a white-sand beach and one of the island's best beach bars. Design-forward, high-energy, and genuinely spectacular.",
+    rating: 4.7,
+    priceFrom: 500,
+    priceNote: "pool villa",
+    year: "June 2026",
+    heroImage: U("1537996194471-e657df975ab4", 2000),
+    cardImage: U("1537996194471-e657df975ab4", 1000),
+    standout:
+      "Slipping into your own villa pool at midnight, the lights of fishing boats strung across the Gulf of Thailand and the beach bar's bass drifting up the hill.",
+    quickFacts: [
+      { label: "Location", value: "Maenam, Koh Samui" },
+      { label: "Villas", value: "74 pool villas" },
+      { label: "Opened", value: "2010" },
+      { label: "Best for", value: "Couples, design lovers, privacy" },
+    ],
+    sections: [
+      {
+        body: [
+          "The clever thing about W Koh Samui is that there are no ordinary rooms at all. Every one of the 74 units is a private villa with its own pool, tumbling down a green hillside to the sand, so even at full occupancy the place feels private and calm.",
+          "By day it's all your-own-pool seclusion and a long, beautiful beach; by night the WooBar comes alive as one of the island's best sundowner spots. The design is playful and lavish, and the service hits the sweet spot between switched-on and relaxed.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Samui's most stylish resort, and a rare one where the entry-level room is a private pool villa. Ideal for a couple who want privacy by day and a little glamour by night.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "stay-wellbeing-phuket",
+    name: "STAY Wellbeing & Lifestyle Resort",
+    city: "Phuket",
+    country: "Thailand",
+    region: "Asia",
+    category: "Wellness Resort",
+    tagline: "A serious wellness retreat in Phuket's quiet south, at a surprisingly gentle price",
+    excerpt:
+      "Detox programmes, an enormous spa and a calm, garden-filled campus near Rawai make this one of the best-value wellbeing resorts in Southeast Asia.",
+    rating: 4.6,
+    priceFrom: 80,
+    year: "July 2026",
+    heroImage: U("1571003123894-1f0594d2b5d9", 2000),
+    cardImage: U("1571003123894-1f0594d2b5d9", 1000),
+    standout:
+      "Finishing a week-long detox lighter and clearer than you arrived, then rewarding yourself with a slow massage as the cicadas start up in the garden.",
+    quickFacts: [
+      { label: "Location", value: "Rawai, South Phuket" },
+      { label: "Rooms", value: "180 rooms & suites" },
+      { label: "Opened", value: "2017" },
+      { label: "Best for", value: "Detox, wellness, value" },
+    ],
+    sections: [
+      {
+        body: [
+          "Wellness travel usually comes with a punishing price tag. STAY is the happy exception. Set in green gardens in the quieter south of Phuket, near Rawai and Nai Harn, it runs proper structured programmes, from detox and weight management to sleep and fitness, with a spa and hydrotherapy area far bigger than the modest rates suggest.",
+          "It's not beachfront and it isn't trying to be a party resort. What it offers is space, calm, healthy food and genuine wellbeing expertise, at a fraction of what the big-name retreats charge.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The smartest-value wellness stay in Phuket. Come to reset properly rather than to lie on a beach, and leave feeling like you actually did something for yourself.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "rambagh-palace-jaipur",
+    name: "Rambagh Palace",
+    city: "Jaipur",
+    country: "India",
+    region: "Asia",
+    category: "Palace Hotel",
+    tagline: "The former residence of the Maharaja of Jaipur, and the grandest address in the Pink City",
+    excerpt:
+      "Peacocks on the lawns, marble corridors, and suites once lived in by a maharaja. This Taj flagship is the full Rajasthani fantasy, and it delivers on every inch of it.",
+    rating: 4.9,
+    priceFrom: 480,
+    year: "March 2026",
+    heroImage: U("1512343879784-a960bf40e7f2", 2000),
+    cardImage: U("1512343879784-a960bf40e7f2", 1000),
+    standout:
+      "Afternoon tea in the Verandah Cafe as peacocks strut across the manicured lawns and a sitar player tunes up somewhere out of sight.",
+    quickFacts: [
+      { label: "Location", value: "Bhawani Singh Rd, Jaipur" },
+      { label: "Rooms", value: "78 rooms & suites" },
+      { label: "Opened", value: "1835 · hotel 1957" },
+      { label: "Best for", value: "Romance, once-in-a-lifetime India" },
+    ],
+    sections: [
+      {
+        body: [
+          "If you are going to do a palace hotel in Jaipur properly, this is the one. Rambagh was the home of the Maharaja of Jaipur until the 1950s, and it still feels like a private royal residence that happens to let you stay: 47 acres of gardens, marble halls, and suites hung with portraits and chandeliers.",
+          "The service is warm and ceremonial in equal measure, the food is excellent, and the whole place hums with a sense of occasion. It is expensive by Indian standards and worth every rupee for the right trip.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "One of India's truly great hotels, and the definitive Jaipur splurge. For a honeymoon or a landmark birthday, few addresses on earth feel this special.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "umaid-bhawan-jodhpur",
+    name: "Umaid Bhawan Palace",
+    city: "Jodhpur",
+    country: "India",
+    region: "Asia",
+    category: "Palace Hotel",
+    tagline: "One of the world's last great palaces, half of it still home to the royal family",
+    excerpt:
+      "An immense Art Deco palace on a hill above the Blue City, part royal residence, part museum, part Taj hotel. Staying here is like being a guest of the Maharaja, because in a sense you are.",
+    rating: 4.9,
+    priceFrom: 650,
+    year: "April 2026",
+    heroImage: U("1470114716159-e389f8712fda", 2000),
+    cardImage: U("1470114716159-e389f8712fda", 1000),
+    standout:
+      "Standing under the great central dome at dusk, the sandstone glowing gold, knowing the Maharaja of Jodhpur is quite possibly at home in the wing next door.",
+    quickFacts: [
+      { label: "Location", value: "Above Jodhpur, Rajasthan" },
+      { label: "Rooms", value: "64 rooms & suites" },
+      { label: "Opened", value: "1943 · hotel 1972" },
+      { label: "Best for", value: "Grand occasions, architecture" },
+    ],
+    sections: [
+      {
+        body: [
+          "Umaid Bhawan is one of the largest private residences in the world, a colossal blend of Art Deco and Rajput design built through the 1930s and 40s. The royal family still lives in one wing, a museum occupies another, and the third is a Taj hotel of extraordinary grandeur.",
+          "The scale is almost hard to process: soaring domed halls, a subterranean pool, gardens patrolled by peacocks, and views out over the fort and the indigo sprawl of the Blue City. It is theatrical in the best possible way.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Not a boutique hideaway but a genuine living palace, and an experience quite unlike any other hotel in India. Come for the sheer, jaw-dropping scale of it.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "raffles-singapore",
+    name: "Raffles Singapore",
+    city: "Singapore",
+    country: "Singapore",
+    region: "Asia",
+    category: "Grande Dame",
+    tagline: "The colonial grande dame that gave the world the Singapore Sling",
+    excerpt:
+      "After a careful restoration, the all-suite Raffles is back to its shuttered, palm-filled, ceiling-fan best. Order a Sling at the Long Bar and let the peanut shells fall where they may.",
+    rating: 4.8,
+    priceFrom: 750,
+    year: "May 2026",
+    heroImage: U("1584132967334-10e028bd69f7", 2000),
+    cardImage: U("1584132967334-10e028bd69f7", 1000),
+    standout:
+      "A Singapore Sling at the Long Bar, ceiling fans turning overhead and peanut shells crunching underfoot, exactly as it has been for over a century.",
+    quickFacts: [
+      { label: "Location", value: "Beach Road, Singapore" },
+      { label: "Suites", value: "115 suites" },
+      { label: "Opened", value: "1887 · restored 2019" },
+      { label: "Best for", value: "History, romance, that cocktail" },
+    ],
+    sections: [
+      {
+        body: [
+          "Few hotels are woven into a city's identity as tightly as Raffles is into Singapore's. Opened in 1887, it is a white colonial confection of verandahs, courtyards and palm-shaded walkways, and every room is a suite served by the hotel's famous butlers.",
+          "A multi-year restoration finished in 2019 freshened everything without stripping away the romance. The Long Bar still serves the Singapore Sling it invented, and the whole place remains a cool, gracious escape from the glass-and-steel city around it.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "A living monument that still functions as a genuinely lovely hotel. Stay if you can; if not, at least go for the Sling and a wander through the courtyards.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "amankila-bali",
+    name: "Amankila",
+    city: "Bali",
+    country: "Indonesia",
+    region: "Asia",
+    category: "Cliffside Retreat",
+    tagline: "Aman's Balinese classic, with a three-tiered infinity pool cascading toward the sea",
+    excerpt:
+      "On a quiet stretch of Bali's east coast, thatched pavilions step down a jungled cliff to one of the most photographed pools in Asia and a private beach club below.",
+    rating: 4.9,
+    priceFrom: 1050,
+    year: "June 2026",
+    heroImage: U("1518548419970-58e3b4079ab2", 2000),
+    cardImage: U("1518548419970-58e3b4079ab2", 1000),
+    standout:
+      "The three-tiered infinity pool at dawn, each level spilling into the next and the whole thing seeming to pour off the cliff into the Lombok Strait.",
+    quickFacts: [
+      { label: "Location", value: "Manggis, East Bali" },
+      { label: "Rooms", value: "34 free-standing suites" },
+      { label: "Opened", value: "1992" },
+      { label: "Best for", value: "Honeymoons, quiet, that pool" },
+    ],
+    sections: [
+      {
+        body: [
+          "While the crowds pile into Seminyak and Ubud, Amankila keeps to itself on Bali's serene east coast. Its thatched suites are scattered down a forested cliff, connected by walkways and linked to a private beach club at the bottom, so you feel gloriously alone with the sea.",
+          "The signature is that pool: three turquoise tiers stepping toward the horizon, one of the images that launched a thousand imitations. Beyond it lie the water palaces of Karangasem and some of the island's least spoiled temples and villages.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The Bali of the imagination, on the quiet side of the island. For romance and privacy it is hard to beat anywhere in Southeast Asia.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "four-seasons-bali-sayan",
+    name: "Four Seasons Resort Bali at Sayan",
+    city: "Ubud",
+    country: "Indonesia",
+    region: "Asia",
+    category: "Jungle Retreat",
+    tagline: "A lily-pond rooftop and a valley of rice terraces on the edge of Ubud",
+    excerpt:
+      "You cross a bridge to a rooftop lotus pond, then descend into the jungle canopy of the Ayung River valley. This is Ubud's most dramatic arrival, and one of Bali's great spa retreats.",
+    rating: 4.8,
+    priceFrom: 850,
+    year: "June 2026",
+    heroImage: U("1602002418082-a4443e081dd1", 2000),
+    cardImage: U("1602002418082-a4443e081dd1", 1000),
+    standout:
+      "Yoga at dawn on the deck as mist rises off the Ayung River and the terraced rice paddies wake up green and gold below you.",
+    quickFacts: [
+      { label: "Location", value: "Sayan, near Ubud" },
+      { label: "Rooms", value: "60 suites & villas" },
+      { label: "Opened", value: "1998 · renovated 2020s" },
+      { label: "Best for", value: "Spa, jungle, spiritual Bali" },
+    ],
+    sections: [
+      {
+        body: [
+          "The arrival alone is worth the trip: you walk across a timber bridge into a vast rooftop lotus pond, then wind down into the resort, which is folded into the jungle of the Ayung River valley. It's a piece of theatre that never gets old.",
+          "This is the Ubud side of Bali, all rice terraces, river rafting, temples and wellness, and the Four Seasons does it with a serious spa, superb food, and villas that open straight onto the green. It's calmer and more grown-up than the island's beach scene.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The best base for spiritual, green, inland Bali, with an arrival you'll never forget. Pair it with a few nights on the coast for the full island.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "the-datai-langkawi",
+    name: "The Datai Langkawi",
+    city: "Langkawi",
+    country: "Malaysia",
+    region: "Asia",
+    category: "Rainforest Resort",
+    tagline: "A ten-million-year-old rainforest, a private beach, and villas hidden in the canopy",
+    excerpt:
+      "On Langkawi's north-west tip, The Datai sits inside one of the oldest rainforests on earth, where hornbills and dusky langurs share the trees and the Andaman Sea laps a perfect beach.",
+    rating: 4.8,
+    priceFrom: 700,
+    year: "July 2026",
+    heroImage: U("1578662996442-48f60103fc96", 2000),
+    cardImage: U("1578662996442-48f60103fc96", 1000),
+    standout:
+      "A resident naturalist pointing out a great hornbill in the canopy on the walk to breakfast, then that first sight of the empty, jungle-fringed beach.",
+    quickFacts: [
+      { label: "Location", value: "Datai Bay, Langkawi" },
+      { label: "Rooms", value: "121 rooms, suites & villas" },
+      { label: "Opened", value: "1993 · rebuilt 2018" },
+      { label: "Best for", value: "Nature lovers, beach-and-jungle" },
+    ],
+    sections: [
+      {
+        body: [
+          "The Datai's setting is genuinely rare: a resort built inside a rainforest thought to be around ten million years old, on a beach regularly rated among the best in the world. A major rebuild finished in 2018 modernised everything while keeping the trees, quite literally, growing through the architecture.",
+          "It's a place for slow mornings, nature walks with the in-house naturalists, and long afternoons between the jungle pool and the Andaman Sea. Hornbills, monitor lizards and cheeky langurs are your neighbours.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "One of Asia's great beach-and-jungle resorts, and a genuine haven for anyone who loves the natural world. The wildlife here is part of the luxury.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nihi-sumba",
+    name: "Nihi Sumba",
+    city: "Sumba",
+    country: "Indonesia",
+    region: "Asia",
+    category: "Wilderness Resort",
+    tagline: "Surf, horses and raw wilderness on a remote Indonesian island few can find on a map",
+    excerpt:
+      "A famous private left-hand wave, horses cantering along an empty beach, and a spa reached by a two-hour trek. Nihi Sumba is barefoot luxury at its wildest and most soulful.",
+    rating: 4.9,
+    priceFrom: 1400,
+    priceNote: "villa, full board",
+    year: "August 2026",
+    heroImage: U("1455587734955-081b22074882", 2000),
+    cardImage: U("1455587734955-081b22074882", 1000),
+    standout:
+      "Riding a horse bareback along the surf at dawn on an empty two-mile beach, the island's wild interior rising green and untouched behind you.",
+    quickFacts: [
+      { label: "Location", value: "Sumba Island, Indonesia" },
+      { label: "Villas", value: "27 villas" },
+      { label: "Opened", value: "surf camp 1980s · resort 2015" },
+      { label: "Best for", value: "Surfers, adventurers, disconnecting" },
+    ],
+    sections: [
+      {
+        body: [
+          "Sumba lies a short flight but a whole world away from Bali, drier, wilder and far less touched. Nihi began life as a legendary surf camp built around a private left-hand wave, and it has grown into one of the most distinctive resorts anywhere without losing its soul.",
+          "Days are spent surfing, riding the resort's beloved horses along the sand, trekking to the famous cliffside spa, or simply staring at a landscape that feels prehistoric. A share of proceeds funds the Sumba Foundation, which does serious work across the island.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Barefoot luxury with genuine purpose and a real edge of adventure. Not for everyone, and all the better for it. One of the most memorable places we've ever stayed.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "the-savoy-london",
+    name: "The Savoy",
+    city: "London",
+    country: "United Kingdom",
+    region: "Europe",
+    category: "Grande Dame",
+    tagline: "Theatreland's glittering Thames-side icon, Art Deco and Edwardian in equal measure",
+    excerpt:
+      "A riverside legend since 1889, with an American Bar that pours some of the world's most famous cocktails and a location in the very thick of the West End.",
+    rating: 4.7,
+    priceFrom: 800,
+    year: "July 2026",
+    heroImage: U("1520454974749-611b7248ffdb", 2000),
+    cardImage: U("1520454974749-611b7248ffdb", 1000),
+    standout:
+      "A martini at the American Bar as the pianist plays, then a two-minute walk to a curtain-up in Covent Garden.",
+    quickFacts: [
+      { label: "Location", value: "Strand, London" },
+      { label: "Rooms", value: "267 rooms & suites" },
+      { label: "Opened", value: "1889" },
+      { label: "Best for", value: "Theatre, cocktails, river views" },
+    ],
+    sections: [
+      {
+        body: [
+          "The Savoy has been at the centre of London life since 1889, when it became the city's first truly modern luxury hotel, with electric lights and its own power station. It still splits neatly into two personalities: Edwardian grandeur on the river side, cool Art Deco on the Strand.",
+          "The American Bar is the star turn, one of the oldest and most celebrated cocktail bars in the world, and the location could hardly be better for the theatres, restaurants and galleries of the West End. River-view rooms are the ones to book.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "A glamorous, superbly located London institution with a bar worth crossing town for. For a theatre-and-cocktails weekend in the capital, it's hard to beat.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "gritti-palace-venice",
+    name: "The Gritti Palace",
+    city: "Venice",
+    country: "Italy",
+    region: "Europe",
+    category: "Palazzo",
+    tagline: "A 15th-century Grand Canal palazzo with the best terrace in Venice",
+    excerpt:
+      "Once a doge's residence, the Gritti puts you right on the Grand Canal opposite Santa Maria della Salute, with a terrace made for lingering and Venetian antiques at every turn.",
+    rating: 4.8,
+    priceFrom: 950,
+    year: "August 2026",
+    heroImage: U("1523805009345-7448845a9e53", 2000),
+    cardImage: U("1523805009345-7448845a9e53", 1000),
+    standout:
+      "A Bellini on the canal-side terrace at golden hour, watching gondolas glide past the great dome of the Salute directly opposite.",
+    quickFacts: [
+      { label: "Location", value: "Grand Canal, San Marco" },
+      { label: "Rooms", value: "82 rooms & suites" },
+      { label: "Opened", value: "1525 · hotel 1895" },
+      { label: "Best for", value: "Canal views, romance, the terrace" },
+    ],
+    sections: [
+      {
+        body: [
+          "Some Venice hotels are near the Grand Canal; the Gritti is on it, occupying a 15th-century palazzo once home to a doge. Every room is a jewel box of Venetian antiques, Rubelli silks and Murano glass, restored with the seriousness the setting deserves.",
+          "The terrace is the thing everyone remembers, a run of tables right at the water's edge, looking straight across to Santa Maria della Salute. It is one of the great places in Europe to nurse a drink and watch a city drift by.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most romantic address on the Grand Canal, with a terrace worth the price on its own. For a special few nights in Venice, this is the one.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "four-seasons-george-v-paris",
+    name: "Four Seasons Hotel George V",
+    city: "Paris",
+    country: "France",
+    region: "Europe",
+    category: "Palace Hotel",
+    tagline: "Off the Champs-Elysees, a palace hotel famous for its flowers and three Michelin restaurants",
+    excerpt:
+      "A 1928 Art Deco landmark a step from the Champs-Elysees, celebrated for extravagant floral displays, faultless service, and more Michelin stars than any other hotel in the world.",
+    rating: 4.9,
+    priceFrom: 1600,
+    year: "July 2026",
+    heroImage: U("1573790387438-4da905039392", 2000),
+    cardImage: U("1573790387438-4da905039392", 1000),
+    standout:
+      "Walking into the marble courtyard to find another impossible, room-height floral installation, different every fortnight and worth a detour on its own.",
+    quickFacts: [
+      { label: "Location", value: "8th, near Champs-Elysees" },
+      { label: "Rooms", value: "244 rooms & suites" },
+      { label: "Opened", value: "1928" },
+      { label: "Best for", value: "Special occasions, dining, service" },
+    ],
+    sections: [
+      {
+        body: [
+          "The George V holds a claim no other hotel can match: three restaurants, three Michelin stars between them, under one roof. But even if you never ate here, you would remember the flowers, the vast, sculptural arrangements by Jeff Leatham that fill the marble halls and change with the seasons.",
+          "Behind the spectacle is service of almost unnerving precision and rooms of quiet, gilded comfort a short stroll from the Champs-Elysees and the Seine. It is the Paris palace hotel taken to its logical, luxurious extreme.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Perhaps the most polished hotel in Paris, and a destination for its flowers and its restaurants alone. Save it for the occasions that truly warrant it.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bulgari-resort-dubai",
+    name: "Bulgari Resort Dubai",
+    city: "Dubai",
+    country: "United Arab Emirates",
+    region: "Middle East & Africa",
+    category: "Design Resort",
+    tagline: "Italian design on a private seahorse-shaped island, with a marina and a skyline view",
+    excerpt:
+      "On its own island minutes from downtown, the Bulgari trades Dubai's usual gold-and-glitz for sleek Italian restraint, a superyacht marina, and a beach club that draws the city's stylish set.",
+    rating: 4.7,
+    priceFrom: 1100,
+    year: "May 2026",
+    heroImage: U("1540541338287-41700207dee6", 2000),
+    cardImage: U("1540541338287-41700207dee6", 1000),
+    standout:
+      "An aperitivo at the marina as the yachts light up and the Burj Khalifa glitters across the water, feeling more Portofino than Persian Gulf.",
+    quickFacts: [
+      { label: "Location", value: "Jumeirah Bay Island" },
+      { label: "Rooms", value: "101 rooms & suites" },
+      { label: "Opened", value: "2017" },
+      { label: "Best for", value: "Design, marina scene, style" },
+    ],
+    sections: [
+      {
+        body: [
+          "Dubai is not short of grand hotels, but most shout. The Bulgari murmurs, in the cool Italian language of the jewellery house that created it. Set on a private, seahorse-shaped island linked to the mainland by a short bridge, it swaps gold leaf for stone, bronze and impeccable tailoring.",
+          "There's a superyacht marina, a serious Italian restaurant, and a beach club that has become one of the city's most fashionable addresses, all within minutes of downtown yet feeling a world apart.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most tasteful luxury hotel in Dubai, and proof the city can do understated when it wants to. For style over spectacle, this is the pick.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "upper-house-hong-kong",
+    name: "The Upper House",
+    city: "Hong Kong",
+    country: "Hong Kong SAR",
+    region: "Asia",
+    category: "Urban Retreat",
+    tagline: "A calm, art-filled hideaway above Admiralty, with no lobby and no attitude",
+    excerpt:
+      "Andre Fu's serene interiors, unusually large rooms, and a top-floor restaurant with harbour views make this the thinking traveller's Hong Kong hotel. Quiet luxury, done to perfection.",
+    rating: 4.8,
+    priceFrom: 550,
+    year: "May 2026",
+    heroImage: U("1590490360182-c33d57733427", 2000),
+    cardImage: U("1590490360182-c33d57733427", 1000),
+    standout:
+      "Dinner at Salisterra on the top floor as the light drops and Hong Kong's forest of towers switches on around you.",
+    quickFacts: [
+      { label: "Location", value: "Admiralty, Hong Kong Island" },
+      { label: "Rooms", value: "117 rooms & suites" },
+      { label: "Opened", value: "2009" },
+      { label: "Best for", value: "Design, calm, long stays" },
+    ],
+    sections: [
+      {
+        body: [
+          "The Upper House does everything the opposite way to a typical grand hotel, and it works beautifully. There is no formal lobby, no check-in desk, no fuss. Instead you are shown quietly to a room designed by Andre Fu, generously large by Hong Kong standards, full of natural materials and clever, calming detail.",
+          "The whole place feels more like a serene private residence than a hotel, right down to the free minibar and the art-lined stairwell. The rooftop restaurant, Salisterra, is a destination in its own right.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The most soothing hotel in a frenetic city, and a favourite of people who travel for a living. If you value calm and design over marble and gold, book here.",
+        ],
+      },
+    ],
+  },
 ];
 
 // ---- helpers -------------------------------------------------------------

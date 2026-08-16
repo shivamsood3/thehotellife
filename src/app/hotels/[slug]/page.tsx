@@ -44,7 +44,7 @@ export default async function HotelPage({
     <article className="pb-8">
       {/* ===== HERO ===== */}
       <div className="relative mt-6 overflow-hidden rounded-md">
-        <div className="relative aspect-[16/10] w-full sm:aspect-[16/7]">
+        <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image
             src={hotel.heroImage}
             alt={hotel.name}
