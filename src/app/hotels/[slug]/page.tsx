@@ -91,6 +91,24 @@ export default async function HotelPage({
                 {section.body.map((p, j) => (
                   <p key={j}>{p}</p>
                 ))}
+                {section.image && (
+                  <figure className="my-10 not-prose">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md sm:aspect-[3/2]">
+                      <Image
+                        src={section.image.src}
+                        alt={section.image.caption ?? hotel.name}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 760px, 100vw"
+                      />
+                    </div>
+                    {section.image.caption && (
+                      <figcaption className="mt-3 text-center text-xs uppercase tracking-widest text-ink-muted">
+                        {section.image.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
                 {/* In-article AdSense after the first section */}
                 {i === 0 && (
                   <div className="my-10 not-prose">

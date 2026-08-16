@@ -9,6 +9,8 @@ export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa"
 export interface Section {
   heading?: string;
   body: string[]; // paragraphs
+  /** Optional inline photograph rendered after this section's body. */
+  image?: { src: string; caption?: string };
 }
 
 export interface Hotel {
@@ -969,8 +971,8 @@ export const hotels: Hotel[] = [
     rating: 4.6,
     priceFrom: 240,
     year: "February 2026",
-    heroImage: U("1571536802807-30451e3955d8", 2000),
-    cardImage: U("1571536802807-30451e3955d8", 1000),
+    heroImage: "/hotels/weligama-bay-marriott.jpeg",
+    cardImage: "/hotels/weligama-bay-marriott.jpeg",
     standout:
       "Breakfast on the terrace watching first-time surfers tumble off longboards in the calm bay, then a blue-whale boat out of nearby Mirissa.",
     quickFacts: [
@@ -982,14 +984,56 @@ export const hotels: Hotel[] = [
     sections: [
       {
         body: [
-          "Weligama Bay is where half of Sri Lanka learns to surf, thanks to its soft, forgiving waves, and this resort has the best seat in the house. It's a big, comfortable, contemporary place rather than a boutique hideaway, and that's rather the point: it works beautifully for families and for anyone who wants the south coast made easy.",
-          "The bay is a natural crescent, calm and safe, and the wider region is one of Sri Lanka's richest, close to the whale grounds off Mirissa, the fort town of Galle, and a string of beaches that get quieter the further you wander.",
+          "Weligama Bay is where half of Sri Lanka learns to surf, thanks to its soft, forgiving waves, and this resort has the best seat in the house. It is a big, comfortable, contemporary place rather than a boutique hideaway, and that is rather the point: it works beautifully for families and for anyone who wants the south coast made easy.",
+          "The bay is a natural crescent, calm and safe, and the wider region is one of Sri Lanka's richest, close to the whale grounds off Mirissa, the fort town of Galle, and a string of beaches that get quieter the further you wander. From most of the sea-facing rooms you look straight down onto the break, where longboarders trade waves from breakfast until the light goes.",
         ],
+      },
+      {
+        heading: "Checking In",
+        body: [
+          "Arrival sets the tone. The lobby is a tall, open-sided room that frames the ocean like a painting, with a run of sculptural ring chandeliers overhead and a polished floor that mirrors the palms outside. There is almost no wall between you and the water, so the first thing you feel is the breeze coming off the bay.",
+          "It is a Marriott, so the machine runs smoothly: quick check-in, familiar loyalty perks, a concierge who can line up surf lessons, a Mirissa whale boat, or a driver to Galle without any fuss. What lifts it above a standard flag hotel is the setting and the staff, who are warm in a distinctly Sri Lankan way.",
+        ],
+        image: {
+          src: "/hotels/weligama/1.jpeg",
+          caption: "The open-sided lobby, framing the bay",
+        },
+      },
+      {
+        heading: "Days by the Water",
+        body: [
+          "The centrepiece is the dark, mirror-tiled infinity pool that reaches out toward the sand so that the water seems to pour into the sea beyond. It is long enough for actual laps, shallow enough at one end for children, and lined with loungers that stay comfortable even at midday.",
+          "Below it, the beach is the real draw. The house reef keeps the bay gentle, which is exactly why the surf schools set up here, and you can walk straight off the property onto the sand. Spend a morning taking a lesson, dry off by the pool, and you have the whole rhythm of a Weligama day.",
+        ],
+        image: {
+          src: "/hotels/weligama/2.jpeg",
+          caption: "The mirror-black infinity pool, running to the beach",
+        },
+      },
+      {
+        heading: "After Dark",
+        body: [
+          "In the evening the resort softens and glows. The pool turns a deep lit blue, a fire bowl is lit beside the loungers, and the whole terrace takes on the feel of a beach club without the noise. Dinner tends to be relaxed and generous, heavy on Sri Lankan curries and just-landed seafood, and there is always somewhere to take a cocktail and listen to the surf you were riding a few hours earlier.",
+        ],
+        image: {
+          src: "/hotels/weligama/3.jpeg",
+          caption: "The pool and fire bowl after sunset",
+        },
+      },
+      {
+        heading: "Golden Hour on the Lawn",
+        body: [
+          "The best hour of the day happens on the lawn between the resort and the sea. Old pandanus and coconut trees lean over rows of loungers, festoon lights come on as the sky turns peach and lilac, and everyone drifts down to watch the last surfers head in. It is the kind of unhurried, end-of-day scene that makes you extend your stay by a night, then another.",
+        ],
+        image: {
+          src: "/hotels/weligama/4.jpeg",
+          caption: "Sunset over the seafront lawn",
+        },
       },
       {
         heading: "The Verdict",
         body: [
-          "Not the most characterful stay on the island, but one of the most practical and comfortable bases for the south coast. Use it to surf, eat, and slow right down.",
+          "Not the most characterful stay on the island, but one of the most practical and comfortable bases for the south coast, and a genuinely lovely one at that. Come to surf, eat well, watch whales off Mirissa, and slow right down with the bay laid out in front of you.",
         ],
       },
     ],
