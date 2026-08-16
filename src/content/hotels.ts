@@ -95,8 +95,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 1400,
     year: "July 2026",
-    heroImage: U("1502602898657-3e91760cbb34", 2000),
-    cardImage: U("1502602898657-3e91760cbb34", 1000),
+    heroImage: "/hotels/the-ritz-paris.jpg",
+    cardImage: "/hotels/the-ritz-paris.jpg",
     standout:
       "A negroni at Bar Hemingway, where Colin Field still mixes the best martini in Europe under a ceiling of framed photographs.",
     quickFacts: [
@@ -141,8 +141,8 @@ export const hotels: Hotel[] = [
     rating: 4.5,
     priceFrom: 520,
     year: "June 2026",
-    heroImage: U("1564501049412-61c2a3083791", 2000),
-    cardImage: U("1564501049412-61c2a3083791", 1000),
+    heroImage: "/hotels/marina-bay-sands.jpg",
+    cardImage: "/hotels/marina-bay-sands.jpg",
     standout:
       "Floating at the edge of the 150-metre SkyPark infinity pool at dusk, with the whole Singapore skyline lit up below your chin.",
     quickFacts: [
@@ -187,8 +187,8 @@ export const hotels: Hotel[] = [
     rating: 4.4,
     priceFrom: 1600,
     year: "May 2026",
-    heroImage: U("1540541338287-41700207dee6", 2000),
-    cardImage: U("1540541338287-41700207dee6", 1000),
+    heroImage: "/hotels/burj-al-arab.jpg",
+    cardImage: "/hotels/burj-al-arab.jpg",
     standout:
       "Arriving by chauffeured Rolls-Royce across the private bridge, then riding up to a duplex suite with a butler on call around the clock.",
     quickFacts: [
@@ -224,8 +224,8 @@ export const hotels: Hotel[] = [
     rating: 4.7,
     priceFrom: 750,
     year: "April 2026",
-    heroImage: U("1512918728675-ed5a9ecdebfd", 2000),
-    cardImage: U("1512918728675-ed5a9ecdebfd", 1000),
+    heroImage: "/hotels/la-mamounia.jpg",
+    cardImage: "/hotels/la-mamounia.jpg",
     standout:
       "Mint tea in the old gardens at golden hour, orange blossom in the air and the Koutoubia minaret glowing pink beyond the palms.",
     quickFacts: [
@@ -263,8 +263,8 @@ export const hotels: Hotel[] = [
     rating: 4.3,
     priceFrom: 895,
     year: "March 2026",
-    heroImage: U("1445019980597-93fa8acb246c", 2000),
-    cardImage: U("1445019980597-93fa8acb246c", 1000),
+    heroImage: "/hotels/the-plaza-new-york.jpg",
+    cardImage: "/hotels/the-plaza-new-york.jpg",
     standout:
       "Afternoon tea in the Palm Court under the restored stained-glass ceiling, a New York ritual that has survived a full century.",
     quickFacts: [
@@ -341,8 +341,8 @@ export const hotels: Hotel[] = [
     priceFrom: 2100,
     priceNote: "all-inclusive",
     year: "July 2026",
-    heroImage: U("1516426122078-c23e76319801", 2000),
-    cardImage: U("1516426122078-c23e76319801", 1000),
+    heroImage: "/hotels/singita-sabi-sand.jpg",
+    cardImage: "/hotels/singita-sabi-sand.jpg",
     standout:
       "A leopard sighting at dawn from an open Land Cruiser, then breakfast in the bush as the reserve wakes up around you.",
     quickFacts: [
@@ -379,8 +379,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 1450,
     year: "August 2026",
-    heroImage: U("1523805009345-7448845a9e53", 2000),
-    cardImage: U("1523805009345-7448845a9e53", 1000),
+    heroImage: "/hotels/hotel-cipriani-venice.jpg",
+    cardImage: "/hotels/hotel-cipriani-venice.jpg",
     standout:
       "Crossing the lagoon at dusk on the hotel's private teak launch, the domes of San Marco turning gold as the city lights come up behind you.",
     quickFacts: [
@@ -425,8 +425,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 990,
     year: "July 2026",
-    heroImage: U("1513635269975-59663e0ac1ad", 2000),
-    cardImage: U("1513635269975-59663e0ac1ad", 1000),
+    heroImage: "/hotels/claridges-london.jpg",
+    cardImage: "/hotels/claridges-london.jpg",
     standout:
       "Tea beneath the shimmering Chihuly chandelier in the foyer, a pianist playing, while three generations of a family celebrate something they won't explain.",
     quickFacts: [
@@ -464,8 +464,8 @@ export const hotels: Hotel[] = [
     priceFrom: 1800,
     priceNote: "high season",
     year: "June 2026",
-    heroImage: U("1551882547-ff40c63fe5fa", 2000),
-    cardImage: U("1551882547-ff40c63fe5fa", 1000),
+    heroImage: "/hotels/hotel-du-cap-eden-roc.jpg",
+    cardImage: "/hotels/hotel-du-cap-eden-roc.jpg",
     standout:
       "A negroni on the Eden-Roc terrace at the exact hour the Mediterranean turns from turquoise to ink, cicadas roaring in the pines behind you.",
     quickFacts: [
@@ -503,8 +503,8 @@ export const hotels: Hotel[] = [
     rating: 4.6,
     priceFrom: 1250,
     year: "January 2026",
-    heroImage: U("1501785888041-af3ef285b470", 2000),
-    cardImage: U("1501785888041-af3ef285b470", 1000),
+    heroImage: "/hotels/badrutts-palace-st-moritz.jpg",
+    cardImage: "/hotels/badrutts-palace-st-moritz.jpg",
     standout:
       "Skiing back to the door as the alpenglow turns the Engadine peaks rose-pink, then thawing out by the fire in the Renaissance Bar with a glass of something Swiss and expensive.",
     quickFacts: [
@@ -541,8 +541,8 @@ export const hotels: Hotel[] = [
     rating: 4.7,
     priceFrom: 780,
     year: "May 2026",
-    heroImage: U("1542314831-068cd1dbfeeb", 2000),
-    cardImage: U("1542314831-068cd1dbfeeb", 1000),
+    heroImage: "/hotels/peninsula-hong-kong.jpg",
+    cardImage: "/hotels/peninsula-hong-kong.jpg",
     standout:
       "Afternoon tea in the gilded lobby as a string quartet plays on the mezzanine, a colonial-era ritual Hong Kong has somehow kept alive through everything.",
     quickFacts: [
@@ -580,8 +580,8 @@ export const hotels: Hotel[] = [
     priceFrom: 2200,
     priceNote: "villa, full board",
     year: "April 2026",
-    heroImage: U("1439066615861-d1af74d74000", 2000),
-    cardImage: U("1439066615861-d1af74d74000", 1000),
+    heroImage: "/hotels/soneva-fushi-maldives.jpg",
+    cardImage: "/hotels/soneva-fushi-maldives.jpg",
     standout:
       "Snorkelling straight off your villa's stretch of house reef at dawn, then eating breakfast with your feet in the sand while a manta ray glides past the jetty.",
     quickFacts: [
@@ -619,8 +619,8 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     priceFrom: 900,
     year: "March 2026",
-    heroImage: U("1596436889106-be35e843f974", 2000),
-    cardImage: U("1596436889106-be35e843f974", 1000),
+    heroImage: "/hotels/oberoi-udaivilas-udaipur.jpg",
+    cardImage: "/hotels/oberoi-udaivilas-udaipur.jpg",
     standout:
       "Being rowed across Lake Pichola to dinner as the City Palace lights come on and the domes of Udaivilas glow behind you like something out of a dream.",
     quickFacts: [
@@ -658,8 +658,8 @@ export const hotels: Hotel[] = [
     rating: 4.6,
     priceFrom: 720,
     year: "February 2026",
-    heroImage: U("1618773928121-c32242e63f39", 2000),
-    cardImage: U("1618773928121-c32242e63f39", 1000),
+    heroImage: "/hotels/park-hyatt-tokyo.jpg",
+    cardImage: "/hotels/park-hyatt-tokyo.jpg",
     standout:
       "A Suntory whisky in the New York Bar as the pianist plays and Tokyo spreads out fifty-two floors below, the exact frame Sofia Coppola made famous.",
     quickFacts: [
@@ -697,8 +697,8 @@ export const hotels: Hotel[] = [
     priceFrom: 3400,
     priceNote: "suite",
     year: "August 2026",
-    heroImage: U("1544644181-1484b3fdfc62", 2000),
-    cardImage: U("1544644181-1484b3fdfc62", 1000),
+    heroImage: "/hotels/amangiri-utah.jpg",
+    cardImage: "/hotels/amangiri-utah.jpg",
     standout:
       "Floating in the central pool at dawn, wrapped around a wall of ancient sandstone, with nothing but silence and 900 square miles of empty desert in every direction.",
     quickFacts: [
@@ -736,8 +736,8 @@ export const hotels: Hotel[] = [
     rating: 4.4,
     priceFrom: 850,
     year: "July 2026",
-    heroImage: U("1571003123894-1f0594d2b5d9", 2000),
-    cardImage: U("1571003123894-1f0594d2b5d9", 1000),
+    heroImage: "/hotels/beverly-hills-hotel.jpg",
+    cardImage: "/hotels/beverly-hills-hotel.jpg",
     standout:
       "A Cobb salad in a green-leather booth at the Polo Lounge, watching an agent and a director pretend they aren't making a deal three tables over.",
     quickFacts: [
@@ -775,8 +775,8 @@ export const hotels: Hotel[] = [
     priceFrom: 1975,
     priceNote: "full board, all-inclusive",
     year: "September 2026",
-    heroImage: U("1470071459604-3b5ec3a7fe05", 2000),
-    cardImage: U("1470071459604-3b5ec3a7fe05", 1000),
+    heroImage: "/hotels/fogo-island-inn.jpg",
+    cardImage: "/hotels/fogo-island-inn.jpg",
     standout:
       "Watching an iceberg drift past your floor-to-ceiling window from a wood-fired sauna on the rocks, the North Atlantic crashing a few metres below.",
     quickFacts: [
@@ -891,8 +891,8 @@ export const hotels: Hotel[] = [
     priceFrom: 1450,
     priceNote: "full board",
     year: "October 2026",
-    heroImage: U("1549294413-26f195200c16", 2000),
-    cardImage: U("1549294413-26f195200c16", 1000),
+    heroImage: "/hotels/giraffe-manor-nairobi.jpg",
+    cardImage: "/hotels/giraffe-manor-nairobi.jpg",
     standout:
       "A giraffe's improbably long, dark tongue reaching in through the dining-room window to take a pellet from your palm, its eyelashes almost comically enormous.",
     quickFacts: [
@@ -930,8 +930,8 @@ export const hotels: Hotel[] = [
     rating: 4.6,
     priceFrom: 300,
     year: "January 2026",
-    heroImage: U("1548574505-5e239809ee19", 2000),
-    cardImage: U("1548574505-5e239809ee19", 1000),
+    heroImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
+    cardImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
     standout:
       "A butler lighting the wood stove in your room while fresh snow piles up on the balcony and the Pir Panjal range glows in the last of the light.",
     quickFacts: [
@@ -1046,8 +1046,8 @@ export const hotels: Hotel[] = [
     priceFrom: 320,
     priceNote: "full board",
     year: "April 2026",
-    heroImage: U("1516426122078-c23e76319801", 2000),
-    cardImage: U("1516426122078-c23e76319801", 1000),
+    heroImage: "/hotels/pashan-garh-taj-safari.jpeg",
+    cardImage: "/hotels/pashan-garh-taj-safari.jpeg",
     standout:
       "Coming back from a dawn drive to breakfast on your private stone terrace, the valley below still full of birdsong and mist.",
     quickFacts: [
@@ -1238,8 +1238,8 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     priceFrom: 480,
     year: "March 2026",
-    heroImage: U("1512343879784-a960bf40e7f2", 2000),
-    cardImage: U("1512343879784-a960bf40e7f2", 1000),
+    heroImage: "/hotels/rambagh-palace-jaipur.jpg",
+    cardImage: "/hotels/rambagh-palace-jaipur.jpg",
     standout:
       "Afternoon tea in the Verandah Cafe as peacocks strut across the manicured lawns and a sitar player tunes up somewhere out of sight.",
     quickFacts: [
@@ -1277,8 +1277,8 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     priceFrom: 650,
     year: "April 2026",
-    heroImage: U("1470114716159-e389f8712fda", 2000),
-    cardImage: U("1470114716159-e389f8712fda", 1000),
+    heroImage: "/hotels/umaid-bhawan-jodhpur.jpg",
+    cardImage: "/hotels/umaid-bhawan-jodhpur.jpg",
     standout:
       "Standing under the great central dome at dusk, the sandstone glowing gold, knowing the Maharaja of Jodhpur is quite possibly at home in the wing next door.",
     quickFacts: [
@@ -1315,8 +1315,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 750,
     year: "May 2026",
-    heroImage: U("1584132967334-10e028bd69f7", 2000),
-    cardImage: U("1584132967334-10e028bd69f7", 1000),
+    heroImage: "/hotels/raffles-singapore.jpg",
+    cardImage: "/hotels/raffles-singapore.jpg",
     standout:
       "A Singapore Sling at the Long Bar, ceiling fans turning overhead and peanut shells crunching underfoot, exactly as it has been for over a century.",
     quickFacts: [
@@ -1354,8 +1354,8 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     priceFrom: 1050,
     year: "June 2026",
-    heroImage: U("1518548419970-58e3b4079ab2", 2000),
-    cardImage: U("1518548419970-58e3b4079ab2", 1000),
+    heroImage: "/hotels/amankila-bali.jpg",
+    cardImage: "/hotels/amankila-bali.jpg",
     standout:
       "The three-tiered infinity pool at dawn, each level spilling into the next and the whole thing seeming to pour off the cliff into the Lombok Strait.",
     quickFacts: [
@@ -1431,8 +1431,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 700,
     year: "July 2026",
-    heroImage: U("1578662996442-48f60103fc96", 2000),
-    cardImage: U("1578662996442-48f60103fc96", 1000),
+    heroImage: "/hotels/the-datai-langkawi.jpg",
+    cardImage: "/hotels/the-datai-langkawi.jpg",
     standout:
       "A resident naturalist pointing out a great hornbill in the canopy on the walk to breakfast, then that first sight of the empty, jungle-fringed beach.",
     quickFacts: [
@@ -1470,8 +1470,8 @@ export const hotels: Hotel[] = [
     priceFrom: 1400,
     priceNote: "villa, full board",
     year: "August 2026",
-    heroImage: U("1455587734955-081b22074882", 2000),
-    cardImage: U("1455587734955-081b22074882", 1000),
+    heroImage: "/hotels/nihi-sumba.jpg",
+    cardImage: "/hotels/nihi-sumba.jpg",
     standout:
       "Riding a horse bareback along the surf at dawn on an empty two-mile beach, the island's wild interior rising green and untouched behind you.",
     quickFacts: [
@@ -1509,8 +1509,8 @@ export const hotels: Hotel[] = [
     rating: 4.7,
     priceFrom: 800,
     year: "July 2026",
-    heroImage: U("1520454974749-611b7248ffdb", 2000),
-    cardImage: U("1520454974749-611b7248ffdb", 1000),
+    heroImage: "/hotels/the-savoy-london.jpg",
+    cardImage: "/hotels/the-savoy-london.jpg",
     standout:
       "A martini at the American Bar as the pianist plays, then a two-minute walk to a curtain-up in Covent Garden.",
     quickFacts: [
@@ -1547,8 +1547,8 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     priceFrom: 950,
     year: "August 2026",
-    heroImage: U("1523805009345-7448845a9e53", 2000),
-    cardImage: U("1523805009345-7448845a9e53", 1000),
+    heroImage: "/hotels/gritti-palace-venice.jpg",
+    cardImage: "/hotels/gritti-palace-venice.jpg",
     standout:
       "A Bellini on the canal-side terrace at golden hour, watching gondolas glide past the great dome of the Salute directly opposite.",
     quickFacts: [
@@ -1585,8 +1585,8 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     priceFrom: 1600,
     year: "July 2026",
-    heroImage: U("1573790387438-4da905039392", 2000),
-    cardImage: U("1573790387438-4da905039392", 1000),
+    heroImage: "/hotels/four-seasons-george-v-paris.jpg",
+    cardImage: "/hotels/four-seasons-george-v-paris.jpg",
     standout:
       "Walking into the marble courtyard to find another impossible, room-height floral installation, different every fortnight and worth a detour on its own.",
     quickFacts: [
