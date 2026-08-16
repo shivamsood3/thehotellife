@@ -22,6 +22,7 @@ import Link from "next/link";
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
 const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
+const NIKHAAR_URL = process.env.NEXT_PUBLIC_NIKHAAR_URL ?? "https://www.nikhaarfoundation.org";
 
 type AdSenseProps = {
   slot?: string;
@@ -86,31 +87,64 @@ export function HacocoBanner() {
   );
 }
 
-/** Sticky side skyscraper - house creative for The AntiAlias. Desktop only. */
+/**
+ * Side rail of direct-sold house banners (desktop only). Scrolls with the page
+ * rather than sticking, so every banner in the stack is reachable no matter how
+ * many we add. New banners: drop a creative in /public/ads and add a <RailAd/>.
+ */
+function RailAd({
+  href,
+  src,
+  alt,
+  width,
+  height,
+}: {
+  href: string;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      className="group block"
+      aria-label={`Advertisement - ${alt}`}
+    >
+      <div className="overflow-hidden rounded-sm">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className="block h-auto w-[300px] transition-opacity group-hover:opacity-90"
+        />
+      </div>
+    </Link>
+  );
+}
+
 export function AntialiasRail() {
   return (
     <aside className="hidden xl:block w-[300px] shrink-0 py-10">
-      <div className="sticky top-28 space-y-6">
-        <Link
+      <div className="space-y-6">
+        <RailAd
           href={ANTIALIAS_URL}
-          target="_blank"
-          rel="sponsored noopener noreferrer"
-          className="group block"
-          aria-label="Advertisement - The AntiAlias"
-        >
-          <div className="overflow-hidden rounded-sm">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/ads/antialias-skyscraper.svg"
-              alt="The AntiAlias - a design & brand studio"
-              width={300}
-              height={600}
-              className="block h-auto w-[300px] transition-opacity group-hover:opacity-90"
-            />
-          </div>
-        </Link>
-        {/* Secondary AdSense rectangle below the direct-sold unit */}
-        <AdSense format="rectangle" slot="0000000001" />
+          src="/ads/antialias-skyscraper.svg"
+          alt="The AntiAlias - a design & brand studio"
+          width={300}
+          height={600}
+        />
+        <RailAd
+          href={NIKHAAR_URL}
+          src="/ads/nikhaar-foundation.svg"
+          alt="Nikhaar Foundation"
+          width={300}
+          height={420}
+        />
       </div>
     </aside>
   );

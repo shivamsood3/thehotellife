@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="420" viewBox="0 0 300 420" role="img" aria-label="Nikhaar Foundation - water, clean air and education for Delhi's children">
+  <defs>
+    <linearGradient id="nkbg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#0b4a43"/>
+      <stop offset="1" stop-color="#08403b"/>
+    </linearGradient>
+    <linearGradient id="nkterra" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d98a3d"/>
+      <stop offset="1" stop-color="#c07a2c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="300" height="420" fill="url(#nkbg)"/>
+  <rect x="0.5" y="0.5" width="299" height="419" fill="none" stroke="#0d5c55" stroke-width="1"/>
+
+  <!-- sprout / leaf emblem -->
+  <g transform="translate(34 44)">
+    <path d="M0 34 C 0 14, 16 2, 34 0 C 32 20, 18 32, 0 34 Z" fill="url(#nkterra)"/>
+    <path d="M6 40 C 8 24, 20 14, 34 12" fill="none" stroke="#efeade" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="34" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="1" fill="#f7ecdd">Nikhaar</text>
+  <text x="34" y="150" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="5" fill="#9ec4bd">FOUNDATION</text>
+  <rect x="34" y="166" width="44" height="2" fill="url(#nkterra)"/>
+
+  <!-- Message -->
+  <text x="34" y="222" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#f7ecdd">Clean water.</text>
+  <text x="34" y="250" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#f7ecdd">Cleaner air.</text>
+  <text x="34" y="278" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-style="italic" fill="#e6a765">Brighter futures.</text>
+
+  <!-- Subcopy -->
+  <text x="34" y="322" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#c7ddd8">Supporting Delhi's children through</text>
+  <text x="34" y="340" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#c7ddd8">education, water and clean air.</text>
+
+  <!-- CTA -->
+  <g transform="translate(34 362)">
+    <rect x="0" y="0" width="176" height="40" rx="20" fill="url(#nkterra)"/>
+    <text x="88" y="26" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#08403b">SUPPORT OUR WORK &#8594;</text>
+  </g>
+</svg>

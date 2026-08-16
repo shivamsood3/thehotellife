@@ -66,7 +66,22 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-paper/15 pt-8 text-xs text-paper/50 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} The Hotel Life. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/thehotellifeofficial/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="The Hotel Life on Instagram"
+              className="text-paper/60 transition-colors hover:text-brass"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" strokeWidth="1.6" />
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.6" />
+                <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" />
+              </svg>
+            </a>
+            <p>© {new Date().getFullYear()} The Hotel Life. All rights reserved.</p>
+          </div>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-paper">Privacy</Link>
             <Link href="/terms" className="hover:text-paper">Terms</Link>

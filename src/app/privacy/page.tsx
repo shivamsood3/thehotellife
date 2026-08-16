@@ -62,14 +62,31 @@ export default function Privacy() {
         <p>
           You can unsubscribe from our newsletter at any time using the link in every email,
           and you may ask us to access or delete the personal data we hold about you by
-          emailing <strong>hello@thehotellife.com</strong>. Depending on where you live, you
-          may have additional rights under laws such as the GDPR or CCPA.
+          messaging us on WhatsApp at{" "}
+          <a
+            href="https://wa.me/919810254606"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brass-deep hover:underline"
+          >
+            +91 98102 54606
+          </a>
+          . Depending on where you live, you may have additional rights under laws such as
+          the GDPR or CCPA.
         </p>
 
         <h2>Contact</h2>
         <p>
-          Questions about this policy? Write to us at{" "}
-          <strong>hello@thehotellife.com</strong> and we&apos;ll be glad to help.
+          Questions about this policy? Message us on WhatsApp at{" "}
+          <a
+            href="https://wa.me/919810254606"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brass-deep hover:underline"
+          >
+            +91 98102 54606
+          </a>{" "}
+          and we&apos;ll be glad to help.
         </p>
       </div>
     </div>

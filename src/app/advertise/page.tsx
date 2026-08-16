@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "480K", label: "Monthly readers" },
-  { value: "40K", label: "Newsletter subscribers" },
+  { value: "100K", label: "Monthly visitors" },
+  { value: "20K", label: "Newsletter subscribers" },
   { value: "3:40", label: "Avg. time on page" },
-  { value: "68%", label: "Book travel within 30 days" },
+  { value: "52%", label: "Repeat visitors book within 30 days" },
 ];
 
 const formats = [
@@ -45,7 +45,7 @@ const formats = [
   {
     name: "Newsletter Sponsorship",
     partner: "The Concierge, weekly",
-    spec: "40K opt-in subscribers · 52% open rate",
+    spec: "20K opt-in subscribers · 52% open rate",
     body: "A dedicated placement in our Sunday edition, in front of an engaged, high-spending travel audience that asked to hear from us.",
     price: "from $1,800 / send",
   },
@@ -121,14 +121,19 @@ export default function Advertise() {
           Request the full media kit
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
-          Tell us about your brand and campaign, and we&apos;ll send audience data, rates and
-          availability within 48 hours.
+          Message us on WhatsApp with a note about your brand and campaign, and we&apos;ll
+          send audience data, rates and availability within 48 hours.
         </p>
         <a
-          href="mailto:partners@thehotellife.com?subject=Media%20Kit%20Request"
-          className="mt-6 inline-block rounded-full bg-ink px-8 py-3 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
+          href="https://wa.me/919810254606?text=Hi%2C%20I%27d%20like%20the%20full%20media%20kit%20for%20The%20Hotel%20Life."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
         >
-          partners@thehotellife.com
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.35-.5.05-1.13.26-3.8-.79-3.2-1.26-5.24-4.53-5.4-4.74-.16-.21-1.29-1.71-1.29-3.27 0-1.55.81-2.31 1.1-2.63.29-.32.63-.4.84-.4.21 0 .42 0 .6.01.19.01.45-.07.71.54.26.61.89 2.16.97 2.32.08.16.13.34.03.55-.11.21-.16.34-.32.53-.16.19-.34.42-.48.57-.16.16-.33.34-.14.66.19.32.85 1.4 1.83 2.27 1.26 1.12 2.32 1.47 2.64 1.63.32.16.5.13.69-.08.19-.21.79-.92.99-1.23.21-.32.42-.26.71-.16.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.14.08.79-.16 1.47Z" />
+          </svg>
+          Message us on WhatsApp
         </a>
       </section>
     </div>

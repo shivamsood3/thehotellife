@@ -69,7 +69,16 @@ export default function Terms() {
 
         <h2>Contact</h2>
         <p>
-          Questions? Reach us at <strong>hello@thehotellife.com</strong>.
+          Questions? Message us on WhatsApp at{" "}
+          <a
+            href="https://wa.me/919810254606"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-brass-deep hover:underline"
+          >
+            +91 98102 54606
+          </a>
+          .
         </p>
       </div>
     </div>
