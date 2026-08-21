@@ -6,6 +6,9 @@ import { hotels, getHotel, getRelated } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import { affiliateBookingUrl } from "@/lib/affiliate";
+import ShareWhatsApp from "@/components/ShareWhatsApp";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
 
 export function generateStaticParams() {
   return hotels.map((h) => ({ slug: h.slug }));
@@ -75,6 +78,11 @@ export default async function HotelPage({
           {hotel.priceNote ? ` / night · ${hotel.priceNote}` : " / night"}
         </span>
         <span className="text-sm text-ink-muted">Reviewed {hotel.year}</span>
+        <ShareWhatsApp
+          url={`${SITE_URL}/hotels/${hotel.slug}`}
+          title={`${hotel.name}, ${hotel.city}`}
+          className="sm:ml-auto"
+        />
       </div>
 
       {/* ===== BODY + SIDEBAR ===== */}

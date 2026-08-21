@@ -7,6 +7,9 @@ import { getHotel } from "@/content/hotels";
 import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
 import { affiliateBookingUrl } from "@/lib/affiliate";
+import ShareWhatsApp from "@/components/ShareWhatsApp";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -59,6 +62,11 @@ export default async function GuidePage({
         <span>By {guide.author}</span>
         <span>{guide.readTime} min read</span>
         <span>{guide.date}</span>
+        <ShareWhatsApp
+          url={`${SITE_URL}/guides/${guide.slug}`}
+          title={guide.title}
+          className="sm:ml-auto"
+        />
       </div>
 
       {/* Body */}
