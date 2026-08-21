@@ -138,6 +138,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "marina-bay-sands",
+    bookingUrl: "https://www.booking.com/hotel/sg/marina-bay-sands.html",
     name: "Marina Bay Sands",
     city: "Singapore",
     country: "Singapore",
@@ -298,6 +299,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "belmond-hotel-caruso",
+    bookingUrl: "https://www.booking.com/hotel/it/caruso.html",
     name: "Belmond Hotel Caruso",
     city: "Ravello",
     country: "Italy",
@@ -376,6 +378,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "hotel-cipriani-venice",
+    bookingUrl: "https://www.booking.com/hotel/it/cipriani-venezia.html",
     name: "Belmond Hotel Cipriani",
     city: "Venice",
     country: "Italy",
@@ -422,6 +425,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "claridges-london",
+    bookingUrl: "https://www.booking.com/hotel/gb/claridge-s.html",
     name: "Claridge's",
     city: "London",
     country: "United Kingdom",
@@ -500,6 +504,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "badrutts-palace-st-moritz",
+    bookingUrl: "https://www.booking.com/hotel/ch/badrutt-s-palace-st-moritz.html",
     name: "Badrutt's Palace",
     city: "St. Moritz",
     country: "Switzerland",
@@ -538,6 +543,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "peninsula-hong-kong",
+    bookingUrl: "https://www.booking.com/hotel/hk/the-peninsula-hong-kong.html",
     name: "The Peninsula Hong Kong",
     city: "Hong Kong",
     country: "Hong Kong SAR",
@@ -576,6 +582,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "soneva-fushi-maldives",
+    bookingUrl: "https://www.booking.com/hotel/mv/soneva-fushi.html",
     name: "Soneva Fushi",
     city: "Baa Atoll",
     country: "Maldives",
@@ -616,6 +623,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "oberoi-udaivilas-udaipur",
+    bookingUrl: "https://www.booking.com/hotel/in/the-oberoi-udaivilas.html",
     name: "The Oberoi Udaivilas",
     city: "Udaipur",
     country: "India",
@@ -655,6 +663,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "park-hyatt-tokyo",
+    bookingUrl: "https://www.booking.com/hotel/jp/park-hyatt-tokyo.html",
     name: "Park Hyatt Tokyo",
     city: "Tokyo",
     country: "Japan",
@@ -810,6 +819,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "explora-patagonia",
+    bookingUrl: "https://www.booking.com/hotel/cl/explora-torres-del-paine-conservation-reserve.html",
     name: "Explora Patagonia",
     city: "Torres del Paine",
     country: "Chile",
@@ -849,6 +859,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "one-and-only-cape-town",
+    bookingUrl: "https://www.booking.com/hotel/za/one-only-cape-town.html",
     name: "One&Only Cape Town",
     city: "Cape Town",
     country: "South Africa",
@@ -927,6 +938,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "khyber-himalayan-gulmarg",
+    bookingUrl: "https://www.booking.com/hotel/in/khyber-mountain-resort-and-spa.html",
     name: "The Khyber Himalayan Resort & Spa",
     city: "Gulmarg",
     country: "India",
@@ -966,6 +978,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "weligama-bay-marriott",
+    bookingUrl: "https://www.booking.com/hotel/lk/weligama-bay-marriott-resort-spa.html",
     name: "Weligama Bay Marriott Resort & Spa",
     city: "Weligama",
     country: "Sri Lanka",
@@ -1046,6 +1059,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "jai-mahal-palace-jaipur",
+    bookingUrl: "https://www.booking.com/hotel/in/jaimahal-palace.html",
     name: "Jai Mahal Palace",
     city: "Jaipur",
     country: "India",
@@ -1084,6 +1098,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "pashan-garh-taj-safari",
+    bookingUrl: "https://www.booking.com/hotel/in/pashangarh-panna-national-park.html",
     name: "Pashan Garh, A Taj Safari",
     city: "Panna",
     country: "India",
@@ -1123,6 +1138,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "oberoi-new-delhi",
+    bookingUrl: "https://www.booking.com/hotel/in/the-oberoi-new-delhi.html",
     name: "The Oberoi, New Delhi",
     city: "New Delhi",
     country: "India",
@@ -1161,6 +1177,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "w-goa",
+    bookingUrl: "https://www.booking.com/hotel/in/w-retreat-spa-goa.html",
     name: "W Goa",
     city: "Goa",
     country: "India",
@@ -1199,6 +1216,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "w-koh-samui",
+    bookingUrl: "https://www.booking.com/hotel/th/w-retreat-koh-samui.html",
     name: "W Koh Samui",
     city: "Koh Samui",
     country: "Thailand",
@@ -1239,6 +1257,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "stay-wellbeing-phuket",
+    bookingUrl: "https://www.booking.com/hotel/th/stay-well-being-amp-lifestyle-resort.html",
     name: "STAY Wellbeing & Lifestyle Resort",
     city: "Phuket",
     country: "Thailand",
@@ -1277,6 +1296,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "rambagh-palace-jaipur",
+    bookingUrl: "https://www.booking.com/hotel/in/rambagh-palace.html",
     name: "Rambagh Palace",
     city: "Jaipur",
     country: "India",
@@ -1316,6 +1336,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "umaid-bhawan-jodhpur",
+    bookingUrl: "https://www.booking.com/hotel/in/umaid-bhawan-place.html",
     name: "Umaid Bhawan Palace",
     city: "Jodhpur",
     country: "India",
@@ -1354,6 +1375,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "raffles-singapore",
+    bookingUrl: "https://www.booking.com/hotel/sg/raffles.html",
     name: "Raffles Singapore",
     city: "Singapore",
     country: "Singapore",
@@ -1432,6 +1454,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "four-seasons-bali-sayan",
+    bookingUrl: "https://www.booking.com/hotel/id/four-seasons-resort-bali-at-sayan.html",
     name: "Four Seasons Resort Bali at Sayan",
     city: "Ubud",
     country: "Indonesia",
@@ -1470,6 +1493,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "the-datai-langkawi",
+    bookingUrl: "https://www.booking.com/hotel/my/datai.html",
     name: "The Datai Langkawi",
     city: "Langkawi",
     country: "Malaysia",
@@ -1508,6 +1532,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "nihi-sumba",
+    bookingUrl: "https://www.booking.com/hotel/id/nihi-sumba.html",
     name: "Nihi Sumba",
     city: "Sumba",
     country: "Indonesia",
@@ -1586,6 +1611,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "gritti-palace-venice",
+    bookingUrl: "https://www.booking.com/hotel/it/gritti-palace.html",
     name: "The Gritti Palace",
     city: "Venice",
     country: "Italy",
@@ -1624,6 +1650,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "four-seasons-george-v-paris",
+    bookingUrl: "https://www.booking.com/hotel/fr/four-seasons-george-v-paris.html",
     name: "Four Seasons Hotel George V",
     city: "Paris",
     country: "France",
@@ -1738,6 +1765,7 @@ export const hotels: Hotel[] = [
   },
   {
     slug: "hopewell-hotel-hong-kong",
+    bookingUrl: "https://www.booking.com/hotel/hk/hopewell.html",
     name: "Hopewell Hotel",
     city: "Hong Kong",
     country: "China",

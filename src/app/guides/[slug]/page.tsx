@@ -47,10 +47,10 @@ export default async function GuidePage({
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image src={guide.heroImage} alt={guide.title} fill priority className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
+          <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-            <span className="eyebrow text-brass">{guide.destination}</span>
-            <h1 className="font-display mt-3 max-w-4xl text-3xl font-medium leading-[1.1] text-white sm:text-5xl">
+            <span className="eyebrow eyebrow-hero">{guide.destination}</span>
+            <h1 className="hero-text font-display mt-3 max-w-4xl text-3xl font-medium leading-[1.1] text-white sm:text-5xl">
               {guide.title}
             </h1>
           </div>

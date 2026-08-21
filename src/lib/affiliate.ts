@@ -31,31 +31,44 @@ import type { Hotel } from "@/content/hotels";
 const DEEPLINK_BASE = process.env.NEXT_PUBLIC_BOOKING_DEEPLINK_BASE ?? "";
 const SID_PREFIX = process.env.NEXT_PUBLIC_BOOKING_SID ?? "thehotellife";
 
-/** The plain Booking.com destination for a hotel (before CJ wrapping). */
-export function bookingDestination(hotel: Hotel): string {
-  if (hotel.bookingUrl) return hotel.bookingUrl;
+/** Plain Booking.com search for a hotel, used when it has no property page. */
+function bookingSearch(hotel: Hotel): string {
   const query = encodeURIComponent(`${hotel.name} ${hotel.city}`);
   return `https://www.booking.com/searchresults.html?ss=${query}`;
 }
 
 /**
- * The click-through URL for the "Check Availability" button: the CJ
- * tracking link when configured, otherwise the plain destination.
+ * The click-through for "Check Availability".
+ *
+ * Important: Booking.com's CJ programme strips the query string from the
+ * destination, so a wrapped search URL (?ss=...) arrives as an empty search
+ * page. Only path-based property URLs survive the redirect. Therefore:
+ *
+ *   - hotel.bookingUrl set  -> wrap it in CJ. Tracked, earns commission.
+ *   - no bookingUrl         -> link straight to a Booking.com search. Not
+ *                              tracked, but it actually shows the hotel,
+ *                              which beats dumping the reader on a blank page.
+ *
+ * `bookingUrl` is only filled in for hotels verified to exist on
+ * Booking.com; several (Aman, Ritz Paris, Singita, Amangiri and other
+ * direct-only properties) are not listed there at all.
  */
 export function affiliateBookingUrl(hotel: Hotel): string {
-  const dest = bookingDestination(hotel);
-  if (!DEEPLINK_BASE) return dest;
+  if (!hotel.bookingUrl) return bookingSearch(hotel);
+  if (!DEEPLINK_BASE) return hotel.bookingUrl;
 
   const sid = `${SID_PREFIX}-${hotel.slug}`;
   if (DEEPLINK_BASE.includes("{url}")) {
     return DEEPLINK_BASE.replace("{sid}", encodeURIComponent(sid)).replace(
       "{url}",
-      encodeURIComponent(dest),
+      encodeURIComponent(hotel.bookingUrl),
     );
   }
   // Raw-append form: base ends in a slash and takes the destination as-is.
-  return DEEPLINK_BASE + dest;
+  return DEEPLINK_BASE + hotel.bookingUrl;
 }
 
-/** Whether real affiliate tracking is wired up (for internal checks). */
-export const affiliateEnabled = Boolean(DEEPLINK_BASE);
+/** True when this hotel's link is a tracked, commission-earning link. */
+export function isAffiliateLink(hotel: Hotel): boolean {
+  return Boolean(hotel.bookingUrl && DEEPLINK_BASE);
+}

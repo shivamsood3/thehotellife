@@ -57,10 +57,10 @@ export default async function HotelPage({
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+          <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-            <span className="eyebrow text-brass">{hotel.category}</span>
-            <h1 className="font-display mt-2 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl">
+            <span className="eyebrow eyebrow-hero">{hotel.category}</span>
+            <h1 className="hero-text font-display mt-2 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl">
               {hotel.name}
             </h1>
             <p className="mt-3 text-sm uppercase tracking-widest text-white/80">

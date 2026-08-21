@@ -18,6 +18,7 @@
  * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
 import Link from "next/link";
+import { AntialiasCreative, NikhaarCreative } from "@/components/HouseBanners";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
@@ -94,18 +95,15 @@ export function HacocoBanner() {
  */
 function RailAd({
   href,
-  src,
-  alt,
-  width,
-  height,
-  imgClassName = "w-[300px]",
+  label,
+  ratio,
+  children,
 }: {
   href: string;
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  imgClassName?: string;
+  label: string;
+  /** width / height of the ad slot, keeps space reserved (no layout shift) */
+  ratio: string;
+  children: React.ReactNode;
 }) {
   return (
     <Link
@@ -113,17 +111,13 @@ function RailAd({
       target="_blank"
       rel="sponsored noopener noreferrer"
       className="group block"
-      aria-label={`Advertisement - ${alt}`}
+      aria-label={`Advertisement - ${label}`}
     >
-      <div className="overflow-hidden rounded-sm">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className={`block h-auto transition-opacity group-hover:opacity-90 ${imgClassName}`}
-        />
+      <div
+        className="overflow-hidden rounded-sm shadow-sm transition-opacity group-hover:opacity-95"
+        style={{ aspectRatio: ratio }}
+      >
+        {children}
       </div>
     </Link>
   );
@@ -135,18 +129,18 @@ export function AntialiasRail() {
       <div className="space-y-6">
         <RailAd
           href={ANTIALIAS_URL}
-          src="/ads/antialias-skyscraper.svg"
-          alt="The AntiAlias - a design & brand studio"
-          width={300}
-          height={600}
-        />
+          label="The AntiAlias, a design & brand studio"
+          ratio="300 / 600"
+        >
+          <AntialiasCreative />
+        </RailAd>
         <RailAd
           href={NIKHAAR_URL}
-          src="/ads/nikhaar-foundation.svg"
-          alt="Nikhaar Foundation"
-          width={300}
-          height={420}
-        />
+          label="Nikhaar Foundation"
+          ratio="300 / 420"
+        >
+          <NikhaarCreative />
+        </RailAd>
       </div>
     </aside>
   );
@@ -160,23 +154,21 @@ export function AntialiasRail() {
 export function MobileRail() {
   return (
     <section className="xl:hidden mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10">
-      <div className="mx-auto flex max-w-[360px] flex-col items-center gap-6">
+      <div className="mx-auto flex w-full max-w-[300px] flex-col items-stretch gap-6">
         <RailAd
           href={ANTIALIAS_URL}
-          src="/ads/antialias-skyscraper.svg"
-          alt="The AntiAlias - a design & brand studio"
-          width={300}
-          height={600}
-          imgClassName="w-full max-w-[300px]"
-        />
+          label="The AntiAlias, a design & brand studio"
+          ratio="300 / 600"
+        >
+          <AntialiasCreative />
+        </RailAd>
         <RailAd
           href={NIKHAAR_URL}
-          src="/ads/nikhaar-foundation.svg"
-          alt="Nikhaar Foundation"
-          width={300}
-          height={420}
-          imgClassName="w-full max-w-[300px]"
-        />
+          label="Nikhaar Foundation"
+          ratio="300 / 420"
+        >
+          <NikhaarCreative />
+        </RailAd>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export default function Home() {
     <div className="pb-8">
       {/* ============ HERO ============ */}
       <section className="relative mt-6 overflow-hidden rounded-md">
-        <div className="relative aspect-[3/4] w-full sm:aspect-[16/8] lg:aspect-[16/7]">
+        <div className="relative aspect-[3/4] min-h-[30rem] w-full sm:aspect-[16/8] sm:min-h-[26rem] lg:aspect-[16/7] lg:min-h-[34rem]">
           <Image
             src={hero.heroImage}
             alt={hero.name}
@@ -24,10 +24,10 @@ export default function Home() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
+          <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
-            <span className="eyebrow text-brass">The Hotel Life · Featured Stay</span>
-            <h1 className="font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <span className="eyebrow eyebrow-hero">The Hotel Life · Featured Stay</span>
+            <h1 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               {hero.tagline}
             </h1>
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/85">
@@ -105,7 +105,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 lg:p-16">
-            <span className="eyebrow text-brass">Editor&apos;s Pick</span>
+            <span className="eyebrow eyebrow-hero">Editor&apos;s Pick</span>
             <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl">
               {editorPick.name}
             </h2>
@@ -150,7 +150,7 @@ export default function Home() {
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
+                <div className="hero-scrim absolute inset-0" />
                 <div className="absolute inset-x-0 bottom-0 p-5">
                   <h3 className="font-display text-xl font-medium text-white">{region}</h3>
                   <p className="text-xs uppercase tracking-widest text-white/70">

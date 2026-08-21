@@ -70,6 +70,39 @@ body {
   font-optical-sizing: auto;
 }
 
+/* Hero scrim: keeps white overlay text readable on any photograph.
+   Two stacked gradients - a strong bottom-up wash where the headline sits,
+   plus a gentle left-side darkening for left-aligned text - and a soft
+   text shadow so type stays legible even over bright, busy images. */
+.hero-scrim {
+  background:
+    linear-gradient(
+      to top,
+      rgb(0 0 0 / 0.88) 0%,
+      rgb(0 0 0 / 0.72) 22%,
+      rgb(0 0 0 / 0.45) 45%,
+      rgb(0 0 0 / 0.18) 68%,
+      rgb(0 0 0 / 0.28) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgb(0 0 0 / 0.45) 0%,
+      rgb(0 0 0 / 0.12) 55%,
+      rgb(0 0 0 / 0) 100%
+    );
+}
+
+.hero-text {
+  text-shadow: 0 1px 24px rgb(0 0 0 / 0.5), 0 1px 3px rgb(0 0 0 / 0.4);
+}
+
+/* Eyebrow sitting on a photograph: the standard brass is too dark to read
+   against an image, so lift it to a light gold and add the same shadow. */
+.eyebrow-hero {
+  color: #f0cf92;
+  text-shadow: 0 1px 12px rgb(0 0 0 / 0.65);
+}
+
 /* Thin brass divider */
 .rule-brass {
   height: 1px;
