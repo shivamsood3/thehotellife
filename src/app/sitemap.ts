@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { hotels } from "@/content/hotels";
 import { guides } from "@/content/guides";
 import { destinations } from "@/content/destinations";
+import { articles } from "@/content/articles";
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com").replace(/\/$/, "");
 
@@ -44,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const articleEntries: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${SITE_URL}/the-edit/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   const regionEntries: MetadataRoute.Sitemap = destinations.map((d) => ({
     url: `${SITE_URL}/destinations/${d.slug}`,
     lastModified: now,
@@ -51,5 +59,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...hotelEntries, ...guideEntries, ...regionEntries];
+  return [
+    ...staticEntries,
+    ...hotelEntries,
+    ...guideEntries,
+    ...articleEntries,
+    ...regionEntries,
+  ];
 }

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "The Hotel Life — an editorial guide to the world's most extraordinary hotels";
+export const alt = "The Hotel Life: an editorial guide to the world's most extraordinary hotels";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

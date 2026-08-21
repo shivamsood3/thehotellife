@@ -439,6 +439,369 @@ export const guides: Guide[] = [
     ],
     featured: true,
   },
+  {
+    slug: "rio-de-janeiro-first-timers",
+    title: "Rio de Janeiro, Properly",
+    destination: "Rio de Janeiro",
+    region: "The Americas",
+    dek: "A first visit to Rio is usually spent in the wrong places at the wrong times. Here is the version that works: the beaches by hour, the hills by weather, and the neighbourhoods worth your evenings.",
+    excerpt:
+      "Copacabana at seven, Ipanema at five, the Corcovado only on a clear morning. How to spend four days in Rio without wasting one of them in a queue.",
+    author: "Shivam Sood",
+    readTime: 9,
+    date: "August 2026",
+    heroImage: U("1483729558449-99ef09a8c325", 2000),
+    cardImage: U("1483729558449-99ef09a8c325", 1000),
+    hotelSlugs: ["copacabana-palace-rio"],
+    featured: true,
+    sections: [
+      {
+        body: [
+          "Rio rewards timing more than any city I know. The same beach is transcendent at seven in the morning and unbearable at one in the afternoon. The same viewpoint is the best thing you will ever see, or a queue in cloud. Getting this right is most of the work.",
+          "What follows assumes four days, which is the minimum that makes the flight worthwhile, and a base in the beach neighbourhoods rather than the centre.",
+        ],
+      },
+      {
+        heading: "The Beaches, by the Clock",
+        body: [
+          "Copacabana belongs to the early morning. Between six and eight it is a genuine civic space: swimmers, walkers, elderly men playing volleyball with astonishing competence, the whole crescent still cool. By midday it is hot and busy and you should be elsewhere.",
+          "Ipanema is the late afternoon beach. Head for the stretch between postos nine and ten around four or five, when the light goes gold and the whole city seems to arrive. Stay for sunset at Arpoador, the rock at the eastern end, where people applaud when the sun goes down. It sounds unbearable and it is genuinely lovely.",
+          "Rent a chair and umbrella from a beach vendor rather than carrying your own. It costs very little, they will bring you cold drinks all afternoon, and the whole arrangement is a pillar of local etiquette.",
+        ],
+      },
+      {
+        heading: "The Two Hills",
+        body: [
+          "Corcovado, with the statue, and Sugarloaf, the cable car. Both are worth doing and both are ruined by cloud, so watch the forecast and go the moment you get a clear morning rather than saving them for a planned day.",
+          "Corcovado is best very early, ideally on the first train of the day, before the coach parties and before the cloud builds. Sugarloaf is better at the other end, an hour or so before sunset, so that you ride up in daylight and come down over a lit city.",
+          "Buy timed tickets online for both. The queues at the ticket windows are the single biggest waste of time available to a visitor to Rio.",
+        ],
+      },
+      {
+        heading: "Santa Teresa and Lapa",
+        body: [
+          "Santa Teresa is the hill neighbourhood of cobbled streets, colonial houses and artists' studios, and it is where to spend a slow afternoon. Take the restored bonde tram up if it is running. Eat lunch somewhere with a terrace and a view down over the centre.",
+          "Below it, Lapa is where Rio goes out. The arches are the landmark, the samba clubs around them are the reason to come, and Friday and Saturday are when it happens. Go with somebody who knows the city if you can, keep your phone in your pocket, and take a taxi both ways.",
+        ],
+      },
+      {
+        heading: "Eating",
+        body: [
+          "Do the churrascaria once, understand that it is enormous, and go hungry. More interesting is the botequim tradition, the corner bars serving cold beer and small plates, which is where Rio actually eats. Order the bolinho de bacalhau and a very cold chopp.",
+          "Sunday feijoada is a genuine institution and effectively occupies an entire afternoon, which is the intended effect. Plan nothing afterwards.",
+        ],
+      },
+      {
+        heading: "Staying Sensible",
+        body: [
+          "Rio has real crime and pretending otherwise helps nobody. The practical version: carry a small amount of cash and one card, leave the watch in the safe, use a cheap phone on the street, take taxis or apps after dark rather than walking, and stay off the beaches at night entirely.",
+          "Do this and you will almost certainly have no trouble at all. The city is far less frightening than its reputation and considerably more welcoming than most visitors expect.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bangkok-for-people-who-think-they-know-it",
+    title: "Bangkok for People Who Think They Know It",
+    destination: "Bangkok",
+    region: "Asia",
+    dek: "Beyond the Grand Palace and the rooftop bars, the city is doing something far more interesting. A guide to the river, the old quarters, and the food that never makes the lists.",
+    excerpt:
+      "Most visitors see three temples and a sky bar and conclude they have done Bangkok. The city that repays a second visit is on the water, in the old shophouse quarters, and eating at ten at night.",
+    author: "Shivam Sood",
+    readTime: 9,
+    date: "August 2026",
+    heroImage: U("1528181304800-259b08848526", 2000),
+    cardImage: U("1528181304800-259b08848526", 1000),
+    hotelSlugs: ["mandarin-oriental-bangkok"],
+    sections: [
+      {
+        body: [
+          "Bangkok has an image problem with people who have visited once. They arrive, do the Grand Palace in punishing heat, take a photograph from a rooftop bar, eat something on Khao San Road, and leave with the impression of a city that is hot, chaotic and slightly exhausting.",
+          "All of which is true and almost entirely beside the point. The Bangkok worth returning for runs on water, eats late, and is currently in the middle of one of the most interesting food and design moments in Asia.",
+        ],
+      },
+      {
+        heading: "Use the River",
+        body: [
+          "The single change that transforms a visit is treating the Chao Phraya as your main road. The orange-flag express boats run constantly, cost almost nothing, and move faster than any car in the city.",
+          "From the river you reach Wat Arun, the old city, the flower market at Pak Khlong Talat and the whole of the west bank. Do the temples early, get back on a boat by eleven, and let the afternoon heat happen somewhere with air conditioning.",
+          "The old canals of Thonburi, on the far bank, are the closest thing left to the city that was called the Venice of the East. A longtail for an hour in the late afternoon is the best money you will spend.",
+        ],
+      },
+      {
+        heading: "The Old Quarters",
+        body: [
+          "Talat Noi is a knot of shophouses, scrap-metal workshops and small shrines south of Chinatown, and it has become quietly one of the most rewarding places to walk in Bangkok. Go on foot, get lost deliberately, and stop when you find coffee.",
+          "Chinatown itself, Yaowarat, is a night proposition. The street kitchens set up around six and run late, and it remains the best concentrated eating in the city. Look for the stalls with a queue of locals and no English menu.",
+        ],
+      },
+      {
+        heading: "Eating, Seriously",
+        body: [
+          "Bangkok now has a genuine fine-dining scene built on Thai ingredients rather than French technique, and it is worth planning around. Book well ahead for the big names, because the good rooms are small and the world has noticed.",
+          "But the meals that stay with you are cheaper. Boat noodles in a cramped shop near Victory Monument. Grilled pork and sticky rice from a cart at seven in the morning. Khao man gai from a shop that sells nothing else. Follow crowds and cash-only signage.",
+          "One practical note: order less than you think per round. It is normal to eat across several stops in an evening, and the whole system assumes it.",
+        ],
+      },
+      {
+        heading: "Getting About",
+        body: [
+          "The BTS Skytrain and MRT are fast, clean and cheap, and they cover most of what a visitor wants. Traffic at rush hour is genuinely immobile, so if a journey has a rail option, take it.",
+          "Use the metered taxis rather than tuk-tuks for actual transport. Tuk-tuks are fun for a short novelty ride and consistently more expensive for anything else. Insist on the meter, or use a ride app.",
+        ],
+      },
+      {
+        heading: "When to Come",
+        body: [
+          "November to February is the cool dry season and the obvious answer. March to May is punishingly hot, with April the worst of it, though Songkran in mid-April is a genuine spectacle if you do not mind being soaked continuously for three days.",
+          "The rainy months are underrated. It usually rains hard for an hour in the afternoon and then stops, the city is greener, the light is better, and hotel rates fall considerably.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "london-in-a-long-weekend",
+    title: "London in a Long Weekend",
+    destination: "London",
+    region: "Europe",
+    dek: "Three days in a city with four hundred years of things to do. The version that avoids the queues, the tourist restaurants and the mistake of trying to see everything.",
+    excerpt:
+      "One museum a day, dinner booked before you fly, and the neighbourhoods that actually reward a wander. A realistic plan for seventy-two hours in London.",
+    author: "Shivam Sood",
+    readTime: 8,
+    date: "August 2026",
+    heroImage: U("1513694203232-719a280e022f", 2000),
+    cardImage: U("1513694203232-719a280e022f", 1000),
+    hotelSlugs: ["the-connaught-london", "claridges-london", "the-savoy-london"],
+    sections: [
+      {
+        body: [
+          "The mistake people make in London is treating it as a list. The Tower, the Eye, Buckingham Palace, a musical, Oxford Street. It is possible to do all of that in three days and come away having experienced almost nothing of the city.",
+          "London is a collection of villages that happens to contain some world-class institutions. The better plan is to pick one big thing a day and spend the rest of the time walking somewhere specific.",
+        ],
+      },
+      {
+        heading: "One Museum a Day, and Which One",
+        body: [
+          "They are free, they are extraordinary, and they will defeat you if you attempt more than one. The British Museum for the sheer sweep of it, though go at opening or in the last two hours. The National Gallery if you want great paintings in a manageable building. The V and A if you care about design, and it has the best museum cafe in London.",
+          "Sir John Soane's Museum, a small architect's house near Holborn stuffed floor to ceiling with antiquities, is the one Londoners send friends to. Free, strange, and only takes an hour.",
+        ],
+      },
+      {
+        heading: "Walk These, Not Oxford Street",
+        body: [
+          "Marylebone, for a high street that still works, good bookshops and the sense of a village that got surrounded. Borough Market and then east along the river toward Tower Bridge, ideally on a weekday morning.",
+          "Hampstead and the Heath for a proper half day, with the swimming ponds if the weather allows and a pub at the end of it. Columbia Road on a Sunday morning for the flower market, then Brick Lane and Spitalfields afterwards.",
+          "Avoid Oxford Street entirely. It has nothing you cannot buy at home and it is the least pleasant half mile in central London.",
+        ],
+      },
+      {
+        heading: "Eating",
+        body: [
+          "Book before you fly. The good rooms in London go weeks out, and the restaurants with tables free on the day are almost always the ones aimed at people who did not plan.",
+          "The city's real strength is its range rather than its grandest restaurants. A proper curry in Whitechapel, dim sum in Chinatown at eleven in the morning, a Sunday roast in a pub with a fire. Do at least one of each.",
+          "Afternoon tea is a genuine pleasure and a genuine tourist trap depending entirely on where. The hotel dining rooms do it properly. Anywhere advertising it on a chalkboard does not.",
+        ],
+      },
+      {
+        heading: "Practicalities",
+        body: [
+          "Get an Oyster card or just tap a contactless card, which now works on everything and caps automatically. Walk more than you plan to. Central London is much smaller than the tube map suggests, and the map is famously not to scale.",
+          "Theatre is worth doing and worth booking directly with the theatre rather than through a reseller. Same-day returns often appear at the box office in the morning for shows that look sold out.",
+        ],
+      },
+      {
+        heading: "When to Come",
+        body: [
+          "May, June and September are the best of it: long days, gardens working, and the city not yet in high summer crowds. July and August are busy and the transport is hot in a way the system was never designed for.",
+          "Winter is underrated if you accept the dark. The museums are empty, the pubs are at their best, and hotel rates in January are the lowest of the year by a wide margin.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "morocco-beyond-marrakech",
+    title: "Morocco Beyond Marrakech",
+    destination: "Morocco",
+    region: "Middle East & Africa",
+    dek: "Most trips stop at the Jemaa el-Fnaa. The country that lies past it, the Atlas passes, the blue city, the Atlantic coast and the desert, deserves the extra week.",
+    excerpt:
+      "Marrakech is the door, not the room. A route through the Atlas, Fes, Chefchaouen and the coast, with honest advice on driving, guides and how long each place actually deserves.",
+    author: "Shivam Sood",
+    readTime: 10,
+    date: "August 2026",
+    heroImage: U("1539020140153-e479b8c22e70", 2000),
+    cardImage: U("1539020140153-e479b8c22e70", 1000),
+    hotelSlugs: ["royal-mansour-marrakech", "la-mamounia"],
+    sections: [
+      {
+        body: [
+          "Marrakech does a very effective job of convincing visitors that it is Morocco. It is not. It is a superb, theatrical, slightly exhausting introduction to a country that gets considerably more interesting the further you go from it.",
+          "Give the city three nights, which is enough to do the medina, the gardens and one long dinner properly, and then commit the rest of the trip to somewhere else.",
+        ],
+      },
+      {
+        heading: "Over the Atlas",
+        body: [
+          "The drive south over the Tizi n'Tichka pass is one of the great road journeys in North Africa, and the new road has made it far less punishing than it used to be. Allow a full day rather than treating it as transport.",
+          "Ait Ben Haddou, the fortified earthen village on the far side, is the obvious stop and deserves the stop despite the film-set associations. Stay the night rather than day-tripping from Marrakech: it empties out completely by six and the light on the kasbah at dusk is the reason to be there.",
+          "Beyond it the Draa valley runs south through palmeries toward the desert. The dunes at Erg Chigaga are less visited than Merzouga and worth the extra effort if you have the time.",
+        ],
+      },
+      {
+        heading: "Fes, and Why It Beats Marrakech",
+        body: [
+          "Fes has the oldest and most intact medieval medina in the Arab world, and unlike Marrakech it is still primarily a working city rather than a visitor economy. It is harder, less polished, and considerably more rewarding.",
+          "Hire a guide for the first day, genuinely. The medina has thousands of lanes and no logic that a visitor can hold, and a good guide turns a stressful morning into a revelation. Then spend the second day lost on purpose, which is safe and is the whole point.",
+          "The tanneries are the famous sight and smell exactly as advertised. Go in the morning, accept the sprig of mint, and expect a sales pitch afterwards.",
+        ],
+      },
+      {
+        heading: "The Blue City and the Coast",
+        body: [
+          "Chefchaouen, up in the Rif mountains, is painted almost entirely in blue and is as photogenic as everyone says. It is also small, and a night or two is plenty. Go early in the morning for the lanes before the coaches arrive.",
+          "On the Atlantic, Essaouira is the antidote to the interior: windy, low-rise, white and blue, with a working fishing port and no hard sell at all. It is the place people extend their stay in. Casablanca, honestly, can be skipped unless you are there for the mosque, which is magnificent.",
+        ],
+      },
+      {
+        heading: "Driving, Guides and Money",
+        body: [
+          "Driving in Morocco between cities is straightforward, the roads are good, and it buys you enormous freedom. Driving inside the old cities is not worth attempting. Park outside the walls and walk.",
+          "A driver for the Atlas and desert leg is often cheaper than a rental once you account for one-way fees, and removes the mountain passes from your list of worries.",
+          "Haggling is expected in the souks and is a social exchange rather than a confrontation. Start well below, stay friendly, and be prepared to walk away without hard feelings on either side.",
+        ],
+      },
+      {
+        heading: "When to Go",
+        body: [
+          "March to May and September to November. The interior in July and August is genuinely dangerous levels of hot, and the desert is unvisitable in the middle of the day.",
+          "Winter is excellent in Marrakech and the coast, cold at night in the mountains, and snow can close the high passes. Ramadan changes opening hours and the atmosphere considerably, in ways that are interesting but worth knowing about in advance.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "big-sur-and-the-california-coast",
+    title: "Driving the California Coast, Slowly",
+    destination: "California",
+    region: "The Americas",
+    dek: "Highway 1 is not a route between two cities. It is the destination, and the single biggest mistake is trying to do it in a day.",
+    excerpt:
+      "San Francisco to Big Sur in three unhurried days: where to stop, which viewpoints are worth the pull-in, and why you should check the road closures before booking anything.",
+    author: "Shivam Sood",
+    readTime: 8,
+    date: "August 2026",
+    heroImage: U("1506905925346-21bda4d32df4", 2000),
+    cardImage: U("1506905925346-21bda4d32df4", 1000),
+    hotelSlugs: ["post-ranch-inn-big-sur"],
+    sections: [
+      {
+        body: [
+          "People treat Highway 1 as a way of getting from San Francisco to Los Angeles. It is a terrible way of doing that. It is slow, it bends constantly, and if you drive it in a day you will arrive exhausted having seen a great deal through a windscreen.",
+          "Treat it instead as the trip itself. Three days from San Francisco to Big Sur and back, or onward, is the version that works.",
+        ],
+      },
+      {
+        heading: "Before You Book Anything",
+        body: [
+          "Check the road. Big Sur sits on an unstable coastline and landslides close sections of Highway 1 regularly, sometimes for a season, occasionally for over a year. Caltrans publishes current closures and they are authoritative.",
+          "This matters because a closure can mean a four-hour inland detour or no southern access at all. Check before you book non-refundable hotels, and check again the week you travel.",
+        ],
+      },
+      {
+        heading: "Day One: South to Monterey",
+        body: [
+          "Leave San Francisco early and take the coast rather than the freeway. Half Moon Bay for coffee, then the long empty stretch past Pescadero. Ano Nuevo has elephant seals in season and is worth the stop.",
+          "Santa Cruz or Monterey makes the first night. Monterey Bay Aquarium is genuinely one of the best in the world and deserves half a day rather than an hour. Cannery Row itself is largely a tourist strip and can be walked in twenty minutes.",
+        ],
+      },
+      {
+        heading: "Day Two: The Big Sur Coast",
+        body: [
+          "This is the day. Carmel first, then the stretch south that everybody photographs. Bixby Creek Bridge is the famous one and there is a proper pull-in just north of it. Go early, because by eleven the parking is a scrum.",
+          "Point Lobos, just south of Carmel, is the underrated stop: cypress, coves, sea otters, and walking trails that get you out of the car for an hour. Julia Pfeiffer Burns State Park has the waterfall onto the beach, viewable from a short trail.",
+          "Do not plan on lunch appearing when you want it. There are very few places to eat along this stretch and they fill. Carry water and something to eat.",
+        ],
+      },
+      {
+        heading: "Day Three: Slower",
+        body: [
+          "Give the third day to almost nothing. Walk in the redwoods at Pfeiffer Big Sur. Sit somewhere with the view. The coast rewards stillness far more than it rewards mileage.",
+          "If you are continuing south, Hearst Castle at San Simeon is a genuinely strange and impressive detour, and the elephant seal colony at Piedras Blancas just beyond it is free and remarkable.",
+        ],
+      },
+      {
+        heading: "Practical Notes",
+        body: [
+          "Fuel is scarce and expensive along the Big Sur stretch. Fill up in Carmel or Cambria rather than assuming a station will appear.",
+          "Mobile signal is absent for long sections, so download maps offline before you set out. Book accommodation well in advance, because there is very little of it and demand is constant.",
+          "Fog is a summer feature rather than a summer risk. June and July mornings are often grey until midday. September and October are the clearest months and the best time to make this drive.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "italian-riviera-liguria",
+    title: "The Italian Riviera, Without the Crush",
+    destination: "Liguria",
+    region: "Europe",
+    dek: "Portofino and the Cinque Terre in the weeks when you can actually move, plus the harbour towns either side that nobody photographs and everybody prefers.",
+    excerpt:
+      "Liguria in high summer is a queue with a view. In late May or September it is the best coastline in Italy. Where to base yourself, and how to use the boats and trains.",
+    author: "Shivam Sood",
+    readTime: 8,
+    date: "August 2026",
+    heroImage: U("1516483638261-f4dbaf036963", 2000),
+    cardImage: U("1516483638261-f4dbaf036963", 1000),
+    hotelSlugs: ["splendido-portofino"],
+    sections: [
+      {
+        body: [
+          "The Ligurian coast has a scale problem. The famous places are very small and the number of people who want to see them is very large, and in July and August the arithmetic simply does not work.",
+          "Come in the second half of May, or in September, and the same coast becomes one of the loveliest places in Europe. The water is warm enough, the restaurants have tables, and the villages return to being villages.",
+        ],
+      },
+      {
+        heading: "Where to Base Yourself",
+        body: [
+          "Portofino is exquisite and tiny, and staying there buys you the harbour in the early morning and late evening when the day visitors have gone. That is a genuine luxury and it is priced accordingly.",
+          "Santa Margherita Ligure, ten minutes around the bay, is the sensible alternative: a proper town with a working seafront, better value, and boats to everywhere. Camogli, on the other side of the promontory, is the one people fall in love with, a tall painted fishing town with almost no international crowd.",
+          "For the Cinque Terre, base in Levanto or Sestri Levante rather than in the five villages themselves. You get a real town, somewhere to park, and a short train ride in.",
+        ],
+      },
+      {
+        heading: "Use the Boats",
+        body: [
+          "The coastal ferries are the right way to move along this shore. They are frequent in season, they cost little, and approaching these villages from the water is how they were designed to be seen.",
+          "The trip from Portofino or Camogli to San Fruttuoso, an abbey in a cove reachable only by boat or on foot, is the best half day on the coast. Swim off the beach in front of it.",
+          "For the Cinque Terre the train is faster and runs constantly, but take the ferry at least once for the view back at the villages stacked up the cliffs.",
+        ],
+      },
+      {
+        heading: "Walking",
+        body: [
+          "The Cinque Terre paths are the famous walk and sections close regularly after landslides, so check status on the day. The Monterosso to Vernazza leg is the classic and it is genuinely steep, so treat it as a hike rather than a stroll.",
+          "The quieter and arguably better walk is over the Portofino promontory from Camogli to San Fruttuoso, through pine and holm oak with the sea appearing below you. Two hours, properly worthwhile, and you can take the boat back.",
+        ],
+      },
+      {
+        heading: "Eating",
+        body: [
+          "This is the home of pesto, and it is worth understanding that the local version is served on trofie or trenette with potato and green beans in the same bowl, which sounds odd and is correct.",
+          "Focaccia here is a breakfast food and Recco, just along the coast, makes a cheese-filled version that is worth a detour on its own. Anchovies from Monterosso, fresh or salted, are a genuine delicacy rather than a pizza topping.",
+          "Book dinner. In the small harbour towns there are very few tables and they all go by seven.",
+        ],
+      },
+      {
+        heading: "Getting There and Around",
+        body: [
+          "Genoa is the nearest airport and the most sensible arrival. Pisa and Milan both work with a train connection. The coastal railway line is excellent, frequent and cheap, and it links almost everything you will want to see.",
+          "A car is more liability than asset here. The coast road is narrow and slow, parking in the villages ranges from expensive to impossible, and Portofino restricts vehicles entirely in season. Take the train and the boats.",
+        ],
+      },
+    ],
+  },
 ];
 
 // ---- helpers -------------------------------------------------------------

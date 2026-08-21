@@ -1809,6 +1809,366 @@ export const hotels: Hotel[] = [
       },
     ],
   },
+  {
+    slug: "copacabana-palace-rio",
+    bookingUrl: "https://www.booking.com/hotel/br/copacabana-palace.html",
+    name: "Copacabana Palace, A Belmond Hotel",
+    city: "Rio de Janeiro",
+    country: "Brazil",
+    region: "The Americas",
+    category: "Grand Dame",
+    tagline: "The white palace that taught Rio how to be glamorous",
+    excerpt:
+      "Ninety-something years on the Avenida Atlantica and still the most consequential address in Brazil, with a pool that has hosted more decisive conversations than most boardrooms.",
+    rating: 4.8,
+    priceFrom: 500,
+    year: "August 2026",
+    heroImage: U("1483729558449-99ef09a8c325", 2000),
+    cardImage: U("1483729558449-99ef09a8c325", 1000),
+    standout:
+      "Late afternoon at the pool, when the light comes off the white facade and the whole terrace turns the colour of weak tea, and nobody in a deckchair is in any hurry at all.",
+    quickFacts: [
+      { label: "Location", value: "Copacabana, Rio de Janeiro" },
+      { label: "Rooms", value: "239 rooms & suites" },
+      { label: "Opened", value: "1923" },
+      { label: "Best for", value: "Old-school glamour, beach, carnival" },
+    ],
+    sections: [
+      {
+        body: [
+          "Rio built the Copacabana Palace before it quite knew what it wanted to be, and then spent a century becoming the city the hotel had imagined. It went up in 1923, a great wedding cake of a building facing a beach that was still half wilderness, and within a decade it had gathered every visiting film star, deposed monarch and dance band in the hemisphere.",
+          "What is remarkable is how little of that has curdled into nostalgia. The Copa still functions as a working luxury hotel rather than a museum of one. Belmond has restored it carefully, resisting the temptation to modernise away the things that make it itself, and the result is a building that feels its age in the best possible way.",
+        ],
+      },
+      {
+        heading: "The Pool",
+        body: [
+          "You come for the pool, and you should. It is not the largest in Rio or the newest, but it is unquestionably the most consequential piece of water in Brazil. Politicians have been made and unmade around it. It has appeared in more films than most actors.",
+          "In practice it is simply a very good pool, generously proportioned, lined with proper loungers, and staffed by people who understand the difference between attentive and intrusive. Order a caipirinha and watch an entire social order arrange itself around the deep end.",
+        ],
+      },
+      {
+        heading: "Rooms and the Question of Which Side",
+        body: [
+          "The rooms are large and comfortably traditional, with parquet, high ceilings and the sort of proportions that stopped being built decades ago. The decision that matters is the view. Ocean-facing rooms look straight out over Copacabana beach, which is spectacular and, on carnival weekends, extremely loud.",
+          "Pool-side rooms are quieter and arguably more atmospheric, since you look down into the courtyard rather than out at the traffic on the Avenida. If you are here to sleep rather than to be photographed, take the pool.",
+        ],
+      },
+      {
+        heading: "Eating",
+        body: [
+          "Cipriani is the grand Italian restaurant and it is genuinely good, which is not always true of grand hotel restaurants with famous names. The Michelin attention it has attracted is deserved.",
+          "But the more useful meal is breakfast on the terrace, taken slowly, with the beach filling up in front of you and the mountains behind still holding cloud. It is the best introduction to Rio the city offers.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "A genuine grande dame that has managed the difficult trick of aging without becoming a period piece. If you are going to Rio once, stay here, take a room over the pool, and give yourself one entirely unstructured afternoon.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "mandarin-oriental-bangkok",
+    bookingUrl: "https://www.booking.com/hotel/th/mandarin-oriental-bangkok.html",
+    name: "Mandarin Oriental, Bangkok",
+    city: "Bangkok",
+    country: "Thailand",
+    region: "Asia",
+    category: "Grand Dame",
+    tagline: "A hundred and forty years on the Chao Phraya, and still the benchmark for service",
+    excerpt:
+      "The hotel that more or less invented Asian luxury hospitality, sitting on the river with a staff-to-guest ratio and an institutional memory that nothing built since has matched.",
+    rating: 4.9,
+    priceFrom: 420,
+    year: "August 2026",
+    heroImage: U("1528181304800-259b08848526", 2000),
+    cardImage: U("1528181304800-259b08848526", 1000),
+    standout:
+      "Breakfast on the Verandah with the river going past at working speed, longtails and rice barges and commuter ferries, while someone quietly remembers how you take your coffee.",
+    quickFacts: [
+      { label: "Location", value: "Chao Phraya riverside, Bangrak" },
+      { label: "Rooms", value: "331 rooms & suites" },
+      { label: "Opened", value: "1876" },
+      { label: "Best for", value: "Service, the river, long stays" },
+    ],
+    sections: [
+      {
+        body: [
+          "There is a reasonable argument that modern luxury hospitality was invented here. The Oriental opened on the Chao Phraya in 1876, and over the following century it developed a style of service that the rest of Asia studied, copied and eventually exported to the world.",
+          "The remarkable thing is that the original is still the best. Not because the building is the grandest, and certainly not because the rooms are the most fashionable, but because the institutional knowledge has never been broken. Staff stay for decades. Families work here across generations. It shows in a hundred small moments a day.",
+        ],
+      },
+      {
+        heading: "The Two Hotels",
+        body: [
+          "Practically speaking there are two properties here. The Authors' Wing is the original nineteenth-century building, small, wood-panelled and hushed, with suites named for the writers who stayed in them. Somerset Maugham convalesced from malaria in one. Joseph Conrad passed through.",
+          "The River Wing is the modern tower, and it is where most guests stay. The rooms are large, quiet and comfortable rather than exciting, and almost all of them face the water. Given that the river is the entire point, this is the correct arrangement.",
+        ],
+      },
+      {
+        heading: "The River",
+        body: [
+          "The Chao Phraya is not a decorative river. It is a working waterway, and watching it is genuinely absorbing: rice barges under tow, longtails at improbable speed, cross-river ferries loaded past any sensible limit.",
+          "The hotel runs its own boats continuously, which turns the river into your transport rather than an obstacle. Getting to the old city by water, past the temples, is the single best thing about staying on this bank.",
+        ],
+      },
+      {
+        heading: "Eating and the Spa",
+        body: [
+          "Le Normandie is the formal French room and has held stars for years. The Chinese restaurant is excellent. But the meal people remember is afternoon tea in the Authors' Lounge, a white colonial room under a glass roof, which manages to be a tourist ritual and genuinely lovely at the same time.",
+          "The spa sits across the river in a teak house and is reached by boat, which is a small piece of theatre that never gets old. The traditional Thai massage there remains the reference version.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Newer hotels in Bangkok have better bathrooms, higher views and more Instagram appeal. None of them have this. Stay for the service, take a river-facing room, and give it long enough that the staff learn your name, which will take approximately one day.",
+        ],
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "royal-mansour-marrakech",
+    bookingUrl: "https://www.booking.com/hotel/ma/royal-mansour-marrakech.html",
+    name: "Royal Mansour",
+    city: "Marrakech",
+    country: "Morocco",
+    region: "Middle East & Africa",
+    category: "Palace Retreat",
+    tagline: "Fifty-three private riads, built by a king, staffed through tunnels you never see",
+    excerpt:
+      "Commissioned by Mohammed VI and executed by 1,500 Moroccan craftsmen, this is less a hotel than a walled medina of private houses, with the entire service operation hidden underground.",
+    rating: 4.9,
+    priceFrom: 1300,
+    year: "August 2026",
+    heroImage: U("1539020140153-e479b8c22e70", 2000),
+    cardImage: U("1539020140153-e479b8c22e70", 1000),
+    standout:
+      "Discovering that your riad has three floors, a private plunge pool on the roof, and that breakfast arrives without anyone appearing to have entered the building.",
+    quickFacts: [
+      { label: "Location", value: "Beside the Menara gardens, Marrakech" },
+      { label: "Rooms", value: "53 private riads" },
+      { label: "Opened", value: "2010" },
+      { label: "Best for", value: "Privacy, craft, once-in-a-lifetime" },
+    ],
+    sections: [
+      {
+        body: [
+          "The Royal Mansour was commissioned by the King of Morocco, and it was built the way things are built when the budget is not the primary constraint. Around 1,500 craftsmen worked on it for three years. The zellij tilework, the carved cedar, the sculpted plaster and the hand-beaten brass were all made on site by people who had trained for decades.",
+          "The result is not a hotel in any conventional sense. It is a small walled medina of fifty-three private riads, each a house of two or three floors with its own courtyard, its own roof terrace and, in most cases, its own plunge pool.",
+        ],
+      },
+      {
+        heading: "The Tunnels",
+        body: [
+          "The detail everyone repeats, and it is true, is that the staff move through a network of underground passages. Housekeeping, room service and maintenance all arrive via a service stair inside your riad rather than by crossing the gardens.",
+          "The effect is genuinely strange at first and then completely seductive. The gardens are always empty of trolleys and uniforms. Your breakfast appears. The turndown happens. You never see the mechanism, and after a day you stop wondering about it and simply enjoy the silence.",
+        ],
+      },
+      {
+        heading: "Living in a Riad",
+        body: [
+          "A riad here is a serious amount of space, typically a sitting room and courtyard on the ground floor, bedrooms above, and a roof terrace with a fireplace and a pool on top. Families and couples travelling together get something closer to a private villa than a hotel room.",
+          "The craft is the point. Sit in the courtyard for ten minutes and you start noticing the tilework patterns, the way the cedar screens throw shadows, the fact that nothing in the room is machine-made. Very few hotels reward looking closely in this way.",
+        ],
+      },
+      {
+        heading: "The Spa, and the City",
+        body: [
+          "The spa is a three-storey white atrium in wrought iron that looks like a birdcage designed by a perfectionist, with a hammam that is the best in a city full of them. Give it a full afternoon rather than an hour.",
+          "The one honest caveat is location. You are just outside the medina rather than inside it, which buys quiet and space but means Marrakech itself arrives by car. The hotel will drive you to the Jemaa el-Fnaa in minutes, but this is not a hotel you wander out of.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Extravagant in a way that very few places on earth are, and much warmer than that sounds. If you can justify the rate once, this is the sort of hotel that recalibrates what you think is possible. Take a riad with a pool and stay at least three nights.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "the-connaught-london",
+    name: "The Connaught",
+    city: "London",
+    country: "United Kingdom",
+    region: "Europe",
+    category: "Grand Dame",
+    tagline: "Mayfair's most discreet address, and the best hotel bar in the world",
+    excerpt:
+      "Red brick and impeccable manners on a quiet Mayfair corner, with a martini trolley that has become a pilgrimage and service that has never needed to raise its voice.",
+    rating: 4.8,
+    priceFrom: 950,
+    year: "August 2026",
+    heroImage: U("1513694203232-719a280e022f", 2000),
+    cardImage: U("1513694203232-719a280e022f", 1000),
+    standout:
+      "The martini trolley arriving at your table in the Connaught Bar, where the gin is poured from a height and the whole ritual takes exactly as long as it should.",
+    quickFacts: [
+      { label: "Location", value: "Carlos Place, Mayfair" },
+      { label: "Rooms", value: "121 rooms & suites" },
+      { label: "Opened", value: "1815, rebuilt 1897" },
+      { label: "Best for", value: "Discretion, dining, the bar" },
+    ],
+    sections: [
+      {
+        body: [
+          "London has grander hotels and louder ones. It does not have a better-mannered one. The Connaught sits on a quiet corner of Mayfair behind red brick and white stone, and its entire operating philosophy appears to be that nobody should ever feel managed.",
+          "It is the hotel of choice for people who could stay anywhere and would rather not be looked at while doing so. The lobby is small. There is no scene. The staff recognise returning guests and say nothing about it.",
+        ],
+      },
+      {
+        heading: "The Bar",
+        body: [
+          "The Connaught Bar has been at or near the top of every serious bar list for over a decade, and unusually for such things, it deserves it. The room is a silvery Cubist box by David Collins, the service is precise without being solemn, and the martini trolley is the best piece of theatre in London hospitality.",
+          "You choose a gin or vodka, then a bitters from a small rank of bottles, and the drink is built at your table with unhurried ceremony. It costs a great deal and is worth doing at least once. Book, or arrive early, because it fills.",
+        ],
+      },
+      {
+        heading: "Rooms",
+        body: [
+          "The rooms split between traditional and contemporary, and both are done properly. Ceilings are high, bathrooms are marble and generous, and the soundproofing is genuinely excellent, which matters more in central London than almost anything else.",
+          "Ask for something on the Carlos Place side facing the Tadao Ando water feature, or higher up at the back for absolute quiet. Avoid the lowest floors near the entrance if you are a light sleeper.",
+        ],
+      },
+      {
+        heading: "Eating",
+        body: [
+          "Helene Darroze at the Connaught holds three stars and is one of the few hotel restaurants in London that people book for its own sake rather than convenience. Jean-Georges at the Connaught, in the lighter room at the front, is the more useful everyday option and does an excellent lunch.",
+          "Afternoon tea in the Espelette is significantly less of a production than at the more touristed London hotels, which is precisely its appeal.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "If you want to be seen, stay elsewhere. If you want the best-run hotel in Mayfair, a bar worth flying for, and a staff that will quietly remember everything, this is the one. Not on Booking.com, so book direct or through a travel agent with Maybourne access.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "post-ranch-inn-big-sur",
+    name: "Post Ranch Inn",
+    city: "Big Sur",
+    country: "United States",
+    region: "The Americas",
+    category: "Cliffside Retreat",
+    tagline: "Twelve hundred feet above the Pacific, with nothing between you and the horizon",
+    excerpt:
+      "Adults only, no televisions, and a set of timber and glass cabins built into a Big Sur ridge so carefully that from the road you cannot see the hotel at all.",
+    rating: 4.8,
+    priceFrom: 1600,
+    year: "August 2026",
+    heroImage: U("1506905925346-21bda4d32df4", 2000),
+    cardImage: U("1506905925346-21bda4d32df4", 1000),
+    standout:
+      "The infinity pool on the cliff edge at dusk, when the fog comes in below you and you are looking down at the top of it.",
+    quickFacts: [
+      { label: "Location", value: "Highway 1, Big Sur, California" },
+      { label: "Rooms", value: "39 rooms & houses" },
+      { label: "Opened", value: "1992" },
+      { label: "Best for", value: "Couples, disconnecting, the coast" },
+    ],
+    sections: [
+      {
+        body: [
+          "Big Sur does not permit much building, and what little exists has to earn its place. Post Ranch Inn manages this better than anywhere else on the coast. Its rooms are timber and glass structures set into a ridge twelve hundred feet above the Pacific, several of them raised on stilts to avoid disturbing the root systems below.",
+          "Drive past on Highway 1 and you would not know it was there. That restraint is the whole design argument, and thirty years on it still reads as modern.",
+        ],
+      },
+      {
+        heading: "The Rooms",
+        body: [
+          "There are several types and the choice genuinely matters. The Ocean Houses are cut into the hillside with grass roofs and full-width windows onto the water. The Tree Houses are raised among the redwoods and feel more sheltered, with less of the drama and more of the calm.",
+          "All of them have a fireplace, a private deck and no television. There is no clock either. This is deliberate and takes about half a day to stop noticing and then becomes the best thing about the stay.",
+        ],
+      },
+      {
+        heading: "The Pools",
+        body: [
+          "There are two, and the famous one is the heated infinity pool on the cliff edge, which is open around the clock. Swimming there at night, in cold air over a dark ocean, is the memory most people take away.",
+          "The second pool sits by the spa and is quieter, which on a busy weekend is worth knowing. The spa itself does treatments in a hut on the cliff with the doors open, weather permitting.",
+        ],
+      },
+      {
+        heading: "Practicalities Worth Knowing",
+        body: [
+          "It is adults only, which is unusual at this level and is the reason the property is as quiet as it is. Rates are all-inclusive of breakfast, and Sierra Mar, the restaurant, is built out over the drop with what is probably the best dining-room view in California.",
+          "Highway 1 closes. Landslides shut sections of the road for months at a time, occasionally years, and it is worth checking access before you commit to non-refundable flights.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Expensive, remote, and completely justified. Come for two or three nights with somebody you like, leave the laptop, and take an Ocean House if the budget stretches. Book direct, as it does not appear on the usual booking sites.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "splendido-portofino",
+    name: "Splendido, A Belmond Hotel",
+    city: "Portofino",
+    country: "Italy",
+    region: "Europe",
+    category: "Riviera Classic",
+    tagline: "A former monastery above Portofino harbour, and the Ligurian coast at its most composed",
+    excerpt:
+      "High on the hillside above the prettiest harbour in Italy, in a sixteenth-century monastery turned hotel, with terraced gardens dropping toward the sea.",
+    rating: 4.8,
+    priceFrom: 1300,
+    priceNote: "seasonal, closed in winter",
+    year: "August 2026",
+    heroImage: U("1516483638261-f4dbaf036963", 2000),
+    cardImage: U("1516483638261-f4dbaf036963", 1000),
+    standout:
+      "The walk down through the terraced gardens to the harbour in the early evening, and the considerably slower walk back up after dinner.",
+    quickFacts: [
+      { label: "Location", value: "Above Portofino harbour, Liguria" },
+      { label: "Rooms", value: "69 rooms & suites" },
+      { label: "Opened", value: "1901" },
+      { label: "Best for", value: "Riviera classicism, couples, boats" },
+    ],
+    sections: [
+      {
+        body: [
+          "Portofino is a very small harbour that has spent a century absorbing a very large amount of glamour, and the Splendido is where most of it has stayed. The building began as a sixteenth-century Benedictine monastery, became a private villa, and opened as a hotel in 1901.",
+          "It sits high on the hillside above the village, reached by a switchback drive through pine and olive, and the separation is the point. You look down on the harbour rather than sitting in it, which on an August afternoon is worth a great deal.",
+        ],
+      },
+      {
+        heading: "The Gardens and the Pool",
+        body: [
+          "The gardens are terraced down the slope in the Ligurian manner, all bougainvillea, lemon and clipped hedge, and they are maintained to an obsessive standard. Walking them in the early morning, before anyone else is up, is one of the quiet pleasures of the place.",
+          "The saltwater pool sits on a terrace with the bay laid out below. It is not enormous and on peak days the loungers go early, which is the one genuine constraint on an otherwise faultless operation.",
+        ],
+      },
+      {
+        heading: "Rooms, and the Sister Hotel",
+        body: [
+          "Rooms are classically Italian rather than fashionably minimal, with painted furniture, tiled floors and, in the best of them, a private terrace over the water. The sea-view rooms are worth the premium here more than at almost any other hotel I can think of, because the view is the entire reason to be up the hill.",
+          "Belmond also runs Splendido Mare down on the harbour front, which is a different and much smaller hotel. If you want to be in the village rather than above it, that is the one to book, and the two properties share facilities.",
+        ],
+      },
+      {
+        heading: "Getting About",
+        body: [
+          "The hotel runs a shuttle down to the harbour continuously, which you will use more than you expect, since the walk back up is genuinely steep. Boats can be arranged for the Cinque Terre, San Fruttuoso abbey, or simply an afternoon swimming off the point.",
+          "Book a table at the harbour restaurants in advance in summer. Portofino has very few of them and the whole coast tries to eat there in August.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "The definitive Italian Riviera hotel, and one of the few places whose reputation and reality actually match. Come in late May or September, take a sea-view room, and do not attempt to walk up from the village after dinner.",
+        ],
+      },
+    ],
+  },
 ];
 
 // ---- helpers -------------------------------------------------------------
