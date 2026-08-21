@@ -32,6 +32,12 @@ export interface Hotel {
   standout: string;
   sections: Section[];
   featured?: boolean;
+  /**
+   * Optional exact Booking.com property URL for the affiliate "Check
+   * Availability" link. If omitted, a Booking.com search for the hotel
+   * name + city is used instead. See src/lib/affiliate.ts.
+   */
+  bookingUrl?: string;
 }
 
 const U = (id: string, w = 1600) =>
@@ -1726,6 +1732,51 @@ export const hotels: Hotel[] = [
         heading: "The Verdict",
         body: [
           "The most soothing hotel in a frenetic city, and a favourite of people who travel for a living. If you value calm and design over marble and gold, book here.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "hopewell-hotel-hong-kong",
+    name: "Hopewell Hotel",
+    city: "Hong Kong",
+    country: "China",
+    region: "Asia",
+    category: "Skyline Hotel",
+    tagline: "Wan Chai's tallest new stay, a thousand rooms with the harbour at your feet",
+    excerpt:
+      "The largest five-star hotel on Hong Kong Island, folded into the landmark Hopewell Centre II above Wan Chai, with big, high-floor rooms and sweeping views over the city and the harbour.",
+    rating: 4.4,
+    priceFrom: 150,
+    year: "August 2026",
+    heroImage: U("1590490360182-c33d57733427", 2000),
+    cardImage: U("1590490360182-c33d57733427", 1000),
+    standout:
+      "Waking up on a high floor to the whole sweep of Wan Chai and the harbour beyond, then riding the lifts down into one of Hong Kong's most walkable neighbourhoods.",
+    quickFacts: [
+      { label: "Location", value: "Kennedy Road, Wan Chai" },
+      { label: "Rooms", value: "1,000 rooms & suites" },
+      { label: "Opened", value: "2024" },
+      { label: "Best for", value: "Views, business, first-time Hong Kong" },
+    ],
+    sections: [
+      {
+        body: [
+          "Hong Kong had not opened a hotel on this scale in years, and the Hopewell arrived at the end of 2024 with a real sense of occasion. It sits inside Hopewell Centre II, a landmark tower rising out of the slope above Wan Chai, and with a thousand rooms across 35 guest floors it is the biggest five-star hotel on Hong Kong Island.",
+          "What that size buys you is space and height. Rooms start generous and climb from there, and because the building steps up the hillside, even the lower categories look out over the dense grid of Wan Chai toward the water. It is a modern, capable, view-first hotel rather than a historic grande dame, and for a first trip to Hong Kong that is often exactly what you want.",
+        ],
+      },
+      {
+        heading: "The Neighbourhood",
+        body: [
+          "Wan Chai is one of the most rewarding parts of the city to stay in: old wet markets and dai pai dong street kitchens on one block, cocktail bars and galleries on the next, and the tram rattling through the middle of it all. The convention centre, the Star Ferry, and Causeway Bay's shopping are all an easy walk or a short taxi away.",
+          "The hotel leans into that energy with a broad set of restaurants and one of the largest column-free event spaces in town, so it pulls a lively mix of travellers, conference crowds, and locals in for dinner.",
+        ],
+      },
+      {
+        heading: "The Verdict",
+        body: [
+          "Not the place for old-world romance, but a comfortable, well-run, genuinely impressive new base with some of the best-value high-floor views in Hong Kong. Book high, look out, and use Wan Chai as your way into the city.",
         ],
       },
     ],

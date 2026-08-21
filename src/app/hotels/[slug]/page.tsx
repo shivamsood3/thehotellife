@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { hotels, getHotel, getRelated } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
+import { affiliateBookingUrl } from "@/lib/affiliate";
 
 export function generateStaticParams() {
   return hotels.map((h) => ({ slug: h.slug }));
@@ -134,11 +135,17 @@ export default async function HotelPage({
                 </div>
               ))}
             </dl>
-            <button className="mt-6 w-full rounded-full bg-ink py-3 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep">
+            <a
+              href={affiliateBookingUrl(hotel)}
+              target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
+              className="mt-6 block w-full rounded-full bg-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
+            >
               Check Availability
-            </button>
+            </a>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
-              We may earn a commission. It never affects our reviews.
+              Booking.com partner link. We may earn a commission, at no cost to
+              you. It never affects our reviews.
             </p>
           </div>
 
