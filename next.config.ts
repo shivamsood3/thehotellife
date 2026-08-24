@@ -22,11 +22,20 @@ const GOOGLE_ADS = [
   "https://*.adtrafficquality.google",
 ].join(" ");
 
+const EDITORIAL_IMAGE_HOSTS = [
+  "https://media.sixsenses.com",
+  "https://www.aman.com",
+  "https://www.passalacqua.it",
+  "https://dam.kerzner.com",
+  "https://thebrando.com",
+  "https://picasso.rosewoodhotelgroup.com",
+].join(" ");
+
 const csp = [
   `default-src 'self'`,
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${GOOGLE_ADS}`,
   `style-src 'self' 'unsafe-inline'`,
-  `img-src 'self' data: blob: https://images.unsplash.com ${GOOGLE_ADS} https://*.g.doubleclick.net`,
+  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} https://*.g.doubleclick.net`,
   `font-src 'self' data:`,
   `frame-src 'self' ${GOOGLE_ADS}`,
   `connect-src 'self' ${GOOGLE_ADS}`,
@@ -69,6 +78,14 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/**",
       },
+      ...[
+        "media.sixsenses.com",
+        "www.aman.com",
+        "www.passalacqua.it",
+        "dam.kerzner.com",
+        "thebrando.com",
+        "picasso.rosewoodhotelgroup.com",
+      ].map((hostname) => ({ protocol: "https" as const, hostname, pathname: "/**" })),
     ],
   },
 
