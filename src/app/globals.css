@@ -97,6 +97,18 @@ body {
   font-family: var(--font-brand);
 }
 
+/* Partner ad typography is intentionally isolated from the site identity.
+   Without these boundaries the Outfit rebrand changes the Antialias and
+   Nikhaar creatives as well. */
+.font-ad-sans {
+  font-family: var(--font-ad-sans), system-ui, -apple-system, sans-serif;
+}
+
+.font-ad-display {
+  font-family: var(--font-ad-display), Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+}
+
 /* Hero scrim: keeps white overlay text readable on any photograph.
    Two stacked gradients - a strong bottom-up wash where the headline sits,
    plus a gentle left-side darkening for left-aligned text - and a soft

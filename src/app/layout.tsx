@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Fraunces, Inter, Outfit } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -17,6 +17,22 @@ const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
+});
+
+// Partner creatives keep their own typography instead of inheriting The
+// Hotel Life's Outfit wordmark face. These variables are scoped by utility
+// classes in HouseBanners.tsx.
+const adFraunces = Fraunces({
+  variable: "--font-ad-display",
+  subsets: ["latin"],
+  display: "swap",
+  axes: ["opsz"],
+});
+
+const adInter = Inter({
+  variable: "--font-ad-sans",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
@@ -93,7 +109,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} h-full`}
+      className={`${outfit.variable} ${adFraunces.variable} ${adInter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {/* AdSense loader, beforeInteractive so it lands in the initial

@@ -15,7 +15,7 @@
  * ---------------------------------------------------------------- */
 export function AntialiasCreative() {
   return (
-    <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#0b0b0c] p-7">
+    <div className="font-ad-sans relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#0b0b0c] p-7">
       {/* warm glow */}
       <div
         className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full opacity-70 blur-3xl"
@@ -47,14 +47,14 @@ export function AntialiasCreative() {
         <p className="text-[0.6rem] font-semibold uppercase tracking-[0.42em] text-white/40">
           The
         </p>
-        <p className="font-display mt-1 text-[2.35rem] font-semibold leading-none text-[#f4f2ee]">
+        <p className="font-ad-display mt-1 text-[2.35rem] font-semibold leading-none text-[#f4f2ee]">
           AntiAlias
         </p>
         <div className="mt-4 h-px w-12 bg-gradient-to-r from-[#e6b078] to-[#cf8f52]" />
       </div>
 
       <div className="relative">
-        <p className="font-display text-[1.6rem] leading-[1.28] text-[#f4f2ee]">
+        <p className="font-ad-display text-[1.6rem] leading-[1.28] text-[#f4f2ee]">
           Make
           <br />
           the edges
@@ -86,7 +86,7 @@ export function AntialiasCreative() {
  * ---------------------------------------------------------------- */
 export function NikhaarCreative() {
   return (
-    <div className="relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#08403b] p-7">
+    <div className="font-ad-sans relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#08403b] p-7">
       <div
         className="pointer-events-none absolute -left-20 bottom--10 h-56 w-56 rounded-full opacity-60 blur-3xl"
         style={{
@@ -117,7 +117,7 @@ export function NikhaarCreative() {
           />
         </svg>
 
-        <p className="font-display text-[1.95rem] font-semibold leading-none text-[#f7ecdd]">
+        <p className="font-ad-display text-[1.95rem] font-semibold leading-none text-[#f7ecdd]">
           Nikhaar
         </p>
         <p className="mt-2 text-[0.6rem] font-semibold uppercase tracking-[0.42em] text-[#9ec4bd]">
@@ -127,7 +127,7 @@ export function NikhaarCreative() {
       </div>
 
       <div className="relative">
-        <p className="font-display text-[1.35rem] leading-[1.3] text-[#f7ecdd]">
+        <p className="font-ad-display text-[1.35rem] leading-[1.3] text-[#f7ecdd]">
           Clean water.
           <br />
           Cleaner air.
