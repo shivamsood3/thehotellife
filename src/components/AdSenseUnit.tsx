@@ -42,7 +42,11 @@ export default function AdSenseUnit({
     <div className={`w-full ${className}`}>
       <ins
         className="adsbygoogle block"
-        style={{ display: "block", minHeight }}
+        style={{
+          display: "block",
+          minHeight,
+          ...(layout === "in-article" ? { textAlign: "center" as const } : {}),
+        }}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-format={format}
