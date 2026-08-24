@@ -19,11 +19,24 @@
  */
 import Link from "next/link";
 import { AntialiasCreative, NikhaarCreative } from "@/components/HouseBanners";
+import AdSenseUnit from "@/components/AdSenseUnit";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
 const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
 const NIKHAAR_URL = process.env.NEXT_PUBLIC_NIKHAAR_URL ?? "https://www.nikhaarfoundation.org";
+
+/**
+ * Real AdSense ad unit IDs, one per position type. Create the units in the
+ * AdSense dashboard (Ads > By ad unit) and set these env vars; any position
+ * left unset simply renders nothing and is left to Auto Ads.
+ */
+const SLOT_IDS: Record<NonNullable<AdSenseProps["format"]>, string> = {
+  leaderboard: process.env.NEXT_PUBLIC_ADSENSE_SLOT_DISPLAY ?? "",
+  rectangle: process.env.NEXT_PUBLIC_ADSENSE_SLOT_RECTANGLE ?? "",
+  "in-article": process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_ARTICLE ?? "",
+  responsive: process.env.NEXT_PUBLIC_ADSENSE_SLOT_DISPLAY ?? "",
+};
 
 type AdSenseProps = {
   slot?: string;
@@ -41,16 +54,30 @@ const SIZES: Record<NonNullable<AdSenseProps["format"]>, { h: number; label: str
 
 export function AdSense({ slot, format = "responsive", className = "" }: AdSenseProps) {
   const size = SIZES[format];
+  const configured = SLOT_IDS[format];
 
-  // Live mode: Google Auto Ads is enabled (loader present + toggled in the
-  // AdSense dashboard). Auto Ads chooses placements itself, so we render
-  // nothing here - no empty manual slots, no policy risk. `slot` is kept in
-  // the API for a future switch back to manual units.
+  // Live: a real ad unit exists for this position, so render it. These sit
+  // alongside Auto Ads rather than replacing it; Google will not double up
+  // on a position that already carries a manual unit.
+  if (ADSENSE_CLIENT && configured) {
+    return (
+      <AdSenseUnit
+        client={ADSENSE_CLIENT}
+        slot={configured}
+        format={format === "in-article" ? "fluid" : "auto"}
+        layout={format === "in-article" ? "in-article" : undefined}
+        minHeight={size.h}
+        className={className}
+      />
+    );
+  }
+
+  // Publisher ID set but no unit created yet for this position: render
+  // nothing rather than an empty box, and let Auto Ads decide.
   void slot;
   if (ADSENSE_CLIENT) return null;
 
-  // Preview placeholder - only when no publisher ID is configured (local dev).
-  // Shows where ad inventory lives without shipping empty boxes to production.
+  // Local dev with no publisher ID: show where inventory lives.
   return (
     <div className={`w-full ${className}`}>
       <div className="ad-slot rounded-sm" style={{ minHeight: size.h }}>
