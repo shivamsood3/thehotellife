@@ -8,6 +8,7 @@ import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
 import { affiliateBookingUrl } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import JsonLd, { articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -44,6 +45,23 @@ export default async function GuidePage({
 
   return (
     <article className="pb-8">
+      <JsonLd
+        data={articleSchema({
+          path: `/guides/${guide.slug}`,
+          title: guide.title,
+          excerpt: guide.excerpt,
+          author: guide.author,
+          date: guide.date,
+          image: guide.heroImage,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Guides", path: "/guides" },
+          { name: guide.title, path: `/guides/${guide.slug}` },
+        ])}
+      />
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
@@ -107,7 +125,7 @@ export default async function GuidePage({
                         className="group flex min-w-0 flex-1 gap-4"
                       >
                         <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-sm">
-                          <Image src={h.cardImage} alt={h.name} fill className="object-cover" sizes="96px" />
+                          <Image src={h.cardImage} alt={`${h.name}, ${h.city}`} fill className="object-cover" sizes="96px" />
                         </div>
                         <div className="min-w-0">
                           <span className="eyebrow text-ink-muted">

@@ -5,6 +5,15 @@ import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import NewsletterForm from "@/components/NewsletterForm";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Hotel Life: The World's Most Extraordinary Hotels",
+  description:
+    "Honest, independent reviews of the world's best luxury hotels, plus destination guides and editors' collections. The stays worth crossing the planet for.",
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   const featured = getFeatured();
   const hero = featured[0];
@@ -18,7 +27,7 @@ export default function Home() {
         <div className="relative aspect-[3/4] min-h-[30rem] w-full sm:aspect-[16/8] sm:min-h-[26rem] lg:aspect-[16/7] lg:min-h-[34rem]">
           <Image
             src={hero.heroImage}
-            alt={hero.name}
+            alt={`${hero.name}, ${hero.city}, ${hero.country}`}
             fill
             priority
             className="object-cover"
@@ -98,7 +107,7 @@ export default function Home() {
           <div className="relative min-h-[320px] lg:min-h-[480px]">
             <Image
               src={editorPick.heroImage}
-              alt={editorPick.name}
+              alt={`${editorPick.name}, ${editorPick.city}, ${editorPick.country}`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -145,7 +154,7 @@ export default function Home() {
               >
                 <Image
                   src={rHotel.cardImage}
-                  alt={region}
+                  alt={`Luxury hotels in ${region}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 25vw"

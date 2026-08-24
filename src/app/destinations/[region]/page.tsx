@@ -46,7 +46,7 @@ export default async function RegionPage({
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[3/4] w-full sm:aspect-[16/6]">
-          <Image src={dest.heroImage} alt={dest.name} fill priority className="object-cover" sizes="100vw" />
+          <Image src={dest.heroImage} alt={`Where to stay in ${dest.name}`} fill priority className="object-cover" sizes="100vw" />
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
             <span className="eyebrow eyebrow-hero">Destinations</span>

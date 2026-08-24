@@ -7,6 +7,7 @@ import { getHotel } from "@/content/hotels";
 import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import JsonLd, { articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -49,6 +50,23 @@ export default async function ArticlePage({
 
   return (
     <article className="pb-8">
+      <JsonLd
+        data={articleSchema({
+          path: `/the-edit/${article.slug}`,
+          title: article.title,
+          excerpt: article.excerpt,
+          author: article.author,
+          date: article.date,
+          image: article.heroImage,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "The Edit", path: "/the-edit" },
+          { name: article.title, path: `/the-edit/${article.slug}` },
+        ])}
+      />
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">

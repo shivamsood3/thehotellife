@@ -7,6 +7,7 @@ import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import { affiliateBookingUrl } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import JsonLd, { hotelReviewSchema, breadcrumbSchema } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -47,12 +48,20 @@ export default async function HotelPage({
 
   return (
     <article className="pb-8">
+      <JsonLd data={hotelReviewSchema(hotel)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Hotels", path: "/hotels" },
+          { name: hotel.name, path: `/hotels/${hotel.slug}` },
+        ])}
+      />
       {/* ===== HERO ===== */}
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image
             src={hotel.heroImage}
-            alt={hotel.name}
+            alt={`${hotel.name}, ${hotel.city}, ${hotel.country}`}
             fill
             priority
             className="object-cover"

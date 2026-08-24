@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AntialiasRail, MobileRail } from "@/components/Ads";
+import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
@@ -41,13 +42,49 @@ export const metadata: Metadata = {
     "where to stay",
   ],
   alternates: { canonical: "/" },
+  // Stable, unhashed icon URLs. Google needs a favicon at a consistent URL
+  // that is square and a multiple of 48px, so favicon.ico ships 48 and 96
+  // alongside the small tab sizes.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "The Hotel Life",
+    title: "The Hotel Life: The World's Most Extraordinary Hotels",
     description:
-      "An editorial guide to the world's most extraordinary hotels.",
+      "An editorial guide to the world's most extraordinary hotels. Honest reviews, insider intelligence, and the stays worth crossing the planet for.",
     type: "website",
     siteName: "The Hotel Life",
+    url: SITE_URL,
+    locale: "en_GB",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Hotel Life: The World's Most Extraordinary Hotels",
+    description:
+      "An editorial guide to the world's most extraordinary hotels.",
+  },
+  // Let Google show full-length previews and large image thumbnails.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  authors: [{ name: "The Hotel Life" }],
+  creator: "The Hotel Life",
+  publisher: "The Hotel Life",
   // Google AdSense ownership verification (<meta name="google-adsense-account">)
   ...(ADSENSE_CLIENT ? { other: { "google-adsense-account": ADSENSE_CLIENT } } : {}),
 };
@@ -70,6 +107,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           />
         )}
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
         <Header />
         {/* Main + side ad rail */}
         <div className="flex-1 w-full">
