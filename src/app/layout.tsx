@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -10,17 +10,13 @@ import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Outfit is the brand typeface. Light 300 and SemiBold 600 carry the
+// wordmark; the rest of the weights cover UI and body copy.
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   display: "swap",
-  axes: ["opsz"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
@@ -89,11 +85,15 @@ export const metadata: Metadata = {
   ...(ADSENSE_CLIENT ? { other: { "google-adsense-account": ADSENSE_CLIENT } } : {}),
 };
 
+export const viewport = {
+  themeColor: "#4A1D34",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full`}
+      className={`${outfit.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {/* AdSense loader, beforeInteractive so it lands in the initial

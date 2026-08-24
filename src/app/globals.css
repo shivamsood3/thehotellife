@@ -1,19 +1,33 @@
 @import "tailwindcss";
 
 /* ============================================================
-   The Hotel Life - Editorial Luxury Design System
+   The Hotel Life - Brand Design System (logo system v2)
    ============================================================ */
 
 :root {
-  /* Core palette - warm paper, deep ink, brass accent */
-  --paper: #faf8f4;
-  --paper-2: #f2ede4;
-  --ink: #1a1714;
-  --ink-soft: #4a443d;
-  --ink-muted: #8a8175;
-  --line: #e4ddd0;
-  --brass: #a9852f;
-  --brass-deep: #8a6d24;
+  /* ============================================================
+     Brand palette (The Hotel Life logo system v2)
+     Plum #4A1D34 . Signal Cyan #00A6DE . Key Orange #F58220 . Linen #F7F5F4
+     Cyan and orange fail contrast as body text on linen, so they are used
+     for fills, surfaces and accents; -deep variants exist for type.
+     ============================================================ */
+  --plum: #4A1D34;
+  --cyan: #00A6DE;
+  --cyan-deep: #00718F;   /* 5.1:1 on linen, safe for link text */
+  --orange: #F58220;
+  --orange-deep: #B85C0E; /* for small type where orange is needed */
+  --linen: #F7F5F4;
+
+  /* Semantic tokens. Names kept from the previous system so every existing
+     utility class re-skins to the new brand without markup changes. */
+  --paper: var(--linen);
+  --paper-2: #EFEAE8;
+  --ink: var(--plum);
+  --ink-soft: #6B4152;
+  --ink-muted: #8A6377;
+  --line: rgba(74, 29, 52, 0.15);
+  --brass: var(--cyan);
+  --brass-deep: var(--cyan-deep);
   --cream-card: #ffffff;
 
   --background: var(--paper);
@@ -33,9 +47,16 @@
   --color-brass: var(--brass);
   --color-brass-deep: var(--brass-deep);
   --color-cream-card: var(--cream-card);
+  --color-plum: var(--plum);
+  --color-cyan: var(--cyan);
+  --color-cyan-deep: var(--cyan-deep);
+  --color-orange: var(--orange);
+  --color-orange-deep: var(--orange-deep);
+  --color-linen: var(--linen);
 
-  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-brand: var(--font-outfit), "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: var(--font-outfit), "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: var(--font-outfit), "Helvetica Neue", Helvetica, sans-serif;
 }
 
 * {
@@ -64,10 +85,16 @@ body {
   color: var(--brass-deep);
 }
 
-/* Serif display helpers */
+/* Display helper: the brand face, tight and semibold */
 .font-display {
-  font-family: var(--font-serif);
-  font-optical-sizing: auto;
+  font-family: var(--font-brand);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Explicit brand-face helper for the logo lockup */
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 /* Hero scrim: keeps white overlay text readable on any photograph.
@@ -96,17 +123,17 @@ body {
   text-shadow: 0 1px 24px rgb(0 0 0 / 0.5), 0 1px 3px rgb(0 0 0 / 0.4);
 }
 
-/* Eyebrow sitting on a photograph: the standard brass is too dark to read
-   against an image, so lift it to a light gold and add the same shadow. */
+/* Eyebrow sitting on a photograph: signal cyan is too dark to read against
+   an image, so lift it to a pale tint and add the same shadow. */
 .eyebrow-hero {
-  color: #f0cf92;
+  color: #7FD8F5;
   text-shadow: 0 1px 12px rgb(0 0 0 / 0.65);
 }
 
-/* Thin brass divider */
+/* Thin cyan divider */
 .rule-brass {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--brass) 20%, var(--brass) 80%, transparent);
+  background: linear-gradient(90deg, transparent, var(--cyan) 20%, var(--cyan) 80%, transparent);
   opacity: 0.5;
 }
 
@@ -142,27 +169,29 @@ body {
 }
 .prose-editorial p { margin-bottom: 1.4em; }
 .prose-editorial h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-brand);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--ink);
   font-size: 1.85rem;
   line-height: 1.2;
   margin: 1.8em 0 0.5em;
-  font-weight: 500;
 }
 .prose-editorial h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-brand);
+  font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--ink);
   font-size: 1.4rem;
   margin: 1.4em 0 0.4em;
-  font-weight: 500;
 }
 .prose-editorial blockquote {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-brand);
+  font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.4;
   color: var(--ink);
-  border-left: 2px solid var(--brass);
+  border-left: 3px solid var(--cyan);
   padding-left: 1.5rem;
   margin: 1.6em 0;
 }

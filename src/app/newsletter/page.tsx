@@ -39,7 +39,7 @@ export default function Newsletter() {
           />
         </div>
         <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 lg:p-16">
-          <span className="eyebrow text-brass">The Concierge</span>
+          <span className="eyebrow">The Concierge</span>
           <h1 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
             One extraordinary hotel in your inbox, every Sunday.
           </h1>

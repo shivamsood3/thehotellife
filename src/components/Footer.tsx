@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HangerMark, Wordmark } from "@/components/Logo";
 import NewsletterForm from "./NewsletterForm";
 
 const COLUMNS = [
@@ -38,7 +39,16 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Brand + newsletter */}
           <div>
-            <span className="font-display text-2xl font-medium">The Hotel Life</span>
+            {/* Reversed lockup: white mark, cyan dot, on the dark footer */}
+            <span className="flex items-center gap-3">
+              <HangerMark
+                height={40}
+                markColor="#FFFFFF"
+                dotColor="#00A6DE"
+                title="The Hotel Life"
+              />
+              <Wordmark size={24} color="#FFFFFF" />
+            </span>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper/60">
               An editorial guide to the world&apos;s most extraordinary hotels, and the
               stays worth crossing the planet for.

@@ -58,7 +58,7 @@ export default function Advertise() {
       {/* Hero */}
       <section className="mt-6 rounded-md bg-ink px-6 py-16 text-paper sm:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="eyebrow text-brass">Partner With Us</span>
+          <span className="eyebrow">Partner With Us</span>
           <h1 className="font-display mt-3 text-4xl font-medium leading-tight sm:text-5xl">
             Reach travellers at the moment they&apos;re deciding where to spend.
           </h1>
@@ -71,7 +71,7 @@ export default function Advertise() {
         <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-8 sm:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="font-display text-3xl font-medium text-brass sm:text-4xl">
+              <div className="font-display text-3xl font-medium text-brass-deep sm:text-4xl">
                 {s.value}
               </div>
               <div className="mt-1 text-xs uppercase tracking-widest text-paper/50">

@@ -4,7 +4,7 @@ import type { Hotel } from "@/content/hotels";
 
 export function Stars({ rating }: { rating: number }) {
   return (
-    <span className="inline-flex items-center gap-1 text-brass" aria-label={`${rating} out of 5`}>
+    <span className="inline-flex items-center gap-1 text-brass-deep" aria-label={`${rating} out of 5`}>
       <span className="text-[0.7rem] tracking-widest">
         {"★".repeat(Math.round(rating))}
         <span className="text-line">{"★".repeat(5 - Math.round(rating))}</span>

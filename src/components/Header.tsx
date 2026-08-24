@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { HangerMark, Wordmark } from "@/components/Logo";
 import { HacocoBanner } from "./Ads";
 
 const NAV = [
@@ -22,11 +23,18 @@ export default function Header() {
 
       <div className="border-b border-line bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
-          {/* Wordmark */}
-          <Link href="/" className="group flex flex-col leading-none" onClick={() => setOpen(false)}>
-            <span className="eyebrow text-[0.6rem] text-ink-muted">Est. 2016</span>
-            <span className="font-display text-2xl font-medium tracking-tight text-ink sm:text-[1.7rem]">
-              The Hotel Life
+          {/* Brand lockup. Per the brand rules the wordmark drops below
+              28px, so on the narrowest screens the mark stands alone. */}
+          <Link
+            href="/"
+            aria-label="The Hotel Life, home"
+            className="group flex items-center gap-2.5"
+            onClick={() => setOpen(false)}
+          >
+            <HangerMark height={34} className="shrink-0 sm:hidden" title="The Hotel Life" />
+            <HangerMark height={38} className="hidden shrink-0 sm:block" title="The Hotel Life" />
+            <span className="hidden sm:inline">
+              <Wordmark size={26} />
             </span>
           </Link>
 

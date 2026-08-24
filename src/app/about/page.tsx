@@ -40,7 +40,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
-            <span className="eyebrow text-brass">Our Story</span>
+            <span className="eyebrow">Our Story</span>
             <h1 className="font-display mt-2 max-w-3xl text-4xl font-medium leading-tight text-white sm:text-5xl">
               We stay so you don&apos;t have to guess.
             </h1>
@@ -76,7 +76,7 @@ export default function About() {
       {/* Values */}
       <section className="mt-16 rounded-md bg-ink px-6 py-14 text-paper sm:px-12">
         <div className="mx-auto max-w-4xl">
-          <span className="eyebrow text-brass">What we stand for</span>
+          <span className="eyebrow">What we stand for</span>
           <div className="mt-8 grid gap-10 sm:grid-cols-3">
             {values.map((v) => (
               <div key={v.title}>
