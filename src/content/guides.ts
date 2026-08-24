@@ -3,6 +3,8 @@
  * Longer-form pieces that sit alongside the hotel reviews.
  */
 import type { Region } from "./hotels";
+import { expansionGuides } from "./editorial/expansion-guides";
+import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
 
 export interface GuideSection {
   heading?: string;
@@ -29,7 +31,8 @@ export interface Guide {
 const U = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-export const guides: Guide[] = [
+const guideCatalogue: Guide[] = [
+  ...expansionGuides,
   {
     slug: "48-hours-in-tokyo",
     title: "48 Hours in Tokyo, the Hotel Insider's Way",
@@ -803,6 +806,11 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export const guides: Guide[] = guideCatalogue.map((guide) => ({
+  ...guide,
+  sections: [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])],
+}));
 
 // ---- helpers -------------------------------------------------------------
 

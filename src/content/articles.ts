@@ -3,6 +3,8 @@
  * Opinion and service journalism that sits alongside the hotel reviews
  * and the destination guides.
  */
+import { expansionArticles } from "./editorial/expansion-articles";
+import { legacyArticleAdditions } from "./editorial/legacy-enrichment";
 
 export interface ArticleSection {
   heading?: string;
@@ -28,7 +30,8 @@ export interface Article {
 const U = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-export const articles: Article[] = [
+const articleCatalogue: Article[] = [
+  ...expansionArticles,
   {
     slug: "what-a-hotel-owes-you",
     title: "What a Hotel Actually Owes You",
@@ -365,6 +368,11 @@ export const articles: Article[] = [
     ],
   },
 ];
+
+export const articles: Article[] = articleCatalogue.map((article) => ({
+  ...article,
+  sections: [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])],
+}));
 
 // ---- helpers -------------------------------------------------------------
 

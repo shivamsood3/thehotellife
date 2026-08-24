@@ -29,7 +29,7 @@ export default function DestinationsIndex() {
       <div className="rule-brass mt-8 w-full" />
 
       <div className="mt-10 space-y-6">
-        {destinations.map((d, i) => {
+        {destinations.map((d) => {
           const count = hotels.filter((h) => h.region === d.region).length;
           return (
             <Link

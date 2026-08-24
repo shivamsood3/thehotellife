@@ -3,6 +3,8 @@
  * Single source of truth for hotel guides. Swap this for a CMS or MDX later;
  * pages read only from these exported helpers.
  */
+import { expansionHotels } from "./editorial/expansion-hotels";
+import { legacyHotelAdditions } from "./editorial/legacy-enrichment";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -43,7 +45,8 @@ export interface Hotel {
 const U = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-export const hotels: Hotel[] = [
+const hotelCatalogue: Hotel[] = [
+  ...expansionHotels,
   {
     slug: "aman-tokyo",
     name: "Aman Tokyo",
@@ -2170,6 +2173,16 @@ export const hotels: Hotel[] = [
     ],
   },
 ];
+
+export const hotels: Hotel[] = hotelCatalogue.map((hotel) => {
+  const additions = legacyHotelAdditions[hotel.slug];
+  if (!additions?.length) return hotel;
+  const finalSection = hotel.sections.slice(-1);
+  return {
+    ...hotel,
+    sections: [...hotel.sections.slice(0, -1), ...additions, ...finalSection],
+  };
+});
 
 // ---- helpers -------------------------------------------------------------
 
