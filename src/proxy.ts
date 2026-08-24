@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 /**
- * Canonical host enforcement.
+ * Canonical host enforcement (Next 16 `proxy` convention, formerly
+ * `middleware`).
  *
  * The site is reachable on its Vercel deployment domains as well as on
  * www.thehotellife.com. Left alone that is duplicate content: Google indexes
@@ -18,7 +19,7 @@ const CANONICAL_HOST = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehote
   .replace(/^https?:\/\//, "")
   .replace(/\/$/, "");
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const host = request.headers.get("host") ?? "";
   const isProd = process.env.VERCEL_ENV === "production";
   const isLocal = host.startsWith("localhost") || host.startsWith("127.0.0.1");
