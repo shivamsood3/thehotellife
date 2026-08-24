@@ -175,3 +175,12 @@ body {
 .card-zoom:hover img {
   transform: scale(1.05);
 }
+
+/* Collapse ad slots Google could not fill.
+   Units reserve height so a filled ad does not shift the page, but while
+   the site is new most requests come back unfilled and that reserved space
+   would otherwise show as a large blank gap in the middle of an article.
+   AdSense marks these itself with data-ad-status="unfilled". */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
