@@ -8,7 +8,7 @@ import { AdSense } from "@/components/Ads";
 import { affiliateBookingUrl } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
 export function generateStaticParams() {
   return hotels.map((h) => ({ slug: h.slug }));
@@ -24,6 +24,7 @@ export async function generateMetadata({
   if (!hotel) return { title: "Not found" };
   return {
     title: `${hotel.name}, ${hotel.city}: Review`,
+    alternates: { canonical: `/hotels/${hotel.slug}` },
     description: hotel.excerpt,
     openGraph: {
       title: `${hotel.name} · The Hotel Life`,

@@ -9,7 +9,7 @@ import { Stars } from "@/components/HotelCard";
 import { affiliateBookingUrl } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -25,6 +25,7 @@ export async function generateMetadata({
   if (!guide) return { title: "Not found" };
   return {
     title: guide.title,
+    alternates: { canonical: `/guides/${guide.slug}` },
     description: guide.excerpt,
     openGraph: { title: guide.title, description: guide.excerpt, images: [guide.heroImage] },
   };

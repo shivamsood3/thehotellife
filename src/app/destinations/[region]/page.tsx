@@ -23,6 +23,7 @@ export async function generateMetadata({
   if (!dest) return { title: "Not found" };
   return {
     title: `${dest.name}: Where to Stay`,
+    alternates: { canonical: `/destinations/${dest.slug}` },
     description: dest.dek,
     openGraph: { title: `${dest.name} · The Hotel Life`, description: dest.dek, images: [dest.heroImage] },
   };

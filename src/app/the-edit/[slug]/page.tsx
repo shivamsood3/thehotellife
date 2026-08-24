@@ -8,7 +8,7 @@ import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -24,6 +24,7 @@ export async function generateMetadata({
   if (!article) return { title: "Not found" };
   return {
     title: article.title,
+    alternates: { canonical: `/the-edit/${article.slug}` },
     description: article.excerpt,
     openGraph: {
       title: article.title,

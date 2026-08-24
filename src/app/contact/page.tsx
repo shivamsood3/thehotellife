@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact · The Hotel Life",
   description:
     "Get in touch with The Hotel Life on WhatsApp about editorial tips, corrections, partnerships and press.",

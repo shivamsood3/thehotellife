@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About · The Hotel Life",
   description:
     "The Hotel Life is an independent editorial guide to the world's most extraordinary hotels, written by travellers who pay their own way and tell the truth.",

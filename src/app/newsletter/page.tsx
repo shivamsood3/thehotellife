@@ -3,6 +3,7 @@ import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/newsletter" },
   title: "The Concierge · Our Weekly Newsletter",
   description:
     "One extraordinary hotel in your inbox every Sunday. Join 20,000 readers of The Hotel Life's weekly newsletter, The Concierge.",

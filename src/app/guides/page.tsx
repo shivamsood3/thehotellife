@@ -4,6 +4,7 @@ import GuideCard from "@/components/GuideCard";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/guides" },
   title: "Travel Guides: Where to Go, When, and Where to Stay",
   description:
     "In-depth, honest travel guides from The Hotel Life, from 48 hours in Tokyo to choosing the right island in the Maldives.",

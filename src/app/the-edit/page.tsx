@@ -7,6 +7,7 @@ import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/the-edit" },
   title: "The Edit · Our Most Opinionated Hotel Lists",
   description:
     "Curated collections from The Hotel Life: the best hotel pools, the great grande dames, where to honeymoon, and stays for the design-obsessed.",

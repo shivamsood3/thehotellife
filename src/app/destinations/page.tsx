@@ -6,6 +6,7 @@ import { hotels } from "@/content/hotels";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/destinations" },
   title: "Destinations: The World's Great Hotels, by Region",
   description:
     "Explore the world's most extraordinary hotels by region: Europe, Asia, the Americas, and the Middle East & Africa.",

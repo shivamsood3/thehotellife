@@ -22,7 +22,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     "boutique hotels",
     "where to stay",
   ],
+  alternates: { canonical: "/" },
   openGraph: {
     title: "The Hotel Life",
     description:

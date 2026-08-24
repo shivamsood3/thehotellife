@@ -4,7 +4,7 @@ import { guides } from "@/content/guides";
 import { destinations } from "@/content/destinations";
 import { articles } from "@/content/articles";
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://thehotellife.com").replace(/\/$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com").replace(/\/$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

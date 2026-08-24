@@ -4,6 +4,7 @@ import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/hotels" },
   title: "All Hotels · The World's Most Extraordinary Stays",
   description:
     "Every hotel we've reviewed, from grande dames to safari lodges. Honest, in-depth guides to the best places to stay around the world.",

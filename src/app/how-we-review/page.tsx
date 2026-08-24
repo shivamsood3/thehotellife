@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/how-we-review" },
   title: "How We Review · The Hotel Life",
   description:
     "Our hotel review methodology: how we book, what we test, and how we score. The same standard for a $200 room and a $3,000 suite.",
