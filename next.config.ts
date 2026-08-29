@@ -29,6 +29,7 @@ const EDITORIAL_IMAGE_HOSTS = [
   "https://dam.kerzner.com",
   "https://thebrando.com",
   "https://picasso.rosewoodhotelgroup.com",
+  "https://www.thejohrijaipur.com",
 ].join(" ");
 
 const csp = [
@@ -85,6 +86,7 @@ const nextConfig: NextConfig = {
         "dam.kerzner.com",
         "thebrando.com",
         "picasso.rosewoodhotelgroup.com",
+        "www.thejohrijaipur.com",
       ].map((hostname) => ({ protocol: "https" as const, hostname, pathname: "/**" })),
     ],
   },

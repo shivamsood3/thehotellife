@@ -162,8 +162,11 @@ export default async function HotelPage({
               Check Availability
             </a>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
-              Booking.com partner link. We may earn a commission, at no cost to
-              you. It never affects our reviews.
+              {hotel.directBookingUrl ? (
+                <>Official hotel booking link. THL does not earn a commission from this booking.</>
+              ) : (
+                <>Booking.com partner link. We may earn a commission, at no cost to you. It never affects our reviews.</>
+              )}
             </p>
           </div>
 

@@ -16,7 +16,7 @@ export const expansionGuides: Guide[] = [
     date: "August 2026",
     heroImage: "/hotels/rambagh-palace-jaipur.jpg",
     cardImage: "/hotels/rambagh-palace-jaipur.jpg",
-    hotelSlugs: ["rambagh-palace-jaipur", "six-senses-fort-barwara", "oberoi-udaivilas-udaipur", "umaid-bhawan-jodhpur"],
+    hotelSlugs: ["rambagh-palace-jaipur", "the-johri-jaipur", "six-senses-fort-barwara", "oberoi-udaivilas-udaipur", "umaid-bhawan-jodhpur"],
     featured: true,
     sections: [
       { body: [

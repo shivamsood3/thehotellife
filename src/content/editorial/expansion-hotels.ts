@@ -5,6 +5,88 @@ const U = (id: string, w = 1600) =>
 
 export const expansionHotels: Hotel[] = [
   {
+    slug: "the-johri-jaipur",
+    name: "The Johri",
+    city: "Jaipur",
+    country: "India",
+    region: "Asia",
+    category: "Walled City Haveli",
+    tagline: "An eight-suite jewel box hidden inside Jaipur's most exhilarating bazaar",
+    excerpt: "The Johri replaces palace acreage with old-city immersion: an 1871 haveli, eight intensely designed suites, Jaipur's most persuasive vegetarian hotel restaurant and a front door cars cannot reach.",
+    rating: 4.7,
+    priceFrom: 330,
+    priceNote: "Approximate; seasonal and before taxes",
+    year: "August 2026",
+    heroImage: "https://www.thejohrijaipur.com/assets/img/entrance_to_the_hotel.jpg",
+    cardImage: "https://www.thejohrijaipur.com/assets/img/entrance_to_the_hotel.jpg",
+    standout: "Stepping through the brass-studded door from the jewellers' lane into the flower-filled courtyard—a compression of Jaipur's noise and grace into a few remarkable metres.",
+    quickFacts: [
+      { label: "Location", value: "Johri Bazaar, Walled City" },
+      { label: "Rooms", value: "8 suites" },
+      { label: "Opened", value: "2020" },
+      { label: "Best for", value: "Design, food, old-city immersion" }
+    ],
+    featured: true,
+    directBookingUrl: "https://live.ipms247.com/booking/book-rooms-thejohri",
+    sections: [
+      { body: [
+        "Jaipur has never lacked grand hotels. It has former palaces with peacocks on the lawns, sandstone forts beyond the city and swimming pools long enough to turn an afternoon into an occupation. The Johri offers almost none of that. Its front door is hidden down a lane in Johri Bazaar, the jewellers' market at the centre of the walled Pink City. Cars cannot complete the journey. Porters meet guests for the last, vivid metres past sari shops, scooters, sweet counters, flower sellers and the constant theatre of a market that has no interest in becoming a hotel lobby.",
+        "Then the door closes. Inside is Lal Haveli, an 1871 merchant house organised around a slender courtyard, its eight suites rising through several intensely coloured floors. The compression is astonishing: Jaipur at full volume on one side of the threshold; arches, palms and an almost conspiratorial calm on the other. The Johri is not an escape from the city so much as a secret room within it, and that difference explains both the hotel's considerable charm and its unavoidable compromises.",
+        "This is the second Jaipur hotel from the group behind 28 Kothi, created by Abhishek Honawar and jeweller Siddharth Kasliwal. The partnership matters because The Johri understands the city from the inside. It does not offer a generic idea of Rajasthan assembled from carved screens and miniature paintings. Craft here is more particular, colour more fearless and the relationship with the bazaar outside more essential. The hotel earned a Michelin Key and a place on the World's 50 Best Hotels list in 2025, but its greatest luxury remains wonderfully unquantifiable: it gives visitors access to Jaipur without placing them at a polite distance from it."
+      ]},
+      { heading: "The arrival: the final metres on foot", body: [
+        "The Johri's arrival is either a thrill or a warning, depending on the traveller. A driver can approach the bazaar but cannot pull up beneath a porte-cochère. Luggage disappears onto a handcart or into the care of staff while guests follow on foot through lanes that can feel feverish after a long journey. First-time visitors should arrange the hotel's transfer, keep the telephone number close and resist attempting the last turn with an impatient taxi driver.",
+        "There is no polished transition zone. That is precisely why the arrival stays in the memory. The building does not dominate its surroundings; it reveals itself by degrees. A brass-studded blue-green door gives way to a cool passage, then to a courtyard where a small fountain, patterned stone and climbing foliage reset the senses. In a city inclined toward spectacle, The Johri's most dramatic gesture is concealment.",
+        "The practical corollary should not be romanticised. Anyone with reduced mobility needs a detailed conversation before booking. The hotel has an elevator, but the historic plan still involves thresholds, passages and stairs, and the lane itself is uneven and crowded. Guests who expect effortless vehicle access at every hour will be happier elsewhere."
+      ]},
+      { heading: "A haveli with opinions", body: [
+        "Lal Haveli was acquired in 1871 by Dhannalal Kasliwal Faujdar, a figure connected to Jaipur's civic and political history. Its reinvention by designer Naina Shah avoids the beige neutrality that has become luxury hospitality's default dialect. Scalloped arches frame chevron-striped columns. Embroidered headboards climb like gardens. Block-printed lampshades throw warm pools of light, and pastels—pistachio, marigold, rose and powder blue—are allowed to meet without an apology.",
+        "The sources are Rajasthani, but the composition is contemporary. Antique furniture sits beside bespoke pieces; local stone, textiles and metalwork are treated as living materials rather than heritage props. In the Pukhraj Lounge, hand-painted murals turn Rajasthan's wilderness into a dreamscape of foliage and animals. Elsewhere, flowers and palms soften the building's verticality. The effect is more jewel box than museum, which suits a hotel conceived with one of Jaipur's best-known jewellery families.",
+        "This is assertive decoration, and it will not seduce everyone. Travellers committed to limestone minimalism may find the accumulation too sweet; photographers will find a composition at every landing. The more important achievement is coherence. What could have become a catalogue of local motifs instead feels like a single, confident house—romantic without being nostalgic, decorative without losing architectural clarity."
+      ]},
+      { heading: "Eight suites, not eight copies", body: [
+        "The suites take their names from precious materials and stones—Manek, Sona, Panna, Firoza, Sunela, Neelam, Moti and Moonga—and the names are more than a branding flourish. Each room carries its own palette and relationship to the courtyard. One may be washed in turmeric yellow and edged with scalloped white arches; another settles into blue, green or coral. Beds are enveloping, fabrics tactile and bathrooms comfortably modern without trying to outshine the rooms around them.",
+        "The best suites possess the layered pleasure of a private apartment: a place to sit, something handmade within reach and a view that reveals the rhythm of the haveli rather than a generic city panorama. Soundproofed windows help temper the market, though no hotel at this address can promise the sensory blankness of a resort. Light, ceiling height and layout differ. At a property this small, room category should be chosen by conversation, not merely by price; ask what faces the courtyard, how much daylight arrives and whether any stairs lie between the lift and the door.",
+        "There are no televisions, acres of marble or private terraces attached to every room. There is also no pool or gym. The Johri is a city house, and it should be booked as one. A traveller planning to spend entire days within the hotel may eventually feel the walls close in. Someone returning from Amber Fort, ateliers and the bazaars will find the scale intimate and restorative."
+      ], image: {
+        src: "https://www.thejohrijaipur.com/assets/img/W15.JPG",
+        caption: "A suite at The Johri · Official hotel photography"
+      }},
+      { heading: "The restaurant is not an amenity", body: [
+        "Many small hotels ask their dining rooms to be adequate. The Johri asks considerably more. Its restaurant has become a destination in its own right, drawing Jaipur residents and informed visitors into the haveli for an evolving vegetarian Indian menu. The cooking is rooted in regional memory but uninterested in museum preservation. Familiar forms are taken apart, lightened, sharpened and rebuilt with enough wit to feel contemporary rather than merely decorative.",
+        "A drumstick 'paya' shorba borrows the depth and ritual of a meat broth without attempting a pale imitation. Pyaaz ki kachori arrives rethought rather than reverently reproduced; dal pakwaan gains polish without losing the salt, crunch and warmth that make the original compelling. Gucchi mushrooms, desert beans and local grains give the menu a sense of place. The kitchen's intelligence lies in knowing when to intervene and when to let a very good ingredient retain its accent.",
+        "The room helps. Arches and plants create pockets of privacy, but the restaurant never becomes solemn. Lunch offers a cool retreat from the bazaar; dinner feels more grown-up, particularly once cocktails begin travelling from the lounge. Because the food is entirely vegetarian, committed carnivores should know what they are booking. Most will discover that the absence of meat is less noticeable than the presence of an actual culinary point of view.",
+        "Breakfast is necessarily quieter and simpler, an important counterweight to dinner's ambition. A longer stay will still expose the limitations of having one principal restaurant, so eat beyond the hotel at least once. Yet few eight-room properties in India have a kitchen this persuasive, and fewer still would merit a reservation from someone sleeping elsewhere."
+      ], image: {
+        src: "https://www.thejohrijaipur.com/assets/img/The_Johri_Restaurant.jpg",
+        caption: "The restaurant at Lal Haveli · Official hotel photography"
+      }},
+      { heading: "After the bazaar closes", body: [
+        "The Pukhraj Lounge changes character with the light. In the afternoon it hosts high chai, a civilised pause after bargaining and traffic. By evening, its hand-painted wilderness gathers depth and the bar begins to feel like a salon hidden above the shops. The cocktail programme uses Indian botanicals and local spirits with more imagination than the usual palace-hotel list of global classics.",
+        "There is particular pleasure in staying after Johri Bazaar lowers its shutters. The commercial pulse softens, the street empties by degrees and the haveli belongs more completely to its few residents. The hotel's massage offering is modest rather than spa-like, but a treatment can neatly bridge the hot afternoon and dinner. Do not expect a wellness complex; expect a quiet room, capable hands and the convenience of not leaving the house."
+      ]},
+      { heading: "Service and the privilege of smallness", body: [
+        "Eight suites allow for genuine recognition. Staff learn breakfast preferences quickly, keep track of cars and make the kind of local introductions that matter in Jaipur: which workshop is worth the drive, when a bazaar will be bearable and how long an apparently short journey will actually take. The most useful service is interpretive. The hotel sits within one of India's great craft cities, and a thoughtful recommendation is worth more than another ceremonial welcome.",
+        "Smallness is not the same as infallibility. With little institutional distance between guest and operation, every lapse becomes visible. A missed transfer or confused reservation cannot be absorbed by a large concierge team, and the intensity of the address makes arrival coordination particularly important. Confirm airport or railway collection in writing, share a working mobile number and ask exactly where the meeting point will be. The hotel should make the complexity feel easy, but an informed guest will remove unnecessary ambiguity before setting out.",
+        "When the machinery works, the atmosphere is unusually personal without becoming intrusive. The Johri does not behave like a private club or insist that intimacy means forced conversation. It understands the finer point of a small hotel: guests should feel known, never watched."
+      ]},
+      { heading: "The Walled City bargain", body: [
+        "Location is the hotel's defining amenity. Hawa Mahal, the City Palace and Jantar Mantar are close; more important, the surrounding lanes offer jewellers, textile merchants, temples, food stalls and the continuous human detail that disappears when Jaipur is experienced only through a car window. An early walk before the shops fully open reveals the walled city in a more contemplative register. Later, step outside and the day arrives all at once.",
+        "That immediacy exacts a price. Traffic is slow, pollution can be tiring and a return journey at the wrong hour may require patience. The Johri does not provide Rambagh Palace's lawns, Rajmahal Palace's broad arrival or a resort's buffer from the city. What it offers is contact. Choosing between them is not a question of quality but of appetite.",
+        "For a first visit to Jaipur, two or three nights here create a powerful education in the old city. For a longer Rajasthan holiday, the clever combination is contrast: The Johri for texture and walking access, followed by a palace or countryside retreat for gardens, swimming and silence. Staying only beyond the walls makes Jaipur easier. Staying here makes it more legible."
+      ]},
+      { heading: "What to know before booking", body: [
+        "Book The Johri if design, food and urban immersion rank above facilities. Do not book it for a fly-and-flop weekend beside a pool; there is none. Families who enjoy exploring may love the colour and compact scale, but parents of very young children should discuss room layouts and the building's stairs. Guests with meaningful mobility requirements need specific guidance rather than a generic assurance that an elevator exists.",
+        "Two nights is the minimum and three feels ideal. Request the hotel's assistance for the first arrival, particularly after dark. If quiet is paramount, ask for the current assessment of the calmest suite; the building has evolved from five to eight rooms, and older online reviews do not always describe the hotel that exists today. Reserve dinner even when staying in-house, because the restaurant attracts outside guests.",
+        "Rates can look high beside larger Jaipur hotels, especially when measured by facilities. The better comparison is with a beautifully serviced private house in an irreplaceable location. You are paying for design, scarcity and the ability to cross a threshold directly into the old city—not for a long list of recreational infrastructure."
+      ]},
+      { heading: "The verdict", body: [
+        "The Johri is one of Jaipur's most complete small hotels because it knows exactly what it cannot be. It does not compete with palaces on acreage, pools or royal theatre. Instead, it turns an 1871 haveli into an intimate expression of the contemporary city: craft-literate, colour-drunk, gastronomically ambitious and embedded in the commerce that made Jaipur famous.",
+        "Its limitations are inseparable from its identity. The lane that frustrates a car is the lane that gives the hotel meaning. The lack of resort facilities keeps attention on the city. The tiny room count makes service personal and operational missteps conspicuous. Accept that bargain and The Johri becomes more than a beautiful place to sleep. It becomes an argument for encountering Jaipur at close range—and one of the few hotels for which the walk to the front door is part of the reason to come."
+      ]}
+    ]
+  },
+  {
     slug: "six-senses-fort-barwara",
     name: "Six Senses Fort Barwara",
     city: "Chauth ka Barwara",

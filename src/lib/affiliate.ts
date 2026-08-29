@@ -54,6 +54,7 @@ function bookingSearch(hotel: Hotel): string {
  * direct-only properties) are not listed there at all.
  */
 export function affiliateBookingUrl(hotel: Hotel): string {
+  if (hotel.directBookingUrl) return hotel.directBookingUrl;
   if (!hotel.bookingUrl) return bookingSearch(hotel);
   if (!DEEPLINK_BASE) return hotel.bookingUrl;
 
@@ -70,5 +71,5 @@ export function affiliateBookingUrl(hotel: Hotel): string {
 
 /** True when this hotel's link is a tracked, commission-earning link. */
 export function isAffiliateLink(hotel: Hotel): boolean {
-  return Boolean(hotel.bookingUrl && DEEPLINK_BASE);
+  return Boolean(!hotel.directBookingUrl && hotel.bookingUrl && DEEPLINK_BASE);
 }

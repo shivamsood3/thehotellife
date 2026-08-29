@@ -34,6 +34,8 @@ export interface Hotel {
   standout: string;
   sections: Section[];
   featured?: boolean;
+  /** Optional official hotel booking engine for direct-only properties. */
+  directBookingUrl?: string;
   /**
    * Optional exact Booking.com property URL for the affiliate "Check
    * Availability" link. If omitted, a Booking.com search for the hotel

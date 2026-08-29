@@ -155,8 +155,8 @@ export default async function GuidePage({
               )}
             </div>
             <p className="mt-5 text-[0.65rem] text-ink-muted">
-              Booking.com partner links. We may earn a commission, at no cost to
-              you. It never affects our reviews.
+              Some booking links are affiliate links. We may earn a commission,
+              at no cost to you. It never affects our reviews.
             </p>
           </div>
         )}
