@@ -8,6 +8,7 @@ const COLUMNS = [
     links: [
       { label: "All Hotels", href: "/hotels" },
       { label: "Destinations", href: "/destinations" },
+      { label: "Best Hotels", href: "/best-hotels" },
       { label: "City Guides", href: "/guides" },
       { label: "The Edit", href: "/the-edit" },
     ],

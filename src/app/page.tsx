@@ -4,15 +4,39 @@ import { hotels, getFeatured, regions } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import NewsletterForm from "@/components/NewsletterForm";
+import JsonLd, { faqSchema } from "@/components/JsonLd";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Hotel Life: The World's Most Extraordinary Hotels",
+  title: { absolute: "The Hotel Life | Independent Luxury Hotel Reviews" },
   description:
-    "Honest, independent reviews of the world's best luxury hotels, plus destination guides and editors' collections. The stays worth crossing the planet for.",
+    "Independent luxury hotel reviews, destination guides and ranked hotel collections. Find the world's best hotels—and the stays genuinely worth the journey.",
   alternates: { canonical: "/" },
 };
+
+const HOME_FAQ = [
+  {
+    question: "What is The Hotel Life?",
+    answer:
+      "The Hotel Life is an independent editorial guide to exceptional hotels, with detailed reviews, destination advice and curated best-hotel lists.",
+  },
+  {
+    question: "How does The Hotel Life choose hotels?",
+    answer:
+      "We prioritise a clear sense of place, design, service, food, comfort and value within the hotel's category. We publish drawbacks as well as strengths and do not sell rankings.",
+  },
+  {
+    question: "Does The Hotel Life earn money from booking links?",
+    answer:
+      "Some booking links are affiliate links, which may earn The Hotel Life a commission at no extra cost to the reader. Commercial relationships never change our editorial verdicts and are disclosed on the page.",
+  },
+  {
+    question: "How often are hotel reviews updated?",
+    answer:
+      "Reviews and guides carry an editorial date and are revisited when hotels renovate, change operators or materially alter their rooms, restaurants or facilities.",
+  },
+];
 
 export default function Home() {
   const featured = getFeatured();
@@ -22,6 +46,7 @@ export default function Home() {
 
   return (
     <div className="pb-8">
+      <JsonLd data={faqSchema(HOME_FAQ)} />
       {/* ============ HERO ============ */}
       <section className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[3/4] min-h-[30rem] w-full sm:aspect-[16/8] sm:min-h-[26rem] lg:aspect-[16/7] lg:min-h-[34rem]">
@@ -36,9 +61,9 @@ export default function Home() {
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
             <span className="eyebrow eyebrow-hero">The Hotel Life · Featured Stay</span>
-            <h1 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               {hero.tagline}
-            </h1>
+            </h2>
             <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/85">
               <Stars rating={hero.rating} />
               <span className="text-sm">
@@ -58,10 +83,13 @@ export default function Home() {
       {/* ============ INTRO STRIP ============ */}
       <section className="mx-auto mt-14 max-w-3xl text-center">
         <span className="eyebrow">An honest guide to extraordinary hotels</span>
-        <p className="font-display mt-4 text-2xl font-medium leading-snug text-ink sm:text-[1.75rem]">
-          We stay so you don&apos;t have to guess. No sponsored fluff, just the hotels
-          around the world worth crossing a continent for, reviewed the way we&apos;d
-          brief a friend.
+        <h1 className="font-display mt-4 text-2xl font-medium leading-snug text-ink sm:text-[1.75rem]">
+          The Hotel Life is an independent guide to extraordinary hotels.
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+          We stay so you don&apos;t have to guess: detailed reviews, useful drawbacks
+          and the hotels worth crossing a continent for, written the way we&apos;d
+          brief a well-travelled friend.
         </p>
         <div className="rule-brass mx-auto mt-8 w-40" />
       </section>
@@ -170,6 +198,28 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
+
+      {/* ============ EDITORIAL FAQ ============ */}
+      <section className="mt-20 border-y border-line py-12">
+        <div className="max-w-3xl">
+          <span className="eyebrow">About The Hotel Life</span>
+          <h2 className="font-display mt-2 text-3xl font-medium text-ink">
+            Independent answers for better hotel decisions
+          </h2>
+        </div>
+        <dl className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-2">
+          {HOME_FAQ.map((item) => (
+            <div key={item.question}>
+              <dt className="font-display text-xl font-medium text-ink">
+                {item.question}
+              </dt>
+              <dd className="mt-3 text-sm leading-relaxed text-ink-soft">
+                {item.answer}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       {/* ============ NEWSLETTER ============ */}

@@ -13,8 +13,9 @@ export default function JsonLd({ data }: { data: Record<string, any> }) {
   return (
     <script
       type="application/ld+json"
-      // JSON.stringify output is safe here: it is our own data, not user input.
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
@@ -22,10 +23,13 @@ export default function JsonLd({ data }: { data: Record<string, any> }) {
 /** Publisher identity, emitted once sitewide from the root layout. */
 export const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "NewsMediaOrganization"],
   "@id": `${SITE_URL}/#organization`,
   name: "The Hotel Life",
+  alternateName: "THL",
   url: SITE_URL,
+  description:
+    "An independent editorial guide to the world's most extraordinary hotels.",
   logo: {
     "@type": "ImageObject",
     url: `${SITE_URL}/icon-512.png`,
@@ -40,6 +44,7 @@ export const websiteSchema = {
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   name: "The Hotel Life",
+  alternateName: ["THL", "thehotellife.com"],
   url: SITE_URL,
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "en-GB",
@@ -52,6 +57,67 @@ export const websiteSchema = {
     "query-input": "required name=search_term_string",
   },
 };
+
+/** Visible FAQ content represented for search engines and answer engines. */
+export function faqSchema(items: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+/** Ranked destination collection with each hotel described as an entity. */
+export function bestHotelsListSchema(list: {
+  slug: string;
+  title: string;
+  dek: string;
+  destination: string;
+  country: string;
+  updated: string;
+  updatedISO: string;
+  hotels: {
+    rank: number;
+    name: string;
+    description: string;
+    officialUrl: string;
+  }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/best-hotels/${list.slug}#list`,
+    name: list.title,
+    description: list.dek,
+    url: `${SITE_URL}/best-hotels/${list.slug}`,
+    numberOfItems: list.hotels.length,
+    dateModified: list.updatedISO,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    itemListElement: list.hotels.map((hotel) => ({
+      "@type": "ListItem",
+      position: hotel.rank,
+      item: {
+        "@type": "Hotel",
+        name: hotel.name,
+        description: hotel.description,
+        url: hotel.officialUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: list.destination,
+          addressCountry: list.country,
+        },
+      },
+    })),
+  };
+}
 
 /** Breadcrumb trail. Pass [{name, path}] from home downward. */
 export function breadcrumbSchema(items: { name: string; path: string }[]) {

@@ -39,8 +39,9 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.c
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: "The Hotel Life",
   title: {
-    default: "The Hotel Life: The World's Most Extraordinary Hotels",
+    default: "The Hotel Life | Independent Luxury Hotel Reviews",
     template: "%s · The Hotel Life",
   },
   description:
@@ -64,21 +65,30 @@ export const metadata: Metadata = {
       { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
     ],
+    shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "The Hotel Life: The World's Most Extraordinary Hotels",
+    title: "The Hotel Life | Independent Luxury Hotel Reviews",
     description:
       "An editorial guide to the world's most extraordinary hotels. Honest reviews, insider intelligence, and the stays worth crossing the planet for.",
     type: "website",
     siteName: "The Hotel Life",
     url: SITE_URL,
     locale: "en_GB",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "The Hotel Life — independent luxury hotel reviews",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Hotel Life: The World's Most Extraordinary Hotels",
+    title: "The Hotel Life | Independent Luxury Hotel Reviews",
     description:
       "An editorial guide to the world's most extraordinary hotels.",
   },

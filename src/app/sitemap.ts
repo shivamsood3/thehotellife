@@ -3,6 +3,7 @@ import { hotels } from "@/content/hotels";
 import { guides } from "@/content/guides";
 import { destinations } from "@/content/destinations";
 import { articles } from "@/content/articles";
+import { bestHotelsLists } from "@/content/best-hotels";
 
 const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com"
@@ -26,13 +27,14 @@ function contentDate(value: string | undefined, fallback: string): Date {
 }
 
 /** Stable date for evergreen pages whose copy rarely changes. */
-const EVERGREEN = new Date("2026-08-24T00:00:00.000Z");
+const EVERGREEN = new Date("2026-08-30T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths: { path: string; priority: number }[] = [
     { path: "", priority: 1 },
     { path: "/hotels", priority: 0.9 },
     { path: "/destinations", priority: 0.8 },
+    { path: "/best-hotels", priority: 0.8 },
     { path: "/guides", priority: 0.8 },
     { path: "/the-edit", priority: 0.8 },
     { path: "/about", priority: 0.5 },
@@ -81,11 +83,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const bestHotelsEntries: MetadataRoute.Sitemap = bestHotelsLists.map((list) => ({
+    url: `${SITE_URL}/best-hotels/${list.slug}`,
+    lastModified: new Date(list.updatedISO),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   return [
     ...staticEntries,
     ...hotelEntries,
     ...guideEntries,
     ...articleEntries,
     ...regionEntries,
+    ...bestHotelsEntries,
   ];
 }
