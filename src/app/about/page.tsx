@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "About · The Hotel Life",
   description:
-    "The Hotel Life is an independent editorial guide to the world's most extraordinary hotels, written by travellers who pay their own way and tell the truth.",
+    "The Hotel Life is an independent editorial guide to the world's most extraordinary hotels, with named writers and a public scoring methodology.",
 };
 
 const values = [
   {
-    title: "We pay our own way",
-    body: "We book and pay for our stays like any other guest, or declare it plainly when we don't. No hotel buys a good review here.",
+    title: "Independence is the rule",
+    body: "Commercial relationships do not buy favourable coverage. Hosted stays and material support are disclosed when they apply, and affiliate links never influence a score.",
   },
   {
     title: "We tell the truth",
@@ -20,9 +20,11 @@ const values = [
   },
   {
     title: "We go deep, not wide",
-    body: "We'd rather publish one review we'd stake our name on than ten we skimmed. Every guide here is written from a real bed, a real breakfast, a real morning view.",
+    body: "We'd rather publish one review we'd stake a name on than ten anonymous summaries. Every story has a named editorial owner and is held to the same published scoring framework.",
   },
 ];
+
+const contributors = ["Zinnia Thapar", "Shiv S", "Akash G", "AB"];
 
 export default function About() {
   return (
@@ -85,6 +87,32 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contributors */}
+      <section className="mx-auto mt-16 max-w-4xl">
+        <div className="border-b border-line pb-4">
+          <span className="eyebrow">Editorial accountability</span>
+          <h2 className="font-display mt-1 text-3xl font-medium text-ink">Meet the bylines</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
+            These are the named writers responsible for reviews, destination guides and
+            The Edit. Zinnia Thapar leads the current commissioning slate, followed by
+            Shiv S, Akash G and AB.
+          </p>
+        </div>
+        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {contributors.map((name, index) => (
+            <div key={name} className="rounded-md border border-line bg-white p-5">
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brass-deep">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p className="font-display mt-5 text-xl font-medium text-ink">{name}</p>
+              <p className="mt-2 text-xs leading-relaxed text-ink-muted">
+                Reviews, guides and editorial features
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

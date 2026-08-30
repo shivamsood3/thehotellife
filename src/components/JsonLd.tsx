@@ -147,6 +147,7 @@ export function hotelReviewSchema(hotel: {
   priceFrom: number;
   heroImage: string;
   year: string;
+  author?: string;
 }) {
   const image = hotel.heroImage.startsWith("http")
     ? hotel.heroImage
@@ -156,7 +157,7 @@ export function hotelReviewSchema(hotel: {
     "@type": "Review",
     url: `${SITE_URL}/hotels/${hotel.slug}`,
     reviewBody: hotel.excerpt,
-    author: { "@type": "Organization", name: "The Hotel Life" },
+    author: { "@type": "Person", name: hotel.author ?? "Zinnia Thapar" },
     publisher: { "@id": `${SITE_URL}/#organization` },
     reviewRating: {
       "@type": "Rating",
@@ -173,7 +174,7 @@ export function hotelReviewSchema(hotel: {
         addressLocality: hotel.city,
         addressCountry: hotel.country,
       },
-      priceRange: `From USD ${hotel.priceFrom} per night`,
+      priceRange: `Indicative from USD ${hotel.priceFrom} per night; rates vary by date`,
     },
   };
 }

@@ -5,6 +5,7 @@
  */
 import { expansionHotels } from "./editorial/expansion-hotels";
 import { legacyHotelAdditions } from "./editorial/legacy-enrichment";
+import { editorialAuthorForIndex, type EditorialAuthor } from "./authors";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -28,6 +29,8 @@ export interface Hotel {
   priceFrom: number; // USD / night
   priceNote?: string;
   year: string; // review date
+  /** Named editorial owner. Assigned centrally until author profiles move to a CMS. */
+  author?: EditorialAuthor;
   heroImage: string;
   cardImage: string;
   quickFacts: { label: string; value: string }[];
@@ -62,6 +65,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.9,
     priceFrom: 1150,
     year: "August 2026",
+    directBookingUrl: "https://www.aman.com/hotels/aman-tokyo",
     heroImage: U("1611892440504-42a792e24d32", 2000),
     cardImage: U("1611892440504-42a792e24d32", 1000),
     standout:
@@ -108,6 +112,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 1400,
     year: "July 2026",
+    directBookingUrl: "https://www.ritzparis.com/",
     heroImage: "/hotels/the-ritz-paris.jpg",
     cardImage: "/hotels/the-ritz-paris.jpg",
     standout:
@@ -201,6 +206,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.4,
     priceFrom: 1600,
     year: "May 2026",
+    bookingUrl: "https://www.booking.com/hotel/ae/burj-al-arab.html",
     heroImage: "/hotels/burj-al-arab.jpg",
     cardImage: "/hotels/burj-al-arab.jpg",
     standout:
@@ -238,6 +244,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 750,
     year: "April 2026",
+    directBookingUrl: "https://www.mamounia.com/",
     heroImage: "/hotels/la-mamounia.jpg",
     cardImage: "/hotels/la-mamounia.jpg",
     standout:
@@ -277,6 +284,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.3,
     priceFrom: 895,
     year: "March 2026",
+    bookingUrl: "https://www.booking.com/hotel/us/the-plaza.html",
     heroImage: "/hotels/the-plaza-new-york.jpg",
     cardImage: "/hotels/the-plaza-new-york.jpg",
     standout:
@@ -356,6 +364,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 2100,
     priceNote: "all-inclusive",
     year: "July 2026",
+    directBookingUrl: "https://singita.com/region-sabi-sand/",
     heroImage: "/hotels/singita-sabi-sand.jpg",
     cardImage: "/hotels/singita-sabi-sand.jpg",
     standout:
@@ -481,6 +490,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1800,
     priceNote: "high season",
     year: "June 2026",
+    directBookingUrl: "https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/",
     heroImage: "/hotels/hotel-du-cap-eden-roc.jpg",
     cardImage: "/hotels/hotel-du-cap-eden-roc.jpg",
     standout:
@@ -719,6 +729,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 3400,
     priceNote: "suite",
     year: "August 2026",
+    directBookingUrl: "https://www.aman.com/resorts/amangiri",
     heroImage: "/hotels/amangiri-utah.jpg",
     cardImage: "/hotels/amangiri-utah.jpg",
     standout:
@@ -758,6 +769,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.4,
     priceFrom: 850,
     year: "July 2026",
+    bookingUrl: "https://www.booking.com/hotel/us/the-beverly-hills.html",
     heroImage: "/hotels/beverly-hills-hotel.jpg",
     cardImage: "/hotels/beverly-hills-hotel.jpg",
     standout:
@@ -796,7 +808,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 1975,
     priceNote: "full board, all-inclusive",
-    year: "September 2026",
+    year: "August 2026",
+    directBookingUrl: "https://fogoislandinn.ca/",
     heroImage: "/hotels/fogo-island-inn.jpg",
     cardImage: "/hotels/fogo-island-inn.jpg",
     standout:
@@ -836,7 +849,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 2600,
     priceNote: "all-inclusive, 4-night min",
-    year: "November 2026",
+    year: "August 2026",
     heroImage: U("1517840901100-8179e982acb7", 2000),
     cardImage: U("1517840901100-8179e982acb7", 1000),
     standout:
@@ -875,7 +888,7 @@ const hotelCatalogue: Hotel[] = [
       "A polished marina resort at the foot of Table Mountain, with island spa suites, a serious wine list, and one of the best views of any city on earth.",
     rating: 4.6,
     priceFrom: 640,
-    year: "December 2026",
+    year: "August 2026",
     heroImage: U("1587734195503-904fca47e0e9", 2000),
     cardImage: U("1587734195503-904fca47e0e9", 1000),
     standout:
@@ -914,7 +927,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 1450,
     priceNote: "full board",
-    year: "October 2026",
+    year: "August 2026",
+    directBookingUrl: "https://www.thesafaricollection.com/properties/giraffe-manor/",
     heroImage: "/hotels/giraffe-manor-nairobi.jpg",
     cardImage: "/hotels/giraffe-manor-nairobi.jpg",
     standout:
@@ -1193,7 +1207,7 @@ const hotelCatalogue: Hotel[] = [
       "Bold colour, a clifftop pool and a DJ-driven beach club, all above one of North Goa's best beaches. This is the loud, glamorous end of the Goan spectrum, and it's a lot of fun.",
     rating: 4.5,
     priceFrom: 300,
-    year: "December 2026",
+    year: "August 2026",
     heroImage: U("1582719508461-905c673771fd", 2000),
     cardImage: U("1582719508461-905c673771fd", 1000),
     standout:
@@ -1431,6 +1445,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.9,
     priceFrom: 1050,
     year: "June 2026",
+    directBookingUrl: "https://www.aman.com/resorts/amankila",
     heroImage: "/hotels/amankila-bali.jpg",
     cardImage: "/hotels/amankila-bali.jpg",
     standout:
@@ -1589,6 +1604,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 800,
     year: "July 2026",
+    bookingUrl: "https://www.booking.com/hotel/gb/the-savoy.html",
     heroImage: "/hotels/the-savoy-london.jpg",
     cardImage: "/hotels/the-savoy-london.jpg",
     standout:
@@ -1705,6 +1721,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 1100,
     year: "May 2026",
+    bookingUrl: "https://www.booking.com/hotel/ae/bulgari-resorts-dubai.html",
     heroImage: U("1540541338287-41700207dee6", 2000),
     cardImage: U("1540541338287-41700207dee6", 1000),
     standout:
@@ -1743,6 +1760,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 550,
     year: "May 2026",
+    bookingUrl: "https://www.booking.com/hotel/hk/the-upper-house.html",
     heroImage: U("1590490360182-c33d57733427", 2000),
     cardImage: U("1590490360182-c33d57733427", 1000),
     standout:
@@ -2009,6 +2027,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 950,
     year: "August 2026",
+    bookingUrl: "https://www.booking.com/hotel/gb/the-connaught-mayfair.html",
     heroImage: U("1513694203232-719a280e022f", 2000),
     cardImage: U("1513694203232-719a280e022f", 1000),
     standout:
@@ -2068,6 +2087,7 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 1600,
     year: "August 2026",
+    directBookingUrl: "https://www.postranchinn.com/",
     heroImage: U("1506905925346-21bda4d32df4", 2000),
     cardImage: U("1506905925346-21bda4d32df4", 1000),
     standout:
@@ -2128,6 +2148,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1300,
     priceNote: "seasonal, closed in winter",
     year: "August 2026",
+    bookingUrl: "https://www.booking.com/hotel/it/splendido-amp-splendido-mare.html",
     heroImage: U("1516483638261-f4dbaf036963", 2000),
     cardImage: U("1516483638261-f4dbaf036963", 1000),
     standout:
@@ -2176,12 +2197,14 @@ const hotelCatalogue: Hotel[] = [
   },
 ];
 
-export const hotels: Hotel[] = hotelCatalogue.map((hotel) => {
+export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   const additions = legacyHotelAdditions[hotel.slug];
-  if (!additions?.length) return hotel;
+  const author = editorialAuthorForIndex(index);
+  if (!additions?.length) return { ...hotel, author };
   const finalSection = hotel.sections.slice(-1);
   return {
     ...hotel,
+    author,
     sections: [...hotel.sections.slice(0, -1), ...additions, ...finalSection],
   };
 });

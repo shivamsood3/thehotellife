@@ -39,7 +39,7 @@ export async function generateMetadata({
       url: `/best-hotels/${list.slug}`,
       images: [{ url: list.heroImage }],
       modifiedTime: list.updatedISO,
-      authors: ["The Hotel Life Editors"],
+      authors: ["Zinnia Thapar"],
     },
   };
 }

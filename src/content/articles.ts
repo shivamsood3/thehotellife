@@ -5,6 +5,7 @@
  */
 import { expansionArticles } from "./editorial/expansion-articles";
 import { legacyArticleAdditions } from "./editorial/legacy-enrichment";
+import { editorialAuthorForIndex } from "./authors";
 
 export interface ArticleSection {
   heading?: string;
@@ -369,8 +370,9 @@ const articleCatalogue: Article[] = [
   },
 ];
 
-export const articles: Article[] = articleCatalogue.map((article) => ({
+export const articles: Article[] = articleCatalogue.map((article, index) => ({
   ...article,
+  author: editorialAuthorForIndex(index),
   sections: [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])],
 }));
 

@@ -25,8 +25,8 @@ const formats = [
   {
     name: "Side Rail Skyscraper",
     partner: "as run by Antialias",
-    spec: "300 × 600 · sticky, article & index pages",
-    body: "A tall, high-impact canvas that travels down the page beside our editorial. Ideal for brand storytelling and campaign creative.",
+    spec: "300 × 600 · article & index pages",
+    body: "A tall, high-impact canvas positioned beside our editorial and integrated into the reading flow. Ideal for brand storytelling and campaign creative.",
     price: "from $450 / mo",
   },
   {

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { hotels, getHotel, getRelated } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
-import { affiliateBookingUrl } from "@/lib/affiliate";
+import { affiliateBookingUrl, isAffiliateLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema } from "@/components/JsonLd";
 
@@ -84,10 +84,12 @@ export default async function HotelPage({
       <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-b border-line pb-6">
         <Stars rating={hotel.rating} />
         <span className="text-sm text-ink-soft">
-          From <span className="font-semibold text-ink">${hotel.priceFrom.toLocaleString()}</span>
+          Indicative from <span className="font-semibold text-ink">${hotel.priceFrom.toLocaleString()}</span>
           {hotel.priceNote ? ` / night · ${hotel.priceNote}` : " / night"}
         </span>
-        <span className="text-sm text-ink-muted">Reviewed {hotel.year}</span>
+        <span className="text-sm text-ink-muted">
+          By <span className="font-medium text-ink">{hotel.author}</span> · Reviewed {hotel.year}
+        </span>
         <ShareWhatsApp
           url={`${SITE_URL}/hotels/${hotel.slug}`}
           title={`${hotel.name}, ${hotel.city}`}
@@ -102,6 +104,16 @@ export default async function HotelPage({
           <p className="font-display text-2xl font-medium leading-snug text-ink">
             {hotel.tagline}.
           </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 border-y border-line py-3 text-xs text-ink-muted">
+            <span>Editorial review by {hotel.author}</span>
+            <span aria-hidden="true">·</span>
+            <Link href="/how-we-review" className="font-semibold text-brass-deep hover:underline">
+              Read our scoring methodology
+            </Link>
+            <span aria-hidden="true">·</span>
+            <span>Indicative rate recorded with the {hotel.year} review</span>
+          </div>
 
           <div className="prose-editorial mt-8">
             {hotel.sections.map((section, i) => (
@@ -164,9 +176,14 @@ export default async function HotelPage({
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
               {hotel.directBookingUrl ? (
                 <>Official hotel booking link. THL does not earn a commission from this booking.</>
-              ) : (
+              ) : isAffiliateLink(hotel) ? (
                 <>Booking.com partner link. We may earn a commission, at no cost to you. It never affects our reviews.</>
+              ) : (
+                <>Booking.com search link. THL does not currently earn a commission from this booking.</>
               )}
+            </p>
+            <p className="mt-2 text-center text-[0.65rem] leading-relaxed text-ink-muted">
+              Displayed prices are editorial indications, not live quotes. Your dates, room and taxes may change the final rate.
             </p>
           </div>
 

@@ -5,6 +5,7 @@
 import type { Region } from "./hotels";
 import { expansionGuides } from "./editorial/expansion-guides";
 import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
+import { editorialAuthorForIndex } from "./authors";
 
 export interface GuideSection {
   heading?: string;
@@ -807,8 +808,9 @@ const guideCatalogue: Guide[] = [
   },
 ];
 
-export const guides: Guide[] = guideCatalogue.map((guide) => ({
+export const guides: Guide[] = guideCatalogue.map((guide, index) => ({
   ...guide,
+  author: editorialAuthorForIndex(index),
   sections: [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])],
 }));
 

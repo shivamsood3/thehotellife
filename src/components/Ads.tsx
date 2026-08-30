@@ -18,7 +18,7 @@
  * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
 import Link from "next/link";
-import { AntialiasCreative, NikhaarCreative } from "@/components/HouseBanners";
+import { AntialiasCreative, HacocoCreative, NikhaarCreative } from "@/components/HouseBanners";
 import AdSenseUnit from "@/components/AdSenseUnit";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
@@ -99,15 +99,8 @@ export function HacocoBanner() {
           className="group block"
           aria-label="Advertisement - Hacoco"
         >
-          <div className="relative mx-auto w-full max-w-[970px] overflow-hidden rounded-sm">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/ads/hacoco-leaderboard.svg"
-              alt="Hacoco - Private Real Estate Capital"
-              width={970}
-              height={90}
-              className="h-auto w-full transition-opacity group-hover:opacity-90"
-            />
+          <div className="relative mx-auto h-[76px] w-full max-w-[970px] overflow-hidden rounded-sm transition-opacity group-hover:opacity-95 sm:h-[90px]">
+            <HacocoCreative />
           </div>
         </Link>
       </div>

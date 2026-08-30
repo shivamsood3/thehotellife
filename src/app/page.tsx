@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { hotels, getFeatured, regions } from "@/content/hotels";
+import { hotels, getFeatured, regions, type Region } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -37,6 +37,13 @@ const HOME_FAQ = [
       "Reviews and guides carry an editorial date and are revisited when hotels renovate, change operators or materially alter their rooms, restaurants or facilities.",
   },
 ];
+
+const REGION_PATHS: Record<Region, string> = {
+  Europe: "/destinations/europe",
+  Asia: "/destinations/asia",
+  "The Americas": "/destinations/americas",
+  "Middle East & Africa": "/destinations/mea",
+};
 
 export default function Home() {
   const featured = getFeatured();
@@ -177,7 +184,7 @@ export default function Home() {
             return (
               <Link
                 key={region}
-                href="/destinations"
+                href={REGION_PATHS[region]}
                 className="card-zoom group relative aspect-[3/4] overflow-hidden rounded-sm"
               >
                 <Image

@@ -5,9 +5,21 @@ import type { Hotel } from "@/content/hotels";
 export function Stars({ rating }: { rating: number }) {
   return (
     <span className="inline-flex items-center gap-1 text-brass-deep" aria-label={`${rating} out of 5`}>
-      <span className="text-[0.7rem] tracking-widest">
-        {"★".repeat(Math.round(rating))}
-        <span className="text-line">{"★".repeat(5 - Math.round(rating))}</span>
+      <span className="inline-flex gap-[0.12rem] text-[0.7rem]" aria-hidden="true">
+        {Array.from({ length: 5 }, (_, index) => {
+          const fill = Math.max(0, Math.min(1, rating - index)) * 100;
+          return (
+            <span key={index} className="relative inline-block text-line">
+              ★
+              <span
+                className="absolute inset-y-0 left-0 overflow-hidden text-brass-deep"
+                style={{ width: `${fill}%` }}
+              >
+                ★
+              </span>
+            </span>
+          );
+        })}
       </span>
       <span className="font-sans text-xs font-semibold text-ink-soft">{rating.toFixed(1)}</span>
     </span>
@@ -50,7 +62,7 @@ export default function HotelCard({
         </h3>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">{hotel.excerpt}</p>
         <p className="mt-3 text-xs font-medium text-ink-muted">
-          From <span className="text-ink">${hotel.priceFrom.toLocaleString()}</span> / night
+          Indicative from <span className="text-ink">${hotel.priceFrom.toLocaleString()}</span> / night
         </p>
       </div>
     </Link>

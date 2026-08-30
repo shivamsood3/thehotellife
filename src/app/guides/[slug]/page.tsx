@@ -137,7 +137,7 @@ export default async function GuidePage({
                           <div className="mt-1 flex items-center gap-3">
                             <Stars rating={h.rating} />
                             <span className="text-xs text-ink-muted">
-                              From ${h.priceFrom.toLocaleString()}
+                              Indicative from ${h.priceFrom.toLocaleString()}
                             </span>
                           </div>
                         </div>

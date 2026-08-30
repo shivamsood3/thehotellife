@@ -1,151 +1,104 @@
-/**
- * House ad creatives, rendered as components rather than flat SVG files.
- *
- * Why components: an SVG loaded through <img> cannot use the site's web
- * fonts, so the old creatives fell back to Georgia/Arial and looked
- * generic. Rendering them in the page lets them use Fraunces and Inter,
- * stay crisp at any pixel density, and scale to their container.
- *
- * Both are sized to standard ad slots (300x600 and 300x420) via aspect
- * ratio, so they reserve the same space and avoid layout shift.
- */
+/** Code-native direct-client creatives: sharp at every density and responsive. */
 
-/* ---------------------------------------------------------------- *
- * The AntiAlias - design & brand studio (300 x 600 skyscraper)
- * ---------------------------------------------------------------- */
+export function HacocoCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full min-h-[76px] w-full items-center overflow-hidden bg-[#071326] px-5 text-[#f4efe4] sm:min-h-[90px] sm:px-8">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_-120%,rgba(224,184,91,0.34),transparent_48%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#b98a31] via-[#f0d47f] to-[#b98a31]" />
+
+      <div className="relative flex shrink-0 items-center gap-3 sm:gap-4">
+        <div className="grid h-9 w-9 place-items-center border border-[#d9b85d] sm:h-11 sm:w-11">
+          <div className="h-3.5 w-3.5 bg-[#e3c66d] sm:h-4 sm:w-4" />
+        </div>
+        <div>
+          <p className="font-ad-display text-lg font-semibold tracking-[0.2em] sm:text-2xl">HACOCO</p>
+          <p className="mt-0.5 hidden text-[0.48rem] font-semibold uppercase tracking-[0.31em] text-[#9eacc2] sm:block">
+            Private real estate capital
+          </p>
+        </div>
+      </div>
+
+      <div className="relative mx-7 hidden h-10 w-px shrink-0 bg-white/15 md:block" />
+      <div className="relative hidden min-w-0 flex-1 md:block">
+        <p className="font-ad-display text-lg leading-tight lg:text-xl">Own a piece of prime India.</p>
+        <p className="mt-1 text-[0.68rem] text-[#aab5c8] lg:text-xs">
+          Curated real-estate opportunities across South Delhi and beyond.
+        </p>
+      </div>
+
+      <span className="relative ml-auto inline-flex shrink-0 items-center gap-3 rounded-full bg-[#e2c260] px-4 py-2.5 text-[0.58rem] font-bold uppercase tracking-[0.14em] text-[#071326] sm:px-6 sm:text-[0.68rem]">
+        Explore <span aria-hidden="true">↗</span>
+      </span>
+    </div>
+  );
+}
+
 export function AntialiasCreative() {
   return (
-    <div className="font-ad-sans relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#0b0b0c] p-7">
-      {/* warm glow */}
-      <div
-        className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full opacity-70 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(217,160,102,0.30) 0%, rgba(217,160,102,0) 70%)",
-        }}
-      />
-      {/* hairline frame */}
-      <div className="pointer-events-none absolute inset-0 border border-white/10" />
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#f3f0e9] p-7 text-[#101010]">
+      <div className="pointer-events-none absolute -right-28 top-36 h-64 w-64 rounded-full bg-[#2749f5] blur-[2px]" />
+      <div className="pointer-events-none absolute -right-16 top-44 h-44 w-44 rounded-full border-[18px] border-[#f4cf46]" />
+      <div className="pointer-events-none absolute inset-3 border border-black/15" />
 
-      <div className="relative">
-        {/* pixel dissolve motif: sharp squares softening into nothing,
-            which is literally what anti-aliasing does */}
-        <div className="mb-9 flex gap-[3px]">
-          {[1, 0.72, 0.46, 0.26, 0.12].map((o, i) => (
-            <div
-              key={i}
-              className="h-[9px] w-[9px]"
-              style={{
-                background: "#e6b078",
-                opacity: o,
-                borderRadius: `${i * 2.2}px`,
-              }}
-            />
-          ))}
+      <div className="relative flex items-start justify-between border-b border-black/20 pb-5">
+        <div>
+          <p className="text-[0.52rem] font-bold uppercase tracking-[0.34em]">Since 2014</p>
+          <p className="mt-2 text-[0.62rem] font-medium uppercase tracking-[0.14em] text-black/55">
+            Design · Systems · AI
+          </p>
         </div>
-
-        <p className="text-[0.6rem] font-semibold uppercase tracking-[0.42em] text-white/40">
-          The
-        </p>
-        <p className="font-ad-display mt-1 text-[2.35rem] font-semibold leading-none text-[#f4f2ee]">
-          AntiAlias
-        </p>
-        <div className="mt-4 h-px w-12 bg-gradient-to-r from-[#e6b078] to-[#cf8f52]" />
+        <span className="grid h-9 w-9 place-items-center rounded-full bg-black text-sm text-white">A</span>
       </div>
 
-      <div className="relative">
-        <p className="font-ad-display text-[1.6rem] leading-[1.28] text-[#f4f2ee]">
-          Make
-          <br />
-          the edges
-          <br />
-          <span className="italic text-[#e6b078]">disappear.</span>
-        </p>
-        <p className="mt-6 text-[0.78rem] leading-relaxed text-white/55">
-          A design and brand studio for
-          <br />
-          companies that sweat the pixels.
+      <div className="relative mt-8">
+        <p className="text-[2.35rem] font-black leading-[0.9] tracking-[-0.075em]">
+          THE<br />ANTI<br />ALIAS
         </p>
       </div>
 
-      <div className="relative">
-        <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#e6b078] to-[#cf8f52] px-6 py-3 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-[#141416]">
-          See the work
-          <span aria-hidden="true">→</span>
-        </span>
-        <p className="mt-5 text-[0.62rem] uppercase tracking-[0.24em] text-white/35">
-          theantialias.com
+      <div className="relative mt-auto bg-[#101010] p-5 text-white">
+        <p className="font-ad-display text-[1.25rem] leading-[1.22]">
+          We build digital systems that make companies feel more valuable.
         </p>
+        <div className="mt-6 flex items-center justify-between border-t border-white/20 pt-4">
+          <span className="text-[0.6rem] font-bold uppercase tracking-[0.16em]">Selected work</span>
+          <span className="text-[#f4cf46]" aria-hidden="true">↗</span>
+        </div>
       </div>
     </div>
   );
 }
 
-/* ---------------------------------------------------------------- *
- * Nikhaar Foundation (300 x 420)
- * ---------------------------------------------------------------- */
 export function NikhaarCreative() {
   return (
-    <div className="font-ad-sans relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#08403b] p-7">
-      <div
-        className="pointer-events-none absolute -left-20 bottom--10 h-56 w-56 rounded-full opacity-60 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(217,138,61,0.28) 0%, rgba(217,138,61,0) 70%)",
-        }}
-      />
-      <div className="pointer-events-none absolute inset-0 border border-white/10" />
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#f5ead7] p-7 text-[#173f38]">
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-60 w-60 rounded-full bg-[#ef9c4a]" />
+      <div className="pointer-events-none absolute -bottom-8 -right-7 h-40 w-40 rounded-full border-[2px] border-[#f5ead7]/70" />
+      <div className="pointer-events-none absolute -bottom-2 right-8 h-28 w-28 rounded-full border border-[#f5ead7]/70" />
 
-      <div className="relative">
-        {/* sprout emblem */}
-        <svg
-          viewBox="0 0 40 44"
-          className="mb-6 h-9 w-9"
-          aria-hidden="true"
-          fill="none"
-        >
-          <path
-            d="M2 36C2 16 17 3 36 1c-2 20-16 33-34 35Z"
-            fill="#d98a3d"
-          />
-          <path
-            d="M7 42C9 26 21 16 35 13"
-            stroke="#efeade"
-            strokeWidth="2"
-            strokeLinecap="round"
-            opacity="0.55"
-          />
+      <div className="relative flex items-center justify-between border-b border-[#173f38]/20 pb-4">
+        <div>
+          <p className="font-ad-display text-[1.65rem] font-semibold leading-none">Nikhaar</p>
+          <p className="mt-1.5 text-[0.52rem] font-bold uppercase tracking-[0.34em]">Foundation</p>
+        </div>
+        <svg viewBox="0 0 32 36" className="h-9 w-8" aria-hidden="true" fill="none">
+          <path d="M2 31C2 14 15 3 30 1c-2 17-13 28-28 30Z" fill="#e98935" />
+          <path d="M6 35C8 22 17 14 28 10" stroke="#173f38" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
-
-        <p className="font-ad-display text-[1.95rem] font-semibold leading-none text-[#f7ecdd]">
-          Nikhaar
-        </p>
-        <p className="mt-2 text-[0.6rem] font-semibold uppercase tracking-[0.42em] text-[#9ec4bd]">
-          Foundation
-        </p>
-        <div className="mt-4 h-px w-12 bg-gradient-to-r from-[#d98a3d] to-[#c07a2c]" />
       </div>
 
-      <div className="relative">
-        <p className="font-ad-display text-[1.35rem] leading-[1.3] text-[#f7ecdd]">
-          Clean water.
-          <br />
-          Cleaner air.
-          <br />
-          <span className="italic text-[#e6a765]">Brighter futures.</span>
+      <div className="relative mt-7">
+        <p className="text-[0.55rem] font-bold uppercase tracking-[0.23em] text-[#bd642b]">Small acts. Lasting change.</p>
+        <p className="font-ad-display mt-3 text-[1.65rem] leading-[1.08]">
+          Clean water.<br />Cleaner air.<br /><span className="italic">Brighter futures.</span>
         </p>
-        <p className="mt-5 text-[0.75rem] leading-relaxed text-[#c7ddd8]/80">
-          Supporting Delhi&apos;s children through
-          <br />
-          education, water and clean air.
+        <p className="mt-5 max-w-[12rem] text-[0.72rem] leading-relaxed text-[#173f38]/70">
+          Supporting children through education, water and clean-air initiatives.
         </p>
       </div>
 
-      <div className="relative">
-        <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d98a3d] to-[#c07a2c] px-5 py-2.5 text-[0.66rem] font-bold uppercase tracking-[0.12em] text-[#08403b]">
-          Support our work
-          <span aria-hidden="true">→</span>
-        </span>
+      <div className="relative mt-auto flex items-center gap-2 text-[0.6rem] font-bold uppercase tracking-[0.16em]">
+        Support the work <span aria-hidden="true">↗</span>
       </div>
     </div>
   );

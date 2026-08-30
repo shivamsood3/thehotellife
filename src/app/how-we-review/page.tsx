@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/how-we-review" },
   title: "How We Review · The Hotel Life",
   description:
-    "Our hotel review methodology: how we book, what we test, and how we score. The same standard for a $200 room and a $3,000 suite.",
+    "Our hotel review methodology: the evidence we use, what we assess and how we score. The same standard for a $200 room and a $3,000 suite.",
 };
 
 const criteria = [
@@ -60,19 +60,29 @@ export default function HowWeReview() {
       {/* Process */}
       <div className="mx-auto mt-12 max-w-2xl">
         <div className="prose-editorial">
-          <h2>We book like everyone else</h2>
+          <h2>We label what the review is based on</h2>
           <p>
-            Wherever possible we reserve anonymously and pay the going rate, arriving as an
-            ordinary guest rather than an announced critic. It&apos;s the only way to see a
-            hotel as you will see it. When a stay is hosted or complimentary, we say so
-            clearly at the top of the review, and we hold it to exactly the same standard.
+            First-hand stays, editorial research and material supplied by a hotel are not
+            the same kind of evidence, so we do not pretend they are. Every published review
+            has a named writer, a review date and a link back to this scoring framework.
+            When a stay is hosted or complimentary, that support must be disclosed on the
+            review. Affiliate links are commercial links, not evidence, and never alter a score.
           </p>
-          <h2>We test, we don&apos;t tour</h2>
+          <h2>We test the ordinary moments</h2>
           <p>
-            A press tour shows you the best suite and the empty restaurant. We&apos;d rather
-            sleep in the cheapest room, order room service at midnight, ask for something
-            awkward, and check what the pool is like at 4pm when everyone wants a lounger.
-            The truth of a hotel lives in those ordinary moments.
+            When our assessment includes a stay, the useful evidence is rarely the staged
+            tour. It is the entry-level room, the night-time noise, breakfast at its busiest,
+            the clarity of the bill and the way a team handles an ordinary request. Where
+            first-hand testing is not available, the story is edited as researched guidance
+            and should not imply an anonymous inspection took place.
+          </p>
+          <h2>Our evidence stays attached to the story</h2>
+          <p>
+            A byline makes one person accountable for the words. The date records when the
+            review was last edited; prices remain clearly labelled as editorial indications
+            until they have their own verified check date. The numeric score preserves the
+            decimal result of the six weighted criteria below; it is not rounded up to a
+            more flattering row of full stars.
           </p>
         </div>
       </div>
