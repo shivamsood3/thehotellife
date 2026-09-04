@@ -1,3 +1,5 @@
+import { assertRankedListDepth } from "./editorial/quality";
+
 export interface BestHotelEntry {
   rank: number;
   name: string;
@@ -402,6 +404,8 @@ export const bestHotelsLists: BestHotelsList[] = [
     ],
   },
 ];
+
+assertRankedListDepth(bestHotelsLists, 1_500);
 
 export const getBestHotelsList = (slug: string) =>
   bestHotelsLists.find((list) => list.slug === slug);

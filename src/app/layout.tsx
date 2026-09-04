@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { AntialiasRail, MobileRail } from "@/components/Ads";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import PWALaunchScreen from "@/components/PWALaunchScreen";
+import PWARegistration from "@/components/PWARegistration";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
@@ -141,6 +142,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         )}
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <PWARegistration />
         <PWALaunchScreen />
         <Header />
         {/* Main + side ad rail */}

@@ -8,20 +8,17 @@ import { HangerMark, Wordmark } from "@/components/Logo";
  * with a short branded launch frame, shown only in installed/standalone mode.
  */
 export default function PWALaunchScreen() {
-  const [mounted, setMounted] = useState(true);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const standalone = window.matchMedia("(display-mode: standalone)").matches;
-    if (!standalone) {
-      setMounted(false);
-      return;
-    }
+    if (!standalone) return;
 
-    const timer = window.setTimeout(() => setMounted(false), 1300);
+    const timer = window.setTimeout(() => setHidden(true), 1300);
     return () => window.clearTimeout(timer);
   }, []);
 
-  if (!mounted) return null;
+  if (hidden) return null;
 
   return (
     <div className="pwa-launch" role="status" aria-label="Opening The Hotel Life">

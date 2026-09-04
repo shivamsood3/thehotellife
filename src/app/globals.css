@@ -82,6 +82,10 @@ body {
 }
 
 @media (display-mode: standalone) {
+  .pwa-install-control {
+    display: none;
+  }
+
   .pwa-launch {
     position: fixed;
     inset: 0;

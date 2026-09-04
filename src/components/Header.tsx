@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { HangerMark, Wordmark } from "@/components/Logo";
@@ -14,9 +14,45 @@ const NAV = [
   { label: "About", href: "/about" },
 ];
 
+interface InstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
+  const [showInstallHelp, setShowInstallHelp] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const capturePrompt = (event: Event) => {
+      event.preventDefault();
+      setInstallPrompt(event as InstallPromptEvent);
+    };
+    const installed = () => {
+      setInstallPrompt(null);
+      setShowInstallHelp(false);
+    };
+
+    window.addEventListener("beforeinstallprompt", capturePrompt);
+    window.addEventListener("appinstalled", installed);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", capturePrompt);
+      window.removeEventListener("appinstalled", installed);
+    };
+  }, []);
+
+  const installApp = async () => {
+    if (!installPrompt) {
+      setShowInstallHelp(true);
+      return;
+    }
+
+    await installPrompt.prompt();
+    await installPrompt.userChoice;
+    setInstallPrompt(null);
+  };
   // Two editorial families carry AI Wise; three carry Hacoco. Utility pages
   // remain ad-free at the top so one partner no longer appears everywhere.
   const partner = pathname === "/about" || pathname.startsWith("/guides") || pathname.startsWith("/the-edit")
@@ -120,6 +156,21 @@ export default function Header() {
               >
                 Subscribe
               </Link>
+              <div className="pwa-install-control mt-3 border-t border-line pt-4">
+                <button
+                  type="button"
+                  onClick={installApp}
+                  className="block w-full rounded-full border border-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-ink"
+                >
+                  Install The Hotel Life app
+                </button>
+                {showInstallHelp && (
+                  <p className="mt-3 text-center text-xs leading-relaxed text-ink-soft">
+                    On iPhone, tap Share, then Add to Home Screen. On Android,
+                    open the browser menu and choose Install app or Add to Home screen.
+                  </p>
+                )}
+              </div>
             </div>
           </nav>
         )}

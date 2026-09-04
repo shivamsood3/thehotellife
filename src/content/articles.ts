@@ -7,6 +7,7 @@ import { expansionArticles } from "./editorial/expansion-articles";
 import { septemberArticles } from "./editorial/september-features";
 import { legacyArticleAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex } from "./authors";
+import { assertSectionDepth } from "./editorial/quality";
 
 export interface ArticleSection {
   heading?: string;
@@ -373,11 +374,18 @@ const articleCatalogue: Article[] = [
   },
 ];
 
-export const articles: Article[] = articleCatalogue.map((article, index) => ({
-  ...article,
-  author: editorialAuthorForIndex(index),
-  sections: [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])],
-}));
+export const articles: Article[] = articleCatalogue.map((article, index) => {
+  const sections = [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])];
+  const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
+  return {
+    ...article,
+    author: editorialAuthorForIndex(index),
+    readTime: Math.max(3, Math.ceil(words / 200)),
+    sections,
+  };
+});
+
+assertSectionDepth("The Edit articles", articles, 500);
 
 // ---- helpers -------------------------------------------------------------
 

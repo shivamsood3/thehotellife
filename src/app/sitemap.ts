@@ -10,7 +10,11 @@ const SITE_URL = (
 ).replace(/\/$/, "");
 
 function absoluteUrl(value: string): string {
-  return value.startsWith("http") ? value : `${SITE_URL}${value}`;
+  const url = value.startsWith("http") ? value : `${SITE_URL}${value}`;
+  // Next 16.3 currently writes image URLs into the generated XML without
+  // escaping query-string separators. A raw ampersand makes the entire
+  // sitemap invalid, so provide the XML entity explicitly.
+  return url.replaceAll("&", "&amp;").replaceAll("<", "&lt;");
 }
 
 /**

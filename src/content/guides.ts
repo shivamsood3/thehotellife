@@ -7,6 +7,7 @@ import { expansionGuides } from "./editorial/expansion-guides";
 import { septemberGuides } from "./editorial/september-features";
 import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex } from "./authors";
+import { assertSectionDepth } from "./editorial/quality";
 
 export interface GuideSection {
   heading?: string;
@@ -811,11 +812,18 @@ const guideCatalogue: Guide[] = [
   },
 ];
 
-export const guides: Guide[] = guideCatalogue.map((guide, index) => ({
-  ...guide,
-  author: editorialAuthorForIndex(index),
-  sections: [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])],
-}));
+export const guides: Guide[] = guideCatalogue.map((guide, index) => {
+  const sections = [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])];
+  const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
+  return {
+    ...guide,
+    author: editorialAuthorForIndex(index),
+    readTime: Math.max(3, Math.ceil(words / 200)),
+    sections,
+  };
+});
+
+assertSectionDepth("Destination guides", guides, 500);
 
 // ---- helpers -------------------------------------------------------------
 

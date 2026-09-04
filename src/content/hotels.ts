@@ -6,7 +6,9 @@
 import { expansionHotels } from "./editorial/expansion-hotels";
 import { septemberHotels } from "./editorial/september-hotels";
 import { legacyHotelAdditions } from "./editorial/legacy-enrichment";
+import { reviewDepthFor } from "./editorial/review-depth";
 import { editorialAuthorForIndex, type EditorialAuthor } from "./authors";
+import { assertSectionDepth } from "./editorial/quality";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -2253,15 +2255,23 @@ const hotelCatalogue: Hotel[] = [
 
 export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   const additions = legacyHotelAdditions[hotel.slug];
+  const depthSections = reviewDepthFor(hotel);
   const author = editorialAuthorForIndex(index);
-  if (!additions?.length) return { ...hotel, author };
+  if (!additions?.length && !depthSections.length) return { ...hotel, author };
   const finalSection = hotel.sections.slice(-1);
   return {
     ...hotel,
     author,
-    sections: [...hotel.sections.slice(0, -1), ...additions, ...finalSection],
+    sections: [
+      ...hotel.sections.slice(0, -1),
+      ...(additions ?? []),
+      ...depthSections,
+      ...finalSection,
+    ],
   };
 });
+
+assertSectionDepth("Hotel reviews", hotels, 700);
 
 // ---- helpers -------------------------------------------------------------
 
