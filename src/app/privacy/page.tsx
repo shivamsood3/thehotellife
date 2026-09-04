@@ -44,6 +44,29 @@ export default function Privacy() {
           Google&apos;s Ads Settings, and manage cookies through your browser at any time.
         </p>
 
+        <h2>Affiliate links and commission</h2>
+        <p>
+          Some booking links on this site are affiliate links, served through
+          Commission Junction on behalf of partners including Booking.com,
+          Hotels.com and Accor. If you follow one of these links and go on to
+          book, we may earn a commission at no additional cost to you. Links
+          that earn us a commission are labelled as partner links wherever
+          they appear.
+        </p>
+        <p>
+          When you click an affiliate link you are passed through the
+          partner network&apos;s redirect, which sets its own cookie so the
+          booking can be attributed to this site. That cookie is read by the
+          network and the advertiser, not by us, and it typically expires
+          within days. We never receive your payment details or booking
+          information: we only see aggregate click and commission reporting.
+        </p>
+        <p>
+          Commission never influences our reviews, ratings or which hotels we
+          choose to cover. Where a hotel has no affiliate programme we link
+          directly to the hotel and earn nothing, and we say so on the page.
+        </p>
+
         <h2>How we use your information</h2>
         <p>
           We use what we collect to send the newsletter you asked for, respond to your
