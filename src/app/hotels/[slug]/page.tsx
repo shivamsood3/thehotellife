@@ -106,9 +106,6 @@ export default async function HotelPage({
         <span className="text-sm text-ink-muted">
           By <span className="font-medium text-ink">{hotel.author}</span> · Reviewed {hotel.year}
         </span>
-        <span className="rounded-full border border-line bg-white px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-widest text-ink-muted">
-          {hotel.reviewBasis === "first-hand" ? "First-hand stay" : "Researched assessment"}
-        </span>
         <ShareWhatsApp
           url={`${SITE_URL}/hotels/${hotel.slug}`}
           title={`${hotel.name}, ${hotel.city}`}
@@ -180,9 +177,7 @@ export default async function HotelPage({
               <aside className="not-prose mt-12 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
                 <p className="font-semibold text-ink">How this review was checked</p>
                 <p className="mt-2">
-                  {hotel.reviewBasis === "first-hand"
-                    ? "The editorial judgement is based on a named stay; changeable hotel details were checked against the primary sources below."
-                    : "This is a researched editorial assessment. Changeable hotel details were checked against the primary sources below."}
+                  Changeable hotel details were checked against the primary sources below.
                 </p>
                 <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
                   {hotel.researchSources.map((source) => (
