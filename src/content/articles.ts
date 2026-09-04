@@ -4,6 +4,7 @@
  * and the destination guides.
  */
 import { expansionArticles } from "./editorial/expansion-articles";
+import { septemberArticles } from "./editorial/september-features";
 import { legacyArticleAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex } from "./authors";
 
@@ -23,6 +24,7 @@ export interface Article {
   date: string;
   heroImage: string;
   cardImage: string;
+  imageAlt?: string;
   hotelSlugs: string[]; // related reviews
   sections: ArticleSection[];
   featured?: boolean;
@@ -33,6 +35,7 @@ const U = (id: string, w = 1600) =>
 
 const articleCatalogue: Article[] = [
   ...expansionArticles,
+  ...septemberArticles,
   {
     slug: "what-a-hotel-owes-you",
     title: "What a Hotel Actually Owes You",

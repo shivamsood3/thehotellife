@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { HangerMark, Wordmark } from "@/components/Logo";
-import { HacocoBanner } from "./Ads";
+import { PartnerLeaderboard } from "./Ads";
 
 const NAV = [
   { label: "Hotels", href: "/hotels" },
@@ -15,11 +16,18 @@ const NAV = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  // Two editorial families carry AI Wise; three carry Hacoco. Utility pages
+  // remain ad-free at the top so one partner no longer appears everywhere.
+  const partner = pathname.startsWith("/guides") || pathname.startsWith("/the-edit")
+    ? "ai-wise"
+    : pathname.startsWith("/hotels") || pathname.startsWith("/destinations") || pathname.startsWith("/best-hotels")
+      ? "hacoco"
+      : null;
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Direct-sold Hacoco leaderboard */}
-      <HacocoBanner />
+      {partner && <PartnerLeaderboard brand={partner} />}
 
       <div className="border-b border-line bg-paper/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 lg:px-10">

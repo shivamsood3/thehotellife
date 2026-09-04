@@ -8,6 +8,17 @@
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
+const MONTHS: Record<string, string> = {
+  January: "01", February: "02", March: "03", April: "04", May: "05", June: "06",
+  July: "07", August: "08", September: "09", October: "10", November: "11", December: "12",
+};
+
+/** Turn editorial month labels into the ISO dates expected by search engines. */
+export function editorialDateToISO(value: string) {
+  const match = value.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  return match && MONTHS[match[1]] ? `${match[2]}-${MONTHS[match[1]]}-01` : value;
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function JsonLd({ data }: { data: Record<string, any> }) {
   return (
@@ -99,6 +110,8 @@ export function bestHotelsListSchema(list: {
     url: `${SITE_URL}/best-hotels/${list.slug}`,
     numberOfItems: list.hotels.length,
     dateModified: list.updatedISO,
+    inLanguage: "en-GB",
+    author: { "@type": "Person", name: "Zinnia Thapar" },
     publisher: { "@id": `${SITE_URL}/#organization` },
     itemListOrder: "https://schema.org/ItemListOrderAscending",
     itemListElement: list.hotels.map((hotel) => ({
@@ -146,6 +159,7 @@ export function hotelReviewSchema(hotel: {
   rating: number;
   priceFrom: number;
   heroImage: string;
+  imageAlt?: string;
   year: string;
   author?: string;
 }) {
@@ -155,7 +169,12 @@ export function hotelReviewSchema(hotel: {
   return {
     "@context": "https://schema.org",
     "@type": "Review",
+    "@id": `${SITE_URL}/hotels/${hotel.slug}#review`,
     url: `${SITE_URL}/hotels/${hotel.slug}`,
+    mainEntityOfPage: `${SITE_URL}/hotels/${hotel.slug}`,
+    inLanguage: "en-GB",
+    datePublished: editorialDateToISO(hotel.year),
+    dateModified: editorialDateToISO(hotel.year),
     reviewBody: hotel.excerpt,
     author: { "@type": "Person", name: hotel.author ?? "Zinnia Thapar" },
     publisher: { "@id": `${SITE_URL}/#organization` },
@@ -168,7 +187,7 @@ export function hotelReviewSchema(hotel: {
     itemReviewed: {
       "@type": "Hotel",
       name: hotel.name,
-      image,
+      image: { "@type": "ImageObject", url: image, caption: hotel.imageAlt ?? hotel.name },
       address: {
         "@type": "PostalAddress",
         addressLocality: hotel.city,
@@ -187,6 +206,7 @@ export function articleSchema(a: {
   author: string;
   date: string;
   image: string;
+  imageAlt?: string;
 }) {
   const image = a.image.startsWith("http") ? a.image : `${SITE_URL}${a.image}`;
   return {
@@ -194,10 +214,12 @@ export function articleSchema(a: {
     "@type": "Article",
     headline: a.title,
     description: a.excerpt,
-    image,
+    image: { "@type": "ImageObject", url: image, caption: a.imageAlt ?? a.title },
     author: { "@type": "Person", name: a.author },
     publisher: { "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: `${SITE_URL}${a.path}`,
-    datePublished: a.date,
+    datePublished: editorialDateToISO(a.date),
+    dateModified: editorialDateToISO(a.date),
+    inLanguage: "en-GB",
   };
 }

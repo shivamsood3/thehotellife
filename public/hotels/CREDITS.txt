@@ -124,3 +124,14 @@ singita-sabi-sand
 # The Brando — thebrando.com
 # Rosewood São Paulo — rosewoodhotels.com / picasso.rosewoodhotelgroup.com
 # The Johri, Jaipur — thejohrijaipur.com
+
+# Official editorial photography used for September 2026 THL reviews:
+# The Imperial New Delhi — tablecells.com / official hotel press photography
+# The Lodhi — thelodhi.com
+# The Leela Palace New Delhi — theleela.com
+# The Oberoi Mumbai — oberoihotels.com
+
+taj-mahal-palace-mumbai
+  Facade of Taj Mahal Palace Hotel - Colaba District - Mumbai - Maharashtra - India
+  by Adam Jones — CC BY-SA 2.0; hosted by Flickr
+  https://commons.wikimedia.org/wiki/File:Facade_of_Taj_Mahal_Palace_Hotel_-_Colaba_District_-_Mumbai_-_Maharashtra_-_India_(26119514800).jpg

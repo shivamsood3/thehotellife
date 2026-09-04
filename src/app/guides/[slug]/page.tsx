@@ -8,7 +8,7 @@ import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
-import JsonLd, { articleSchema, breadcrumbSchema } from "@/components/JsonLd";
+import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -28,7 +28,9 @@ export async function generateMetadata({
     title: guide.title,
     alternates: { canonical: `/guides/${guide.slug}` },
     description: guide.excerpt,
-    openGraph: { title: guide.title, description: guide.excerpt, images: [guide.heroImage] },
+    keywords: [`${guide.destination} travel guide`, `where to stay in ${guide.destination}`, `${guide.destination} itinerary`, "luxury travel guide"],
+    openGraph: { title: guide.title, description: guide.excerpt, type: "article", url: `/guides/${guide.slug}`, publishedTime: editorialDateToISO(guide.date), modifiedTime: editorialDateToISO(guide.date), authors: [guide.author], images: [{ url: guide.heroImage, alt: guide.imageAlt ?? `Travel guide to ${guide.destination}` }] },
+    twitter: { card: "summary_large_image", title: guide.title, description: guide.excerpt, images: [guide.heroImage] },
   };
 }
 
@@ -53,6 +55,7 @@ export default async function GuidePage({
           author: guide.author,
           date: guide.date,
           image: guide.heroImage,
+          imageAlt: guide.imageAlt,
         })}
       />
       <JsonLd
@@ -65,7 +68,7 @@ export default async function GuidePage({
       {/* Hero */}
       <div className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
-          <Image src={guide.heroImage} alt={guide.title} fill priority className="object-cover" sizes="100vw" />
+          <Image src={guide.heroImage} alt={guide.imageAlt ?? `Travel guide to ${guide.destination}`} fill preload className="object-cover" sizes="100vw" />
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
             <span className="eyebrow eyebrow-hero">{guide.destination}</span>
@@ -125,7 +128,7 @@ export default async function GuidePage({
                         className="group flex min-w-0 flex-1 gap-4"
                       >
                         <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-sm">
-                          <Image src={h.cardImage} alt={`${h.name}, ${h.city}`} fill className="object-cover" sizes="96px" />
+                          <Image src={h.cardImage} alt={h.imageAlt ?? `${h.name} in ${h.city}`} fill className="object-cover" sizes="96px" />
                         </div>
                         <div className="min-w-0">
                           <span className="eyebrow text-ink-muted">

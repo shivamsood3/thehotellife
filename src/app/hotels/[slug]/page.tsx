@@ -7,7 +7,7 @@ import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
-import JsonLd, { hotelReviewSchema, breadcrumbSchema } from "@/components/JsonLd";
+import JsonLd, { hotelReviewSchema, breadcrumbSchema, faqSchema, editorialDateToISO } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -27,11 +27,18 @@ export async function generateMetadata({
     title: `${hotel.name}, ${hotel.city}: Review`,
     alternates: { canonical: `/hotels/${hotel.slug}` },
     description: hotel.excerpt,
+    keywords: [hotel.name, `${hotel.name} review`, `luxury hotels in ${hotel.city}`, `where to stay in ${hotel.city}`],
     openGraph: {
       title: `${hotel.name} · The Hotel Life`,
       description: hotel.excerpt,
-      images: [hotel.heroImage],
+      type: "article",
+      url: `/hotels/${hotel.slug}`,
+      publishedTime: editorialDateToISO(hotel.year),
+      modifiedTime: editorialDateToISO(hotel.year),
+      authors: [hotel.author ?? "Zinnia Thapar"],
+      images: [{ url: hotel.heroImage, alt: hotel.imageAlt ?? `${hotel.name} in ${hotel.city}` }],
     },
+    twitter: { card: "summary_large_image", title: `${hotel.name}: Hotel Review`, description: hotel.excerpt, images: [hotel.heroImage] },
   };
 }
 
@@ -46,10 +53,18 @@ export default async function HotelPage({
 
   const related = getRelated(slug);
   const booking = primaryBookingLink(hotel);
+  const bestFor = hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "best for")?.value;
+  const hotelFaq = [
+    { question: `Where is ${hotel.name}?`, answer: `${hotel.name} is in ${hotel.city}, ${hotel.country}. ${hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "location")?.value ?? "See the review for neighbourhood and arrival advice."}` },
+    { question: `What is The Hotel Life's rating for ${hotel.name}?`, answer: `Our editors rate ${hotel.name} ${hotel.rating.toFixed(1)} out of 5 after assessing its sense of place, rooms, service, food, design and value.` },
+    { question: `Who is ${hotel.name} best for?`, answer: bestFor ? `${hotel.name} is particularly well suited to ${bestFor.toLowerCase()}.` : `${hotel.name} suits travellers looking for a distinctive luxury stay in ${hotel.city}.` },
+    { question: `How much does ${hotel.name} cost?`, answer: `Our ${hotel.year} review recorded an indicative starting rate of USD ${hotel.priceFrom.toLocaleString()} per night. Rates vary by date, room, taxes and availability; confirm a live quote before booking.` },
+  ];
 
   return (
     <article className="pb-8">
       <JsonLd data={hotelReviewSchema(hotel)} />
+      <JsonLd data={faqSchema(hotelFaq)} />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -62,9 +77,9 @@ export default async function HotelPage({
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image
             src={hotel.heroImage}
-            alt={`${hotel.name}, ${hotel.city}, ${hotel.country}`}
+            alt={hotel.imageAlt ?? `${hotel.name} in ${hotel.city}, ${hotel.country}`}
             fill
-            priority
+            preload
             className="object-cover"
             sizes="100vw"
           />
@@ -195,6 +210,19 @@ export default async function HotelPage({
           <AdSense format="rectangle" slot="2000000002" />
         </aside>
       </div>
+
+      <section className="mx-auto mt-16 max-w-3xl border-t border-line pt-12">
+        <span className="eyebrow">The essentials, answered</span>
+        <h2 className="font-display mt-2 text-3xl font-medium text-ink">Planning a stay at {hotel.name}</h2>
+        <dl className="mt-6 divide-y divide-line border-y border-line">
+          {hotelFaq.map((item) => (
+            <div key={item.question} className="py-6">
+              <dt className="font-display text-xl font-medium text-ink">{item.question}</dt>
+              <dd className="mt-2 leading-relaxed text-ink-soft">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
       {/* ===== RELATED ===== */}
       <section className="mt-20">

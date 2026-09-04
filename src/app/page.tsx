@@ -61,7 +61,7 @@ export default function Home() {
             src={hero.heroImage}
             alt={`${hero.name}, ${hero.city}, ${hero.country}`}
             fill
-            priority
+            preload
             className="object-cover"
             sizes="100vw"
           />

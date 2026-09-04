@@ -30,6 +30,11 @@ const EDITORIAL_IMAGE_HOSTS = [
   "https://thebrando.com",
   "https://picasso.rosewoodhotelgroup.com",
   "https://www.thejohrijaipur.com",
+  "https://tablecells.com",
+  "https://thelodhi.com",
+  "https://www.theleela.com",
+  "https://live.staticflickr.com",
+  "https://www.oberoihotels.com",
 ].join(" ");
 
 const csp = [
@@ -87,12 +92,24 @@ const nextConfig: NextConfig = {
         "thebrando.com",
         "picasso.rosewoodhotelgroup.com",
         "www.thejohrijaipur.com",
+        "tablecells.com",
+        "thelodhi.com",
+        "www.theleela.com",
+        "live.staticflickr.com",
+        "www.oberoihotels.com",
       ].map((hostname) => ({ protocol: "https" as const, hostname, pathname: "/**" })),
     ],
   },
 
   async headers() {
     return [
+      {
+        source: "/favicon.ico",
+        headers: [
+          ...securityHeaders,
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
       {
         source: "/:path*",
         headers: securityHeaders,

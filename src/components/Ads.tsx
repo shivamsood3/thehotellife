@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------
  * Monetization surfaces:
  *   1. Google AdSense  - <AdSense /> responsive display units
- *   2. Hacoco          - <HacocoBanner /> top leaderboard (direct-sold)
+ *   2. Hacoco / AI Wise - <PartnerLeaderboard /> top leaderboard (direct-sold)
  *   3. The AntiAlias   - <AntialiasRail /> side skyscraper (direct-sold)
  *
  * To go live with AdSense:
@@ -18,7 +18,7 @@
  * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
  */
 import Link from "next/link";
-import { AntialiasCreative, HacocoCreative, NikhaarCreative } from "@/components/HouseBanners";
+import { AiWiseCreative, AntialiasCreative, HacocoCreative, NikhaarCreative } from "@/components/HouseBanners";
 import AdSenseUnit from "@/components/AdSenseUnit";
 import { AccorPlusRail } from "@/components/AffiliateBanner";
 
@@ -26,6 +26,7 @@ const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
 const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
 const NIKHAAR_URL = process.env.NEXT_PUBLIC_NIKHAAR_URL ?? "https://www.nikhaarfoundation.org";
+const AI_WISE_URL = process.env.NEXT_PUBLIC_AI_WISE_URL ?? "https://www.youtube.com/@the.aiwise";
 
 /**
  * Real AdSense ad unit IDs, one per position type. Create the units in the
@@ -88,20 +89,21 @@ export function AdSense({ slot, format = "responsive", className = "" }: AdSense
   );
 }
 
-/** Top-of-page leaderboard - house creative for Hacoco. */
-export function HacocoBanner() {
+/** Top-of-page direct partner leaderboard. */
+export function PartnerLeaderboard({ brand }: { brand: "hacoco" | "ai-wise" }) {
+  const isAiWise = brand === "ai-wise";
   return (
     <div className="w-full border-b border-line bg-paper-2">
       <div className="mx-auto max-w-[1400px] px-4 py-2 sm:px-6 lg:px-10">
         <Link
-          href={HACOCO_URL}
+          href={isAiWise ? AI_WISE_URL : HACOCO_URL}
           target="_blank"
           rel="sponsored noopener noreferrer"
           className="group block"
-          aria-label="Advertisement - Hacoco"
+          aria-label={`Advertisement - ${isAiWise ? "AI Wise" : "Hacoco"}`}
         >
           <div className="relative mx-auto h-[76px] w-full max-w-[970px] overflow-hidden rounded-sm transition-opacity group-hover:opacity-95 sm:h-[90px]">
-            <HacocoCreative />
+            {isAiWise ? <AiWiseCreative /> : <HacocoCreative />}
           </div>
         </Link>
       </div>

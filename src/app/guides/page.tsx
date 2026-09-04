@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { guides } from "@/content/guides";
 import GuideCard from "@/components/GuideCard";
 import { AdSense } from "@/components/Ads";
@@ -31,8 +32,7 @@ export default function GuidesIndex() {
       {/* Featured lead guide */}
       <a href={`/guides/${lead.slug}`} className="card-zoom group mt-10 grid gap-8 overflow-hidden rounded-md bg-white lg:grid-cols-2">
         <div className="relative min-h-[280px] overflow-hidden lg:min-h-[420px]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={lead.cardImage} alt={lead.title} className="absolute inset-0 h-full w-full object-cover" />
+          <Image src={lead.cardImage} alt={lead.imageAlt ?? `Travel guide to ${lead.destination}`} fill preload className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
         <div className="flex flex-col justify-center gap-4 p-8 lg:p-12">
           <span className="eyebrow">{lead.destination}</span>

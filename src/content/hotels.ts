@@ -4,6 +4,7 @@
  * pages read only from these exported helpers.
  */
 import { expansionHotels } from "./editorial/expansion-hotels";
+import { septemberHotels } from "./editorial/september-hotels";
 import { legacyHotelAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex, type EditorialAuthor } from "./authors";
 
@@ -33,6 +34,8 @@ export interface Hotel {
   author?: EditorialAuthor;
   heroImage: string;
   cardImage: string;
+  /** Human-readable description of the photograph, shared by page and card images. */
+  imageAlt?: string;
   quickFacts: { label: string; value: string }[];
   standout: string;
   sections: Section[];
@@ -62,6 +65,7 @@ const U = (id: string, w = 1600) =>
 
 const hotelCatalogue: Hotel[] = [
   ...expansionHotels,
+  ...septemberHotels,
   {
     slug: "aman-tokyo",
     name: "Aman Tokyo",

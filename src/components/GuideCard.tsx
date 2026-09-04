@@ -8,7 +8,7 @@ export default function GuideCard({ guide }: { guide: Guide }) {
       <div className="relative aspect-[3/2] overflow-hidden rounded-sm bg-paper-2">
         <Image
           src={guide.cardImage}
-          alt={guide.title}
+          alt={guide.imageAlt ?? `Travel guide to ${guide.destination}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"

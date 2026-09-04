@@ -40,7 +40,7 @@ export default function HotelCard({
       <div className={`relative ${aspect} overflow-hidden rounded-sm bg-paper-2`}>
         <Image
           src={hotel.cardImage}
-          alt={`${hotel.name}, ${hotel.city}, ${hotel.country}`}
+          alt={hotel.imageAlt ?? `${hotel.name} in ${hotel.city}, ${hotel.country}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"

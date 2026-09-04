@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bestHotelsLists, getBestHotelsList } from "@/content/best-hotels";
+import { getHotel } from "@/content/hotels";
+import { hotelsComAffiliateLink } from "@/lib/affiliate";
 import JsonLd, {
   bestHotelsListSchema,
   breadcrumbSchema,
@@ -37,10 +39,11 @@ export async function generateMetadata({
       description: list.dek,
       type: "article",
       url: `/best-hotels/${list.slug}`,
-      images: [{ url: list.heroImage }],
+      images: [{ url: list.heroImage, alt: list.heroAlt ?? `The best hotels in ${list.destination}, ${list.country}` }],
       modifiedTime: list.updatedISO,
       authors: ["Zinnia Thapar"],
     },
+    twitter: { card: "summary_large_image", title: list.title, description: list.dek, images: [list.heroImage] },
   };
 }
 
@@ -69,9 +72,9 @@ export default async function BestHotelsPage({
         <div className="relative h-[34rem] w-full overflow-hidden rounded-md sm:h-auto sm:min-h-[28rem] sm:aspect-[16/8]">
           <Image
             src={list.heroImage}
-            alt={`The best hotels in ${list.destination}, ${list.country}`}
+            alt={list.heroAlt ?? `The best hotels in ${list.destination}, ${list.country}`}
             fill
-            priority
+            preload
             className="object-cover"
             sizes="100vw"
           />
@@ -179,6 +182,19 @@ export default async function BestHotelsPage({
                     >
                       Visit official site ↗
                     </a>
+                    <a
+                      href={hotelsComAffiliateLink({
+                        slug: hotel.reviewSlug ?? `${list.slug}-${hotel.rank}`,
+                        name: hotel.name,
+                        city: list.destination,
+                        hotelsUrl: hotel.reviewSlug ? getHotel(hotel.reviewSlug)?.hotelsUrl : undefined,
+                      }).url}
+                      target="_blank"
+                      rel="sponsored nofollow noopener noreferrer"
+                      className="rounded-full border border-brass-deep px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-brass-deep hover:bg-brass-deep hover:text-white"
+                    >
+                      Compare rates ↗
+                    </a>
                   </div>
                 </div>
               </div>
@@ -207,9 +223,10 @@ export default async function BestHotelsPage({
           <p className="eyebrow text-paper/50">Editorial note</p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-paper/70">
             This list is independently selected and contains no paid placements.
-            The external buttons above go to official hotel websites; THL does not
-            earn a commission from those links. Hotels evolve, so confirm current
-            facilities and policies directly before booking.
+            Official-site buttons are untracked. Hotels.com comparison buttons are
+            affiliate links, and THL may earn a commission at no cost to you. Paid
+            relationships never determine inclusion or rank. Hotels evolve, so confirm
+            current facilities and policies directly before booking.
           </p>
         </div>
 

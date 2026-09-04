@@ -7,7 +7,7 @@ import { getHotel } from "@/content/hotels";
 import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
-import JsonLd, { articleSchema, breadcrumbSchema } from "@/components/JsonLd";
+import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -27,12 +27,18 @@ export async function generateMetadata({
     title: article.title,
     alternates: { canonical: `/the-edit/${article.slug}` },
     description: article.excerpt,
+    keywords: [article.kicker, "luxury hotel editorial", "hotel advice", "The Hotel Life"],
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      images: [article.heroImage],
       type: "article",
+      url: `/the-edit/${article.slug}`,
+      publishedTime: editorialDateToISO(article.date),
+      modifiedTime: editorialDateToISO(article.date),
+      authors: [article.author],
+      images: [{ url: article.heroImage, alt: article.imageAlt ?? article.title }],
     },
+    twitter: { card: "summary_large_image", title: article.title, description: article.excerpt, images: [article.heroImage] },
   };
 }
 
@@ -58,6 +64,7 @@ export default async function ArticlePage({
           author: article.author,
           date: article.date,
           image: article.heroImage,
+          imageAlt: article.imageAlt,
         })}
       />
       <JsonLd
@@ -72,9 +79,9 @@ export default async function ArticlePage({
         <div className="relative aspect-[4/5] w-full sm:aspect-[16/7]">
           <Image
             src={article.heroImage}
-            alt={article.title}
+            alt={article.imageAlt ?? article.title}
             fill
-            priority
+            preload
             className="object-cover"
             sizes="100vw"
           />
@@ -152,7 +159,7 @@ export default async function ArticlePage({
               <div className="relative aspect-[3/2] overflow-hidden rounded-sm">
                 <Image
                   src={a.cardImage}
-                  alt={a.title}
+                  alt={a.imageAlt ?? a.title}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"

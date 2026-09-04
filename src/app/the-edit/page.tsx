@@ -80,7 +80,7 @@ export default function TheEdit() {
           <div className="relative aspect-[16/10] overflow-hidden rounded-sm">
             <Image
               src={articles[0].cardImage}
-              alt={articles[0].title}
+              alt={articles[0].imageAlt ?? articles[0].title}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -106,7 +106,7 @@ export default function TheEdit() {
               <div className="relative aspect-[3/2] overflow-hidden rounded-sm">
                 <Image
                   src={a.cardImage}
-                  alt={a.title}
+                  alt={a.imageAlt ?? a.title}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"

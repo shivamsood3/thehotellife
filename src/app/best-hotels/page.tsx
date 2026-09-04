@@ -51,7 +51,7 @@ export default function BestHotelsIndex() {
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={list.heroImage}
-                alt={`The best hotels in ${list.destination}, ${list.country}`}
+                alt={list.heroAlt ?? `The best hotels in ${list.destination}, ${list.country}`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

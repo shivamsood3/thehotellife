@@ -33,7 +33,7 @@ export default function Newsletter() {
             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
             alt="The Concierge newsletter"
             fill
-            priority
+            preload
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />

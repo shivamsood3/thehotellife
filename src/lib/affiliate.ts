@@ -100,6 +100,25 @@ export type BookingLink = {
   tracked: boolean;
 };
 
+/** A Hotels.com-only link for ranked lists and other monetized hotel mentions. */
+export function hotelsComAffiliateLink(hotel: {
+  slug: string;
+  name: string;
+  city: string;
+  hotelsUrl?: string;
+}): BookingLink {
+  const destination = hotel.hotelsUrl ??
+    `https://www.hotels.com/Hotel-Search?destination=${encodeURIComponent(`${hotel.name} ${hotel.city}`)}`;
+  if (TEMPLATES.hotels) {
+    return {
+      url: wrap(TEMPLATES.hotels, destination, `${SID_PREFIX}-${hotel.slug}-hotels`),
+      network: "Hotels.com",
+      tracked: true,
+    };
+  }
+  return { url: destination, network: "Hotels.com", tracked: false };
+}
+
 export function primaryBookingLink(hotel: Hotel): BookingLink {
   // 1. Direct-only properties.
   if (hotel.directBookingUrl) {

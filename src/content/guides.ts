@@ -4,6 +4,7 @@
  */
 import type { Region } from "./hotels";
 import { expansionGuides } from "./editorial/expansion-guides";
+import { septemberGuides } from "./editorial/september-features";
 import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex } from "./authors";
 
@@ -24,6 +25,7 @@ export interface Guide {
   date: string;
   heroImage: string;
   cardImage: string;
+  imageAlt?: string;
   hotelSlugs: string[]; // "where to stay" - links into hotels.ts
   sections: GuideSection[];
   featured?: boolean;
@@ -34,6 +36,7 @@ const U = (id: string, w = 1600) =>
 
 const guideCatalogue: Guide[] = [
   ...expansionGuides,
+  ...septemberGuides,
   {
     slug: "48-hours-in-tokyo",
     title: "48 Hours in Tokyo, the Hotel Insider's Way",
