@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AntialiasRail, MobileRail } from "@/components/Ads";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
+import PWALaunchScreen from "@/components/PWALaunchScreen";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
@@ -69,6 +70,11 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "The Hotel Life",
+    statusBarStyle: "default",
+  },
   openGraph: {
     title: "The Hotel Life | Independent Luxury Hotel Reviews",
     description:
@@ -135,6 +141,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         )}
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <PWALaunchScreen />
         <Header />
         {/* Main + side ad rail */}
         <div className="flex-1 w-full">

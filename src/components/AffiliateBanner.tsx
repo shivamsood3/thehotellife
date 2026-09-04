@@ -74,6 +74,28 @@ export function AccorPlusRail({ className = "" }: { className?: string }) {
   );
 }
 
+/** Square mobile crop of the supplied Accor Plus artwork. */
+export function AccorPlusSquare({ className = "" }: { className?: string }) {
+  if (!ACCORPLUS_300x600) return null;
+  return (
+    <a
+      href={`https://www.tkqlhce.com/click-${CJ_PID}-${ACCORPLUS_300x600}`}
+      target="_blank"
+      rel="sponsored nofollow noopener noreferrer"
+      className={`group relative block aspect-square overflow-hidden rounded-sm bg-[#17354a] ${className}`}
+      aria-label="Advertisement - Accor Plus membership"
+    >
+      <Image
+        src="/ads/accorplus-300x600.jpg"
+        alt="Accor Plus membership — become an Explorer"
+        width={300}
+        height={600}
+        className="absolute bottom-0 left-0 block h-auto w-full transition-opacity group-hover:opacity-95"
+      />
+    </a>
+  );
+}
+
 /** 728x90 leaderboard for in-feed placements. */
 export function AccorPlusLeaderboard({ className = "" }: { className?: string }) {
   return (

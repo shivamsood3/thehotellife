@@ -145,3 +145,50 @@ export function NikhaarCreative() {
     </div>
   );
 }
+
+export function AntialiasSquareCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#070707] p-7 text-white">
+      <div className="pointer-events-none absolute -right-16 -top-12 h-52 w-52 rounded-full bg-[#e6322a]/15 blur-2xl" />
+      <div className="pointer-events-none absolute inset-3 border border-white/10" />
+      <div className="relative flex items-center justify-between border-b border-white/15 pb-4">
+        <p className="text-[0.52rem] font-bold uppercase tracking-[0.3em] text-white/60">Design / Systems / AI</p>
+        <span className="grid h-11 w-14 place-items-center bg-[#e6322a] text-[0.58rem] font-black uppercase tracking-tight">Anti<br />Alias</span>
+      </div>
+      <div className="relative mt-8">
+        <p className="text-[2rem] font-black leading-[0.92] tracking-[-0.06em] text-[#e6322a]">WE BUILD<br />DIGITAL SYSTEMS</p>
+        <p className="mt-2 text-[1.65rem] font-black leading-[0.95] tracking-[-0.055em]">THAT MAKE<br />COMPANIES<br />VALUABLE.</p>
+      </div>
+      <div className="relative mt-auto flex items-center justify-between border-t border-white/15 pt-4">
+        <span className="text-[0.58rem] font-bold uppercase tracking-[0.18em]">View selected work</span>
+        <span className="text-xl text-[#e6322a]" aria-hidden="true">↗</span>
+      </div>
+    </div>
+  );
+}
+
+export function NikhaarSquareCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#f5ead7] p-7 text-[#173f38]">
+      <div className="pointer-events-none absolute -bottom-20 -right-16 h-56 w-56 rounded-full bg-[#ef9c4a]" />
+      <div className="pointer-events-none absolute -bottom-3 right-6 h-32 w-32 rounded-full border border-[#f5ead7]/70" />
+      <div className="relative flex items-center justify-between border-b border-[#173f38]/20 pb-4">
+        <div>
+          <p className="font-ad-display text-[1.7rem] font-semibold leading-none">Nikhaar</p>
+          <p className="mt-1.5 text-[0.5rem] font-bold uppercase tracking-[0.34em]">Foundation</p>
+        </div>
+        <svg viewBox="0 0 32 36" className="h-9 w-8" aria-hidden="true" fill="none">
+          <path d="M2 31C2 14 15 3 30 1c-2 17-13 28-28 30Z" fill="#e98935" />
+          <path d="M6 35C8 22 17 14 28 10" stroke="#173f38" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      </div>
+      <div className="relative mt-7">
+        <p className="text-[0.53rem] font-bold uppercase tracking-[0.21em] text-[#bd642b]">Small acts. Lasting change.</p>
+        <p className="font-ad-display mt-3 text-[1.9rem] leading-[1.04]">Clean water.<br />Cleaner air.<br /><span className="italic">Brighter futures.</span></p>
+      </div>
+      <div className="relative mt-auto flex items-center gap-2 text-[0.6rem] font-bold uppercase tracking-[0.16em]">
+        Support the work <span aria-hidden="true">↗</span>
+      </div>
+    </div>
+  );
+}

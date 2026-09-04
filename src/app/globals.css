@@ -75,6 +75,46 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Installed PWA launch frame. Browsers own the native splash screen; this
+   branded continuation appears only in standalone display mode. */
+.pwa-launch {
+  display: none;
+}
+
+@media (display-mode: standalone) {
+  .pwa-launch {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: var(--plum);
+    animation: pwa-launch-out 300ms ease 900ms forwards;
+  }
+
+  .pwa-launch-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .pwa-launch-lockup > span:last-child {
+    margin-top: -8px;
+    color: rgb(255 255 255 / 0.62);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes pwa-launch-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
 /* Utility: fine uppercase eyebrow label */
 .eyebrow {
   font-family: var(--font-sans);
