@@ -6,6 +6,7 @@ export const editorialAuthors = [
 ] as const;
 
 export type EditorialAuthor = (typeof editorialAuthors)[number];
+export type HotelEditorialAuthor = EditorialAuthor | "Shivam Sood";
 
 /**
  * A deliberate 10-story byline mix: Zinnia leads the commissioning slate,

@@ -130,6 +130,7 @@ singita-sabi-sand
 # The Lodhi — thelodhi.com
 # The Leela Palace New Delhi — theleela.com
 # The Oberoi Mumbai — oberoihotels.com
+# SLS Hotel Beverly Hills — slshotels.com (official hotel photography)
 
 taj-mahal-palace-mumbai
   Facade of Taj Mahal Palace Hotel - Colaba District - Mumbai - Maharashtra - India

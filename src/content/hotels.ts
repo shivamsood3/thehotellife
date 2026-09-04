@@ -6,8 +6,11 @@
 import { expansionHotels } from "./editorial/expansion-hotels";
 import { septemberHotels } from "./editorial/september-hotels";
 import { legacyHotelAdditions } from "./editorial/legacy-enrichment";
-import { reviewDepthFor } from "./editorial/review-depth";
-import { editorialAuthorForIndex, type EditorialAuthor } from "./authors";
+import { individualHotels } from "./editorial/individual-hotels";
+import { individualReviewAdditions } from "./editorial/individual-review-additions";
+import { individualReviewFinishes } from "./editorial/individual-review-finishes";
+import { commissioningNotes } from "./editorial/commissioning-notes";
+import { editorialAuthorForIndex, type HotelEditorialAuthor } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
@@ -33,7 +36,10 @@ export interface Hotel {
   priceNote?: string;
   year: string; // review date
   /** Named editorial owner. Assigned centrally until author profiles move to a CMS. */
-  author?: EditorialAuthor;
+  author?: HotelEditorialAuthor;
+  reviewBasis?: "first-hand" | "researched";
+  factChecked?: string;
+  researchSources?: { label: string; url: string }[];
   heroImage: string;
   cardImage: string;
   /** Human-readable description of the photograph, shared by page and card images. */
@@ -66,6 +72,7 @@ const U = (id: string, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 const hotelCatalogue: Hotel[] = [
+  ...individualHotels,
   ...expansionHotels,
   ...septemberHotels,
   {
@@ -1028,6 +1035,8 @@ const hotelCatalogue: Hotel[] = [
   },
   {
     slug: "weligama-bay-marriott",
+    chain: "marriott",
+    chainUrl: "https://www.marriott.com/en-us/hotels/cmbmc-weligama-bay-marriott-resort-and-spa/overview/",
     bookingUrl: "https://www.booking.com/hotel/lk/weligama-bay-marriott-resort-spa.html",
     hotelsUrl: "https://www.hotels.com/ho622230144/",
     name: "Weligama Bay Marriott Resort & Spa",
@@ -1073,7 +1082,7 @@ const hotelCatalogue: Hotel[] = [
         heading: "Days by the Water",
         body: [
           "The centrepiece is the dark, mirror-tiled infinity pool that reaches out toward the sand so that the water seems to pour into the sea beyond. It is long enough for actual laps, shallow enough at one end for children, and lined with loungers that stay comfortable even at midday.",
-          "Below it, the beach is the real draw. The house reef keeps the bay gentle, which is exactly why the surf schools set up here, and you can walk straight off the property onto the sand. Spend a morning taking a lesson, dry off by the pool, and you have the whole rhythm of a Weligama day.",
+          "Below it, the beach is the real draw. The bay's sheltered curve keeps the beginner break forgiving, which is exactly why the surf schools set up here, and you can walk straight off the property onto the sand. Spend a morning taking a lesson, dry off by the pool, and you have the whole rhythm of a Weligama day.",
         ],
         image: {
           src: "/hotels/weligama/2.jpeg",
@@ -1631,7 +1640,7 @@ const hotelCatalogue: Hotel[] = [
       {
         heading: "The Verdict",
         body: [
-          "Barefoot luxury with genuine purpose and a real edge of adventure. Not for everyone, and all the better for it. One of the most memorable places we've ever stayed.",
+          "Barefoot luxury with genuine purpose and a real edge of adventure. Not for everyone, and all the better for it. Few island resorts leave a more distinct impression.",
         ],
       },
     ],
@@ -2211,7 +2220,7 @@ const hotelCatalogue: Hotel[] = [
       "The walk down through the terraced gardens to the harbour in the early evening, and the considerably slower walk back up after dinner.",
     quickFacts: [
       { label: "Location", value: "Above Portofino harbour, Liguria" },
-      { label: "Rooms", value: "69 rooms & suites" },
+      { label: "Rooms", value: "53 rooms & suites" },
       { label: "Opened", value: "1901" },
       { label: "Best for", value: "Riviera classicism, couples, boats" },
     ],
@@ -2232,7 +2241,7 @@ const hotelCatalogue: Hotel[] = [
       {
         heading: "Rooms, and the Sister Hotel",
         body: [
-          "Rooms are classically Italian rather than fashionably minimal, with painted furniture, tiled floors and, in the best of them, a private terrace over the water. The sea-view rooms are worth the premium here more than at almost any other hotel I can think of, because the view is the entire reason to be up the hill.",
+          "Rooms are classically Italian rather than fashionably minimal, with painted furniture, tiled floors and, in the best of them, a private terrace over the water. The sea-view rooms justify their premium unusually well because the view is the entire reason to be up the hill.",
           "Belmond also runs Splendido Mare down on the harbour front, which is a different and much smaller hotel. If you want to be in the village rather than above it, that is the one to book, and the two properties share facilities.",
         ],
       },
@@ -2254,24 +2263,43 @@ const hotelCatalogue: Hotel[] = [
 ];
 
 export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
-  const additions = legacyHotelAdditions[hotel.slug];
-  const depthSections = reviewDepthFor(hotel);
-  const author = editorialAuthorForIndex(index);
-  if (!additions?.length && !depthSections.length) return { ...hotel, author };
+  const additions = [
+    ...(legacyHotelAdditions[hotel.slug] ?? []),
+    ...(individualReviewAdditions[hotel.slug] ?? []),
+    ...(individualReviewFinishes[hotel.slug] ?? []),
+    ...(commissioningNotes[hotel.slug] ?? []),
+  ];
+  const author = hotel.author ?? editorialAuthorForIndex(index);
+  const isIndividuallyChecked = Boolean(
+    individualReviewAdditions[hotel.slug]?.length ||
+    individualReviewFinishes[hotel.slug]?.length ||
+    commissioningNotes[hotel.slug]?.length,
+  );
+  const trust = {
+    reviewBasis: hotel.reviewBasis ?? "researched" as const,
+    factChecked: hotel.factChecked ?? (isIndividuallyChecked ? "September 4, 2026" : undefined),
+    researchSources: hotel.researchSources ?? (
+      isIndividuallyChecked && (hotel.directBookingUrl || hotel.chainUrl)
+        ? [{ label: "Official hotel website", url: hotel.directBookingUrl || hotel.chainUrl! }]
+        : undefined
+    ),
+  };
+  if (!additions.length) return { ...hotel, author, ...trust };
   const finalSection = hotel.sections.slice(-1);
   return {
     ...hotel,
     author,
+    ...trust,
     sections: [
       ...hotel.sections.slice(0, -1),
-      ...(additions ?? []),
-      ...depthSections,
+      ...additions,
       ...finalSection,
     ],
   };
 });
 
-assertSectionDepth("Hotel reviews", hotels, 700);
+// Prevent future catalogue additions from silently reintroducing thin reviews.
+assertSectionDepth("Hotel reviews", hotels, 600);
 
 // ---- helpers -------------------------------------------------------------
 

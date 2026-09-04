@@ -54,6 +54,7 @@ export const septemberHotels: Hotel[] = [
   },
   {
     slug: "the-lodhi-new-delhi",
+    directBookingUrl: "https://www.thelodhi.com/",
     name: "The Lodhi",
     city: "New Delhi",
     country: "India",
@@ -105,6 +106,7 @@ export const septemberHotels: Hotel[] = [
   },
   {
     slug: "the-leela-palace-new-delhi",
+    directBookingUrl: "https://www.theleela.com/the-leela-palace-new-delhi",
     name: "The Leela Palace New Delhi",
     city: "New Delhi",
     country: "India",
@@ -155,6 +157,7 @@ export const septemberHotels: Hotel[] = [
   },
   {
     slug: "taj-mahal-palace-mumbai",
+    directBookingUrl: "https://www.tajhotels.com/en-in/hotels/taj-mahal-palace-mumbai",
     name: "The Taj Mahal Palace",
     city: "Mumbai",
     country: "India",
@@ -206,6 +209,7 @@ export const septemberHotels: Hotel[] = [
   },
   {
     slug: "the-oberoi-mumbai",
+    directBookingUrl: "https://www.oberoihotels.com/hotels-in-mumbai/",
     name: "The Oberoi, Mumbai",
     city: "Mumbai",
     country: "India",
