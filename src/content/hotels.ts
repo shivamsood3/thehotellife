@@ -44,9 +44,11 @@ export interface Hotel {
    * relationship with. Drives the secondary "book direct" link, routed to
    * the right regional advertiser. See src/lib/affiliate.ts.
    */
-  chain?: "accor" | "ihg";
+  chain?: "accor" | "ihg" | "marriott";
   /** The property's page on the chain's own site, for the chain link. */
   chainUrl?: string;
+  /** Exact Hotels.com property URL, so that network can join the OTA split. */
+  hotelsUrl?: string;
   /**
    * Optional exact Booking.com property URL for the affiliate "Check
    * Availability" link. If omitted, a Booking.com search for the hotel
