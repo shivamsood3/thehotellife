@@ -9,6 +9,10 @@ const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com"
 ).replace(/\/$/, "");
 
+function absoluteUrl(value: string): string {
+  return value.startsWith("http") ? value : `${SITE_URL}${value}`;
+}
+
 /**
  * lastmod must reflect when the *content* changed, not when the site was
  * built. Stamping every URL with build time tells Google all 107 pages
@@ -27,7 +31,7 @@ function contentDate(value: string | undefined, fallback: string): Date {
 }
 
 /** Stable date for evergreen pages whose copy rarely changes. */
-const EVERGREEN = new Date("2026-08-30T00:00:00.000Z");
+const EVERGREEN = new Date("2026-09-04T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths: { path: string; priority: number }[] = [
@@ -60,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: contentDate(h.year, "2026-08-01"),
     changeFrequency: "monthly",
     priority: 0.8,
+    images: [absoluteUrl(h.heroImage)],
   }));
 
   const guideEntries: MetadataRoute.Sitemap = guides.map((g) => ({
@@ -67,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: contentDate(g.date, "2026-08-01"),
     changeFrequency: "monthly",
     priority: 0.7,
+    images: [absoluteUrl(g.heroImage)],
   }));
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((a) => ({
@@ -74,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: contentDate(a.date, "2026-08-01"),
     changeFrequency: "monthly",
     priority: 0.7,
+    images: [absoluteUrl(a.heroImage)],
   }));
 
   const regionEntries: MetadataRoute.Sitemap = destinations.map((d) => ({
@@ -81,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: EVERGREEN,
     changeFrequency: "monthly",
     priority: 0.6,
+    images: [absoluteUrl(d.heroImage)],
   }));
 
   const bestHotelsEntries: MetadataRoute.Sitemap = bestHotelsLists.map((list) => ({
@@ -88,8 +96,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(list.updatedISO),
     changeFrequency: "monthly",
     priority: 0.8,
+    images: [absoluteUrl(list.heroImage)],
   }));
 
+  // Search, thank-you, error and API routes are intentionally omitted:
+  // they are utilities rather than canonical editorial landing pages and
+  // carry noindex or non-200 responses where appropriate.
   return [
     ...staticEntries,
     ...hotelEntries,
