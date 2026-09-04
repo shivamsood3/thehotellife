@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Tone = "dark" | "light";
 
@@ -15,6 +16,7 @@ export default function NewsletterForm({
   buttonLabel?: string;
   className?: string;
 }) {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState(""); // honeypot - humans leave this empty
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
@@ -36,12 +38,8 @@ export default function NewsletterForm({
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         setStatus("ok");
-        setMessage(
-          data.alreadySubscribed
-            ? "You're already on the list. Thank you!"
-            : "You're in. Look out for The Concierge this Sunday."
-        );
         setEmail("");
+        router.push(`/newsletter/thank-you?status=${data.alreadySubscribed ? "existing" : "new"}`);
       } else {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");

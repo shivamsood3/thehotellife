@@ -1,48 +1,22 @@
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Page Not Found",
-  description:
-    "That page has checked out. Browse our hotel reviews, destination guides and editor's collections instead.",
-  robots: { index: false, follow: true },
-};
+import { HangerMark } from "@/components/Logo";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex max-w-2xl flex-col items-center py-24 text-center sm:py-32">
-      <span className="eyebrow text-brass-deep">Error 404</span>
-      <h1 className="font-display mt-4 text-5xl font-medium leading-none text-ink sm:text-7xl">
-        No room at this address.
-      </h1>
-      <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
-        The page you were looking for has checked out, or perhaps never checked in. Let us
-        point you somewhere worth staying.
-      </p>
-
-      <div className="rule-brass mt-10 w-40" />
-
-      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <Link
-          href="/"
-          className="rounded-full bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
-        >
-          Back to home
-        </Link>
-        <Link
-          href="/hotels"
-          className="rounded-full border border-ink px-7 py-3 text-xs font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-ink hover:text-paper"
-        >
-          Browse all hotels
-        </Link>
-      </div>
-
-      <div className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm">
-        <Link href="/destinations" className="text-ink-soft hover:text-brass-deep">Destinations</Link>
-        <Link href="/guides" className="text-ink-soft hover:text-brass-deep">Guides</Link>
-        <Link href="/the-edit" className="text-ink-soft hover:text-brass-deep">The Edit</Link>
-        <Link href="/newsletter" className="text-ink-soft hover:text-brass-deep">Newsletter</Link>
-      </div>
+    <div className="flex min-h-[64vh] items-center justify-center py-14 sm:py-20">
+      <section className="w-full max-w-3xl rounded-md border border-line bg-white px-6 py-14 text-center sm:px-12 sm:py-20">
+        <HangerMark height={54} className="mx-auto" title="The Hotel Life" />
+        <p className="font-display mt-7 text-7xl font-semibold leading-none text-paper-2 sm:text-9xl" aria-hidden="true">404</p>
+        <span className="eyebrow mt-5 block">The route less travelled</span>
+        <h1 className="font-display mt-3 text-4xl font-medium text-ink sm:text-5xl">This room cannot be found.</h1>
+        <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-ink-soft">
+          The page may have checked out, moved elsewhere, or never existed. Let us point you towards a stay that is very much worth finding.
+        </p>
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <Link href="/" className="rounded-full bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-widest text-paper hover:bg-brass-deep">Return home</Link>
+          <Link href="/search" className="rounded-full border border-ink px-7 py-3 text-xs font-semibold uppercase tracking-widest text-ink hover:bg-ink hover:text-paper">Search the journal</Link>
+        </div>
+      </section>
     </div>
   );
 }

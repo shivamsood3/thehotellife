@@ -12,7 +12,7 @@ export default function Privacy() {
       <header className="mt-10">
         <span className="eyebrow">Legal</span>
         <h1 className="font-display mt-2 text-4xl font-medium text-ink">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-ink-muted">Last updated: August 2026</p>
+        <p className="mt-3 text-sm text-ink-muted">Last updated: September 2026</p>
       </header>
 
       <div className="rule-brass mt-6 w-full" />
@@ -38,10 +38,11 @@ export default function Privacy() {
         <h2>Cookies &amp; advertising</h2>
         <p>
           We use cookies and similar technologies for analytics and advertising. This site
-          displays ads served by Google AdSense and by direct advertising partners. Third-party
-          vendors, including Google, use cookies to serve ads based on your prior visits to
-          this and other websites. You can opt out of personalised Google advertising via
-          Google&apos;s Ads Settings, and manage cookies through your browser at any time.
+          displays direct advertising and may display ads served by Google AdSense once that
+          service is active. Third-party vendors, including Google, may use cookies to serve ads
+          based on your prior visits to this and other websites. You can opt out of personalised
+          Google advertising via Google&apos;s Ads Settings, and manage cookies through your browser
+          at any time.
         </p>
 
         <h2>Affiliate links and commission</h2>
@@ -74,6 +75,13 @@ export default function Privacy() {
           helps keep The Hotel Life free to read.
         </p>
 
+        <h2>Newsletter storage</h2>
+        <p>
+          Newsletter email addresses are stored in a private Vercel Blob store connected to
+          this website. The files are not publicly accessible. We retain this information for
+          as long as you remain subscribed, or as needed to meet legal and security obligations.
+        </p>
+
         <h2>Sharing</h2>
         <p>
           We do not sell your personal information. We share data only with the service
@@ -84,9 +92,9 @@ export default function Privacy() {
 
         <h2>Your rights</h2>
         <p>
-          You can unsubscribe from our newsletter at any time using the link in every email,
-          and you may ask us to access or delete the personal data we hold about you by
-          messaging us on WhatsApp at{" "}
+          You can unsubscribe from our newsletter at any time. Until our one-click preference
+          centre is available, you can ask us to remove your address, access your information or
+          delete the personal data we hold about you by messaging us on WhatsApp at{" "}
           <a
             href="https://wa.me/919810254606"
             target="_blank"

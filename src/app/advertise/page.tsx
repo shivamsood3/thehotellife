@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "100K", label: "Monthly visitors" },
-  { value: "20K", label: "Newsletter subscribers" },
-  { value: "3:40", label: "Avg. time on page" },
-  { value: "52%", label: "Repeat visitors book within 30 days" },
+  { value: "63", label: "Hotel reviews" },
+  { value: "24", label: "Travel guides" },
+  { value: "4", label: "Ranked city lists" },
+  { value: "4", label: "Regions covered" },
 ];
 
 const formats = [
   {
     name: "Leaderboard Takeover",
-    partner: "as run by Hacoco",
-    spec: "970 × 90 · sitewide, above the masthead",
-    body: "Our most visible unit. The first thing every reader sees, on every page, sticky through the scroll. Sold as an exclusive sitewide sponsorship by the month.",
+    partner: "as run by Hacoco and AI Wise",
+    spec: "970 × 90 · selected high-visibility sections",
+    body: "Our most visible unit, positioned above the masthead across selected editorial sections. Each creative scrolls naturally with the page, with page-family exclusivity available by arrangement.",
     price: "from $650 / mo",
   },
   {
@@ -46,8 +46,8 @@ const formats = [
   {
     name: "Newsletter Sponsorship",
     partner: "The Concierge, weekly",
-    spec: "20K opt-in subscribers · 52% open rate",
-    body: "A dedicated placement in our Sunday edition, in front of an engaged, high-spending travel audience that asked to hear from us.",
+    spec: "Growing opt-in audience · weekly placement",
+    body: "A dedicated placement in our Sunday edition, in front of an engaged, travel-focused audience that has expressly asked to hear from us.",
     price: "from $350 / send",
   },
 ];

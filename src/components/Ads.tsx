@@ -13,9 +13,8 @@
  * Until a client ID is present, units render a styled placeholder so
  * the layout (and reserved space, to avoid layout shift) is preview-safe.
  *
- * Direct banners (Hacoco / AntiAlias) ship with house creatives in
- * /public/ads. Override the click-through URLs with
- * NEXT_PUBLIC_HACOCO_URL / NEXT_PUBLIC_ANTIALIAS_URL.
+ * Direct banners use code-native creatives. Override their click-through
+ * URLs with the corresponding NEXT_PUBLIC_* environment variables.
  */
 import Link from "next/link";
 import { AiWiseCreative, AntialiasCreative, HacocoCreative, NikhaarCreative } from "@/components/HouseBanners";

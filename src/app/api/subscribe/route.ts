@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { kvConfigured, saveSubscriber } from "@/lib/subscribers";
+import { saveSubscriber, subscriberStoreConfigured } from "@/lib/subscribers";
 import { notifyInbox } from "@/lib/notify";
 
 export const runtime = "nodejs";
@@ -34,21 +34,23 @@ export async function POST(req: Request) {
   };
 
   try {
-    if (kvConfigured()) {
+    if (subscriberStoreConfigured()) {
       const isNew = await saveSubscriber(email, meta);
       // Fire-and-forget email notification (no-op unless configured).
       await notifyInbox(email, meta).catch(() => {});
       return NextResponse.json({ ok: true, alreadySubscribed: !isNew });
     }
 
-    // No store connected yet - never lose the signup; capture in function logs.
-    console.log("[newsletter] signup (KV not connected):", JSON.stringify({ email, ...meta }));
-    await notifyInbox(email, meta).catch(() => {});
-    return NextResponse.json({ ok: true, stored: false });
+    return NextResponse.json(
+      { ok: false, error: "Subscriptions are temporarily unavailable. Please try again shortly." },
+      { status: 503 }
+    );
   } catch (err) {
-    // Storage hiccup - log so the signup is recoverable, still thank the user.
+    // Never tell a reader they are subscribed unless durable storage succeeded.
     console.error("[newsletter] store error:", err);
-    console.log("[newsletter] signup (fallback):", JSON.stringify({ email, ...meta }));
-    return NextResponse.json({ ok: true, stored: false });
+    return NextResponse.json(
+      { ok: false, error: "We could not save your subscription. Please try again." },
+      { status: 503 }
+    );
   }
 }

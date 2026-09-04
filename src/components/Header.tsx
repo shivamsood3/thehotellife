@@ -19,14 +19,14 @@ export default function Header() {
   const pathname = usePathname();
   // Two editorial families carry AI Wise; three carry Hacoco. Utility pages
   // remain ad-free at the top so one partner no longer appears everywhere.
-  const partner = pathname.startsWith("/guides") || pathname.startsWith("/the-edit")
+  const partner = pathname === "/about" || pathname.startsWith("/guides") || pathname.startsWith("/the-edit")
     ? "ai-wise"
-    : pathname.startsWith("/hotels") || pathname.startsWith("/destinations") || pathname.startsWith("/best-hotels")
+    : pathname === "/" || pathname.startsWith("/hotels") || pathname.startsWith("/destinations") || pathname.startsWith("/best-hotels")
       ? "hacoco"
       : null;
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="relative z-50">
       {partner && <PartnerLeaderboard brand={partner} />}
 
       <div className="border-b border-line bg-paper/90 backdrop-blur-md">

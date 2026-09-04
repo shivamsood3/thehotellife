@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/newsletter" },
   title: "The Concierge · Our Weekly Newsletter",
   description:
-    "One extraordinary hotel in your inbox every Sunday. Join 20,000 readers of The Hotel Life's weekly newsletter, The Concierge.",
+    "One extraordinary hotel in your inbox every Sunday. Join The Hotel Life's weekly newsletter, The Concierge.",
 };
 
 const perks = [
@@ -44,7 +44,7 @@ export default function Newsletter() {
             One extraordinary hotel in your inbox, every Sunday.
           </h1>
           <p className="text-base leading-relaxed text-paper/70">
-            Join 20,000 discerning travellers who trust The Hotel Life to find the stays
+            Join discerning travellers who trust The Hotel Life to find the stays
             worth the airfare. Free, weekly, and worth opening.
           </p>
           <NewsletterForm tone="dark" source="newsletter-hero" className="max-w-md" />

@@ -1,7 +1,7 @@
 /**
  * Optional email notification for new subscribers.
  * Disabled unless RESEND_API_KEY + NEWSLETTER_INBOX are set - the site works
- * fully (saving to Vercel KV) without it. Add these later to also get a
+ * fully (saving to the connected private store) without it. Add these later to also get a
  * heads-up email in your inbox for every signup.
  */
 import type { SubscriberMeta } from "./subscribers";

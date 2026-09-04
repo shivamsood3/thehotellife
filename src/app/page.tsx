@@ -67,7 +67,9 @@ export default function Home() {
           />
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
-            <span className="eyebrow eyebrow-hero">The Hotel Life · Featured Stay</span>
+            <span className="eyebrow eyebrow-hero text-sm sm:text-xs">
+              The Hotel Life<span className="hidden sm:inline"> · Featured Stay</span>
+            </span>
             <h2 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               {hero.tagline}
             </h2>
@@ -236,7 +238,7 @@ export default function Home() {
           One extraordinary hotel in your inbox, every Sunday.
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
-          Join 20,000 readers who trust The Hotel Life to find the stays worth the airfare.
+          Join discerning readers who trust The Hotel Life to find the stays worth the airfare.
           No spam, ever.
         </p>
         <NewsletterForm tone="light" source="homepage" className="mx-auto mt-8 max-w-md" />
