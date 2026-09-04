@@ -20,11 +20,12 @@
  * own click-template env var. Any programme without a template configured is
  * skipped entirely rather than emitting an untracked link.
  *
- * Note on CJ and query strings: Booking.com's programme strips the query
- * string from the destination, so only path-based property URLs survive.
- * The same is assumed for the other OTAs until proven otherwise, which is
- * why a network only participates for a hotel we hold a real property URL
- * for.
+ * Note on CJ and query strings, verified per programme:
+ *   Booking.com STRIPS the destination's query string, so only path-based
+ *   property URLs survive and a hotel without one cannot be tracked there.
+ *   Hotels.com PRESERVES it, so a search URL works. That makes Hotels.com a
+ *   universal tracked fallback and is why every hotel that is not
+ *   direct-only ends up with an earning link.
  */
 import type { Hotel, Region } from "@/content/hotels";
 
@@ -118,15 +119,31 @@ export function primaryBookingLink(hotel: Hotel): BookingLink {
     }
   }
 
-  // 3. General OTAs. Only networks we can both track and deep-link for this
-  //    specific hotel are eligible, so we never ship a tracked link that
-  //    lands on an empty search page.
+  // 3. General OTAs, split deterministically between whichever we can both
+  //    track and land correctly for this specific hotel.
+  const search = encodeURIComponent(`${hotel.name} ${hotel.city}`);
   const eligible: { network: BookingLink["network"]; url: string; template: string }[] = [];
+
+  // Booking.com needs a path-based property URL: its programme drops the
+  // query string, so a search URL would arrive as an empty results page.
   if (hotel.bookingUrl && TEMPLATES.booking) {
-    eligible.push({ network: "Booking.com", url: hotel.bookingUrl, template: TEMPLATES.booking });
+    eligible.push({
+      network: "Booking.com",
+      url: hotel.bookingUrl,
+      template: TEMPLATES.booking,
+    });
   }
-  if (hotel.hotelsUrl && TEMPLATES.hotels) {
-    eligible.push({ network: "Hotels.com", url: hotel.hotelsUrl, template: TEMPLATES.hotels });
+
+  // Hotels.com keeps the query string, so a property URL is preferred but a
+  // search still lands on the right hotel and still earns.
+  if (TEMPLATES.hotels) {
+    eligible.push({
+      network: "Hotels.com",
+      url:
+        hotel.hotelsUrl ??
+        `https://www.hotels.com/Hotel-Search?destination=${search}`,
+      template: TEMPLATES.hotels,
+    });
   }
 
   if (eligible.length > 0) {
@@ -138,10 +155,9 @@ export function primaryBookingLink(hotel: Hotel): BookingLink {
     };
   }
 
-  // 4. Nothing tracked available: send the reader somewhere useful anyway.
-  const query = encodeURIComponent(`${hotel.name} ${hotel.city}`);
+  // 4. No programme configured at all: still send the reader somewhere useful.
   return {
-    url: hotel.bookingUrl ?? `https://www.booking.com/searchresults.html?ss=${query}`,
+    url: hotel.bookingUrl ?? `https://www.booking.com/searchresults.html?ss=${search}`,
     network: "Booking.com",
     tracked: false,
   };

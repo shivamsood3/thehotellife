@@ -20,6 +20,7 @@
 import Link from "next/link";
 import { AntialiasCreative, HacocoCreative, NikhaarCreative } from "@/components/HouseBanners";
 import AdSenseUnit from "@/components/AdSenseUnit";
+import { AccorPlusRail } from "@/components/AffiliateBanner";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
@@ -147,6 +148,7 @@ export function AntialiasRail() {
   return (
     <aside className="hidden xl:block w-[300px] shrink-0 py-10">
       <div className="space-y-6">
+        <AccorPlusRail />
         <RailAd
           href={ANTIALIAS_URL}
           label="The AntiAlias, a design & brand studio"
@@ -175,6 +177,7 @@ export function MobileRail() {
   return (
     <section className="xl:hidden mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10">
       <div className="mx-auto flex w-full max-w-[300px] flex-col items-stretch gap-6">
+        <AccorPlusRail />
         <RailAd
           href={ANTIALIAS_URL}
           label="The AntiAlias, a design & brand studio"
