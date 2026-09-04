@@ -159,6 +159,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "marina-bay-sands",
     bookingUrl: "https://www.booking.com/hotel/sg/marina-bay-sands.html",
+    hotelsUrl: "https://www.hotels.com/ho339486/",
     name: "Marina Bay Sands",
     city: "Singapore",
     country: "Singapore",
@@ -217,6 +218,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1600,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/ae/burj-al-arab.html",
+    hotelsUrl: "https://www.hotels.com/ho172396/",
     heroImage: "/hotels/burj-al-arab.jpg",
     cardImage: "/hotels/burj-al-arab.jpg",
     standout:
@@ -295,6 +297,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 895,
     year: "March 2026",
     bookingUrl: "https://www.booking.com/hotel/us/the-plaza.html",
+    hotelsUrl: "https://www.hotels.com/ho105314/",
     heroImage: "/hotels/the-plaza-new-york.jpg",
     cardImage: "/hotels/the-plaza-new-york.jpg",
     standout:
@@ -323,6 +326,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "belmond-hotel-caruso",
     bookingUrl: "https://www.booking.com/hotel/it/caruso.html",
+    hotelsUrl: "https://www.hotels.com/ho37131072/",
     name: "Belmond Hotel Caruso",
     city: "Ravello",
     country: "Italy",
@@ -403,6 +407,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "hotel-cipriani-venice",
     bookingUrl: "https://www.booking.com/hotel/it/cipriani-venezia.html",
+    hotelsUrl: "https://www.hotels.com/ho1454752/",
     name: "Belmond Hotel Cipriani",
     city: "Venice",
     country: "Italy",
@@ -450,6 +455,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "claridges-london",
     bookingUrl: "https://www.booking.com/hotel/gb/claridge-s.html",
+    hotelsUrl: "https://www.hotels.com/ho172844/",
     name: "Claridge's",
     city: "London",
     country: "United Kingdom",
@@ -530,6 +536,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "badrutts-palace-st-moritz",
     bookingUrl: "https://www.booking.com/hotel/ch/badrutt-s-palace-st-moritz.html",
+    hotelsUrl: "https://www.hotels.com/ho175738/",
     name: "Badrutt's Palace",
     city: "St. Moritz",
     country: "Switzerland",
@@ -569,6 +576,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "peninsula-hong-kong",
     bookingUrl: "https://www.booking.com/hotel/hk/the-peninsula-hong-kong.html",
+    hotelsUrl: "https://www.hotels.com/ho174033/",
     name: "The Peninsula Hong Kong",
     city: "Hong Kong",
     country: "Hong Kong SAR",
@@ -608,6 +616,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "soneva-fushi-maldives",
     bookingUrl: "https://www.booking.com/hotel/mv/soneva-fushi.html",
+    hotelsUrl: "https://www.hotels.com/ho179354/",
     name: "Soneva Fushi",
     city: "Baa Atoll",
     country: "Maldives",
@@ -649,6 +658,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "oberoi-udaivilas-udaipur",
     bookingUrl: "https://www.booking.com/hotel/in/the-oberoi-udaivilas.html",
+    hotelsUrl: "https://www.hotels.com/ho199125/",
     name: "The Oberoi Udaivilas",
     city: "Udaipur",
     country: "India",
@@ -689,6 +699,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "park-hyatt-tokyo",
     bookingUrl: "https://www.booking.com/hotel/jp/park-hyatt-tokyo.html",
+    hotelsUrl: "https://www.hotels.com/ho108657/",
     name: "Park Hyatt Tokyo",
     city: "Tokyo",
     country: "Japan",
@@ -780,6 +791,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 850,
     year: "July 2026",
     bookingUrl: "https://www.booking.com/hotel/us/the-beverly-hills.html",
+    hotelsUrl: "https://www.hotels.com/ho124056/",
     heroImage: "/hotels/beverly-hills-hotel.jpg",
     cardImage: "/hotels/beverly-hills-hotel.jpg",
     standout:
@@ -848,6 +860,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "explora-patagonia",
     bookingUrl: "https://www.booking.com/hotel/cl/explora-torres-del-paine-conservation-reserve.html",
+    hotelsUrl: "https://www.hotels.com/ho376106/",
     name: "Explora Patagonia",
     city: "Torres del Paine",
     country: "Chile",
@@ -888,6 +901,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "one-and-only-cape-town",
     bookingUrl: "https://www.booking.com/hotel/za/one-only-cape-town.html",
+    hotelsUrl: "https://www.hotels.com/ho309005/",
     name: "One&Only Cape Town",
     city: "Cape Town",
     country: "South Africa",
@@ -968,6 +982,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "khyber-himalayan-gulmarg",
     bookingUrl: "https://www.booking.com/hotel/in/khyber-mountain-resort-and-spa.html",
+    hotelsUrl: "https://www.hotels.com/ho421745/",
     name: "The Khyber Himalayan Resort & Spa",
     city: "Gulmarg",
     country: "India",
@@ -1008,6 +1023,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "weligama-bay-marriott",
     bookingUrl: "https://www.booking.com/hotel/lk/weligama-bay-marriott-resort-spa.html",
+    hotelsUrl: "https://www.hotels.com/ho622230144/",
     name: "Weligama Bay Marriott Resort & Spa",
     city: "Weligama",
     country: "Sri Lanka",
@@ -1089,6 +1105,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "jai-mahal-palace-jaipur",
     bookingUrl: "https://www.booking.com/hotel/in/jaimahal-palace.html",
+    hotelsUrl: "https://www.hotels.com/ho151689/",
     name: "Jai Mahal Palace",
     city: "Jaipur",
     country: "India",
@@ -1128,6 +1145,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "pashan-garh-taj-safari",
     bookingUrl: "https://www.booking.com/hotel/in/pashangarh-panna-national-park.html",
+    hotelsUrl: "https://www.hotels.com/ho148412960/",
     name: "Pashan Garh, A Taj Safari",
     city: "Panna",
     country: "India",
@@ -1168,6 +1186,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "oberoi-new-delhi",
     bookingUrl: "https://www.booking.com/hotel/in/the-oberoi-new-delhi.html",
+    hotelsUrl: "https://www.hotels.com/ho646144288/",
     name: "The Oberoi, New Delhi",
     city: "New Delhi",
     country: "India",
@@ -1207,6 +1226,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "w-goa",
     bookingUrl: "https://www.booking.com/hotel/in/w-retreat-spa-goa.html",
+    hotelsUrl: "https://www.hotels.com/ho621892/",
     name: "W Goa",
     city: "Goa",
     country: "India",
@@ -1246,6 +1266,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "w-koh-samui",
     bookingUrl: "https://www.booking.com/hotel/th/w-retreat-koh-samui.html",
+    hotelsUrl: "https://www.hotels.com/ho343990/",
     name: "W Koh Samui",
     city: "Koh Samui",
     country: "Thailand",
@@ -1287,6 +1308,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "stay-wellbeing-phuket",
     bookingUrl: "https://www.booking.com/hotel/th/stay-well-being-amp-lifestyle-resort.html",
+    hotelsUrl: "https://www.hotels.com/ho1193582432/",
     name: "STAY Wellbeing & Lifestyle Resort",
     city: "Phuket",
     country: "Thailand",
@@ -1326,6 +1348,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "rambagh-palace-jaipur",
     bookingUrl: "https://www.booking.com/hotel/in/rambagh-palace.html",
+    hotelsUrl: "https://www.hotels.com/ho212449/",
     name: "Rambagh Palace",
     city: "Jaipur",
     country: "India",
@@ -1366,6 +1389,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "umaid-bhawan-jodhpur",
     bookingUrl: "https://www.booking.com/hotel/in/umaid-bhawan-place.html",
+    hotelsUrl: "https://www.hotels.com/ho180674/",
     name: "Umaid Bhawan Palace",
     city: "Jodhpur",
     country: "India",
@@ -1407,6 +1431,7 @@ const hotelCatalogue: Hotel[] = [
     chain: "accor",
     chainUrl: "https://all.accor.com/hotel/A5S3/index.en.shtml",
     bookingUrl: "https://www.booking.com/hotel/sg/raffles.html",
+    hotelsUrl: "https://www.hotels.com/ho116216/",
     name: "Raffles Singapore",
     city: "Singapore",
     country: "Singapore",
@@ -1487,6 +1512,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "four-seasons-bali-sayan",
     bookingUrl: "https://www.booking.com/hotel/id/four-seasons-resort-bali-at-sayan.html",
+    hotelsUrl: "https://www.hotels.com/ho143885/",
     name: "Four Seasons Resort Bali at Sayan",
     city: "Ubud",
     country: "Indonesia",
@@ -1526,6 +1552,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "the-datai-langkawi",
     bookingUrl: "https://www.booking.com/hotel/my/datai.html",
+    hotelsUrl: "https://www.hotels.com/ho134373/",
     name: "The Datai Langkawi",
     city: "Langkawi",
     country: "Malaysia",
@@ -1565,6 +1592,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "nihi-sumba",
     bookingUrl: "https://www.booking.com/hotel/id/nihi-sumba.html",
+    hotelsUrl: "https://www.hotels.com/ho672063/",
     name: "Nihi Sumba",
     city: "Sumba",
     country: "Indonesia",
@@ -1617,6 +1645,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 800,
     year: "July 2026",
     bookingUrl: "https://www.booking.com/hotel/gb/the-savoy.html",
+    hotelsUrl: "https://www.hotels.com/ho172847/",
     heroImage: "/hotels/the-savoy-london.jpg",
     cardImage: "/hotels/the-savoy-london.jpg",
     standout:
@@ -1645,6 +1674,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "gritti-palace-venice",
     bookingUrl: "https://www.booking.com/hotel/it/gritti-palace.html",
+    hotelsUrl: "https://www.hotels.com/ho141156/",
     name: "The Gritti Palace",
     city: "Venice",
     country: "Italy",
@@ -1684,6 +1714,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "four-seasons-george-v-paris",
     bookingUrl: "https://www.booking.com/hotel/fr/four-seasons-george-v-paris.html",
+    hotelsUrl: "https://www.hotels.com/ho1212544/",
     name: "Four Seasons Hotel George V",
     city: "Paris",
     country: "France",
@@ -1734,6 +1765,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1100,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/ae/bulgari-resorts-dubai.html",
+    hotelsUrl: "https://www.hotels.com/ho661582464/",
     heroImage: U("1540541338287-41700207dee6", 2000),
     cardImage: U("1540541338287-41700207dee6", 1000),
     standout:
@@ -1773,6 +1805,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 550,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/hk/the-upper-house.html",
+    hotelsUrl: "https://www.hotels.com/ho327104/",
     heroImage: U("1590490360182-c33d57733427", 2000),
     cardImage: U("1590490360182-c33d57733427", 1000),
     standout:
@@ -1800,7 +1833,7 @@ const hotelCatalogue: Hotel[] = [
   },
   {
     slug: "hopewell-hotel-hong-kong",
-    bookingUrl: "https://www.booking.com/hotel/hk/hopewell.html",
+    hotelsUrl: "https://www.hotels.com/ho3365353280/",
     name: "Hopewell Hotel",
     city: "Hong Kong",
     country: "China",
@@ -1847,6 +1880,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "copacabana-palace-rio",
     bookingUrl: "https://www.booking.com/hotel/br/copacabana-palace.html",
+    hotelsUrl: "https://www.hotels.com/ho123512/",
     name: "Copacabana Palace, A Belmond Hotel",
     city: "Rio de Janeiro",
     country: "Brazil",
@@ -1908,6 +1942,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "mandarin-oriental-bangkok",
     bookingUrl: "https://www.booking.com/hotel/th/mandarin-oriental-bangkok.html",
+    hotelsUrl: "https://www.hotels.com/ho109288/",
     name: "Mandarin Oriental, Bangkok",
     city: "Bangkok",
     country: "Thailand",
@@ -1969,6 +2004,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "royal-mansour-marrakech",
     bookingUrl: "https://www.booking.com/hotel/ma/royal-mansour-marrakech.html",
+    hotelsUrl: "https://www.hotels.com/ho340698/",
     name: "Royal Mansour",
     city: "Marrakech",
     country: "Morocco",
@@ -2040,6 +2076,7 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 950,
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/gb/the-connaught-mayfair.html",
+    hotelsUrl: "https://www.hotels.com/ho172846/",
     heroImage: U("1513694203232-719a280e022f", 2000),
     cardImage: U("1513694203232-719a280e022f", 1000),
     standout:
@@ -2161,6 +2198,7 @@ const hotelCatalogue: Hotel[] = [
     priceNote: "seasonal, closed in winter",
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/it/splendido-amp-splendido-mare.html",
+    hotelsUrl: "https://www.hotels.com/ho1004480/",
     heroImage: U("1516483638261-f4dbaf036963", 2000),
     cardImage: U("1516483638261-f4dbaf036963", 1000),
     standout:
