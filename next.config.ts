@@ -36,7 +36,7 @@ const csp = [
   `default-src 'self'`,
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${GOOGLE_ADS}`,
   `style-src 'self' 'unsafe-inline'`,
-  `img-src 'self' data: blob: https://images.unsplash.com https://www.ftjcfx.com https://www.yceml.net https://www.awltovhc.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} https://*.g.doubleclick.net`,
+  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} https://*.g.doubleclick.net`,
   `font-src 'self' data:`,
   `frame-src 'self' ${GOOGLE_ADS}`,
   `connect-src 'self' ${GOOGLE_ADS}`,
