@@ -6,7 +6,7 @@ import { guides, getGuide } from "@/content/guides";
 import { getHotel } from "@/content/hotels";
 import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
-import { affiliateBookingUrl } from "@/lib/affiliate";
+import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 
@@ -143,7 +143,7 @@ export default async function GuidePage({
                         </div>
                       </Link>
                       <a
-                        href={affiliateBookingUrl(h)}
+                        href={primaryBookingLink(h).url}
                         target="_blank"
                         rel="sponsored nofollow noopener noreferrer"
                         className="shrink-0 rounded-full border border-ink px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-ink hover:text-paper"

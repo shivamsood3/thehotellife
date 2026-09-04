@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { hotels, getHotel, getRelated } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
-import { affiliateBookingUrl, isAffiliateLink, chainBookingUrl } from "@/lib/affiliate";
+import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema } from "@/components/JsonLd";
 
@@ -45,7 +45,7 @@ export default async function HotelPage({
   if (!hotel) notFound();
 
   const related = getRelated(slug);
-  const chainLink = chainBookingUrl(hotel);
+  const booking = primaryBookingLink(hotel);
 
   return (
     <article className="pb-8">
@@ -167,7 +167,7 @@ export default async function HotelPage({
               ))}
             </dl>
             <a
-              href={affiliateBookingUrl(hotel)}
+              href={booking.url}
               target="_blank"
               rel="sponsored nofollow noopener noreferrer"
               className="mt-6 block w-full rounded-full bg-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
@@ -175,30 +175,17 @@ export default async function HotelPage({
               Check Availability
             </a>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
-              {hotel.directBookingUrl ? (
+              {booking.tracked ? (
+                <>
+                  {booking.network} partner link. We may earn a commission, at
+                  no cost to you. It never affects our reviews.
+                </>
+              ) : booking.network === "the hotel" ? (
                 <>Official hotel booking link. THL does not earn a commission from this booking.</>
-              ) : isAffiliateLink(hotel) ? (
-                <>Booking.com partner link. We may earn a commission, at no cost to you. It never affects our reviews.</>
               ) : (
-                <>Booking.com search link. THL does not currently earn a commission from this booking.</>
+                <>{booking.network} link. THL does not currently earn a commission from this booking.</>
               )}
             </p>
-            {chainLink && (
-              <>
-                <a
-                  href={chainLink.url}
-                  target="_blank"
-                  rel="sponsored nofollow noopener noreferrer"
-                  className="mt-3 block w-full rounded-full border border-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-ink hover:text-paper"
-                >
-                  Book direct with {chainLink.label}
-                </a>
-                <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
-                  {chainLink.label} partner link. Booking with the group directly
-                  often carries member rates and perks.
-                </p>
-              </>
-            )}
             <p className="mt-2 text-center text-[0.65rem] leading-relaxed text-ink-muted">
               Displayed prices are editorial indications, not live quotes. Your dates, room and taxes may change the final rate.
             </p>
