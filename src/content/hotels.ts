@@ -40,6 +40,14 @@ export interface Hotel {
   /** Optional official hotel booking engine for direct-only properties. */
   directBookingUrl?: string;
   /**
+   * Hotel group, when the property belongs to one we hold a CJ affiliate
+   * relationship with. Drives the secondary "book direct" link, routed to
+   * the right regional advertiser. See src/lib/affiliate.ts.
+   */
+  chain?: "accor" | "ihg";
+  /** The property's page on the chain's own site, for the chain link. */
+  chainUrl?: string;
+  /**
    * Optional exact Booking.com property URL for the affiliate "Check
    * Availability" link. If omitted, a Booking.com search for the hotel
    * name + city is used instead. See src/lib/affiliate.ts.
@@ -1394,6 +1402,8 @@ const hotelCatalogue: Hotel[] = [
   },
   {
     slug: "raffles-singapore",
+    chain: "accor",
+    chainUrl: "https://all.accor.com/hotel/A5S3/index.en.shtml",
     bookingUrl: "https://www.booking.com/hotel/sg/raffles.html",
     name: "Raffles Singapore",
     city: "Singapore",
