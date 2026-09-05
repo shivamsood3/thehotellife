@@ -13,6 +13,8 @@ export interface AuthorProfile {
   slug: string;
   role: string;
   bio: string;
+  image?: string;
+  imageAlt?: string;
   sameAs?: string[];
 }
 
@@ -27,6 +29,8 @@ export const authorProfiles: Partial<Record<HotelEditorialAuthor, AuthorProfile>
     slug: "zinnia-thapar",
     role: "Editor and Travel Writer",
     bio: "Zinnia Thapar is an editor and travel writer at The Hotel Life. She leads the current commissioning slate and writes personal hotel reviews, destination guides and editorial features with particular attention to design, service, food and a property's sense of place.",
+    image: "/authors/zinnia-thapar.jpeg",
+    imageAlt: "Portrait of Zinnia Thapar, editor and travel writer at The Hotel Life",
     sameAs: ["https://www.linkedin.com/in/zinniathapar/"],
   },
 };

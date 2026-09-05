@@ -105,9 +105,20 @@ export default function About() {
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {contributors.map((name, index) => (
             <div id={authorAnchor(name)} key={name} className="scroll-mt-8 rounded-md border border-line bg-white p-5">
-              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brass-deep">
-                {String(index + 1).padStart(2, "0")}
-              </span>
+              <div className="flex items-start justify-between gap-3">
+                <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brass-deep">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {name === "Zinnia Thapar" && authorProfiles[name]?.image && (
+                  <Image
+                    src={authorProfiles[name]!.image!}
+                    alt={authorProfiles[name]!.imageAlt!}
+                    width={48}
+                    height={48}
+                    className="rounded-full object-cover"
+                  />
+                )}
+              </div>
               <p className="font-display mt-5 text-xl font-medium text-ink">{name}</p>
               <p className="mt-2 text-xs leading-relaxed text-ink-muted">
                 Reviews, guides and editorial features

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import HotelCard from "@/components/HotelCard";
 import JsonLd, { authorProfileSchema, breadcrumbSchema } from "@/components/JsonLd";
@@ -16,6 +17,18 @@ export const metadata: Metadata = {
     description: profile.bio,
     type: "profile",
     url: `/authors/${profile.slug}`,
+    images: [{
+      url: profile.image!,
+      width: 348,
+      height: 348,
+      alt: profile.imageAlt!,
+    }],
+  },
+  twitter: {
+    card: "summary",
+    title: `${profile.name} · ${profile.role} at The Hotel Life`,
+    description: profile.bio,
+    images: [profile.image!],
   },
 };
 
@@ -34,8 +47,15 @@ export default function ZinniaThaparProfile() {
       />
 
       <header className="mx-auto mt-12 max-w-3xl border-b border-line pb-10 text-center">
-        <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-ink font-display text-4xl font-medium text-paper" aria-hidden="true">
-          ZT
+        <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white bg-ink shadow-lg sm:h-36 sm:w-36">
+          <Image
+            src={profile.image!}
+            alt={profile.imageAlt!}
+            fill
+            preload
+            className="object-cover"
+            sizes="144px"
+          />
         </div>
         <span className="eyebrow mt-7 inline-block">Editorial profile</span>
         <h1 className="font-display mt-2 text-4xl font-medium leading-tight text-ink sm:text-5xl">

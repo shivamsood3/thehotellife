@@ -96,6 +96,16 @@ export function personSchema(name: HotelEditorialAuthor) {
     url: `${SITE_URL}${path}`,
     ...(profile?.role ? { jobTitle: profile.role } : {}),
     ...(profile?.bio ? { description: profile.bio } : {}),
+    ...(profile?.image ? {
+      image: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${profile.image}`,
+        contentUrl: `${SITE_URL}${profile.image}`,
+        caption: profile.imageAlt ?? `Portrait of ${profile.name}`,
+        width: 348,
+        height: 348,
+      },
+    } : {}),
     ...(profile?.sameAs?.length ? { sameAs: profile.sameAs } : {}),
     worksFor: { "@id": `${SITE_URL}/#organization` },
   };
@@ -106,6 +116,8 @@ export function authorProfileSchema(profile: {
   slug: string;
   role: string;
   bio: string;
+  image?: string;
+  imageAlt?: string;
   sameAs?: string[];
 }) {
   const url = `${SITE_URL}/authors/${profile.slug}`;
