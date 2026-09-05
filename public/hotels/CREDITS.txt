@@ -132,6 +132,16 @@ singita-sabi-sand
 # The Oberoi Mumbai — oberoihotels.com
 # SLS Hotel Beverly Hills — slshotels.com (official hotel photography)
 
+# Official property photography added September 2026 to replace generic stock:
+# The Oberoi, New Delhi — oberoihotels.com official hotel page and gallery
+# https://www.oberoihotels.com/hotels-in-delhi/
+# W Goa — Marriott official hotel gallery
+# https://www.marriott.com/en-us/hotels/goiwh-w-goa/photos/
+# W Koh Samui — Marriott official hotel gallery
+# https://www.marriott.com/en-us/hotels/usmwh-w-koh-samui/photos/
+# STAY Wellbeing & Lifestyle Resort — official hotel gallery
+# https://stayphuketresort.com/gallery/
+
 taj-mahal-palace-mumbai
   Facade of Taj Mahal Palace Hotel - Colaba District - Mumbai - Maharashtra - India
   by Adam Jones — CC BY-SA 2.0; hosted by Flickr

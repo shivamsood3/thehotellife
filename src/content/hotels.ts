@@ -1212,8 +1212,10 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.7,
     priceFrom: 300,
     year: "May 2026",
-    heroImage: U("1477587458883-47145ed94245", 2000),
-    cardImage: U("1477587458883-47145ed94245", 1000),
+    heroImage: "/hotels/oberoi-new-delhi-official.jpg",
+    cardImage: "/hotels/oberoi-new-delhi-official.jpg",
+    imageAlt:
+      "The landscaped garden and swimming pool at The Oberoi, New Delhi",
     standout:
       "A cocktail on the rooftop as the sun drops behind Humayun's Tomb and the green of the golf course fades into the vast, humming city beyond.",
     quickFacts: [
@@ -1252,8 +1254,10 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.5,
     priceFrom: 300,
     year: "August 2026",
-    heroImage: U("1582719508461-905c673771fd", 2000),
-    cardImage: U("1582719508461-905c673771fd", 1000),
+    heroImage: "/hotels/w-goa-official.jpg",
+    cardImage: "/hotels/w-goa-official.jpg",
+    imageAlt:
+      "The hilltop entrance and Arabian Sea view at W Goa in Vagator",
     standout:
       "Sundowners at the clifftop pool as the DJ warms up and the Arabian Sea turns copper below the red laterite headland of Vagator.",
     quickFacts: [
@@ -1293,8 +1297,10 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 500,
     priceNote: "pool villa",
     year: "June 2026",
-    heroImage: U("1537996194471-e657df975ab4", 2000),
-    cardImage: U("1537996194471-e657df975ab4", 1000),
+    heroImage: "/hotels/w-koh-samui-official.jpg",
+    cardImage: "/hotels/w-koh-samui-official.jpg",
+    imageAlt:
+      "Aerial view of W Koh Samui's hillside villas and northern shoreline",
     standout:
       "Slipping into your own villa pool at midnight, the lights of fishing boats strung across the Gulf of Thailand and the beach bar's bass drifting up the hill.",
     quickFacts: [
@@ -1334,8 +1340,10 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.6,
     priceFrom: 80,
     year: "July 2026",
-    heroImage: U("1571003123894-1f0594d2b5d9", 2000),
-    cardImage: U("1571003123894-1f0594d2b5d9", 1000),
+    heroImage: "/hotels/stay-phuket-official.jpg",
+    cardImage: "/hotels/stay-phuket-official.jpg",
+    imageAlt:
+      "The palm-fringed swimming pools at STAY Wellbeing & Lifestyle Resort in Phuket",
     standout:
       "Finishing a week-long detox lighter and clearer than you arrived, then rewarding yourself with a slow massage as the cicadas start up in the garden.",
     quickFacts: [
