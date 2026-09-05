@@ -331,8 +331,8 @@ export const expansionHotels: Hotel[] = [
     priceNote: "Rates peak dramatically during blossom and autumn foliage seasons",
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/jp/park-hyatt-kyoto.html",
-    heroImage: U("1493976040374-85c8e12f0c0e", 2000),
-    cardImage: U("1493976040374-85c8e12f0c0e", 1000),
+    heroImage: "/hotels/park-hyatt-kyoto-official.jpg",
+    cardImage: "/hotels/park-hyatt-kyoto-official.jpg",
     standout: "Walking out before breakfast into empty Sannenzaka lanes, then returning to Yasaka Pagoda framed from the hotel.",
     quickFacts: [
       { label: "Location", value: "Higashiyama, beside Kodaiji" },
@@ -389,8 +389,8 @@ export const expansionHotels: Hotel[] = [
     priceNote: "River villas and peak dates rise substantially",
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/th/capella-bangkok.html",
-    heroImage: U("1528181304800-259b08848526", 2000),
-    cardImage: U("1528181304800-259b08848526", 1000),
+    heroImage: "/hotels/capella-bangkok-official.jpg",
+    cardImage: "/hotels/capella-bangkok-official.jpg",
     standout: "A river-edge villa, where a private plunge pool and verandah make Bangkok feel less like a megacity than a constantly changing piece of theatre.",
     quickFacts: [
       { label: "Location", value: "Charoenkrung Road, Chao Phraya" },

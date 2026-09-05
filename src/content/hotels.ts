@@ -88,8 +88,8 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1150,
     year: "August 2026",
     directBookingUrl: "https://www.aman.com/hotels/aman-tokyo",
-    heroImage: U("1611892440504-42a792e24d32", 2000),
-    cardImage: U("1611892440504-42a792e24d32", 1000),
+    heroImage: "/hotels/aman-tokyo-official.jpg",
+    cardImage: "/hotels/aman-tokyo-official.jpg",
     standout:
       "The 30-metre onsen bath, walled in black granite, with the Imperial Palace gardens laid out below it at dawn.",
     quickFacts: [
@@ -350,8 +350,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.9,
     priceFrom: 1300,
     year: "August 2026",
-    heroImage: U("1582719478250-c89cae4dc85b", 2000),
-    cardImage: U("1582719478250-c89cae4dc85b", 1000),
+    heroImage: "/hotels/belmond-hotel-caruso-official.jpg",
+    cardImage: "/hotels/belmond-hotel-caruso-official.jpg",
     standout:
       "Swimming to the edge of the infinity pool as it seems to pour straight off the cliff into the blue of the coastline below.",
     quickFacts: [
@@ -885,8 +885,8 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 2600,
     priceNote: "all-inclusive, 4-night min",
     year: "August 2026",
-    heroImage: U("1517840901100-8179e982acb7", 2000),
-    cardImage: U("1517840901100-8179e982acb7", 1000),
+    heroImage: "/hotels/explora-patagonia-official.jpg",
+    cardImage: "/hotels/explora-patagonia-official.jpg",
     standout:
       "Coming back from an eight-hour trek to the base of the granite towers, muscles aching, to a hot tub perched over the Salto Chico waterfall as condors wheel overhead.",
     quickFacts: [
@@ -925,8 +925,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.6,
     priceFrom: 640,
     year: "August 2026",
-    heroImage: U("1587734195503-904fca47e0e9", 2000),
-    cardImage: U("1587734195503-904fca47e0e9", 1000),
+    heroImage: "/hotels/one-and-only-cape-town-official.jpg",
+    cardImage: "/hotels/one-and-only-cape-town-official.jpg",
     standout:
       "Breakfast on the terrace as the morning cloud, the famous 'tablecloth', pours slowly over the top of Table Mountain and dissolves in the sun.",
     quickFacts: [
@@ -1131,8 +1131,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.6,
     priceFrom: 200,
     year: "March 2026",
-    heroImage: U("1524492412937-b28074a5d7da", 2000),
-    cardImage: U("1524492412937-b28074a5d7da", 1000),
+    heroImage: "/hotels/jai-mahal-palace-jaipur-official.jpg",
+    cardImage: "/hotels/jai-mahal-palace-jaipur-official.jpg",
     standout:
       "A gin and tonic on the lawn at dusk as the palace facade turns amber and peacocks pick their way across eighteen acres of clipped Mughal garden.",
     quickFacts: [
@@ -1546,8 +1546,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 850,
     year: "June 2026",
-    heroImage: U("1602002418082-a4443e081dd1", 2000),
-    cardImage: U("1602002418082-a4443e081dd1", 1000),
+    heroImage: "/hotels/four-seasons-bali-sayan-official.jpg",
+    cardImage: "/hotels/four-seasons-bali-sayan-official.jpg",
     standout:
       "Yoga at dawn on the deck as mist rises off the Ayung River and the terraced rice paddies wake up green and gold below you.",
     quickFacts: [
@@ -1788,8 +1788,8 @@ const hotelCatalogue: Hotel[] = [
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/ae/bulgari-resorts-dubai.html",
     hotelsUrl: "https://www.hotels.com/ho661582464/",
-    heroImage: U("1540541338287-41700207dee6", 2000),
-    cardImage: U("1540541338287-41700207dee6", 1000),
+    heroImage: "/hotels/bulgari-resort-dubai-official.jpg",
+    cardImage: "/hotels/bulgari-resort-dubai-official.jpg",
     standout:
       "An aperitivo at the marina as the yachts light up and the Burj Khalifa glitters across the water, feeling more Portofino than Persian Gulf.",
     quickFacts: [
@@ -1828,8 +1828,8 @@ const hotelCatalogue: Hotel[] = [
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/hk/the-upper-house.html",
     hotelsUrl: "https://www.hotels.com/ho327104/",
-    heroImage: U("1590490360182-c33d57733427", 2000),
-    cardImage: U("1590490360182-c33d57733427", 1000),
+    heroImage: "/hotels/upper-house-hong-kong-official.jpg",
+    cardImage: "/hotels/upper-house-hong-kong-official.jpg",
     standout:
       "Dinner at Salisterra on the top floor as the light drops and Hong Kong's forest of towers switches on around you.",
     quickFacts: [
@@ -1867,8 +1867,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.4,
     priceFrom: 150,
     year: "August 2026",
-    heroImage: U("1590490360182-c33d57733427", 2000),
-    cardImage: U("1590490360182-c33d57733427", 1000),
+    heroImage: "/hotels/hopewell-hotel-hong-kong-official.jpg",
+    cardImage: "/hotels/hopewell-hotel-hong-kong-official.jpg",
     standout:
       "Waking up on a high floor to the whole sweep of Wan Chai and the harbour beyond, then riding the lifts down into one of Hong Kong's most walkable neighbourhoods.",
     quickFacts: [
@@ -1914,8 +1914,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.8,
     priceFrom: 500,
     year: "August 2026",
-    heroImage: U("1483729558449-99ef09a8c325", 2000),
-    cardImage: U("1483729558449-99ef09a8c325", 1000),
+    heroImage: "/hotels/copacabana-palace-rio-official.jpg",
+    cardImage: "/hotels/copacabana-palace-rio-official.jpg",
     standout:
       "Late afternoon at the pool, when the light comes off the white facade and the whole terrace turns the colour of weak tea, and nobody in a deckchair is in any hurry at all.",
     quickFacts: [
@@ -1976,8 +1976,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.9,
     priceFrom: 420,
     year: "August 2026",
-    heroImage: U("1528181304800-259b08848526", 2000),
-    cardImage: U("1528181304800-259b08848526", 1000),
+    heroImage: "/hotels/mandarin-oriental-bangkok-official.jpg",
+    cardImage: "/hotels/mandarin-oriental-bangkok-official.jpg",
     standout:
       "Breakfast on the Verandah with the river going past at working speed, longtails and rice barges and commuter ferries, while someone quietly remembers how you take your coffee.",
     quickFacts: [
@@ -2038,8 +2038,8 @@ const hotelCatalogue: Hotel[] = [
     rating: 4.9,
     priceFrom: 1300,
     year: "August 2026",
-    heroImage: U("1539020140153-e479b8c22e70", 2000),
-    cardImage: U("1539020140153-e479b8c22e70", 1000),
+    heroImage: "/hotels/royal-mansour-marrakech-official.jpg",
+    cardImage: "/hotels/royal-mansour-marrakech-official.jpg",
     standout:
       "Discovering that your riad has three floors, a private plunge pool on the roof, and that breakfast arrives without anyone appearing to have entered the building.",
     quickFacts: [
@@ -2099,8 +2099,8 @@ const hotelCatalogue: Hotel[] = [
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/gb/the-connaught-mayfair.html",
     hotelsUrl: "https://www.hotels.com/ho172846/",
-    heroImage: U("1513694203232-719a280e022f", 2000),
-    cardImage: U("1513694203232-719a280e022f", 1000),
+    heroImage: "/hotels/the-connaught-london-official.jpg",
+    cardImage: "/hotels/the-connaught-london-official.jpg",
     standout:
       "The martini trolley arriving at your table in the Connaught Bar, where the gin is poured from a height and the whole ritual takes exactly as long as it should.",
     quickFacts: [
@@ -2159,8 +2159,8 @@ const hotelCatalogue: Hotel[] = [
     priceFrom: 1600,
     year: "August 2026",
     directBookingUrl: "https://www.postranchinn.com/",
-    heroImage: U("1506905925346-21bda4d32df4", 2000),
-    cardImage: U("1506905925346-21bda4d32df4", 1000),
+    heroImage: "/hotels/post-ranch-inn-big-sur-official.jpg",
+    cardImage: "/hotels/post-ranch-inn-big-sur-official.jpg",
     standout:
       "The infinity pool on the cliff edge at dusk, when the fog comes in below you and you are looking down at the top of it.",
     quickFacts: [
@@ -2221,8 +2221,8 @@ const hotelCatalogue: Hotel[] = [
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/it/splendido-amp-splendido-mare.html",
     hotelsUrl: "https://www.hotels.com/ho1004480/",
-    heroImage: U("1516483638261-f4dbaf036963", 2000),
-    cardImage: U("1516483638261-f4dbaf036963", 1000),
+    heroImage: "/hotels/splendido-portofino-official.jpg",
+    cardImage: "/hotels/splendido-portofino-official.jpg",
     standout:
       "The walk down through the terraced gardens to the harbour in the early evening, and the considerably slower walk back up after dinner.",
     quickFacts: [

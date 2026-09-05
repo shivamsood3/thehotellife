@@ -142,6 +142,25 @@ singita-sabi-sand
 # STAY Wellbeing & Lifestyle Resort — official hotel gallery
 # https://stayphuketresort.com/gallery/
 
+# Official property photography added September 2026 in the full hotel-photo pass:
+# Aman Tokyo — aman.com official hotel gallery
+# Belmond Hotel Caruso — belmond.com official hotel gallery
+# Explora Patagonia — explora.com official Torres del Paine lodge gallery
+# One&Only Cape Town — oneandonlyresorts.com official hotel gallery
+# Jai Mahal Palace Jaipur — tajhotels.com official hotel gallery
+# Four Seasons Resort Bali at Sayan — fourseasons.com official hotel gallery
+# Bulgari Resort Dubai — bulgarihotels.com official hotel gallery
+# The Upper House Hong Kong — thesetcollection.com official hotel gallery
+# Hopewell Hotel Hong Kong — hopewellhotel.com official hotel gallery
+# Copacabana Palace Rio — belmond.com official press photography
+# Mandarin Oriental Bangkok — mandarinoriental.com official hotel gallery
+# Royal Mansour Marrakech — royalmansour.com official hotel gallery
+# The Connaught London — maybourne.com official hotel gallery
+# Post Ranch Inn Big Sur — postranchinn.com official hotel gallery
+# Splendido Portofino — belmond.com official hotel gallery
+# Park Hyatt Kyoto — hyatt.com official hotel gallery
+# Capella Bangkok — capellahotels.com official hotel gallery
+
 taj-mahal-palace-mumbai
   Facade of Taj Mahal Palace Hotel - Colaba District - Mumbai - Maharashtra - India
   by Adam Jones — CC BY-SA 2.0; hosted by Flickr
