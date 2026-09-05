@@ -15,7 +15,6 @@ export const individualHotels: Hotel[] = [
     priceNote: "Indicative only; taxes and mandatory charges can materially increase the total",
     year: "September 2026",
     author: "Shivam Sood",
-    reviewBasis: "first-hand",
     factChecked: "September 4, 2026",
     heroImage: "/hotels/sls-hotel-beverly-hills.jpg",
     cardImage: "/hotels/sls-hotel-beverly-hills.jpg",
@@ -32,7 +31,7 @@ export const individualHotels: Hotel[] = [
     chainUrl: "https://www.marriott.com/en-us/hotels/laxls-sls-hotel-a-luxury-collection-hotel-beverly-hills/overview/",
     bookingUrl: "https://www.booking.com/hotel/us/sls-at-beverly-hills.html",
     hotelsUrl: "https://www.hotels.com/ho124152/sls-hotel-a-luxury-collection-hotel-beverly-hills-los-angeles-united-states-of-america/",
-    researchSources: [
+    factCheckSources: [
       { label: "Official hotel overview", url: "https://www.marriott.com/en-us/hotels/laxls-sls-hotel-a-luxury-collection-hotel-beverly-hills/overview/" },
       { label: "Official rooms and suites", url: "https://www.marriott.com/en-us/hotels/laxls-sls-hotel-a-luxury-collection-hotel-beverly-hills/rooms/overview/" },
       { label: "Official restaurants and bars", url: "https://www.marriott.com/en-us/hotels/laxls-sls-hotel-a-luxury-collection-hotel-beverly-hills/dining/" },

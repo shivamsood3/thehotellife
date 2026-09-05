@@ -173,14 +173,14 @@ export default async function HotelPage({
 
             <blockquote>{hotel.standout}</blockquote>
 
-            {hotel.researchSources && hotel.researchSources.length > 0 && (
+            {hotel.factCheckSources && hotel.factCheckSources.length > 0 && (
               <aside className="not-prose mt-12 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
                 <p className="font-semibold text-ink">How this review was checked</p>
                 <p className="mt-2">
                   Changeable hotel details were checked against the primary sources below.
                 </p>
                 <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
-                  {hotel.researchSources.map((source) => (
+                  {hotel.factCheckSources.map((source) => (
                     <li key={source.url}>
                       <a className="font-semibold text-brass-deep hover:underline" href={source.url} target="_blank" rel="noopener noreferrer">
                         {source.label}

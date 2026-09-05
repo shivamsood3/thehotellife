@@ -37,9 +37,8 @@ export interface Hotel {
   year: string; // review date
   /** Named editorial owner. Assigned centrally until author profiles move to a CMS. */
   author?: HotelEditorialAuthor;
-  reviewBasis?: "first-hand" | "researched";
   factChecked?: string;
-  researchSources?: { label: string; url: string }[];
+  factCheckSources?: { label: string; url: string }[];
   heroImage: string;
   cardImage: string;
   /** Human-readable description of the photograph, shared by page and card images. */
@@ -2276,9 +2275,8 @@ export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
     commissioningNotes[hotel.slug]?.length,
   );
   const trust = {
-    reviewBasis: hotel.reviewBasis ?? "researched" as const,
     factChecked: hotel.factChecked ?? (isIndividuallyChecked ? "September 4, 2026" : undefined),
-    researchSources: hotel.researchSources ?? (
+    factCheckSources: hotel.factCheckSources ?? (
       isIndividuallyChecked && (hotel.directBookingUrl || hotel.chainUrl)
         ? [{ label: "Official hotel website", url: hotel.directBookingUrl || hotel.chainUrl! }]
         : undefined

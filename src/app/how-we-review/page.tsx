@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/how-we-review" },
   title: "How We Review · The Hotel Life",
   description:
-    "Our hotel review methodology: the evidence we use, what we assess and how we score. The same standard for a $200 room and a $3,000 suite.",
+    "How The Hotel Life turns personal hotel experiences into accountable, independently scored reviews, with named writers and clearly dated fact checks.",
 };
 
 const criteria = [
@@ -60,29 +60,38 @@ export default function HowWeReview() {
       {/* Process */}
       <div className="mx-auto mt-12 max-w-2xl">
         <div className="prose-editorial">
-          <h2>We label what the review is based on</h2>
+          <h2>Every review begins with personal experience</h2>
           <p>
-            First-hand stays, editorial research and material supplied by a hotel are not
-            the same kind of evidence, so we do not pretend they are. Every published review
-            has a named writer, a review date and a link back to this scoring framework.
-            When a stay is hosted or complimentary, that support must be disclosed on the
-            review. Affiliate links are commercial links, not evidence, and never alter a score.
+            The Hotel Life publishes personal editorial accounts, not anonymous hotel
+            summaries. A review is shaped by the writer&apos;s experience of the property: how
+            arrival felt, how the room worked, where the hotel came alive and where the promise
+            fell short. Every story carries a named writer, a review date and a link back to
+            this scoring framework so that the judgement has a visible owner and a consistent
+            standard.
           </p>
-          <h2>We test the ordinary moments</h2>
+          <h2>We pay attention to the ordinary moments</h2>
           <p>
-            When our assessment includes a stay, the useful evidence is rarely the staged
-            tour. It is the entry-level room, the night-time noise, breakfast at its busiest,
-            the clarity of the bill and the way a team handles an ordinary request. Where
-            first-hand testing is not available, the story is edited as researched guidance
-            and should not imply an anonymous inspection took place.
+            The useful evidence is rarely found in a staged tour. It is in the quality of sleep,
+            the light in the room, breakfast when the dining room is busy, the ease of asking
+            for help and whether service retains its warmth after the ceremonial welcome is
+            over. We consider the celebrated spaces, but also the corridors, transfers, bills,
+            acoustics and small acts of care that determine how a hotel actually feels to use.
           </p>
-          <h2>Our evidence stays attached to the story</h2>
+          <h2>Experience leads; facts are checked</h2>
           <p>
-            A byline makes one person accountable for the words. The date records when the
-            review was last edited; prices remain clearly labelled as editorial indications
-            until they have their own verified check date. The numeric score preserves the
-            decimal result of the six weighted criteria below; it is not rounded up to a
-            more flattering row of full stars.
+            A personal judgement and a changeable hotel fact are different things. Before
+            publication, practical details such as room categories, restaurants, facilities,
+            access and renovation status are checked against primary hotel sources, which are
+            attached to the review where useful. Those checks support the writing; they do not
+            replace the experience or turn hotel marketing into our opinion.
+          </p>
+          <h2>Commercial relationships do not edit the verdict</h2>
+          <p>
+            When a stay is hosted or complimentary, that support is disclosed on the review.
+            Affiliate booking links are commercial links, not editorial evidence, and never
+            alter a score. Prices are clearly labelled as indications because rates move. The
+            numeric rating preserves the decimal result of the six weighted criteria below
+            rather than rounding a good hotel up to a more flattering row of full stars.
           </p>
         </div>
       </div>
