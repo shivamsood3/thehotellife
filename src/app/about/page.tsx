@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { authorAnchor, authorProfiles } from "@/content/authors";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
@@ -103,7 +104,7 @@ export default function About() {
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {contributors.map((name, index) => (
-            <div key={name} className="rounded-md border border-line bg-white p-5">
+            <div id={authorAnchor(name)} key={name} className="scroll-mt-8 rounded-md border border-line bg-white p-5">
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-brass-deep">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -111,6 +112,11 @@ export default function About() {
               <p className="mt-2 text-xs leading-relaxed text-ink-muted">
                 Reviews, guides and editorial features
               </p>
+              {name === "Zinnia Thapar" && authorProfiles[name] && (
+                <Link href={`/authors/${authorProfiles[name]!.slug}`} className="mt-4 inline-block text-xs font-semibold text-brass-deep hover:underline">
+                  Read profile →
+                </Link>
+              )}
             </div>
           ))}
         </div>

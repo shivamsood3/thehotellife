@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/the-edit", priority: 0.8 },
     { path: "/about", priority: 0.5 },
     { path: "/how-we-review", priority: 0.5 },
+    { path: "/authors/zinnia-thapar", priority: 0.5 },
     { path: "/advertise", priority: 0.4 },
     { path: "/newsletter", priority: 0.4 },
     { path: "/contact", priority: 0.4 },

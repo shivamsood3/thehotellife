@@ -8,6 +8,7 @@ import { AdSense } from "@/components/Ads";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema, faqSchema, editorialDateToISO } from "@/components/JsonLd";
+import { authorPath } from "@/content/authors";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -104,7 +105,7 @@ export default async function HotelPage({
           {hotel.priceNote ? ` / night · ${hotel.priceNote}` : " / night"}
         </span>
         <span className="text-sm text-ink-muted">
-          By <span className="font-medium text-ink">{hotel.author}</span> · Reviewed {hotel.year}
+          By <Link href={authorPath(hotel.author!)} className="font-medium text-ink hover:text-brass-deep hover:underline">{hotel.author}</Link> · Reviewed {hotel.year}
         </span>
         <ShareWhatsApp
           url={`${SITE_URL}/hotels/${hotel.slug}`}
@@ -122,7 +123,7 @@ export default async function HotelPage({
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 border-y border-line py-3 text-xs text-ink-muted">
-            <span>Editorial review by {hotel.author}</span>
+            <span>Editorial review by <Link href={authorPath(hotel.author!)} className="font-semibold text-brass-deep hover:underline">{hotel.author}</Link></span>
             <span aria-hidden="true">·</span>
             <Link href="/how-we-review" className="font-semibold text-brass-deep hover:underline">
               Read our scoring methodology
