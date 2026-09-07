@@ -5,12 +5,13 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { AntialiasRail, MobileRail } from "@/components/Ads";
+import PageAdvertising from "@/components/PageAdvertising";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import PWALaunchScreen from "@/components/PWALaunchScreen";
 import PWARegistration from "@/components/PWARegistration";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
+const ADSENSE_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
 // Outfit is the brand typeface. Light 300 and SemiBold 600 carry the
 // wordmark; the rest of the weights cover UI and body copy.
@@ -131,7 +132,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {/* AdSense loader, beforeInteractive so it lands in the initial
             HTML for site verification, and Auto Ads can place units early. */}
-        {ADSENSE_CLIENT && (
+        {ADSENSE_CLIENT && ADSENSE_ENABLED && (
           <Script
             id="adsbygoogle-init"
             strategy="beforeInteractive"
@@ -145,14 +146,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <PWARegistration />
         <PWALaunchScreen />
         <Header />
-        {/* Main + side ad rail */}
-        <div className="flex-1 w-full">
-          <div className="mx-auto flex w-full max-w-[1400px] gap-8 px-4 sm:px-6 lg:px-10">
-            <main className="min-w-0 flex-1">{children}</main>
-            <AntialiasRail />
-          </div>
-        </div>
-        <MobileRail />
+        <PageAdvertising>{children}</PageAdvertising>
         <Footer />
         <Analytics />
       </body>

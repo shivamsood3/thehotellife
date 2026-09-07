@@ -22,6 +22,7 @@ import AdSenseUnit from "@/components/AdSenseUnit";
 import { AccorPlusRail, AccorPlusSquare } from "@/components/AffiliateBanner";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
+const ADSENSE_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
 const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
 const NIKHAAR_URL = process.env.NEXT_PUBLIC_NIKHAAR_URL ?? "https://www.nikhaarfoundation.org";
@@ -56,6 +57,10 @@ const SIZES: Record<NonNullable<AdSenseProps["format"]>, { h: number; label: str
 export function AdSense({ slot, format = "responsive", className = "" }: AdSenseProps) {
   const size = SIZES[format];
   const configured = SLOT_IDS[format];
+
+  // Keep ownership verification in metadata while approval is pending, but do
+  // not request or reserve Google inventory until it is deliberately enabled.
+  if (!ADSENSE_ENABLED) return null;
 
   // Live: a real ad unit exists for this position, so render it. These sit
   // alongside Auto Ads rather than replacing it; Google will not double up
@@ -164,6 +169,55 @@ export function AntialiasRail() {
         >
           <NikhaarCreative />
         </RailAd>
+      </div>
+    </aside>
+  );
+}
+
+export type EditorialSponsorBrand = "accor" | "antialias" | "nikhaar";
+
+function EditorialSponsor({ brand, mobile }: { brand: EditorialSponsorBrand; mobile: boolean }) {
+  if (brand === "accor") return mobile ? <AccorPlusSquare /> : <AccorPlusRail />;
+
+  if (brand === "antialias") {
+    return (
+      <RailAd
+        href={ANTIALIAS_URL}
+        label="The AntiAlias, a design & brand studio"
+        ratio={mobile ? "1 / 1" : "300 / 600"}
+      >
+        {mobile ? <AntialiasSquareCreative /> : <AntialiasCreative />}
+      </RailAd>
+    );
+  }
+
+  return (
+    <RailAd
+      href={NIKHAAR_URL}
+      label="Nikhaar Foundation"
+      ratio={mobile ? "1 / 1" : "300 / 420"}
+    >
+      {mobile ? <NikhaarSquareCreative /> : <NikhaarCreative />}
+    </RailAd>
+  );
+}
+
+export function EditorialSponsorRail({ brand }: { brand: EditorialSponsorBrand }) {
+  return (
+    <aside className="hidden w-[300px] shrink-0 py-10 xl:block" aria-label="Sponsored partner">
+      <EditorialSponsor brand={brand} mobile={false} />
+    </aside>
+  );
+}
+
+export function EditorialSponsorMobile({ brand }: { brand: EditorialSponsorBrand }) {
+  return (
+    <aside
+      className="mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10 xl:hidden"
+      aria-label="Sponsored partner"
+    >
+      <div className="mx-auto w-full max-w-[360px]">
+        <EditorialSponsor brand={brand} mobile />
       </div>
     </aside>
   );

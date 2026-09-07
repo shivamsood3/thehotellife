@@ -53,11 +53,11 @@ export default function Header() {
     await installPrompt.userChoice;
     setInstallPrompt(null);
   };
-  // Two editorial families carry AI Wise; three carry Hacoco. Utility pages
-  // remain ad-free at the top so one partner no longer appears everywhere.
-  const partner = pathname === "/about" || pathname.startsWith("/guides") || pathname.startsWith("/the-edit")
+  // During AdSense approval, leaderboards appear only on the five substantial
+  // editorial index pages. The homepage, articles and utility pages stay clean.
+  const partner = pathname === "/guides" || pathname === "/the-edit"
     ? "ai-wise"
-    : pathname === "/" || pathname.startsWith("/hotels") || pathname.startsWith("/destinations") || pathname.startsWith("/best-hotels")
+    : pathname === "/hotels" || pathname === "/destinations" || pathname === "/best-hotels"
       ? "hacoco"
       : null;
 

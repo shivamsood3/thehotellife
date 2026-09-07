@@ -67,9 +67,6 @@ export interface Hotel {
   bookingUrl?: string;
 }
 
-const U = (id: string, w = 1600) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 const hotelCatalogue: Hotel[] = [
   ...individualHotels,
   ...expansionHotels,
