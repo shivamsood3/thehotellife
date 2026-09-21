@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { hotels, getHotel, getRelated } from "@/content/hotels";
+import { hotels, getHotel, getRelated, type Hotel } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import { primaryBookingLink } from "@/lib/affiliate";
@@ -16,6 +16,57 @@ export function generateStaticParams() {
   return hotels.map((h) => ({ slug: h.slug }));
 }
 
+/**
+ * The place label to append to a review's title and description, or null
+ * when the hotel's own name already carries it.
+ *
+ * "Aman Tokyo" needs no city, and the postal city of a rural property is
+ * often neither searched nor recognisable ("Six Senses Fort Barwara" sits
+ * in Chauth ka Barwara). Substituting the country in those cases reads
+ * worse than saying nothing, so return null and let the name stand alone.
+ */
+function placeLabel(hotel: Hotel): string | null {
+  const name = hotel.name.toLowerCase();
+  const cityRepeatsName = hotel.city
+    .toLowerCase()
+    .split(/\s+/)
+    .some((token) => token.length > 3 && name.includes(token));
+  return cityRepeatsName ? null : hotel.city;
+}
+
+/**
+ * Search-facing title for a review.
+ *
+ * Readers type "<hotel name> review" far more often than they type the
+ * settlement a property sits in, and Google renders only ~60 characters
+ * before truncating. The previous pattern spent that budget on the postal
+ * city; lead with the name and the intent word instead, and add a place
+ * only when it is both distinct from the name and short enough to fit.
+ */
+function reviewTitle(hotel: Hotel): string {
+  const base = `${hotel.name} Review`;
+  const place = placeLabel(hotel);
+  if (!place) return base;
+  const withPlace = `${base}: ${place}`;
+  // The " · The Hotel Life" suffix costs 17 of the ~60 characters shown.
+  return withPlace.length <= 43 ? withPlace : base;
+}
+
+/**
+ * Description written to earn the click rather than to read well in a CMS.
+ * The editorial excerpt stays on OpenGraph, where a browsing audience wants
+ * voice; a search result wants the decision: score, what the page settles,
+ * and the number the reader is weighing.
+ */
+function reviewDescription(hotel: Hotel): string {
+  const place = placeLabel(hotel);
+  const subject = place ? `${hotel.name}, ${place}` : hotel.name;
+  const rate = `$${hotel.priceFrom.toLocaleString()}`;
+  const full = `Our ${hotel.rating}/5 review of ${subject}: which room to book, where it falls short, and whether it earns ${rate} a night.`;
+  if (full.length <= 158) return full;
+  return `Our ${hotel.rating}/5 review of ${hotel.name}: which room to book, where it falls short, and whether it earns ${rate} a night.`;
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -25,9 +76,9 @@ export async function generateMetadata({
   const hotel = getHotel(slug);
   if (!hotel) return { title: "Not found" };
   return {
-    title: `${hotel.name}, ${hotel.city}: Review`,
+    title: reviewTitle(hotel),
     alternates: { canonical: `/hotels/${hotel.slug}` },
-    description: hotel.excerpt,
+    description: reviewDescription(hotel),
     keywords: [hotel.name, `${hotel.name} review`, `luxury hotels in ${hotel.city}`, `where to stay in ${hotel.city}`],
     openGraph: {
       title: `${hotel.name} · The Hotel Life`,

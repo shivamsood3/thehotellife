@@ -5,6 +5,7 @@ import HotelCard, { Stars } from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import NewsletterForm from "@/components/NewsletterForm";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
+import { bestHotelsLists } from "@/content/best-hotels";
 
 import type { Metadata } from "next";
 
@@ -206,6 +207,38 @@ export default function Home() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* ============ RANKED CITY LISTS ============ */}
+      {/* These are the strongest commercial pages on the site and were
+          previously reachable only through the /best-hotels index, which
+          left them two clicks from home and starved of internal links.
+          Surfacing them here shortens the crawl path and passes homepage
+          authority to the pages most likely to rank. */}
+      <section className="mt-20">
+        <div className="border-b border-line pb-4">
+          <span className="eyebrow">The Rankings</span>
+          <h2 className="font-display mt-1 text-3xl font-medium text-ink">
+            Best Hotels, City by City
+          </h2>
+        </div>
+        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+          {bestHotelsLists.map((list) => (
+            <Link
+              key={list.slug}
+              href={`/best-hotels/${list.slug}`}
+              className="group block border-t border-line pt-4"
+            >
+              <span className="eyebrow text-ink-muted">{list.country}</span>
+              <h3 className="font-display mt-1 text-xl font-medium text-ink group-hover:text-brass-deep">
+                {list.destination}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                {list.hotels.length} ranked stays · updated {list.updated}
+              </p>
+            </Link>
+          ))}
         </div>
       </section>
 

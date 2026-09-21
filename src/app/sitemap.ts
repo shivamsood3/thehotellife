@@ -48,12 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.5 },
     { path: "/how-we-review", priority: 0.5 },
     { path: "/authors/zinnia-thapar", priority: 0.5 },
-    { path: "/advertise", priority: 0.4 },
-    { path: "/newsletter", priority: 0.4 },
-    { path: "/contact", priority: 0.4 },
-    { path: "/privacy", priority: 0.2 },
-    { path: "/terms", priority: 0.2 },
   ];
+
+  // Advertise, newsletter, contact, privacy and terms are deliberately NOT
+  // nominated here. They stay indexable and footer-linked, but a site Google
+  // is still rationing crawl budget for should spend every slot in the
+  // sitemap on editorial pages. Boilerplate that ranks for nothing competes
+  // with reviews for the same limited number of fetches.
 
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map(
     ({ path, priority }) => ({
@@ -100,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/best-hotels/${list.slug}`,
     lastModified: new Date(list.updatedISO),
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: 0.9,
     images: [absoluteUrl(list.heroImage)],
   }));
 
