@@ -12,6 +12,8 @@ import { individualReviewFinishes } from "./editorial/individual-review-finishes
 import { commissioningNotes } from "./editorial/commissioning-notes";
 import { editorialAuthorForIndex, type HotelEditorialAuthor } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
+import type { EditorialReferences } from "./editorial/references";
+import { septemberCommissionedHotels } from "./editorial/september-commissioned-hotels";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -22,7 +24,7 @@ export interface Section {
   image?: { src: string; caption?: string };
 }
 
-export interface Hotel {
+export interface Hotel extends EditorialReferences {
   slug: string;
   name: string;
   city: string;
@@ -31,8 +33,8 @@ export interface Hotel {
   category: string; // e.g. "Grand Dame", "Urban Retreat"
   tagline: string;
   excerpt: string;
-  rating: number; // out of 5
-  priceFrom: number; // USD / night
+  rating?: number; // out of 5, only when a scored assessment exists
+  priceFrom?: number; // USD / night, only when a dated rate is available
   priceNote?: string;
   year: string; // review date
   /** Named editorial owner. Assigned centrally until author profiles move to a CMS. */
@@ -47,7 +49,7 @@ export interface Hotel {
   standout: string;
   sections: Section[];
   featured?: boolean;
-  /** Optional official hotel booking engine for direct-only properties. */
+  /** Official booking fallback when no verified, configured affiliate route exists. */
   directBookingUrl?: string;
   /**
    * Hotel group, when the property belongs to one we hold a CJ affiliate
@@ -2266,7 +2268,7 @@ const hotelCatalogue: Hotel[] = [
   },
 ];
 
-export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
+const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   const additions = [
     ...(legacyHotelAdditions[hotel.slug] ?? []),
     ...(individualReviewAdditions[hotel.slug] ?? []),
@@ -2301,6 +2303,8 @@ export const hotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   };
 });
 
+export const hotels: Hotel[] = [...septemberCommissionedHotels, ...existingHotels];
+
 // Prevent future catalogue additions from silently reintroducing thin reviews.
 assertSectionDepth("Hotel reviews", hotels, 600);
 
@@ -2313,9 +2317,11 @@ export const getFeatured = () => hotels.filter((h) => h.featured);
 export const getRelated = (slug: string, limit = 3) => {
   const current = getHotel(slug);
   if (!current) return hotels.slice(0, limit);
+  const relevance = (hotel: Hotel) =>
+    hotel.city === current.city ? 3 : hotel.country === current.country ? 2 : hotel.region === current.region ? 1 : 0;
   return hotels
     .filter((h) => h.slug !== slug)
-    .sort((a) => (a.region === current.region ? -1 : 1))
+    .sort((a, b) => relevance(b) - relevance(a))
     .slice(0, limit);
 };
 

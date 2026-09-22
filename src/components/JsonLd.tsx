@@ -297,7 +297,7 @@ export function hotelReviewSchema(hotel: Hotel) {
           name: hotel.city,
           containedInPlace: { "@type": "Country", name: hotel.country },
         },
-        priceRange: `Indicative from USD ${hotel.priceFrom} per night; rates vary by date`,
+        ...(hotel.priceFrom !== undefined ? { priceRange: `Indicative from USD ${hotel.priceFrom} per night; rates vary by date` } : {}),
         ...(hotel.chain ? { brand: { "@type": "Brand", name: brandNames[hotel.chain] } } : {}),
         additionalProperty: hotel.quickFacts.map((fact) => ({
           "@type": "PropertyValue",
@@ -323,12 +323,12 @@ export function hotelReviewSchema(hotel: Hotel) {
         author: { "@id": personId(author) },
         publisher: { "@id": `${SITE_URL}/#organization` },
         ...(citations?.length ? { citation: citations } : {}),
-        reviewRating: {
+        ...(hotel.rating !== undefined ? { reviewRating: {
           "@type": "Rating",
           ratingValue: hotel.rating,
           bestRating: 5,
           worstRating: 1,
-        },
+        } } : {}),
         itemReviewed: { "@id": hotelId },
       },
       personSchema(author),
@@ -345,6 +345,8 @@ export function articleSchema(a: {
   date: string;
   image: string;
   imageAlt?: string;
+  updated?: string;
+  sources?: { url: string }[];
 }) {
   const image = a.image.startsWith("http") ? a.image : `${SITE_URL}${a.image}`;
   const articleUrl = `${SITE_URL}${a.path}`;
@@ -365,7 +367,8 @@ export function articleSchema(a: {
         publisher: { "@id": `${SITE_URL}/#organization` },
         mainEntityOfPage: articleUrl,
         datePublished: editorialDateToISO(a.date),
-        dateModified: editorialDateToISO(a.date),
+        dateModified: editorialDateToISO(a.updated ?? a.date),
+        ...(a.sources?.length ? { citation: a.sources.map((source) => source.url) } : {}),
         inLanguage: "en-GB",
       },
       ...(knownAuthor ? [personSchema(knownAuthor)] : []),

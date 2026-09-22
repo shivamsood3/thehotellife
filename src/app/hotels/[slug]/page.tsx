@@ -9,6 +9,7 @@ import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema, faqSchema, editorialDateToISO } from "@/components/JsonLd";
 import { authorPath } from "@/content/authors";
+import EditorialReferences from "@/components/EditorialReferences";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -59,6 +60,7 @@ function reviewTitle(hotel: Hotel): string {
  * and the number the reader is weighing.
  */
 function reviewDescription(hotel: Hotel): string {
+  if (hotel.rating === undefined || hotel.priceFrom === undefined) return hotel.excerpt;
   const place = placeLabel(hotel);
   const subject = place ? `${hotel.name}, ${place}` : hotel.name;
   const rate = `$${hotel.priceFrom.toLocaleString()}`;
@@ -108,9 +110,9 @@ export default async function HotelPage({
   const bestFor = hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "best for")?.value;
   const hotelFaq = [
     { question: `Where is ${hotel.name}?`, answer: `${hotel.name} is in ${hotel.city}, ${hotel.country}. ${hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "location")?.value ?? "See the review for neighbourhood and arrival advice."}` },
-    { question: `What is The Hotel Life's rating for ${hotel.name}?`, answer: `Our editors rate ${hotel.name} ${hotel.rating.toFixed(1)} out of 5 after assessing its sense of place, rooms, service, food, design and value.` },
+    ...(hotel.rating !== undefined ? [{ question: `What is The Hotel Life's rating for ${hotel.name}?`, answer: `Our editors rate ${hotel.name} ${hotel.rating.toFixed(1)} out of 5 after assessing its sense of place, rooms, service, food, design and value.` }] : []),
     { question: `Who is ${hotel.name} best for?`, answer: bestFor ? `${hotel.name} is particularly well suited to ${bestFor.toLowerCase()}.` : `${hotel.name} suits travellers looking for a distinctive luxury stay in ${hotel.city}.` },
-    { question: `How much does ${hotel.name} cost?`, answer: `Our ${hotel.year} review recorded an indicative starting rate of USD ${hotel.priceFrom.toLocaleString()} per night. Rates vary by date, room, taxes and availability; confirm a live quote before booking.` },
+    { question: `How much does ${hotel.name} cost?`, answer: hotel.priceFrom !== undefined ? `Our ${hotel.year} review recorded an indicative starting rate of USD ${hotel.priceFrom.toLocaleString()} per night. Rates vary by date, room, taxes and availability; confirm a live quote before booking.` : "Check availability for your dates and room category. Request a total including taxes, meals and transfers before comparing offers." },
   ];
 
   return (
@@ -152,8 +154,7 @@ export default async function HotelPage({
       <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-b border-line pb-6">
         <Stars rating={hotel.rating} />
         <span className="text-sm text-ink-soft">
-          Indicative from <span className="font-semibold text-ink">${hotel.priceFrom.toLocaleString()}</span>
-          {hotel.priceNote ? ` / night · ${hotel.priceNote}` : " / night"}
+          {hotel.priceFrom !== undefined ? <>Indicative from <span className="font-semibold text-ink">${hotel.priceFrom.toLocaleString()}</span>{hotel.priceNote ? ` / night · ${hotel.priceNote}` : " / night"}</> : "Check rates for your dates"}
         </span>
         <span className="text-sm text-ink-muted">
           By <Link href={authorPath(hotel.author!)} className="font-medium text-ink hover:text-brass-deep hover:underline">{hotel.author}</Link> · Reviewed {hotel.year}
@@ -177,10 +178,9 @@ export default async function HotelPage({
             <span>Editorial review by <Link href={authorPath(hotel.author!)} className="font-semibold text-brass-deep hover:underline">{hotel.author}</Link></span>
             <span aria-hidden="true">·</span>
             <Link href="/how-we-review" className="font-semibold text-brass-deep hover:underline">
-              Read our scoring methodology
+              Read our review methodology
             </Link>
-            <span aria-hidden="true">·</span>
-            <span>Indicative rate recorded with the {hotel.year} review</span>
+            {hotel.priceFrom !== undefined && <><span aria-hidden="true">·</span><span>Indicative rate recorded with the {hotel.year} review</span></>}
             {hotel.factChecked && (
               <>
                 <span aria-hidden="true">·</span>
@@ -224,6 +224,7 @@ export default async function HotelPage({
             ))}
 
             <blockquote>{hotel.standout}</blockquote>
+            <EditorialReferences relatedReading={hotel.relatedReading} sources={hotel.sources} />
 
             {hotel.factCheckSources && hotel.factCheckSources.length > 0 && (
               <aside className="not-prose mt-12 border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
@@ -263,7 +264,7 @@ export default async function HotelPage({
               rel="sponsored nofollow noopener noreferrer"
               className="mt-6 block w-full rounded-full bg-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
             >
-              Check Availability
+              {booking.destinationType === "search" ? "Search partner availability" : "Check Availability"}
             </a>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
               {booking.tracked ? (
@@ -277,8 +278,9 @@ export default async function HotelPage({
                 <>{booking.network} link. THL does not currently earn a commission from this booking.</>
               )}
             </p>
+            {booking.destinationType === "search" && <p className="mt-2 text-center text-[0.65rem] leading-relaxed text-ink-muted">This opens a partner search. The reviewed property may not be listed or available; confirm the hotel name before booking.</p>}
             <p className="mt-2 text-center text-[0.65rem] leading-relaxed text-ink-muted">
-              Displayed prices are editorial indications, not live quotes. Your dates, room and taxes may change the final rate.
+              {hotel.priceFrom !== undefined ? "Displayed prices are editorial indications, not live quotes. Your dates, room and taxes may change the final rate." : "Check the total for your dates, including taxes and any meal or transfer charges."}
             </p>
           </div>
 

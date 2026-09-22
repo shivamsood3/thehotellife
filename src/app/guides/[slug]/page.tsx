@@ -8,6 +8,7 @@ import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import EditorialReferences from "@/components/EditorialReferences";
 import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
@@ -29,7 +30,7 @@ export async function generateMetadata({
     alternates: { canonical: `/guides/${guide.slug}` },
     description: guide.excerpt,
     keywords: [`${guide.destination} travel guide`, `where to stay in ${guide.destination}`, `${guide.destination} itinerary`, "luxury travel guide"],
-    openGraph: { title: guide.title, description: guide.excerpt, type: "article", url: `/guides/${guide.slug}`, publishedTime: editorialDateToISO(guide.date), modifiedTime: editorialDateToISO(guide.date), authors: [guide.author], images: [{ url: guide.heroImage, alt: guide.imageAlt ?? `Travel guide to ${guide.destination}` }] },
+    openGraph: { title: guide.title, description: guide.excerpt, type: "article", url: `/guides/${guide.slug}`, publishedTime: editorialDateToISO(guide.date), modifiedTime: editorialDateToISO(guide.updated ?? guide.date), authors: [guide.author], images: [{ url: guide.heroImage, alt: guide.imageAlt ?? `Travel guide to ${guide.destination}` }] },
     twitter: { card: "summary_large_image", title: guide.title, description: guide.excerpt, images: [guide.heroImage] },
   };
 }
@@ -54,6 +55,8 @@ export default async function GuidePage({
           excerpt: guide.excerpt,
           author: guide.author,
           date: guide.date,
+          updated: guide.updated,
+          sources: guide.sources,
           image: guide.heroImage,
           imageAlt: guide.imageAlt,
         })}
@@ -83,7 +86,7 @@ export default async function GuidePage({
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line pb-6 text-sm text-ink-muted">
         <span>By {guide.author}</span>
         <span>{guide.readTime} min read</span>
-        <span>{guide.date}</span>
+        <span>{guide.updated ? `Updated ${guide.updated}` : guide.date}</span>
         <ShareWhatsApp
           url={`${SITE_URL}/guides/${guide.slug}`}
           title={guide.title}
@@ -111,6 +114,7 @@ export default async function GuidePage({
           ))}
         </div>
 
+        <EditorialReferences sources={guide.sources} relatedReading={guide.relatedReading} />
         {/* Where to stay - links into hotel reviews */}
         {stayHotels.length > 0 && (
           <div className="mt-14 rounded-md border border-line bg-white p-6 sm:p-8">
@@ -140,7 +144,7 @@ export default async function GuidePage({
                           <div className="mt-1 flex items-center gap-3">
                             <Stars rating={h.rating} />
                             <span className="text-xs text-ink-muted">
-                              Indicative from ${h.priceFrom.toLocaleString()}
+                              {h.priceFrom !== undefined ? `Indicative from $${h.priceFrom.toLocaleString()}` : "Check rates for your dates"}
                             </span>
                           </div>
                         </div>

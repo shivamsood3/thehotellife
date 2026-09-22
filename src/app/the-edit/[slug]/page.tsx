@@ -7,6 +7,7 @@ import { getHotel } from "@/content/hotels";
 import HotelCard from "@/components/HotelCard";
 import { AdSense } from "@/components/Ads";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import EditorialReferences from "@/components/EditorialReferences";
 import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
@@ -34,7 +35,7 @@ export async function generateMetadata({
       type: "article",
       url: `/the-edit/${article.slug}`,
       publishedTime: editorialDateToISO(article.date),
-      modifiedTime: editorialDateToISO(article.date),
+      modifiedTime: editorialDateToISO(article.updated ?? article.date),
       authors: [article.author],
       images: [{ url: article.heroImage, alt: article.imageAlt ?? article.title }],
     },
@@ -63,6 +64,8 @@ export default async function ArticlePage({
           excerpt: article.excerpt,
           author: article.author,
           date: article.date,
+          updated: article.updated,
+          sources: article.sources,
           image: article.heroImage,
           imageAlt: article.imageAlt,
         })}
@@ -99,7 +102,7 @@ export default async function ArticlePage({
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line pb-6 text-sm text-ink-muted">
         <span>By {article.author}</span>
         <span>{article.readTime} min read</span>
-        <span>{article.date}</span>
+        <span>{article.updated ? `Updated ${article.updated}` : article.date}</span>
         <ShareWhatsApp
           url={`${SITE_URL}/the-edit/${article.slug}`}
           title={article.title}
@@ -130,6 +133,7 @@ export default async function ArticlePage({
         </div>
       </div>
 
+      <div className="mx-auto max-w-2xl"><EditorialReferences sources={article.sources} relatedReading={article.relatedReading} /></div>
       {/* Hotels referenced */}
       {related.length > 0 && (
         <section className="mt-20">

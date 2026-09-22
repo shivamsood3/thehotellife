@@ -8,13 +8,16 @@ import { septemberGuides } from "./editorial/september-features";
 import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
 import { editorialAuthorForIndex } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
+import type { EditorialReferences } from "./editorial/references";
+import { septemberDecisionGuides } from "./editorial/september-decision-guides";
+import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
 
 export interface GuideSection {
   heading?: string;
   body: string[];
 }
 
-export interface Guide {
+export interface Guide extends EditorialReferences {
   slug: string;
   title: string;
   destination: string;
@@ -812,16 +815,26 @@ const guideCatalogue: Guide[] = [
   },
 ];
 
-export const guides: Guide[] = guideCatalogue.map((guide, index) => {
-  const sections = [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])];
+const existingGuides: Guide[] = guideCatalogue.map((guide, index) => {
+  const revision = septemberGuideRewrites[guide.slug];
+  const sections = revision?.sections ?? [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])];
   const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
   return {
     ...guide,
+    ...revision,
     author: editorialAuthorForIndex(index),
     readTime: Math.max(3, Math.ceil(words / 200)),
     sections,
   };
 });
+
+export const guides: Guide[] = [
+  ...septemberDecisionGuides.map((guide) => ({
+    ...guide,
+    readTime: Math.ceil(guide.sections.flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
+  })),
+  ...existingGuides,
+];
 
 assertSectionDepth("Destination guides", guides, 500);
 

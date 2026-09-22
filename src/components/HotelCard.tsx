@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Hotel } from "@/content/hotels";
 
-export function Stars({ rating }: { rating: number }) {
+export function Stars({ rating }: { rating?: number }) {
+  if (rating === undefined) return null;
   return (
     <span className="inline-flex items-center gap-1 text-brass-deep" aria-label={`${rating} out of 5`}>
       <span className="inline-flex gap-[0.12rem] text-[0.7rem]" aria-hidden="true">
@@ -62,7 +63,7 @@ export default function HotelCard({
         </h3>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">{hotel.excerpt}</p>
         <p className="mt-3 text-xs font-medium text-ink-muted">
-          Indicative from <span className="text-ink">${hotel.priceFrom.toLocaleString()}</span> / night
+          {hotel.priceFrom !== undefined ? <>Indicative from <span className="text-ink">${hotel.priceFrom.toLocaleString()}</span> / night</> : "Check rates for your dates"}
         </p>
       </div>
     </Link>
