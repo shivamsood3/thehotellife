@@ -11,7 +11,6 @@ import PWALaunchScreen from "@/components/PWALaunchScreen";
 import PWARegistration from "@/components/PWARegistration";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
-const ADSENSE_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
 // Outfit is the brand typeface. Light 300 and SemiBold 600 carry the
 // wordmark; the rest of the weights cover UI and body copy.
@@ -131,8 +130,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         {/* AdSense loader, beforeInteractive so it lands in the initial
-            HTML for site verification, and Auto Ads can place units early. */}
-        {ADSENSE_CLIENT && ADSENSE_ENABLED && (
+            HTML for site verification, and Auto Ads can place units early.
+            Deliberately NOT gated on ADSENSE_ENABLED: review crawls the page
+            looking for this tag, so gating it is self-defeating — the site
+            can never be approved, which is what "Site down or unavailable"
+            was actually reporting. Nothing is served until Google approves
+            the site, so shipping the loader early costs no impressions.
+            ADSENSE_ENABLED still gates the ad units themselves in Ads.tsx,
+            which is where an unapproved site would otherwise show gaps. */}
+        {ADSENSE_CLIENT && (
           <Script
             id="adsbygoogle-init"
             strategy="beforeInteractive"
