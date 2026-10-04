@@ -14,6 +14,7 @@ import { editorialAuthorForIndex, type HotelEditorialAuthor } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberCommissionedHotels } from "./editorial/september-commissioned-hotels";
+import { octoberCommissionedHotels } from "./editorial/october-commissioned-hotels";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -45,6 +46,8 @@ export interface Hotel extends EditorialReferences {
   cardImage: string;
   /** Human-readable description of the photograph, shared by page and card images. */
   imageAlt?: string;
+  imageCredit?: { label: string; url: string };
+  heroObjectPosition?: string;
   quickFacts: { label: string; value: string }[];
   standout: string;
   sections: Section[];
@@ -2303,7 +2306,7 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   };
 });
 
-export const hotels: Hotel[] = [...septemberCommissionedHotels, ...existingHotels];
+export const hotels: Hotel[] = [...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels];
 
 // Prevent future catalogue additions from silently reintroducing thin reviews.
 assertSectionDepth("Hotel reviews", hotels, 600);

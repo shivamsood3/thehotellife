@@ -135,6 +135,7 @@ export default async function HotelPage({
             fill
             preload
             className="object-cover"
+            style={hotel.heroObjectPosition ? { objectPosition: hotel.heroObjectPosition } : undefined}
             sizes="100vw"
           />
           <div className="hero-scrim absolute inset-0" />
@@ -149,6 +150,13 @@ export default async function HotelPage({
           </div>
         </div>
       </div>
+
+      {hotel.imageCredit && (
+        <p className="mt-2 text-right text-xs text-ink-muted">
+          Photograph: <a href={hotel.imageCredit.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hotel.imageCredit.label}</a>
+          {" · "}<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC BY 3.0</a>
+        </p>
+      )}
 
       {/* ===== META BAR ===== */}
       <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-b border-line pb-6">

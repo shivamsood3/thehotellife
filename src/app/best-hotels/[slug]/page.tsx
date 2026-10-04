@@ -23,9 +23,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const list = getBestHotelsList(slug);
   if (!list) return { title: "Not found" };
+  const place = list.country === list.destination ? list.destination : `${list.destination}, ${list.country}`;
 
   return {
-    title: `10 Best Hotels in ${list.destination}, ${list.country} (2026)`,
+    title: `10 Best Hotels in ${place} (2026)`,
     description: list.dek,
     alternates: { canonical: `/best-hotels/${list.slug}` },
     keywords: [
@@ -35,11 +36,11 @@ export async function generateMetadata({
       `${list.destination} hotels`,
     ],
     openGraph: {
-      title: `The 10 Best Hotels in ${list.destination}, ${list.country}`,
+      title: `The 10 Best Hotels in ${place}`,
       description: list.dek,
       type: "article",
       url: `/best-hotels/${list.slug}`,
-      images: [{ url: list.heroImage, alt: list.heroAlt ?? `The best hotels in ${list.destination}, ${list.country}` }],
+      images: [{ url: list.heroImage, alt: list.heroAlt ?? `The best hotels in ${place}` }],
       modifiedTime: list.updatedISO,
       authors: ["Zinnia Thapar"],
     },

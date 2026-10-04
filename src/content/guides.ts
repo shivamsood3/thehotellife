@@ -10,6 +10,7 @@ import { editorialAuthorForIndex } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberDecisionGuides } from "./editorial/september-decision-guides";
+import { octoberCityGuides } from "./editorial/october-city-guides";
 import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
 
 export interface GuideSection {
@@ -829,6 +830,10 @@ const existingGuides: Guide[] = guideCatalogue.map((guide, index) => {
 });
 
 export const guides: Guide[] = [
+  ...octoberCityGuides.map((guide) => ({
+    ...guide,
+    readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
+  })),
   ...septemberDecisionGuides.map((guide) => ({
     ...guide,
     readTime: Math.ceil(guide.sections.flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
