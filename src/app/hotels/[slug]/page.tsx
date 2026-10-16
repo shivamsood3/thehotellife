@@ -88,7 +88,7 @@ export async function generateMetadata({
       type: "article",
       url: `/hotels/${hotel.slug}`,
       publishedTime: editorialDateToISO(hotel.year),
-      modifiedTime: editorialDateToISO(hotel.year),
+      modifiedTime: editorialDateToISO(hotel.updated ?? hotel.factChecked ?? hotel.year),
       authors: [hotel.author ?? "Zinnia Thapar"],
       images: [{ url: hotel.heroImage, alt: hotel.imageAlt ?? `${hotel.name} in ${hotel.city}` }],
     },

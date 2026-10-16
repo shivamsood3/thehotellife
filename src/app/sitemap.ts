@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const hotelEntries: MetadataRoute.Sitemap = hotels.map((h) => ({
     url: `${SITE_URL}/hotels/${h.slug}`,
-    lastModified: contentDate(h.year, "2026-08-01"),
+    lastModified: contentDate(h.updated ?? h.factChecked ?? h.year, "2026-08-01"),
     changeFrequency: "monthly",
     priority: 0.8,
     images: [absoluteUrl(h.heroImage)],
