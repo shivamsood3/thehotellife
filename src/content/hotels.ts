@@ -15,6 +15,7 @@ import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberCommissionedHotels } from "./editorial/september-commissioned-hotels";
 import { octoberCommissionedHotels } from "./editorial/october-commissioned-hotels";
+import { reviewVoice } from "./editorial/review-voice";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -150,7 +151,7 @@ const hotelCatalogue: Hotel[] = [
     sections: [
       {
         body: [
-          "When César Ritz opened his hotel in 1898, he invented much of what we now take for granted. The ensuite bathroom. A telephone in every room. The idea that a hotel could be a stage as much as a shelter. More than a century later, the Ritz is still writing that script.",
+          "When César Ritz opened his hotel in 1898, he introduced much of what hotel guests now take for granted. The ensuite bathroom. A telephone in every room. The idea that a hotel could be a stage as much as a shelter. More than a century later, the Ritz is still writing that script.",
           "The restoration that ran from 2012 to 2016 was so thorough that the hotel effectively closed and rebuilt itself behind its Louis XVI façade. What came back isn't a museum. It's softer, brighter and far more comfortable than the grande dame it replaced.",
         ],
       },
@@ -2312,7 +2313,27 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   };
 });
 
-export const hotels: Hotel[] = [...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels];
+export const hotels: Hotel[] = [...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
+  const voice = reviewVoice[hotel.slug];
+  if (!voice) return hotel;
+  if (voice.length !== hotel.sections.length) {
+    throw new Error(`Review voice sections do not match ${hotel.slug}: ${voice.length} notes for ${hotel.sections.length} sections`);
+  }
+  return {
+    ...hotel,
+    updated: "October 20, 2026",
+    sections: hotel.sections.map((section, index) => ({
+      ...section,
+      body: section.body.map((paragraph, paragraphIndex) =>
+        paragraphIndex === 0
+          ? index % 2 === 0
+            ? `${voice[index]} ${paragraph}`
+            : `${paragraph} ${voice[index]}`
+          : paragraph,
+      ),
+    })),
+  };
+});
 
 // Prevent future catalogue additions from silently reintroducing thin reviews.
 assertSectionDepth("Hotel reviews", hotels, 600);
