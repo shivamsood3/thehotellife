@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audit:review-voice": "node scripts/audit-review-voice.cjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

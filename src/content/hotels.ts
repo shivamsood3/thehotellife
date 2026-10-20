@@ -1453,7 +1453,7 @@ const hotelCatalogue: Hotel[] = [
   {
     slug: "raffles-singapore",
     chain: "accor",
-    chainUrl: "https://all.accor.com/hotel/A5S3/index.en.shtml",
+    chainUrl: "https://www.raffles.com/singapore/",
     bookingUrl: "https://www.booking.com/hotel/sg/raffles.html",
     hotelsUrl: "https://www.hotels.com/ho116216/",
     name: "Raffles Singapore",
@@ -1461,16 +1461,22 @@ const hotelCatalogue: Hotel[] = [
     country: "Singapore",
     region: "Asia",
     category: "Grande Dame",
-    tagline: "The colonial grande dame that gave the world the Singapore Sling",
+    tagline: "Singapore's storied grand dame, for a stay beyond the Sling",
     excerpt:
       "After a careful restoration, the all-suite Raffles is back to its shuttered, palm-filled, ceiling-fan best. Order a Sling at the Long Bar and let the peanut shells fall where they may.",
     rating: 4.8,
     priceFrom: 750,
     year: "May 2026",
+    updated: "October 20, 2026",
+    factChecked: "October 20, 2026",
+    factCheckSources: [
+      { label: "Raffles Singapore: hotel history and location", url: "https://www.raffles.com/singapore/about/.html" },
+      { label: "Raffles Singapore: suite categories", url: "https://www.raffles.com/singapore/suites/" },
+    ],
     heroImage: "/hotels/raffles-singapore.jpg",
     cardImage: "/hotels/raffles-singapore.jpg",
     standout:
-      "A Singapore Sling at the Long Bar, ceiling fans turning overhead and peanut shells crunching underfoot, exactly as it has been for over a century.",
+      "I would come for the architecture and the all-suite sense of space; the Singapore Sling is a diversion, not the whole reason to stay.",
     quickFacts: [
       { label: "Location", value: "Beach Road, Singapore" },
       { label: "Suites", value: "115 suites" },
@@ -1480,14 +1486,14 @@ const hotelCatalogue: Hotel[] = [
     sections: [
       {
         body: [
-          "Few hotels are woven into a city's identity as tightly as Raffles is into Singapore's. Opened in 1887, it is a white colonial confection of verandahs, courtyards and palm-shaded walkways, and every room is a suite served by the hotel's famous butlers.",
-          "A multi-year restoration finished in 2019 freshened everything without stripping away the romance. The Long Bar still serves the Singapore Sling it invented, and the whole place remains a cool, gracious escape from the glass-and-steel city around it.",
+          "I find Raffles most interesting when I look past the Singapore Sling. The hotel opened in 1887 and now sits at the centre of the city's hotel mythology, but its case for a stay is more practical and more beautiful than a cocktail origin story. Low white arcades, garden courtyards and verandas create a rhythm almost impossible to reproduce in a new tower; every accommodation is a suite. I would book it to inhabit that architecture, not just to photograph the entrance.",
+          "The restoration completed in 2019 updated the hotel without turning it into a nostalgic replica. I would choose Raffles over a glass-and-steel high-rise when I wanted the Civic District at the door and room to retreat from it between outings. That does not make it an automatically better Singapore hotel than a smaller river address or a contemporary bay property. It makes it a specific purchase: space, history, ceremony and a location I could use without organising every day around a car.",
         ],
       },
       {
         heading: "The Verdict",
         body: [
-          "A living monument that still functions as a genuinely lovely hotel. Stay if you can; if not, at least go for the Sling and a wander through the courtyards.",
+          "I would stay for at least two nights if the rate made sense, because one quick visit to the Long Bar cannot tell me whether this hotel fits my trip. Raffles is a living monument with real hotel duties; I value the suite, the quieter resident spaces and the walkable Civic District more than the mythology. If the price would leave no room to enjoy Singapore beyond its gates, I would visit for a drink and book elsewhere.",
         ],
       },
     ],

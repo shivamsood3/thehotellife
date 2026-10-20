@@ -29,7 +29,9 @@ export async function generateMetadata({
     title: guide.title,
     alternates: { canonical: `/guides/${guide.slug}` },
     description: guide.excerpt,
-    keywords: [`${guide.destination} travel guide`, `where to stay in ${guide.destination}`, `${guide.destination} itinerary`, "luxury travel guide"],
+    keywords: guide.slug === "where-to-stay-in-singapore"
+      ? ["where to stay in Singapore", "best areas to stay in Singapore", "Singapore hotel neighbourhoods", "Singapore luxury hotel guide"]
+      : [`${guide.destination} travel guide`, `where to stay in ${guide.destination}`, `${guide.destination} itinerary`, "luxury travel guide"],
     openGraph: { title: guide.title, description: guide.excerpt, type: "article", url: `/guides/${guide.slug}`, publishedTime: editorialDateToISO(guide.date), modifiedTime: editorialDateToISO(guide.updated ?? guide.date), authors: [guide.author], images: [{ url: guide.heroImage, alt: guide.imageAlt ?? `Travel guide to ${guide.destination}` }] },
     twitter: { card: "summary_large_image", title: guide.title, description: guide.excerpt, images: [guide.heroImage] },
   };
@@ -97,6 +99,12 @@ export default async function GuidePage({
       {/* Body */}
       <div className="mx-auto mt-10 max-w-2xl">
         <p className="font-display text-2xl font-medium leading-snug text-ink">{guide.dek}</p>
+
+        {guide.slug === "where-to-stay-in-singapore" && (
+          <p className="mt-5 text-sm leading-relaxed text-ink-soft">
+            Already chosen your neighbourhood? Compare <Link href="/best-hotels/singapore" className="font-semibold text-brass-deep hover:underline">our ten best hotels in Singapore</Link>, with a reason to book—and a caveat—for each.
+          </p>
+        )}
 
         <div className="prose-editorial mt-8">
           {guide.sections.map((section, i) => (

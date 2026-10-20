@@ -48,7 +48,7 @@ const REGION_PATHS: Record<Region, string> = {
 
 export default function Home() {
   const featured = getFeatured();
-  const hero = featured[0];
+  const hero = featured.find((hotel) => hotel.slug === "raffles-singapore") ?? featured[0];
   const collection = hotels.slice(1, 7);
   const editorPick = featured[3] ?? hotels[4];
 

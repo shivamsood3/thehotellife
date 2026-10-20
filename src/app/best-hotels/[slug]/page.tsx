@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bestHotelsLists, getBestHotelsList } from "@/content/best-hotels";
 import { getHotel } from "@/content/hotels";
+import { authorPath } from "@/content/authors";
 import { hotelsComAffiliateLink, primaryBookingLink } from "@/lib/affiliate";
 import JsonLd, {
   bestHotelsListSchema,
@@ -93,11 +94,20 @@ export default async function BestHotelsPage({
       </header>
 
       <div className="mx-auto mt-12 max-w-4xl">
+        <p className="mb-7 text-sm text-ink-muted">
+          Selected by <Link href={authorPath("Zinnia Thapar")} className="font-semibold text-brass-deep hover:underline">Zinnia Thapar</Link> · Updated {list.updated}
+        </p>
         <div className="prose-editorial">
           {list.intro.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+
+        {list.slug === "singapore" && (
+          <p className="mt-8 text-sm leading-relaxed text-ink-soft">
+            Still deciding which part of the city suits your trip? Read our <Link href="/guides/where-to-stay-in-singapore" className="font-semibold text-brass-deep hover:underline">guide to the best areas to stay in Singapore</Link> before choosing a hotel.
+          </p>
+        )}
 
         <aside className="mt-10 rounded-md border border-line bg-paper-2 p-6 sm:p-8">
           <h2 className="eyebrow">The list at a glance</h2>
@@ -229,7 +239,7 @@ export default async function BestHotelsPage({
             Official-site buttons are untracked. Hotels.com comparison buttons are
             affiliate links, and THL may earn a commission at no cost to you. Paid
             relationships never determine inclusion or rank. Hotels evolve, so confirm
-            current facilities and policies directly before booking.
+            current facilities and policies directly before booking. Read <Link href="/how-we-review" className="underline underline-offset-2 hover:text-white">how we review and select hotels</Link>.
           </p>
         </div>
 
