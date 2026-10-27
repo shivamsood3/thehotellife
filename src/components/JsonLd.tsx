@@ -167,6 +167,7 @@ export function bestHotelsListSchema(list: {
   hotels: {
     rank: number;
     name: string;
+    city?: string;
     description: string;
     officialUrl: string;
     reviewSlug?: string;
@@ -203,7 +204,7 @@ export function bestHotelsListSchema(list: {
             sameAs: [hotel.officialUrl],
             address: {
               "@type": "PostalAddress",
-              addressLocality: list.destination,
+              addressLocality: hotel.city ?? list.destination,
               addressCountry: list.country,
             },
           },

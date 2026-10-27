@@ -224,7 +224,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
-          {bestHotelsLists.map((list) => (
+          {bestHotelsLists.filter((list) => !list.theme).map((list) => (
             <Link
               key={list.slug}
               href={`/best-hotels/${list.slug}`}
@@ -240,6 +240,21 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="mt-10 rounded-md border border-line bg-paper-2 p-7 sm:p-9">
+        <span className="eyebrow">The occasion edit</span>
+        <h2 className="font-display mt-2 text-2xl font-medium text-ink">
+          Where to celebrate in India
+        </h2>
+        <p className="mt-3 max-w-3xl leading-relaxed text-ink-soft">
+          From a palace above Jodhpur to Kerala&apos;s quieter coast, our wedding-hotel
+          shortlist weighs the setting against the guest rooms, transfers and
+          weather plan that make a celebration work.
+        </p>
+        <Link href="/best-hotels/destination-wedding-hotels-india" className="mt-5 inline-block text-sm font-semibold text-brass-deep hover:underline">
+          Explore the best destination wedding hotels in India →
+        </Link>
       </section>
 
       {/* ============ EDITORIAL FAQ ============ */}

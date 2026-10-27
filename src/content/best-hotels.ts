@@ -1,15 +1,18 @@
 import { assertRankedListDepth } from "./editorial/quality";
 import { octoberBestHotelsLists } from "./editorial/october-best-hotels";
+import { indiaOccasionLists } from "./editorial/india-occasion-lists";
 
 export interface BestHotelEntry {
   rank: number;
   name: string;
   location: string;
+  city?: string;
   bestFor: string;
   style: string;
   description: string;
   caveat: string;
   officialUrl: string;
+  eventUrl?: string;
   reviewSlug?: string;
 }
 
@@ -18,6 +21,9 @@ export interface BestHotelsList {
   destination: string;
   country: string;
   title: string;
+  searchTitle?: string;
+  cardTitle?: string;
+  theme?: boolean;
   dek: string;
   searchDescription?: string;
   quickAnswer?: string;
@@ -33,6 +39,7 @@ export interface BestHotelsList {
 
 export const bestHotelsLists: BestHotelsList[] = [
   ...octoberBestHotelsLists,
+  ...indiaOccasionLists,
   {
     slug: "jaipur",
     destination: "Jaipur",

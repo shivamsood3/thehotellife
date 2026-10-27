@@ -36,10 +36,15 @@ export async function generateMetadata({
     : `${list.destination}, ${list.country}`;
 
   return {
-    title: `10 Best Hotels in ${place} (2026)`,
+    title: list.searchTitle ?? `10 Best Hotels in ${place} (2026)`,
     description: list.searchDescription ?? list.dek,
     alternates: { canonical: `/best-hotels/${list.slug}` },
-    keywords: [
+    keywords: list.theme ? [
+      "best destination wedding venues in India",
+      "best wedding hotels in India",
+      "luxury destination wedding hotels India",
+      "palace wedding venues India",
+    ] : [
       `best hotels in ${list.destination}`,
       `luxury hotels in ${list.destination}`,
       `where to stay in ${list.destination}`,
@@ -67,6 +72,10 @@ export default async function BestHotelsPage({
   const list = getBestHotelsList(slug);
   if (!list) notFound();
   const areaGuide = areaGuides[list.slug];
+  const relatedSlugs = list.theme ? ["udaipur", "jodhpur", "jaipur", "goa"]
+    : list.slug === "udaipur" || list.slug === "jodhpur"
+      ? ["destination-wedding-hotels-india", list.slug === "udaipur" ? "jodhpur" : "udaipur"]
+      : [];
 
   return (
     <article className="pb-8">
@@ -146,9 +155,9 @@ export default async function BestHotelsPage({
         </aside>
 
         <section className="mt-14">
-          <span className="eyebrow">Plan the stay</span>
+          <span className="eyebrow">{list.theme ? "Plan the celebration" : "Plan the stay"}</span>
           <h2 className="font-display mt-2 text-3xl font-medium text-ink">
-            Before choosing your hotel
+            {list.theme ? "Before choosing your wedding hotel" : "Before choosing your hotel"}
           </h2>
           <div className="mt-7 grid gap-5 md:grid-cols-3">
             {list.planning.map((item) => (
@@ -168,7 +177,7 @@ export default async function BestHotelsPage({
             const booking = review ? primaryBookingLink(review) : hotelsComAffiliateLink({
               slug: hotel.reviewSlug ?? `${list.slug}-${hotel.rank}`,
               name: hotel.name,
-              city: list.destination,
+              city: hotel.city ?? list.destination,
             });
             return (
             <section
@@ -219,6 +228,16 @@ export default async function BestHotelsPage({
                     >
                       Visit official site ↗
                     </a>
+                    {hotel.eventUrl && (
+                      <a
+                        href={hotel.eventUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-ink px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-ink hover:bg-ink hover:text-paper"
+                      >
+                        Enquire about events ↗
+                      </a>
+                    )}
                     <a
                       href={booking.url}
                       target="_blank"
@@ -237,7 +256,7 @@ export default async function BestHotelsPage({
         <section className="mt-16">
           <span className="eyebrow">Questions, answered</span>
           <h2 className="font-display mt-2 text-3xl font-medium text-ink">
-            Choosing a hotel in {list.destination}
+            {list.theme ? "Planning a destination wedding in India" : `Choosing a hotel in ${list.destination}`}
           </h2>
           <dl className="mt-8 divide-y divide-line border-y border-line">
             {list.faq.map((item) => (
@@ -250,6 +269,22 @@ export default async function BestHotelsPage({
             ))}
           </dl>
         </section>
+
+        {relatedSlugs.length > 0 && (
+          <nav aria-label="Related hotel shortlists" className="mt-12 border-t border-line pt-8">
+            <h2 className="font-display text-2xl font-medium text-ink">Continue exploring</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {relatedSlugs.map((relatedSlug) => {
+                const related = getBestHotelsList(relatedSlug);
+                return related ? (
+                  <Link key={relatedSlug} href={`/best-hotels/${relatedSlug}`} className="rounded-full border border-line px-4 py-2 text-sm text-brass-deep hover:border-brass-deep">
+                    {related.cardTitle ?? `Best hotels in ${related.destination}`} →
+                  </Link>
+                ) : null;
+              })}
+            </div>
+          </nav>
+        )}
 
         <div className="mt-12 rounded-md bg-ink p-7 text-paper sm:p-9">
           <p className="eyebrow text-paper/50">Editorial note</p>
