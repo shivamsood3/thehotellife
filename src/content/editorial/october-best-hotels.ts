@@ -7,6 +7,8 @@ export const octoberBestHotelsLists: BestHotelsList[] = [
     slug: "hong-kong", destination: "Hong Kong", country: "Hong Kong SAR",
     title: "The 10 Best Hotels in Hong Kong", updated: "October 2026", updatedISO: "2026-10-16",
     dek: "Ten distinct ways into Hong Kong, from a Kowloon harbour icon and a discreet Admiralty sanctuary to a thoroughly useful city hotel above Pacific Place.",
+    searchDescription: "Best hotels in Hong Kong, compared by island or Kowloon location, harbour views and room choice. Zinnia Thapar's ten picks include Rosewood, Upper House and Peninsula.",
+    quickAnswer: "For a first Hong Kong visit built around the harbour, I would start with Rosewood or The Peninsula on the Kowloon side. The Upper House is my quieter island choice; JW Marriott is more convenient for a busy Admiralty itinerary, though I found its service and upkeep less convincing. Before booking any of them, I would decide which side of the water my days belong to and pay attention to the exact room view.",
     heroImage: "/hotels/peninsula-hong-kong.jpg", heroAlt: "The Peninsula Hong Kong in Tsim Sha Tsui",
     intro: [
       "I find Hong Kong especially unforgiving of a lazy hotel shortlist. A perfect harbour photograph says little about the journey I will make each morning, the scale of the lobby I want to return to, or whether the view even belongs to the room I have booked. The city's great hotels sit in quite different versions of Hong Kong: the layered streets of the island, the ceremonial Kowloon waterfront and quieter pockets that reward a return visit. I choose the experience first; the ranking can only take me so far.",
@@ -39,6 +41,8 @@ export const octoberBestHotelsLists: BestHotelsList[] = [
     slug: "singapore", destination: "Singapore", country: "Singapore",
     title: "The 10 Best Hotels in Singapore", updated: "October 2026", updatedISO: "2026-10-20",
     dek: "My ten best hotels in Singapore, chosen for different kinds of trips: Raffles for occasion, Marina Bay for spectacle, Robertson Quay for intimacy and Sentosa for a slower stay.",
+    searchDescription: "Best hotels in Singapore, chosen by Zinnia Thapar: Raffles, Capella, Fullerton Bay, Marina Bay Sands and six more, with neighbourhood advice and booking caveats.",
+    quickAnswer: "For a first Singapore visit with time to enjoy the hotel, I would choose Raffles in the Civic District. I would book The Fullerton Bay for a smaller waterfront stay, Marina Bay Sands for the scale and the guest-only pool, or Capella only when Sentosa itself is part of the holiday. The best choice is less about a universal winner than whether I want history, skyline, neighbourhood or retreat at my door.",
     heroImage: "/hotels/raffles-singapore.jpg", heroAlt: "The historic Raffles Singapore hotel",
     intro: [
       "A search for the best hotels in Singapore tends to produce a contest of rooftop altitude and famous bars. I find that a poor way to choose a room. Singapore packs several different holidays into one island: the museums and historic buildings of the Civic District, the bright theatre of Marina Bay, the smaller pleasures of the river, Orchard's convenience and Sentosa's deliberate escape. A hotel can be excellent and still belong to the wrong itinerary. I begin with the question of what I want to step into each morning, not which pool looks most dramatic from above.",
@@ -73,6 +77,8 @@ export const octoberBestHotelsLists: BestHotelsList[] = [
     slug: "bangkok", destination: "Bangkok", country: "Thailand",
     title: "The 10 Best Hotels in Bangkok", updated: "October 2026", updatedISO: "2026-10-04",
     dek: "A river grand dame, contemporary waterside sanctuaries and sharp city addresses: ten Bangkok hotels chosen for the trip you actually want to take.",
+    searchDescription: "Best hotels in Bangkok, from Mandarin Oriental and Capella on the river to Rosewood in Ploenchit. Ten recommendations with room, location and booking caveats.",
+    quickAnswer: "If the Chao Phraya is part of the trip, I would book Mandarin Oriental for its established sense of occasion, Capella for a quieter contemporary stay, or Four Seasons for a larger hotel with a lively public life. For days organised around inland appointments, Rosewood or Park Hyatt in Ploenchit may be the better recommendation. A beautiful river hotel is only worth the detour when I have time to enjoy the river.",
     heroImage: "/hotels/capella-bangkok-official.jpg", heroAlt: "Capella Bangkok on the Chao Phraya River",
     intro: [
       "In Bangkok, I treat a hotel's position as a decision about which city I want to inhabit. On the Chao Phraya, boats, temple roofs and changing light become part of my day. In Sathorn and Silom, I exchange that river rhythm for a denser urban one; around Ploenchit, the logic is proximity to modern shopping and business addresses. None is a consolation prize. I would not choose a famous hotel without noticing which Bangkok it is designed to make easy.",

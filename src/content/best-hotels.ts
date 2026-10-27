@@ -19,6 +19,8 @@ export interface BestHotelsList {
   country: string;
   title: string;
   dek: string;
+  searchDescription?: string;
+  quickAnswer?: string;
   updated: string;
   updatedISO: string;
   heroImage: string;
@@ -188,9 +190,12 @@ export const bestHotelsLists: BestHotelsList[] = [
     country: "India",
     title: "The 10 Best Hotels in Goa, India",
     dek: "The Goa stays that rise above the beach-resort blur: private villas, paddy-field hideaways, serious South Goa resorts and a seven-room fort at the edge of the sea.",
+    searchDescription: "Best hotels and resorts in Goa, compared: Ahilya by the Sea, St. Regis, Taj Exotica, W Goa and more, with honest advice on beaches, location and drawbacks.",
+    quickAnswer: "For a full-service beach resort, I would begin with The St. Regis Goa or Taj Exotica; for a livelier North Goa resort, W Goa is a better fit. Ahilya by the Sea is my pick for a small, art-filled waterfront stay, but its rocky shore is not a swimming beach. The Postcard Cuelim makes most sense when village quiet matters more than sand at the door.",
     updated: "August 2026",
     updatedISO: "2026-08-30",
-    heroImage: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=2000&q=85",
+    heroImage: "/hotels/ahilya-by-the-sea-official.jpg",
+    heroAlt: "Palm gardens and waterfront villas at Ahilya by the Sea in Goa",
     intro: [
       "Goa is not one destination but a long, complicated coastline stitched to villages, river islands, forest and an increasingly ambitious restaurant scene. North Goa carries the energy—Vagator sunsets, Assagao tables and late nights—while the south opens into longer beaches, larger resorts and a slower calendar. The most interesting small hotels often sit elsewhere entirely: above a hidden bay, behind paddy fields or inside a fort at the state's northern edge.",
       "Our ten choices are deliberately mixed. A 206-room resort and a nine-room seaside house answer different questions, yet each needs a distinct sense of place, consistently thoughtful hospitality and a reason to stay after the photograph has been taken. Beach quality matters, but so do food, privacy, architecture and what happens during the monsoon. This is an editorial ranking, not a price comparison, and the caveat beneath each entry is as important as the praise.",
@@ -314,6 +319,10 @@ export const bestHotelsLists: BestHotelsList[] = [
       },
     ],
     faq: [
+      {
+        question: "What are the best resorts in Goa?",
+        answer: "For a classic South Goa beach resort, I would compare The St. Regis Goa, Taj Exotica and ITC Grand Goa. W Goa is the more social, design-led choice in the north. Alila Diwa Goa trades direct beachfront for paddy-field calm and a different sense of space. I would choose between them by coast, beach access and the time I expect to spend at the property, not by facilities alone.",
+      },
       {
         question: "What is the best luxury hotel in Goa?",
         answer: "The St. Regis Goa is the most complete large luxury resort, while Ahilya by the Sea is the strongest intimate stay. Taj Exotica is particularly dependable for families, and Cabo Serai is better for secluded nature and wellness.",

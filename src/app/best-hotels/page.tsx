@@ -60,7 +60,7 @@ export default function BestHotelsIndex() {
               <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                 <span className="eyebrow eyebrow-hero">10 hotels · {list.updated}</span>
                 <h2 className="font-display mt-2 text-3xl font-medium">
-                  {list.destination}, {list.country}
+                  10 Best Hotels in {list.destination}
                 </h2>
               </div>
             </div>

@@ -12,6 +12,13 @@ import JsonLd, {
   faqSchema,
 } from "@/components/JsonLd";
 
+const areaGuides: Record<string, { href: string; label: string }> = {
+  singapore: { href: "/guides/where-to-stay-in-singapore", label: "where to stay in Singapore" },
+  bangkok: { href: "/guides/where-to-stay-in-bangkok-river-or-city", label: "where to stay in Bangkok" },
+  "hong-kong": { href: "/guides/where-to-stay-in-hong-kong", label: "where to stay in Hong Kong" },
+  goa: { href: "/guides/where-to-stay-in-goa", label: "where to stay in Goa" },
+};
+
 export function generateStaticParams() {
   return bestHotelsLists.map((list) => ({ slug: list.slug }));
 }
@@ -24,11 +31,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const list = getBestHotelsList(slug);
   if (!list) return { title: "Not found" };
-  const place = list.country === list.destination ? list.destination : `${list.destination}, ${list.country}`;
+  const place = list.slug === "hong-kong" || list.country === list.destination
+    ? list.destination
+    : `${list.destination}, ${list.country}`;
 
   return {
     title: `10 Best Hotels in ${place} (2026)`,
-    description: list.dek,
+    description: list.searchDescription ?? list.dek,
     alternates: { canonical: `/best-hotels/${list.slug}` },
     keywords: [
       `best hotels in ${list.destination}`,
@@ -37,7 +46,7 @@ export async function generateMetadata({
       `${list.destination} hotels`,
     ],
     openGraph: {
-      title: `The 10 Best Hotels in ${place}`,
+      title: list.title,
       description: list.dek,
       type: "article",
       url: `/best-hotels/${list.slug}`,
@@ -45,7 +54,7 @@ export async function generateMetadata({
       modifiedTime: list.updatedISO,
       authors: ["Zinnia Thapar"],
     },
-    twitter: { card: "summary_large_image", title: list.title, description: list.dek, images: [list.heroImage] },
+    twitter: { card: "summary_large_image", title: list.title, description: list.searchDescription ?? list.dek, images: [list.heroImage] },
   };
 }
 
@@ -57,6 +66,7 @@ export default async function BestHotelsPage({
   const { slug } = await params;
   const list = getBestHotelsList(slug);
   if (!list) notFound();
+  const areaGuide = areaGuides[list.slug];
 
   return (
     <article className="pb-8">
@@ -103,9 +113,18 @@ export default async function BestHotelsPage({
           ))}
         </div>
 
-        {list.slug === "singapore" && (
+        {list.quickAnswer && (
+          <section className="mt-9 border-l-2 border-brass bg-paper-2 px-6 py-5 sm:px-8">
+            <h2 className="font-display text-2xl font-medium text-ink">
+              {list.slug === "goa" ? "The best Goa resorts—or a smaller hotel?" : "The short answer"}
+            </h2>
+            <p className="mt-3 leading-relaxed text-ink-soft">{list.quickAnswer}</p>
+          </section>
+        )}
+
+        {areaGuide && (
           <p className="mt-8 text-sm leading-relaxed text-ink-soft">
-            Still deciding which part of the city suits your trip? Read our <Link href="/guides/where-to-stay-in-singapore" className="font-semibold text-brass-deep hover:underline">guide to the best areas to stay in Singapore</Link> before choosing a hotel.
+            Still deciding which part of {list.destination} suits your trip? Read our guide to <Link href={areaGuide.href} className="font-semibold text-brass-deep hover:underline">{areaGuide.label}</Link> before choosing a hotel.
           </p>
         )}
 
@@ -119,7 +138,7 @@ export default async function BestHotelsPage({
                   className="flex gap-3 text-sm text-ink-soft hover:text-brass-deep"
                 >
                   <span className="font-semibold text-brass-deep">{hotel.rank}.</span>
-                  <span>{hotel.name}</span>
+                  <span><span className="font-medium text-ink">{hotel.name}</span><span className="block text-xs text-ink-muted">{hotel.bestFor}</span></span>
                 </a>
               </li>
             ))}

@@ -232,7 +232,7 @@ export default function Home() {
             >
               <span className="eyebrow text-ink-muted">{list.country}</span>
               <h3 className="font-display mt-1 text-xl font-medium text-ink group-hover:text-brass-deep">
-                {list.destination}
+                10 Best Hotels in {list.destination}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {list.hotels.length} ranked stays · updated {list.updated}

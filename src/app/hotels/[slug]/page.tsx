@@ -10,6 +10,7 @@ import ShareWhatsApp from "@/components/ShareWhatsApp";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema, faqSchema, editorialDateToISO } from "@/components/JsonLd";
 import { authorPath } from "@/content/authors";
 import EditorialReferences from "@/components/EditorialReferences";
+import { bestHotelsLists } from "@/content/best-hotels";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.thehotellife.com";
 
@@ -106,6 +107,9 @@ export default async function HotelPage({
   if (!hotel) notFound();
 
   const related = getRelated(slug);
+  const shortlist = bestHotelsLists.find((list) =>
+    list.hotels.some((entry) => entry.reviewSlug === hotel.slug),
+  );
   const booking = primaryBookingLink(hotel);
   const bestFor = hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "best for")?.value;
   const hotelFaq = [
@@ -309,6 +313,22 @@ export default async function HotelPage({
           ))}
         </dl>
       </section>
+
+      {shortlist && (
+        <aside className="mx-auto mt-12 max-w-3xl rounded-md border border-line bg-paper-2 p-6 sm:p-8">
+          <span className="eyebrow">Compare the alternatives</span>
+          <h2 className="font-display mt-2 text-2xl font-medium text-ink">
+            Is {hotel.name} the right stay for your trip?
+          </h2>
+          <p className="mt-3 leading-relaxed text-ink-soft">
+            Compare it with nine other addresses in Zinnia Thapar&apos;s{" "}
+            <Link href={`/best-hotels/${shortlist.slug}`} className="font-semibold text-brass-deep hover:underline">
+              10 best hotels in {shortlist.destination}
+            </Link>{" "}
+            shortlist, with the reason to choose each one and the drawback worth knowing first.
+          </p>
+        </aside>
+      )}
 
       {/* ===== RELATED ===== */}
       <section className="mt-20">
