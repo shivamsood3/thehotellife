@@ -25,13 +25,45 @@ export default function BookingLink({
   className?: string;
   children: React.ReactNode;
 }) {
+  function record() {
+    const payload = { hotel, network, tracked, placement };
+
+    // Client-side analytics, for the dashboard view. Blockable, and that is
+    // fine: the server copy below is the one that has to be right.
+    trackAffiliateClick(payload);
+
+    // Server-side copy. Same-origin and first-party, so content blockers do
+    // not intercept it. sendBeacon is the correct primitive here: the browser
+    // owns the request once queued, so it survives the page being left for
+    // the partner, and it never delays the navigation.
+    try {
+      const body = JSON.stringify(payload);
+      const sent =
+        typeof navigator !== "undefined" &&
+        typeof navigator.sendBeacon === "function" &&
+        navigator.sendBeacon("/api/outbound", new Blob([body], { type: "application/json" }));
+
+      if (!sent) {
+        // Older browsers, or a beacon the browser declined to queue.
+        void fetch("/api/outbound", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body,
+          keepalive: true,
+        }).catch(() => {});
+      }
+    } catch {
+      // Measurement must never break the hand-off.
+    }
+  }
+
   return (
     <a
       href={href}
       target="_blank"
       rel="sponsored nofollow noopener noreferrer"
       className={className}
-      onClick={() => trackAffiliateClick({ hotel, network, tracked, placement })}
+      onClick={record}
     >
       {children}
     </a>
