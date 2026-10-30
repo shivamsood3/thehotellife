@@ -65,7 +65,7 @@ export const organizationSchema = {
   parentOrganization: {
     "@type": "Organization",
     name: "Hacoco Capital",
-    url: "https://investwithhacoco.com",
+    url: "https://www.hacococapital.com",
   },
   publishingPrinciples: `${SITE_URL}/how-we-review`,
 };

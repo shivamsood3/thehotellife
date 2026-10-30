@@ -58,7 +58,7 @@ export default function Header() {
   const partner = pathname === "/guides" || pathname === "/the-edit"
     ? "ai-wise"
     : pathname === "/hotels" || pathname === "/destinations" || pathname === "/best-hotels"
-      ? "hacoco"
+      ? "antialias"
       : null;
 
   return (

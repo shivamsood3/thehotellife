@@ -11,10 +11,10 @@
  * URLs with the corresponding NEXT_PUBLIC_* environment variables.
  */
 import Link from "next/link";
-import { AiWiseCreative, AntialiasCreative, AntialiasSquareCreative, HacocoCreative, NikhaarCreative, NikhaarSquareCreative } from "@/components/HouseBanners";
+import { AiWiseCreative, AntialiasCreative, AntialiasLeaderboardCreative, AntialiasSquareCreative, HacocoCreative, HacocoRailCreative, HacocoSquareCreative, NikhaarCreative, NikhaarSquareCreative } from "@/components/HouseBanners";
 import { AccorPlusRail, AccorPlusSquare } from "@/components/AffiliateBanner";
 
-const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://investwithhacoco.com";
+const HACOCO_URL = process.env.NEXT_PUBLIC_HACOCO_URL ?? "https://www.hacococapital.com";
 const ANTIALIAS_URL = process.env.NEXT_PUBLIC_ANTIALIAS_URL ?? "https://theantialias.com";
 const NIKHAAR_URL = process.env.NEXT_PUBLIC_NIKHAAR_URL ?? "https://www.nikhaarfoundation.org";
 const AI_WISE_URL = process.env.NEXT_PUBLIC_AI_WISE_URL ?? "https://www.youtube.com/@the.aiwise";
@@ -55,20 +55,20 @@ function RailAd({
 }
 
 /** Top-of-page direct partner leaderboard. */
-export function PartnerLeaderboard({ brand }: { brand: "hacoco" | "ai-wise" }) {
+export function PartnerLeaderboard({ brand }: { brand: "antialias" | "ai-wise" }) {
   const isAiWise = brand === "ai-wise";
   return (
     <div className="w-full border-b border-line bg-paper-2">
       <div className="mx-auto max-w-[1400px] px-4 py-2 sm:px-6 lg:px-10">
         <Link
-          href={isAiWise ? AI_WISE_URL : HACOCO_URL}
+          href={isAiWise ? AI_WISE_URL : ANTIALIAS_URL}
           target="_blank"
           rel="sponsored noopener noreferrer"
           className="group block"
-          aria-label={`Advertisement - ${isAiWise ? "AI Wise" : "Hacoco"}`}
+          aria-label={`Advertisement - ${isAiWise ? "AI Wise" : "The AntiAlias"}`}
         >
           <div className="relative mx-auto h-[76px] w-full max-w-[970px] overflow-hidden rounded-sm transition-opacity group-hover:opacity-95 sm:h-[90px]">
-            {isAiWise ? <AiWiseCreative /> : <HacocoCreative />}
+            {isAiWise ? <AiWiseCreative /> : <AntialiasLeaderboardCreative />}
           </div>
         </Link>
       </div>
@@ -100,19 +100,19 @@ export function AntialiasRail() {
   );
 }
 
-export type EditorialSponsorBrand = "accor" | "antialias" | "nikhaar";
+export type EditorialSponsorBrand = "accor" | "hacoco" | "nikhaar";
 
 function EditorialSponsor({ brand, mobile }: { brand: EditorialSponsorBrand; mobile: boolean }) {
   if (brand === "accor") return mobile ? <AccorPlusSquare /> : <AccorPlusRail />;
 
-  if (brand === "antialias") {
+  if (brand === "hacoco") {
     return (
       <RailAd
-        href={ANTIALIAS_URL}
-        label="The AntiAlias, a design & brand studio"
+        href={HACOCO_URL}
+        label="Hacoco, private real estate capital"
         ratio={mobile ? "1 / 1" : "300 / 600"}
       >
-        {mobile ? <AntialiasSquareCreative /> : <AntialiasCreative />}
+        {mobile ? <HacocoSquareCreative /> : <HacocoRailCreative />}
       </RailAd>
     );
   }

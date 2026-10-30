@@ -9,7 +9,7 @@ import {
 
 function sponsorForPath(pathname: string): EditorialSponsorBrand | null {
   if (/^\/hotels\/[^/]+$/.test(pathname)) return "accor";
-  if (/^\/guides\/[^/]+$/.test(pathname)) return "antialias";
+  if (/^\/guides\/[^/]+$/.test(pathname)) return "hacoco";
   if (/^\/the-edit\/[^/]+$/.test(pathname)) return "nikhaar";
   return null;
 }

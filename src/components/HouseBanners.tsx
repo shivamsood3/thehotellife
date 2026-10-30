@@ -192,3 +192,125 @@ export function NikhaarSquareCreative() {
     </div>
   );
 }
+
+/**
+ * Antialias at leaderboard size. Same horizontal grammar as the other 970x90
+ * creatives: brand lockup, rule, message, call to action, with the message
+ * dropping away first as the slot narrows.
+ */
+export function AntialiasLeaderboardCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full min-h-[76px] w-full items-center overflow-hidden bg-[#070707] px-5 text-white sm:min-h-[90px] sm:px-7">
+      <div className="pointer-events-none absolute -right-24 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#e6322a]/12 blur-2xl" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-[#e6322a]" />
+
+      <div className="relative flex shrink-0 items-center gap-3 sm:gap-4">
+        <span className="grid h-9 w-12 shrink-0 place-items-center bg-[#e6322a] text-[0.5rem] font-black uppercase leading-[1.05] tracking-tight sm:h-11 sm:w-14 sm:text-[0.58rem]">
+          Anti<br />Alias
+        </span>
+        <div className="hidden sm:block">
+          <p className="text-[0.46rem] font-bold uppercase tracking-[0.3em] text-white/55">Since 2014</p>
+          <p className="mt-1 text-[0.56rem] font-medium uppercase tracking-[0.16em] text-white/45">
+            Design / Systems / AI
+          </p>
+        </div>
+      </div>
+
+      <div className="relative mx-6 hidden h-11 w-px shrink-0 bg-white/20 md:block" />
+      <div className="relative hidden min-w-0 flex-1 md:block">
+        <p className="text-base font-black uppercase leading-[0.98] tracking-[-0.045em] text-[#e6322a] lg:text-lg">
+          We build digital systems
+        </p>
+        <p className="mt-1 text-base font-black uppercase leading-[0.98] tracking-[-0.045em] lg:text-lg">
+          that make companies valuable.
+        </p>
+      </div>
+
+      <div className="relative ml-3 min-w-0 flex-1 sm:hidden">
+        <p className="text-sm font-black uppercase leading-none tracking-[-0.04em]">
+          We build <span className="text-[#e6322a]">digital systems</span>.
+        </p>
+      </div>
+
+      <span className="relative ml-auto inline-flex shrink-0 items-center gap-2 border border-[#e6322a] bg-[#e6322a] px-4 py-2.5 text-[0.56rem] font-extrabold uppercase tracking-[0.16em] text-white transition-colors group-hover:border-white group-hover:bg-white group-hover:text-[#070707] sm:px-6 sm:text-[0.64rem]">
+        View work <span aria-hidden="true">↗</span>
+      </span>
+    </div>
+  );
+}
+
+/** Hacoco in the tall rail slot. Copy is held to the claims the brand already makes. */
+export function HacocoRailCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#050a12] p-7 text-white">
+      <div className="pointer-events-none absolute -right-24 top-28 h-72 w-72 rotate-12 border border-[#d8b45b]/20" />
+      <div className="pointer-events-none absolute right-6 top-1/2 h-24 w-24 rotate-12 border border-[#d8b45b]/10" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#d8b45b]" />
+      <div className="pointer-events-none absolute inset-3 border border-white/10" />
+
+      <div className="relative flex items-start justify-between border-b border-white/15 pb-5">
+        <div>
+          <p className="font-ad-display text-[1.55rem] font-semibold leading-none tracking-[0.14em]">HACOCO</p>
+          <p className="mt-2 text-[0.5rem] font-semibold uppercase tracking-[0.28em] text-[#d8b45b]">
+            Private real estate capital
+          </p>
+        </div>
+        <div className="relative grid h-11 w-11 shrink-0 place-items-center border border-[#d8b45b]">
+          <div className="h-4 w-4 bg-[#d8b45b]" />
+          <div className="absolute -bottom-1 -right-1 h-2 w-2 bg-[#050a12]" />
+        </div>
+      </div>
+
+      <div className="relative mt-10">
+        <p className="text-[0.55rem] font-bold uppercase tracking-[0.25em] text-[#d8b45b]">Curated ownership</p>
+        <p className="font-ad-display mt-4 text-[2rem] leading-[1.06]">
+          Prime India.<br /><span className="italic">Precisely</span><br />selected.
+        </p>
+        <p className="mt-6 max-w-[13rem] text-[0.72rem] leading-relaxed text-white/55">
+          Private real estate capital, placed in a small number of prime Indian assets.
+        </p>
+      </div>
+
+      <div className="relative mt-auto flex items-center justify-between border-t border-white/15 pt-4">
+        <span className="text-[0.58rem] font-bold uppercase tracking-[0.18em]">View opportunities</span>
+        <span className="text-xl text-[#d8b45b]" aria-hidden="true">↗</span>
+      </div>
+    </div>
+  );
+}
+
+/** Hacoco at 1:1 for the mobile rail, where the tall creative has no room. */
+export function HacocoSquareCreative() {
+  return (
+    <div className="font-ad-sans relative flex h-full w-full flex-col overflow-hidden bg-[#050a12] p-7 text-white">
+      <div className="pointer-events-none absolute -right-20 -top-16 h-56 w-56 rotate-12 border border-[#d8b45b]/20" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#d8b45b]" />
+      <div className="pointer-events-none absolute inset-3 border border-white/10" />
+
+      <div className="relative flex items-center justify-between border-b border-white/15 pb-4">
+        <div>
+          <p className="font-ad-display text-[1.6rem] font-semibold leading-none tracking-[0.14em]">HACOCO</p>
+          <p className="mt-1.5 text-[0.48rem] font-semibold uppercase tracking-[0.28em] text-[#d8b45b]">
+            Private real estate capital
+          </p>
+        </div>
+        <div className="relative grid h-11 w-11 shrink-0 place-items-center border border-[#d8b45b]">
+          <div className="h-4 w-4 bg-[#d8b45b]" />
+          <div className="absolute -bottom-1 -right-1 h-2 w-2 bg-[#050a12]" />
+        </div>
+      </div>
+
+      <div className="relative mt-7">
+        <p className="text-[0.53rem] font-bold uppercase tracking-[0.23em] text-[#d8b45b]">Curated ownership</p>
+        <p className="font-ad-display mt-3 text-[1.9rem] leading-[1.04]">
+          Prime India.<br /><span className="italic">Precisely</span><br />selected.
+        </p>
+      </div>
+
+      <div className="relative mt-auto flex items-center justify-between border-t border-white/15 pt-4">
+        <span className="text-[0.58rem] font-bold uppercase tracking-[0.18em]">View opportunities</span>
+        <span className="text-xl text-[#d8b45b]" aria-hidden="true">↗</span>
+      </div>
+    </div>
+  );
+}
