@@ -4,7 +4,6 @@ import Link from "next/link";
 import { hotels } from "@/content/hotels";
 import { articles } from "@/content/articles";
 import HotelCard from "@/components/HotelCard";
-import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/the-edit" },
@@ -154,11 +153,6 @@ export default function TheEdit() {
                 {list.map((h) => h && <HotelCard key={h.slug} hotel={h} size="sm" />)}
               </div>
 
-              {idx === 1 && (
-                <div className="mt-16">
-                  <AdSense format="leaderboard" slot="6000000001" />
-                </div>
-              )}
             </div>
           );
         })}

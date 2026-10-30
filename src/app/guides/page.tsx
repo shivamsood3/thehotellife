@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { guides } from "@/content/guides";
 import GuideCard from "@/components/GuideCard";
-import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/guides" },
@@ -46,9 +45,6 @@ export default function GuidesIndex() {
         </div>
       </a>
 
-      <div className="my-12">
-        <AdSense format="leaderboard" slot="4000000001" />
-      </div>
 
       <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
         {rest.map((g) => (

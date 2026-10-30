@@ -37,12 +37,13 @@ export default function Privacy() {
 
         <h2>Cookies &amp; advertising</h2>
         <p>
-          We use cookies and similar technologies for analytics and advertising. This site
-          displays direct advertising and may display ads served by Google AdSense once that
-          service is active. Third-party vendors, including Google, may use cookies to serve ads
-          based on your prior visits to this and other websites. You can opt out of personalised
-          Google advertising via Google&apos;s Ads Settings, and manage cookies through your browser
-          at any time.
+          We do not run programmatic advertising and we set no advertising or
+          analytics cookies. Our traffic measurement is aggregate and cookieless, and
+          it does not identify individual readers or follow them across other sites.
+          Advertising on this site is sold directly by us. When you follow a booking
+          link to a partner such as Hotels.com or Booking.com, that company sets its
+          own cookies under its own privacy policy once you arrive, which is how a
+          booking is credited to us.
         </p>
 
         <h2>Affiliate links and commission</h2>

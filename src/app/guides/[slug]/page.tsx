@@ -4,10 +4,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { guides, getGuide } from "@/content/guides";
 import { getHotel } from "@/content/hotels";
-import { AdSense } from "@/components/Ads";
 import { Stars } from "@/components/HotelCard";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import BookingLink from "@/components/BookingLink";
 import EditorialReferences from "@/components/EditorialReferences";
 import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
 
@@ -113,11 +113,6 @@ export default async function GuidePage({
               {section.body.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
-              {i === 1 && (
-                <div className="my-10">
-                  <AdSense format="in-article" slot="4000000002" />
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -157,14 +152,16 @@ export default async function GuidePage({
                           </div>
                         </div>
                       </Link>
-                      <a
+                      <BookingLink
                         href={primaryBookingLink(h).url}
-                        target="_blank"
-                        rel="sponsored nofollow noopener noreferrer"
+                        hotel={h.slug}
+                        network={primaryBookingLink(h).network}
+                        tracked={primaryBookingLink(h).tracked}
+                        placement="guide-list"
                         className="shrink-0 rounded-full border border-ink px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-widest text-ink transition-colors hover:bg-ink hover:text-paper"
                       >
                         Check availability
-                      </a>
+                      </BookingLink>
                     </div>
                   )
               )}

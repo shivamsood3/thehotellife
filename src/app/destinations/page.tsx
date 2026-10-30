@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { destinations } from "@/content/destinations";
 import { hotels } from "@/content/hotels";
-import { AdSense } from "@/components/Ads";
 import HotelCard from "@/components/HotelCard";
 
 export const metadata: Metadata = {
@@ -109,9 +108,6 @@ export default function DestinationsIndex() {
         </Link>
       </section>
 
-      <div className="mt-12">
-        <AdSense format="leaderboard" slot="5000000001" />
-      </div>
     </div>
   );
 }

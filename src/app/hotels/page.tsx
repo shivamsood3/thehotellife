@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { hotels } from "@/content/hotels";
 import HotelCard from "@/components/HotelCard";
-import { AdSense } from "@/components/Ads";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/hotels" },
@@ -27,15 +26,9 @@ export default function HotelsIndex() {
       <div className="rule-brass mt-8 w-full" />
 
       <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-        {hotels.map((h, i) => (
+        {hotels.map((h) => (
           <div key={h.slug} className="contents">
             <HotelCard hotel={h} />
-            {/* In-grid AdSense every 6 cards */}
-            {(i + 1) % 6 === 0 && (
-              <div className="sm:col-span-2 lg:col-span-3 my-2">
-                <AdSense format="leaderboard" slot="3000000001" />
-              </div>
-            )}
           </div>
         ))}
       </div>

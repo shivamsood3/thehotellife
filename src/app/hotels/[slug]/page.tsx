@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { hotels, getHotel, getRelated, type Hotel } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
-import { AdSense } from "@/components/Ads";
 import { primaryBookingLink } from "@/lib/affiliate";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
+import BookingLink from "@/components/BookingLink";
 import JsonLd, { hotelReviewSchema, breadcrumbSchema, faqSchema, editorialDateToISO } from "@/components/JsonLd";
 import { authorPath } from "@/content/authors";
 import EditorialReferences from "@/components/EditorialReferences";
@@ -226,12 +226,6 @@ export default async function HotelPage({
                     )}
                   </figure>
                 )}
-                {/* In-article AdSense after the first section */}
-                {i === 0 && (
-                  <div className="my-10 not-prose">
-                    <AdSense format="in-article" slot="2000000001" />
-                  </div>
-                )}
               </div>
             ))}
 
@@ -270,14 +264,16 @@ export default async function HotelPage({
                 </div>
               ))}
             </dl>
-            <a
+            <BookingLink
               href={booking.url}
-              target="_blank"
-              rel="sponsored nofollow noopener noreferrer"
+              hotel={hotel.slug}
+              network={booking.network}
+              tracked={booking.tracked}
+              placement="review-sidebar"
               className="mt-6 block w-full rounded-full bg-ink py-3 text-center text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep"
             >
               {booking.destinationType === "search" ? "Search partner availability" : "Check Availability"}
-            </a>
+            </BookingLink>
             <p className="mt-3 text-center text-[0.65rem] text-ink-muted">
               {booking.tracked ? (
                 <>
@@ -296,8 +292,6 @@ export default async function HotelPage({
             </p>
           </div>
 
-          {/* Sidebar AdSense rectangle */}
-          <AdSense format="rectangle" slot="2000000002" />
         </aside>
       </div>
 

@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { articles, getArticle } from "@/content/articles";
 import { getHotel } from "@/content/hotels";
 import HotelCard from "@/components/HotelCard";
-import { AdSense } from "@/components/Ads";
 import ShareWhatsApp from "@/components/ShareWhatsApp";
 import EditorialReferences from "@/components/EditorialReferences";
 import JsonLd, { articleSchema, breadcrumbSchema, editorialDateToISO } from "@/components/JsonLd";
@@ -123,11 +122,6 @@ export default async function ArticlePage({
               {section.body.map((p, j) => (
                 <p key={j}>{p}</p>
               ))}
-              {i === 1 && (
-                <div className="my-10 not-prose">
-                  <AdSense format="in-article" slot="7000000001" />
-                </div>
-              )}
             </div>
           ))}
         </div>

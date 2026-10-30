@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { hotels, getFeatured, regions, type Region } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
-import { AdSense } from "@/components/Ads";
 import NewsletterForm from "@/components/NewsletterForm";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import { bestHotelsLists } from "@/content/best-hotels";
@@ -127,10 +126,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* In-feed AdSense, high-value placement between content rows */}
-        <div className="my-12">
-          <AdSense format="leaderboard" slot="1000000001" />
-        </div>
 
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {collection.slice(3, 6).map((h) => (

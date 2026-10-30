@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { trackNewsletterSignup } from "@/lib/analytics";
 
 type Tone = "dark" | "light";
 
@@ -39,6 +40,7 @@ export default function NewsletterForm({
       if (res.ok && data.ok) {
         setStatus("ok");
         setEmail("");
+        trackNewsletterSignup({ source, isNew: !data.alreadySubscribed });
         router.push(`/newsletter/thank-you?status=${data.alreadySubscribed ? "existing" : "new"}`);
       } else {
         setStatus("error");

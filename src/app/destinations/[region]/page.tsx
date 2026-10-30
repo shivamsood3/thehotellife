@@ -7,7 +7,6 @@ import { hotels } from "@/content/hotels";
 import { getGuidesByRegion } from "@/content/guides";
 import HotelCard from "@/components/HotelCard";
 import GuideCard from "@/components/GuideCard";
-import { AdSense } from "@/components/Ads";
 
 export function generateStaticParams() {
   return destinations.map((d) => ({ region: d.slug }));
@@ -67,9 +66,6 @@ export default async function RegionPage({
         </div>
       </div>
 
-      <div className="my-14">
-        <AdSense format="leaderboard" slot="5100000001" />
-      </div>
 
       {/* Hotels in region */}
       <section>

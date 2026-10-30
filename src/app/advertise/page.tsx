@@ -31,9 +31,9 @@ const formats = [
   },
   {
     name: "In-Feed & In-Article Display",
-    partner: "Google AdSense & direct",
+    partner: "Sold direct",
     spec: "Responsive · native placements",
-    body: "Contextual units woven between our reviews and guides. Available programmatically via AdSense, or sold direct for premium campaigns.",
+    body: "Contextual units woven between our reviews and guides. Sold direct only: we run no programmatic advertising, so your campaign never sits beside an arbitrage ad or a competitor.",
     price: "from $6 CPM",
   },
   {
