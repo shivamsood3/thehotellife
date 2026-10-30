@@ -60,6 +60,14 @@ export const organizationSchema = {
     height: 512,
   },
   sameAs: ["https://www.instagram.com/thehotellifeofficial/"],
+  // Ownership stated in machine-readable form as well as in the footer and /about,
+  // so the brand resolves to its owner for search engines and answer engines.
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Hacoco Capital",
+    url: "https://investwithhacoco.com",
+  },
+  publishingPrinciples: `${SITE_URL}/how-we-review`,
 };
 
 export const websiteSchema = {
