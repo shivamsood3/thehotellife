@@ -9,6 +9,8 @@ import PageAdvertising from "@/components/PageAdvertising";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import PWALaunchScreen from "@/components/PWALaunchScreen";
 import PWARegistration from "@/components/PWARegistration";
+import ConsentBanner from "@/components/ConsentBanner";
+import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
@@ -136,6 +138,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${outfit.variable} ${adFraunces.variable} ${adInter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        {/* Consent Mode v2 defaults. Must stay the first script here and
+            stay beforeInteractive: AdSense and gtag both read consent state
+            as they initialise, so a default that lands after them is a
+            default they never saw. Everything advertising-related starts
+            denied; ConsentBanner replays a stored or fresh choice. */}
+        <Script
+          id="consent-mode-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }}
+        />
         {/* AdSense loader, beforeInteractive so it lands in the initial
             HTML for site verification, and Auto Ads can place units early.
             Deliberately NOT gated on ADSENSE_ENABLED: review crawls the page
@@ -177,6 +189,7 @@ gtag('config', '${GOOGLE_ADS_ID}');`}
         <PWALaunchScreen />
         <Header />
         <PageAdvertising>{children}</PageAdvertising>
+        <ConsentBanner />
         <Footer />
         <Analytics />
       </body>
