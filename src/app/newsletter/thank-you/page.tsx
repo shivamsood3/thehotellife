@@ -13,6 +13,7 @@ export default async function NewsletterThankYou({
 }: PageProps<"/newsletter/thank-you">) {
   const { status } = await searchParams;
   const existing = status === "existing";
+  const newsletterLive = process.env.NEWSLETTER_ENABLED === "true";
 
   return (
     <div className="flex min-h-[62vh] items-center justify-center py-14 sm:py-20">
@@ -26,12 +27,14 @@ export default async function NewsletterThankYou({
           </div>
           <span className="eyebrow mt-7 block">The Concierge</span>
           <h1 className="font-display mt-3 text-4xl font-medium leading-tight text-ink sm:text-5xl">
-            {existing ? "You’re already on the list." : "Your Sunday reading is sorted."}
+            {existing ? "You’re already on the list." : newsletterLive ? "Your monthly reading is sorted." : "You’re on the list."}
           </h1>
           <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-ink-soft">
             {existing
               ? "We already have your address safely saved. There’s nothing else you need to do."
-              : "Thank you for subscribing. Look out for one remarkable hotel, sharp travel intelligence and the places worth crossing the planet for."}
+              : newsletterLive
+                ? "Thank you for subscribing. Look out for one remarkable hotel, sharp travel intelligence and the places worth crossing the planet for."
+                : "Thank you for joining. We’ll email you when the first edition of The Concierge is ready."}
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/hotels" className="rounded-full bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-brass-deep">
@@ -41,7 +44,7 @@ export default async function NewsletterThankYou({
               Read the guides
             </Link>
           </div>
-          <p className="mt-8 text-xs text-ink-muted">If it does not arrive, check your promotions or spam folder.</p>
+          {newsletterLive && <p className="mt-8 text-xs text-ink-muted">If it does not arrive, check your promotions or spam folder.</p>}
         </div>
       </section>
     </div>

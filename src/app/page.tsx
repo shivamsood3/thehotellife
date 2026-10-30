@@ -283,11 +283,12 @@ export default function Home() {
       <section className="mt-20 rounded-md border border-line bg-paper-2 px-6 py-14 text-center sm:px-12">
         <span className="eyebrow">The Concierge</span>
         <h2 className="font-display mx-auto mt-3 max-w-2xl text-3xl font-medium leading-tight text-ink sm:text-4xl">
-          One extraordinary hotel in your inbox, every Sunday.
+          {process.env.NEWSLETTER_ENABLED === "true"
+            ? "The best of The Hotel Life, once a month."
+            : "The Concierge is coming soon."}
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
-          Join discerning readers who trust The Hotel Life to find the stays worth the airfare.
-          No spam, ever.
+          Join the list for our monthly edit of stays worth the airfare. No spam, ever.
         </p>
         <NewsletterForm tone="light" source="homepage" className="mx-auto mt-8 max-w-md" />
       </section>

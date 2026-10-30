@@ -12,7 +12,7 @@ export default function Privacy() {
       <header className="mt-10">
         <span className="eyebrow">Legal</span>
         <h1 className="font-display mt-2 text-4xl font-medium text-ink">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-ink-muted">Last updated: September 2026</p>
+        <p className="mt-3 text-sm text-ink-muted">Last updated: October 2026</p>
       </header>
 
       <div className="rule-brass mt-6 w-full" />
@@ -77,9 +77,10 @@ export default function Privacy() {
 
         <h2>Newsletter storage</h2>
         <p>
-          Newsletter email addresses are stored in a private Vercel Blob store connected to
-          this website. The files are not publicly accessible. We retain this information for
-          as long as you remain subscribed, or as needed to meet legal and security obligations.
+          Newsletter email addresses are held in the private subscriber store connected to this
+          website. When our email service is active, we also share subscribed addresses with
+          Resend so it can deliver The Concierge and manage unsubscribes. We retain the record
+          for as long as you remain subscribed, or as needed to meet legal and security obligations.
         </p>
 
         <h2>Sharing</h2>
@@ -92,8 +93,8 @@ export default function Privacy() {
 
         <h2>Your rights</h2>
         <p>
-          You can unsubscribe from our newsletter at any time. Until our one-click preference
-          centre is available, you can ask us to remove your address, access your information or
+          Every newsletter email includes an unsubscribe link. You can also ask us to remove
+          your address, access your information or
           delete the personal data we hold about you by messaging us on WhatsApp at{" "}
           <a
             href="https://wa.me/919810254606"

@@ -12,6 +12,13 @@ import PWARegistration from "@/components/PWARegistration";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 
+// Google Ads conversion / remarketing tag. Hardcoded rather than read from
+// NEXT_PUBLIC_*: the ID is public by nature (it ships in the page source),
+// it does not differ between environments, and an env var that was never
+// set in Vercel is precisely what stripped the AdSense loader and stalled
+// that site review. One less thing that can silently evaluate to empty.
+const GOOGLE_ADS_ID = "AW-966960684";
+
 // Outfit is the brand typeface. Light 300 and SemiBold 600 carry the
 // wordmark; the rest of the weights cover UI and body copy.
 const outfit = Outfit({
@@ -147,6 +154,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           />
         )}
+        {/* Google Ads tag (gtag.js). afterInteractive is the documented
+            strategy for gtag in Next: it still fires on every page load but
+            does not block first paint. Note this fires config once per full
+            document load; client-side route changes do not re-fire it, which
+            matters for remarketing reach but not for conversion events. */}
+        <Script
+          id="google-ads-gtag-src"
+          strategy="afterInteractive"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        />
+        <Script id="google-ads-gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GOOGLE_ADS_ID}');`}
+        </Script>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <PWARegistration />

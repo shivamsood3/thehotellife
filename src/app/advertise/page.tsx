@@ -43,13 +43,13 @@ const formats = [
     body: "A complete, honest, professionally written review of your property, clearly marked as a partnership. We only accept hotels we'd genuinely recommend.",
     price: "from $900",
   },
-  {
+  ...(process.env.NEWSLETTER_ENABLED === "true" ? [{
     name: "Newsletter Sponsorship",
-    partner: "The Concierge, weekly",
-    spec: "Growing opt-in audience · weekly placement",
-    body: "A dedicated placement in our Sunday edition, in front of an engaged, travel-focused audience that has expressly asked to hear from us.",
+    partner: "The Concierge, monthly",
+    spec: "Growing opt-in audience · monthly placement",
+    body: "A dedicated placement in our monthly edition, in front of an engaged, travel-focused audience that has expressly asked to hear from us.",
     price: "from $350 / send",
-  },
+  }] : []),
 ];
 
 export default function Advertise() {

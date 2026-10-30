@@ -15,6 +15,10 @@ const GOOGLE_ADS = [
   "https://*.googlesyndication.com",
   "https://*.googleadservices.com",
   "https://www.googletagservices.com",
+  // gtag.js for the Google Ads conversion/remarketing tag. GOOGLE_ADS feeds
+  // script-src, img-src, frame-src and connect-src, so one entry covers the
+  // loader, the conversion pixels and the beacons it sends back.
+  "https://www.googletagmanager.com",
   "https://*.google.com",
   "https://*.doubleclick.net",
   "https://*.gstatic.com",

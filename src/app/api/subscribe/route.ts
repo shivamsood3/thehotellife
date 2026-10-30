@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { saveSubscriber, subscriberStoreConfigured } from "@/lib/subscribers";
 import { notifyInbox } from "@/lib/notify";
+import { resendNewsletterConfigured, syncNewsletterContact } from "@/lib/resend-newsletter";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -36,6 +37,13 @@ export async function POST(req: Request) {
   try {
     if (subscriberStoreConfigured()) {
       const isNew = await saveSubscriber(email, meta);
+      if (resendNewsletterConfigured()) {
+        // The private store remains the durable record. A failed Resend sync is
+        // retried by the monthly job before any broadcast is sent.
+        await syncNewsletterContact(email).catch((error) => {
+          console.error("[newsletter] Resend sync will be retried:", error);
+        });
+      }
       // Fire-and-forget email notification (no-op unless configured).
       await notifyInbox(email, meta).catch(() => {});
       return NextResponse.json({ ok: true, alreadySubscribed: !isNew });

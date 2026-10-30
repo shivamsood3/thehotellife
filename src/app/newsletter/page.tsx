@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import NewsletterForm from "@/components/NewsletterForm";
 
+const newsletterLive = process.env.NEWSLETTER_ENABLED === "true";
+
 export const metadata: Metadata = {
   alternates: { canonical: "/newsletter" },
-  title: "The Concierge · Our Weekly Newsletter",
+  title: newsletterLive ? "The Concierge · Our Monthly Newsletter" : "The Concierge · Join the List",
   description:
-    "One extraordinary hotel in your inbox every Sunday. Join The Hotel Life's weekly newsletter, The Concierge.",
+    newsletterLive
+      ? "A monthly edit of remarkable hotels, guides and travel stories. Join The Concierge from The Hotel Life."
+      : "Join the list for The Concierge, a forthcoming monthly edit from The Hotel Life.",
 };
 
 const perks = [
   {
     title: "One hotel, done properly",
-    body: "Each Sunday we go deep on a single extraordinary stay: the room to book, the catch to know, the reason to go.",
+    body: "Each issue brings a considered hotel review: the room to book, the catch to know, the reason to go.",
   },
   {
     title: "The insider's list",
@@ -20,7 +24,7 @@ const perks = [
   },
   {
     title: "No noise, ever",
-    body: "One email a week. No daily blasts, no shared data, no filler. Unsubscribe in one click whenever you like.",
+    body: "One email a month when we have new stories worth sharing. No daily blasts, no filler. Unsubscribe at any time.",
   },
 ];
 
@@ -41,11 +45,12 @@ export default function Newsletter() {
         <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 lg:p-16">
           <span className="eyebrow">The Concierge</span>
           <h1 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
-            One extraordinary hotel in your inbox, every Sunday.
+            {newsletterLive ? "The best of The Hotel Life, once a month." : "The Concierge is coming soon."}
           </h1>
           <p className="text-base leading-relaxed text-paper/70">
-            Join discerning travellers who trust The Hotel Life to find the stays
-            worth the airfare. Free, weekly, and worth opening.
+            {newsletterLive
+              ? "Join discerning travellers who trust The Hotel Life to find the stays worth the airfare. Free, monthly, and worth opening."
+              : "Join the list for our forthcoming monthly edit of remarkable hotels, guides and travel stories. We’ll write when the first issue is ready."}
           </p>
           <NewsletterForm tone="dark" source="newsletter-hero" className="max-w-md" />
           <p className="text-xs text-paper/40">No spam. Unsubscribe anytime.</p>
