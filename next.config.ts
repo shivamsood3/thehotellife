@@ -26,6 +26,30 @@ const GOOGLE_ADS = [
   "https://*.adtrafficquality.google",
 ].join(" ");
 
+/**
+ * Google fires its remarketing user-list pixel at the visitor's own country
+ * domain as well as google.com (…/pagead/1p-user-list/<id>/?…&rmt_tld=1), and
+ * CSP has no wildcard for TLDs, so *.google.com does not cover google.co.in.
+ * Without these the local sync is blocked and remarketing match rates drop in
+ * exactly the markets this site advertises in. Pixels only: these belong in
+ * img-src and must NOT widen script-src. Add a market here when ads start
+ * running in a country that is not listed.
+ */
+const GOOGLE_CCTLD_PIXELS = [
+  "https://www.google.co.in",
+  "https://www.google.co.uk",
+  "https://www.google.ae",
+  "https://www.google.com.sg",
+  "https://www.google.com.hk",
+  "https://www.google.com.au",
+  "https://www.google.ca",
+  "https://www.google.de",
+  "https://www.google.fr",
+  "https://www.google.it",
+  "https://www.google.es",
+  "https://www.google.co.jp",
+].join(" ");
+
 const EDITORIAL_IMAGE_HOSTS = [
   "https://media.sixsenses.com",
   "https://www.aman.com",
@@ -45,7 +69,7 @@ const csp = [
   `default-src 'self'`,
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${GOOGLE_ADS}`,
   `style-src 'self' 'unsafe-inline'`,
-  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} https://*.g.doubleclick.net`,
+  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} ${GOOGLE_CCTLD_PIXELS} https://*.g.doubleclick.net`,
   `font-src 'self' data:`,
   `frame-src 'self' ${GOOGLE_ADS}`,
   `connect-src 'self' ${GOOGLE_ADS}`,
