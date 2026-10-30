@@ -17,7 +17,7 @@ const stats = [
 const formats = [
   {
     name: "Leaderboard Takeover",
-    partner: "as run by Hacoco and AI Wise",
+    partner: "as run by Antialias and AI Wise",
     spec: "970 × 90 · selected high-visibility sections",
     body: "Our most visible unit, positioned above the masthead across selected editorial sections. Each creative scrolls naturally with the page, with page-family exclusivity available by arrangement.",
     price: "from $650 / mo",
