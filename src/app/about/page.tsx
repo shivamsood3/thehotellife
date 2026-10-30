@@ -55,6 +55,10 @@ export default function About() {
       <div className="mx-auto mt-12 max-w-2xl">
         <div className="prose-editorial">
           <p>
+            The Hotel Life is published by Hacoco Capital. Our writers make the editorial
+            calls; commercial partnerships do not determine what we recommend.
+          </p>
+          <p>
             The Hotel Life began with a simple frustration: that so much of what&apos;s
             written about luxury hotels reads like it was dictated by the hotel&apos;s own
             marketing department. Glowing, interchangeable, and utterly useless to anyone

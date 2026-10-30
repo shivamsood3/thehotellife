@@ -4,11 +4,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   title: "Contact · The Hotel Life",
   description:
-    "Get in touch with The Hotel Life on WhatsApp about editorial tips, corrections, partnerships and press.",
+    "Email The Hotel Life about editorial tips, corrections, partnerships and press.",
 };
 
 const WA = "919810254606";
 const wa = (text: string) => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
+const email = (subject: string) => `mailto:shiv@hacococapital.com?subject=${encodeURIComponent(subject)}`;
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
@@ -22,17 +23,17 @@ const channels = [
   {
     title: "Editorial & Tips",
     body: "A hotel we should review? A correction? A tip from behind the front desk? We read everything.",
-    text: "Hi, I have an editorial tip for The Hotel Life.",
+    subject: "The Hotel Life — editorial tip or correction",
   },
   {
     title: "Advertising & Partnerships",
     body: "Media kit, sponsorships and campaigns. See our advertise page for formats and audience.",
-    text: "Hi, I'm interested in advertising with The Hotel Life.",
+    subject: "The Hotel Life — advertising or partnership",
   },
   {
     title: "Press & General",
     body: "Everything else: press requests, syndication, and the occasional kind word.",
-    text: "Hi, I'd like to get in touch with The Hotel Life.",
+    subject: "The Hotel Life — press or general enquiry",
   },
 ];
 
@@ -45,8 +46,8 @@ export default function Contact() {
           Contact
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-          We&apos;re a small team, and the fastest way to reach us is WhatsApp. Pick the right
-          door below and we&apos;ll get back to you within a couple of days.
+          The Hotel Life is published by Hacoco Capital. Email us about a story,
+          a correction or a partnership, and we&apos;ll get back to you as soon as we can.
         </p>
       </header>
 
@@ -58,13 +59,10 @@ export default function Contact() {
             <h2 className="font-display text-xl font-medium text-ink">{c.title}</h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.body}</p>
             <a
-              href={wa(c.text)}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={email(c.subject)}
               className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brass-deep hover:underline"
             >
-              <WhatsAppIcon />
-              Message on WhatsApp
+              Email shiv@hacococapital.com
             </a>
           </div>
         ))}
@@ -74,11 +72,11 @@ export default function Contact() {
       <section className="mx-auto mt-16 max-w-2xl rounded-md border border-line bg-paper-2 px-6 py-12 text-center sm:px-12">
         <span className="eyebrow">One tap away</span>
         <h2 className="font-display mt-3 text-3xl font-medium text-ink">
-          Prefer to just message us?
+          Prefer to send a quick message?
         </h2>
         <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
-          Send us a note on WhatsApp and we&apos;ll pick it up as soon as we can. It&apos;s the
-          quickest way to reach a real person on the team.
+          WhatsApp is open for a quick note. For editorial, commercial or privacy
+          enquiries, email shiv@hacococapital.com so we can keep a record.
         </p>
         <a
           href={wa("Hi, I'd like to get in touch with The Hotel Life.")}

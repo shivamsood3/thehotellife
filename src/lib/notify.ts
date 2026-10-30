@@ -8,11 +8,10 @@ import type { SubscriberMeta } from "./subscribers";
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 const INBOX = process.env.NEWSLETTER_INBOX || "";
-// Resend's shared sender works out of the box; swap for your verified domain later.
-const FROM = process.env.NEWSLETTER_FROM || "The Hotel Life <onboarding@resend.dev>";
+const FROM = process.env.NEWSLETTER_FROM || "";
 
 export async function notifyInbox(email: string, meta: SubscriberMeta): Promise<void> {
-  if (!RESEND_API_KEY || !INBOX) return;
+  if (!RESEND_API_KEY || !INBOX || !FROM) return;
   await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {

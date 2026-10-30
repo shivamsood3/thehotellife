@@ -91,7 +91,7 @@ export default function Footer() {
                 <circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" />
               </svg>
             </a>
-            <p>© {new Date().getFullYear()} The Hotel Life. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} The Hotel Life, a Hacoco Capital publication. All rights reserved.</p>
           </div>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-paper">Privacy</Link>

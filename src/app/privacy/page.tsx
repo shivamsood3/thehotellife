@@ -19,7 +19,7 @@ export default function Privacy() {
 
       <div className="prose-editorial mt-8">
         <p>
-          The Hotel Life (&ldquo;we&rdquo;, &ldquo;us&rdquo;) respects your privacy. This
+          The Hotel Life, published by Hacoco Capital (&ldquo;we&rdquo;, &ldquo;us&rdquo;), respects your privacy. This
           policy explains what we collect when you visit thehotellife.com, why, and the
           choices you have. By using the site you agree to the practices described here.
         </p>
@@ -95,15 +95,13 @@ export default function Privacy() {
         <h2>Your rights</h2>
         <p>
           Every newsletter email includes an unsubscribe link. You can also ask us to remove
-          your address, access your information or
-          delete the personal data we hold about you by messaging us on WhatsApp at{" "}
+          your address, access your information or delete the personal data we hold
+          about you by emailing{" "}
           <a
-            href="https://wa.me/919810254606"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:shiv@hacococapital.com?subject=The%20Hotel%20Life%20privacy%20request"
             className="font-semibold text-brass-deep hover:underline"
           >
-            +91 98102 54606
+            shiv@hacococapital.com
           </a>
           . Depending on where you live, you may have additional rights under laws such as
           the GDPR or CCPA.
@@ -111,14 +109,12 @@ export default function Privacy() {
 
         <h2>Contact</h2>
         <p>
-          Questions about this policy? Message us on WhatsApp at{" "}
+          Questions about this policy? Email{" "}
           <a
-            href="https://wa.me/919810254606"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:shiv@hacococapital.com?subject=The%20Hotel%20Life%20privacy%20question"
             className="font-semibold text-brass-deep hover:underline"
           >
-            +91 98102 54606
+            shiv@hacococapital.com
           </a>{" "}
           and we&apos;ll be glad to help.
         </p>

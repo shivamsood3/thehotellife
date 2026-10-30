@@ -6,12 +6,14 @@ import { resendNewsletterConfigured, sendMonthlyBroadcast, syncNewsletterContact
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+const POSTAL_ADDRESS = "B-20 Defence Colony, New Delhi 110024, India";
+
 export async function GET(request: Request) {
   const secret = process.env.CRON_SECRET;
   if (!secret || request.headers.get("authorization") !== `Bearer ${secret}`) {
     return Response.json({ ok: false, error: "Unauthorized" }, { status: 401 });
   }
-  const issue = makeMonthlyNewsletter(new Date(), process.env.NEWSLETTER_POSTAL_ADDRESS || "Preview address");
+  const issue = makeMonthlyNewsletter(new Date(), POSTAL_ADDRESS);
   if (new URL(request.url).searchParams.get("preview") === "1") {
     return Response.json(issue
       ? { ok: true, period: issue.period, subject: issue.subject, stories: issue.count, sendingEnabled: process.env.NEWSLETTER_ENABLED === "true" }
@@ -20,15 +22,13 @@ export async function GET(request: Request) {
   if (process.env.NEWSLETTER_ENABLED !== "true") {
     return Response.json({ ok: false, error: "Monthly sending is not enabled" }, { status: 503 });
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN || !subscriberStoreConfigured() || !resendNewsletterConfigured() || !process.env.NEWSLETTER_FROM || !process.env.NEWSLETTER_POSTAL_ADDRESS) {
+  if (!process.env.BLOB_READ_WRITE_TOKEN || !subscriberStoreConfigured() || !resendNewsletterConfigured() || !process.env.NEWSLETTER_FROM) {
     return Response.json({ ok: false, error: "Newsletter configuration is incomplete" }, { status: 503 });
   }
 
-  // Regenerate with the configured address so the production footer is exact.
-  const sendIssue = makeMonthlyNewsletter(new Date(), process.env.NEWSLETTER_POSTAL_ADDRESS);
-  if (!sendIssue) return Response.json({ ok: true, skipped: "No new monthly issue to send" });
+  if (!issue) return Response.json({ ok: true, skipped: "No new monthly issue to send" });
 
-  const marker = `newsletter/sends/${sendIssue.period}.json`;
+  const marker = `newsletter/sends/${issue.period}.json`;
   try {
     await head(marker);
     return Response.json({ ok: true, skipped: "This issue has already been started" });
@@ -55,7 +55,7 @@ export async function GET(request: Request) {
   // Atomic marker prevents duplicate broadcasts if the cron route is invoked twice.
   // A failed/ambiguous send keeps the marker for manual reconciliation.
   try {
-    await put(marker, JSON.stringify({ period: sendIssue.period, status: "started", at: new Date().toISOString() }), {
+    await put(marker, JSON.stringify({ period: issue.period, status: "started", at: new Date().toISOString() }), {
       access: "private", addRandomSuffix: false, allowOverwrite: false, contentType: "application/json",
     });
   } catch (error) {
@@ -66,11 +66,11 @@ export async function GET(request: Request) {
   }
 
   try {
-    const broadcastId = await sendMonthlyBroadcast(sendIssue);
-    await put(marker, JSON.stringify({ period: sendIssue.period, status: "sent", broadcastId, at: new Date().toISOString() }), {
+    const broadcastId = await sendMonthlyBroadcast(issue);
+    await put(marker, JSON.stringify({ period: issue.period, status: "sent", broadcastId, at: new Date().toISOString() }), {
       access: "private", addRandomSuffix: false, allowOverwrite: true, contentType: "application/json",
     });
-    return Response.json({ ok: true, period: sendIssue.period, broadcastId, active });
+    return Response.json({ ok: true, period: issue.period, broadcastId, active });
   } catch (error) {
     console.error("[monthly-newsletter] Broadcast outcome requires review:", error);
     return Response.json({ ok: false, error: "Broadcast outcome requires manual review before retrying" }, { status: 503 });
