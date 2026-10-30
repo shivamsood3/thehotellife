@@ -34,8 +34,11 @@ const GOOGLE_ADS = [
  * exactly the markets this site advertises in. Pixels only: these belong in
  * img-src and must NOT widen script-src. Add a market here when ads start
  * running in a country that is not listed.
+ *
+ * Needed in BOTH img-src (…/1p-user-list, a pixel) and connect-src
+ * (…/1p-conversion, sent as a beacon). Still never script-src.
  */
-const GOOGLE_CCTLD_PIXELS = [
+const GOOGLE_CCTLD_ENDPOINTS = [
   "https://www.google.co.in",
   "https://www.google.co.uk",
   "https://www.google.ae",
@@ -69,10 +72,10 @@ const csp = [
   `default-src 'self'`,
   `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${GOOGLE_ADS}`,
   `style-src 'self' 'unsafe-inline'`,
-  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} ${GOOGLE_CCTLD_PIXELS} https://*.g.doubleclick.net`,
+  `img-src 'self' data: blob: https://images.unsplash.com ${EDITORIAL_IMAGE_HOSTS} ${GOOGLE_ADS} ${GOOGLE_CCTLD_ENDPOINTS} https://*.g.doubleclick.net`,
   `font-src 'self' data:`,
   `frame-src 'self' ${GOOGLE_ADS}`,
-  `connect-src 'self' ${GOOGLE_ADS}`,
+  `connect-src 'self' ${GOOGLE_ADS} ${GOOGLE_CCTLD_ENDPOINTS}`,
   `object-src 'none'`,
   `base-uri 'self'`,
   `form-action 'self'`,
