@@ -24,6 +24,12 @@ export function proxy(request: NextRequest) {
   const isProd = process.env.VERCEL_ENV === "production";
   const isLocal = host.startsWith("localhost") || host.startsWith("127.0.0.1");
 
+  // Vercel invokes cron routes on the deployment URL and does not follow
+  // redirects. The route itself requires CRON_SECRET before doing any work.
+  if (request.nextUrl.pathname.startsWith("/api/cron/")) {
+    return NextResponse.next();
+  }
+
   // Production traffic on the wrong host: send it to the canonical domain.
   if (isProd && !isLocal && host !== CANONICAL_HOST) {
     const url = request.nextUrl.clone();
