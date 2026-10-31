@@ -1,6 +1,7 @@
 import { assertRankedListDepth } from "./editorial/quality";
 import { octoberBestHotelsLists } from "./editorial/october-best-hotels";
 import { indiaOccasionLists } from "./editorial/india-occasion-lists";
+import { newBestHotelsLists } from "./editorial/new-best-hotels";
 
 export interface BestHotelEntry {
   rank: number;
@@ -38,6 +39,7 @@ export interface BestHotelsList {
 }
 
 export const bestHotelsLists: BestHotelsList[] = [
+  ...newBestHotelsLists,
   ...octoberBestHotelsLists,
   ...indiaOccasionLists,
   {

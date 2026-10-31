@@ -84,6 +84,12 @@ export default async function GuidePage({
         </div>
       </div>
 
+      {guide.imageCredit && guide.imageCreditUrl && (
+        <p className="mt-2 text-xs text-ink-muted">
+          Image: <a href={guide.imageCreditUrl} target="_blank" rel="noopener noreferrer" className="underline">{guide.imageCredit}</a>
+        </p>
+      )}
+
       {/* Byline */}
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line pb-6 text-sm text-ink-muted">
         <span>By {guide.author}</span>

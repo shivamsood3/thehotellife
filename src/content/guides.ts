@@ -11,6 +11,7 @@ import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberDecisionGuides } from "./editorial/september-decision-guides";
 import { octoberCityGuides } from "./editorial/october-city-guides";
+import { newCityGuides } from "./editorial/new-city-guides";
 import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
 
 export interface GuideSection {
@@ -31,6 +32,8 @@ export interface Guide extends EditorialReferences {
   heroImage: string;
   cardImage: string;
   imageAlt?: string;
+  imageCredit?: string;
+  imageCreditUrl?: string;
   hotelSlugs: string[]; // "where to stay" - links into hotels.ts
   sections: GuideSection[];
   featured?: boolean;
@@ -830,6 +833,10 @@ const existingGuides: Guide[] = guideCatalogue.map((guide, index) => {
 });
 
 export const guides: Guide[] = [
+  ...newCityGuides.map((guide) => ({
+    ...guide,
+    readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
+  })),
   ...octoberCityGuides.map((guide) => ({
     ...guide,
     readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
