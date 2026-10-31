@@ -161,6 +161,22 @@ singita-sabi-sand
 # Park Hyatt Kyoto — hyatt.com official hotel gallery
 # Capella Bangkok — capellahotels.com official hotel gallery
 
+# Official property photography selected 31 October 2026 for six new reviews.
+# Source credits appear at the foot of each article. Written reuse permissions
+# and exact photographer bylines were requested from each property and are pending.
+# Hôtel de Crillon — Rosewood Hotels official hotel page
+# https://picasso.rosewoodhotelgroup.com/transform/64cef34e-c14d-4be5-a32b-a8c538252670/RWCRI_Global_3-0_Brand-com_Assets_Hero_facade_2
+# The Newt in Somerset — official Hadspen House page
+# https://res.cloudinary.com/babylon/image/upload/w_1280,q_auto:eco/v1/thenewt/statamic/gzjnry2tko33umguppzb
+# Portrait Firenze — Lungarno Collection official hotel page
+# https://www.lungarnocollection.com/media/wjyphqou/pofi-exterior-00001.jpg
+# Atlantis The Royal — official hotel page / Kerzner DAM
+# https://dam.kerzner.com/i/kerzner/ATR%20Palmscape%20Penthouse-Bedroom-LR?w=2880&fmt=auto
+# Mandarin Oriental, Doha — official hotel gallery
+# https://media.ffycdn.net/eu/mandarin-oriental-hotel-group/bpu6WYij341P6iFuiruv.jpg
+# Jumeirah Muscat Bay — official hotel gallery
+# https://cdn.jumeirah.com/api/public/content/e0b2a98bf9d1457f8a18bc0aa6f700f1?v=396a41ee
+
 taj-mahal-palace-mumbai
   Facade of Taj Mahal Palace Hotel - Colaba District - Mumbai - Maharashtra - India
   by Adam Jones — CC BY-SA 2.0; hosted by Flickr
