@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Florence on the Arno, an editorial illustration</title>
+  <desc id="desc">Abstract terracotta Florence skyline, Ponte Vecchio arches and a pale flowing river.</desc>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e8dcc9"/><stop offset="1" stop-color="#f8e8ce"/></linearGradient><linearGradient id="river" x2="0" y2="1"><stop stop-color="#80989c"/><stop offset="1" stop-color="#375e68"/></linearGradient></defs>
+  <path fill="url(#sky)" d="M0 0h1200v800H0z"/>
+  <circle cx="915" cy="205" r="125" fill="#f5c999" opacity=".7"/>
+  <path d="M0 430h90V295h74v135h36V225h106v205h54V310h76v120h56V198h72v232h39V275h86v155h79V238h101v192h51V327h79v103h54V285h100v145h93v370H0Z" fill="#a76852" opacity=".9"/>
+  <path d="M0 460h1200v340H0z" fill="url(#river)"/>
+  <path d="M0 444h1200v54H0z" fill="#b86f50"/>
+  <path d="M95 498v139c68 0 72-139 140-139m86 0v139c68 0 72-139 140-139m86 0v139c68 0 72-139 140-139m86 0v139c68 0 72-139 140-139m86 0v139c68 0 72-139 140-139" fill="none" stroke="#efd8bc" stroke-width="35"/>
+  <path d="M0 656c157-46 274-42 412 0s278 40 410 2 249-46 378-2M0 708c147-39 280-34 408 0s277 38 414 0 254-37 378 2" fill="none" stroke="#b3c7bf" stroke-width="5" opacity=".55"/>
+  <path d="M61 63h1078v674H61z" fill="none" stroke="#fff4e4" stroke-width="2" opacity=".8"/>
+  <text x="92" y="119" fill="#6a3a32" font-family="Georgia,serif" font-size="28" letter-spacing="6">FLORENCE / THE ARNO</text>
+  <text x="92" y="710" fill="#fff8eb" font-family="Georgia,serif" font-size="48">Portrait Firenze</text>
+  <text x="1090" y="710" text-anchor="end" fill="#fff8eb" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">EDITORIAL ARTWORK</text>
+</svg>

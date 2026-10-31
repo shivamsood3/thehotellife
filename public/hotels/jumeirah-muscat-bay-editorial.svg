@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Muscat Bay, an editorial illustration</title>
+  <desc id="desc">Abstract Omani mountains sheltering a blue bay under a pale afternoon sky.</desc>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#dfdfd2"/><stop offset="1" stop-color="#f7dfbc"/></linearGradient><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#76aab0"/><stop offset="1" stop-color="#125a68"/></linearGradient></defs>
+  <path fill="url(#sky)" d="M0 0h1200v800H0z"/>
+  <circle cx="875" cy="210" r="121" fill="#f8e6c4"/>
+  <path d="M0 480 140 310l95 90 116-210 152 233 78-113 148 160 111-183 110 115 120-130 130 156v372H0z" fill="#a5785c"/>
+  <path d="M0 480 140 310l95 90 116-210 152 233 78-113 148 160 111-183 110 115 120-130 130 156" fill="none" stroke="#d0a482" stroke-width="9" opacity=".55"/>
+  <path d="M0 539c176-41 267 13 388 48s258-10 361-26 278-5 451 5v234H0z" fill="url(#sea)"/>
+  <path d="M0 600c155-30 229-8 350 27s257-1 368-23 300-26 482-7M0 673c155-30 229-8 350 27s257-1 368-23 300-26 482-7" fill="none" stroke="#afd6cf" stroke-width="5" opacity=".55"/>
+  <path d="M60 60h1080v680H60z" fill="none" stroke="#fff6e6" stroke-width="2"/>
+  <text x="91" y="112" fill="#765444" font-family="Georgia,serif" font-size="27" letter-spacing="6">BANDAR JISSAH / OMAN</text>
+  <text x="91" y="703" fill="#fff9eb" font-family="Georgia,serif" font-size="46">Jumeirah Muscat Bay</text>
+  <text x="1091" y="703" text-anchor="end" fill="#fff9eb" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">EDITORIAL ARTWORK</text>
+</svg>

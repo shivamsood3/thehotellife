@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Doha, an editorial illustration</title>
+  <desc id="desc">Abstract warm-stone arcades, geometric shadows and a courtyard inspired by central Doha.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#dec9a7"/><stop offset="1" stop-color="#bd916e"/></linearGradient><linearGradient id="floor" x2="0" y2="1"><stop stop-color="#c4a486"/><stop offset="1" stop-color="#9b735b"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h1200v800H0z"/>
+  <path d="M0 0h1200v520H0z" fill="#e5d7c1"/>
+  <path d="M0 520h1200v280H0z" fill="url(#floor)"/>
+  <path d="M68 88h1064v492H68z" fill="#bb9b78"/>
+  <path d="M135 525V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287" fill="#52454a" opacity=".9"/>
+  <path d="M135 525V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287m60 0V238q0-107 90-107t90 107v287" fill="none" stroke="#f0e3cf" stroke-width="24"/>
+  <path d="M0 800 440 525h325l435 275" fill="#a27a60" opacity=".7"/>
+  <path d="M0 800 540 525m660 275L660 525" fill="none" stroke="#e3c3a0" stroke-width="3" opacity=".7"/>
+  <path d="M60 60h1080v680H60z" fill="none" stroke="#fff5df" stroke-width="2"/>
+  <text x="91" y="112" fill="#574447" font-family="Georgia,serif" font-size="27" letter-spacing="6">MSHEIREB / DOHA</text>
+  <text x="91" y="703" fill="#fff8e9" font-family="Georgia,serif" font-size="46">Mandarin Oriental, Doha</text>
+  <text x="1091" y="703" text-anchor="end" fill="#fff8e9" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">EDITORIAL ARTWORK</text>
+</svg>
