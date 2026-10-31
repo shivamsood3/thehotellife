@@ -155,13 +155,6 @@ export default async function HotelPage({
         </div>
       </div>
 
-      {hotel.imageCredit && (
-        <p className="mt-2 text-right text-xs text-ink-muted">
-          Photograph: <a href={hotel.imageCredit.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{hotel.imageCredit.label}</a>
-          {" · "}<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">CC BY 3.0</a>
-        </p>
-      )}
-
       {/* ===== META BAR ===== */}
       <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 border-b border-line pb-6">
         <Stars rating={hotel.rating} />
@@ -248,6 +241,16 @@ export default async function HotelPage({
                   ))}
                 </ul>
               </aside>
+            )}
+            {hotel.imageCredit && (
+              <p className="not-prose mt-8 border-t border-line pt-4 text-xs leading-relaxed text-ink-muted">
+                {hotel.imageCredit.kind ?? "Photograph"}:{" "}
+                {hotel.imageCredit.url ? (
+                  <a href={hotel.imageCredit.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
+                    {hotel.imageCredit.label}
+                  </a>
+                ) : hotel.imageCredit.label}
+              </p>
             )}
           </div>
         </div>

@@ -79,6 +79,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
     heroImage: "/hotels/mandarin-oriental-doha-editorial.svg",
     cardImage: "/hotels/mandarin-oriental-doha-editorial.svg",
     imageAlt: "Abstract editorial artwork for Mandarin Oriental, Doha; not a property photograph",
+    imageCredit: { kind: "Illustration", label: "The Hotel Life original editorial artwork; this does not depict the property." },
     bookingUrl: "https://www.booking.com/hotel/qa/mandarin-oriental-doha.en-gb.html",
     directBookingUrl: "https://www.mandarinoriental.com/en/doha/msheireb",
     quickFacts: [
@@ -141,6 +142,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
     heroImage: "/hotels/jumeirah-muscat-bay-editorial.svg",
     cardImage: "/hotels/jumeirah-muscat-bay-editorial.svg",
     imageAlt: "Abstract editorial artwork of a bay and mountain forms for Jumeirah Muscat Bay; not a property photograph",
+    imageCredit: { kind: "Illustration", label: "The Hotel Life original editorial artwork; this does not depict the property." },
     bookingUrl: "https://www.booking.com/hotel/om/jumeirah-muscat-bay.en-gb.html",
     directBookingUrl: "https://www.jumeirah.com/en/stay/oman/jumeirah-muscat-bay",
     quickFacts: [

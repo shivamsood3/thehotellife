@@ -136,6 +136,7 @@ export const novemberEuropeReviews: Hotel[] = [
     heroImage: "/hotels/portrait-firenze-editorial.svg",
     cardImage: "/hotels/portrait-firenze-editorial.svg",
     imageAlt: "Editorial artwork for Portrait Firenze, with an abstract Arno river motif; not a property photograph",
+    imageCredit: { kind: "Illustration", label: "The Hotel Life original editorial artwork; this does not depict the property." },
     hotelsUrl: "https://www.hotels.com/ho198119/portrait-firenze-lungarno-collection-florence-italy/",
     directBookingUrl: "https://www.lungarnocollection.com/florence/portrait-firenze/",
     quickFacts: [

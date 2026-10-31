@@ -49,7 +49,7 @@ export interface Hotel extends EditorialReferences {
   cardImage: string;
   /** Human-readable description of the photograph, shared by page and card images. */
   imageAlt?: string;
-  imageCredit?: { label: string; url: string };
+  imageCredit?: { label: string; url?: string; kind?: "Photograph" | "Illustration" };
   heroObjectPosition?: string;
   quickFacts: { label: string; value: string }[];
   standout: string;
