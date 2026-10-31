@@ -5,6 +5,11 @@ import { hotels } from "@/content/hotels";
 
 type Pick = { label: string; title: string; description: string; href: string };
 
+function publishedInMonth(label: string, month: string) {
+  const match = /^(\w+)(?:\s+\d{1,2},?)?\s+(\d{4})$/.exec(label);
+  return Boolean(match && `${match[1]} ${match[2]}` === month);
+}
+
 function escapeHtml(value: string) {
   return value.replace(/[&<>"']/g, (character) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
@@ -18,10 +23,10 @@ export function makeMonthlyNewsletter(now: Date, postalAddress: string) {
   const month = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric", timeZone: "UTC" }).format(previous);
   const picks: Pick[] = [];
 
-  const hotel = hotels.find((item) => item.year === month);
+  const hotel = hotels.find((item) => publishedInMonth(item.year, month));
   if (hotel) picks.push({ label: "The Review", title: hotel.name, description: hotel.excerpt, href: `/hotels/${hotel.slug}` });
 
-  const guide = guides.find((item) => item.date === month);
+  const guide = guides.find((item) => publishedInMonth(item.date, month));
   if (guide) picks.push({ label: "The Guide", title: guide.title, description: guide.dek, href: `/guides/${guide.slug}` });
 
   const list = bestHotelsLists.find((item) => item.updatedISO.startsWith(period));
