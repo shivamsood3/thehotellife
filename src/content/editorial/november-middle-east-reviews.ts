@@ -134,7 +134,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
     region: "Middle East & Africa",
     category: "Coastal Resort",
     tagline: "A bay-and-mountain escape close enough to make Muscat part of the trip",
-    excerpt: "Zinnia Thapar reviews Jumeirah Muscat Bay: a sheltered Omani coastal setting, sea-facing room choices and the need to plan days beyond the resort.",
+    excerpt: "Zinnia Thapar on Jumeirah Muscat Bay's breathtaking views, peaceful beach and excellent service, with the room choices and practical trade-offs worth knowing.",
     author: "Zinnia Thapar",
     year: checked,
     factChecked: checked,
@@ -149,7 +149,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
       { label: "Room decision", value: "Compare resort, sea and balcony categories" },
       { label: "Facilities", value: "Beach, pools, spa and water sports" },
     ],
-    standout: "I would come for the relationship between the sheltered bay and the mountains; the hotel makes most sense when I give that setting time.",
+    standout: "The breathtaking views drew me in, but the peaceful beach and excellent service are what made me want to stay longer.",
     factCheckSources: [
       { label: "Jumeirah Muscat Bay: official hotel and location", url: "https://www.jumeirah.com/en/stay/oman/jumeirah-muscat-bay" },
       { label: "Jumeirah Muscat Bay: current accommodation", url: "https://www.jumeirah.com/en/stay/oman/jumeirah-muscat-bay/accommodation" },
@@ -157,7 +157,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
     ],
     sections: [
       { heading: "The bay makes the argument", body: [
-        "Jumeirah Muscat Bay is not a city hotel that happens to have a pool. It sits where a sheltered stretch of coast meets Oman's hard-edged mountains, and I would book it for that geography before any brand promise. The landscape gives the resort a feeling distinct from the flat horizon of many beach hotels: the water is only one half of the view. I would come with an unhurried morning or two in mind, because the setting needs time to do its work. A single night after a long transfer would reduce the bay to an arrival photograph.",
+        "Jumeirah Muscat Bay is not a city hotel that happens to have a pool. It sits where a sheltered stretch of coast meets Oman's hard-edged mountains, and the views took my breath away. The landscape gives the resort a feeling distinct from the flat horizon of many beach hotels: the water is only one half of the view. I remember the atmosphere as peaceful and the beach as genuinely beautiful, not merely a strip of sand added to a facilities list. I would come with an unhurried morning or two in mind, because the setting needs time to do its work. A single night after a long transfer would reduce the bay to an arrival photograph.",
         "The hotel can also be a way into Muscat, but not by walking out to a dense restaurant district. I would plan a city excursion rather than assume the resort's postal address makes the souq, museums and old harbour an easy spontaneous stroll. The separation can be welcome. It lets a day in the city end with the coast and makes the hotel feel like a destination. But if every appointment is in central Muscat, I would calculate the journeys before choosing this as my base."
       ] },
       { heading: "What sort of room belongs here?", body: [
@@ -165,7 +165,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
         "A villa with a plunge pool is a different holiday from a well-positioned standard room; it should be chosen for privacy and time spent there, not merely for an upgrade story. Families should ask about bed arrangements and the distance to the facilities they will use most. I would also confirm what the rate includes, particularly breakfast, club access and any activity credit. Oman resort taxes and service charges can make a headline rate a poor guide to the final bill."
       ] },
       { heading: "The luxury of an unscheduled hour", body: [
-        "I find the most persuasive coastal resorts are those that let me stop planning for a while. Jumeirah Muscat Bay has the raw materials: beach, pools, mountain backdrop and water sports that could fill a day without becoming obligatory. I would leave a morning blank and see which part of the shore I wanted to use. A resort that insists on turning every view into an activity can exhaust the place it is selling; this one is best approached with some deliberate empty space.",
+        "I find the most persuasive coastal resorts are those that let me stop planning for a while. At Jumeirah Muscat Bay, that was possible because the beautiful beach and quiet atmosphere never felt like an invitation to hurry. The service was excellent, too: an important distinction at a resort where the setting could easily have been expected to carry the entire stay. Pools, mountain backdrop and water sports can fill a day, but I would leave a morning blank and see which part of the shore I wanted to use. A resort that insists on turning every view into an activity can exhaust the place it is selling; this one is best approached with some deliberate empty space.",
         "That does not mean ignoring logistics. Water-sport availability depends on weather and operational schedules, so I would confirm anything essential before arrival. If I wanted a spa treatment or a particular private dining arrangement, I would book it. I would also ask whether any pool, beach section or club space has category-based access rules. The setting is the reliable promise; the timetable and inclusions need a current answer."
       ] },
       { heading: "Food has to sustain the stay", body: [
@@ -177,7 +177,7 @@ export const novemberMiddleEastReviews: Hotel[] = [
         "This is especially relevant on a short holiday. Two nights may be all I need if I have another Oman base; three or four allow a better rhythm of shore and city. I would not choose Jumeirah Muscat Bay for a transit night or for a schedule that leaves no time at the beach. Its setting is too strong to treat as decoration. I would also avoid promising a particular transfer time, which varies with traffic and where in Muscat I am going. The point is to choose the trip consciously."
       ] },
       { heading: "The verdict", body: [
-        "I would recommend Jumeirah Muscat Bay to a traveller who wants Oman's landscape to shape the hotel stay. The bay and mountains distinguish it from a more generic luxury coast; the beach, rooms and range of facilities give me ways to spend time in that setting. It works best with a few nights and at least one deliberate excursion into Muscat, not as an interchangeable stop between flights. I would return for that balance of removal and access.",
+        "I would recommend Jumeirah Muscat Bay to a traveller who wants Oman's landscape to shape the hotel stay. The bay and mountains distinguish it from a more generic luxury coast; the breathtaking view, scenic beach and excellent service made that distinction real for me. It works best with a few nights and at least one deliberate excursion into Muscat, not as an interchangeable stop between flights. I would return for the peaceful atmosphere as much as for the balance of removal and access.",
         "My caution is to plan the parts that cannot be improvised: room outlook, dining nights, total rate and transport. A resort can be relaxing only when those details are settled before arrival. Anyone who wants to step directly into the city's restaurants each evening should pick a different address. But for a stay with the sea at the centre and the capital within reach, this is a compelling choice."
       ] },
     ],
