@@ -172,8 +172,10 @@ singita-sabi-sand
 # https://www.lungarnocollection.com/media/wjyphqou/pofi-exterior-00001.jpg
 # Atlantis The Royal — official hotel page / Kerzner DAM
 # https://dam.kerzner.com/i/kerzner/ATR%20Palmscape%20Penthouse-Bedroom-LR?w=2880&fmt=auto
-# Mandarin Oriental, Doha — official hotel gallery
-# https://media.ffycdn.net/eu/mandarin-oriental-hotel-group/bpu6WYij341P6iFuiruv.jpg
+# Mandarin Oriental, Doha — hotel-supplied press pack, received 1 November 2026 from Marcela Soler
+# Source files: MODOH_EXTERIOR_FINAL_01ZB.jpg, MODOH_LOBBY_FINAL_02ZB.jpg,
+# MODOH_RM_101_BDRM_FINAL_01ZB.jpg, MODOH_FB_AMBAR_FINAL_01.jpg
+# Required published credit (exact wording): Credits: Mandarin Oriental Doha
 # Jumeirah Muscat Bay — official hotel gallery
 # https://cdn.jumeirah.com/api/public/content/e0b2a98bf9d1457f8a18bc0aa6f700f1?v=396a41ee
 

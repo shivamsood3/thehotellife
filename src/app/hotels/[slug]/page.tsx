@@ -206,7 +206,7 @@ export default async function HotelPage({
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md sm:aspect-[3/2]">
                       <Image
                         src={section.image.src}
-                        alt={section.image.caption ?? hotel.name}
+                        alt={section.image.alt ?? section.image.caption ?? hotel.name}
                         fill
                         className="object-cover"
                         sizes="(min-width: 1024px) 760px, 100vw"
@@ -244,7 +244,7 @@ export default async function HotelPage({
             )}
             {hotel.imageCredit && (
               <p className="not-prose mt-8 border-t border-line pt-4 text-xs leading-relaxed text-ink-muted">
-                {hotel.imageCredit.kind ?? "Photograph"}:{" "}
+                {hotel.imageCredit.prefix ?? hotel.imageCredit.kind ?? "Photograph"}:{" "}
                 {hotel.imageCredit.url ? (
                   <a href={hotel.imageCredit.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
                     {hotel.imageCredit.label}

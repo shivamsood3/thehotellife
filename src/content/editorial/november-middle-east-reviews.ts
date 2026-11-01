@@ -75,10 +75,10 @@ export const novemberMiddleEastReviews: Hotel[] = [
     author: "Zinnia Thapar",
     year: checked,
     factChecked: checked,
-    heroImage: "/hotels/mandarin-oriental-doha-official.jpg",
-    cardImage: "/hotels/mandarin-oriental-doha-official.jpg",
-    imageAlt: "Mandarin Oriental, Doha overlooking Barahat Msheireb at dusk",
-    imageCredit: { label: "Mandarin Oriental, Doha, official photography", url: "https://www.mandarinoriental.com/en/doha/msheireb/gallery" },
+    heroImage: "/hotels/mandarin-oriental-doha-press-exterior.jpg",
+    cardImage: "/hotels/mandarin-oriental-doha-press-exterior.jpg",
+    imageAlt: "Mandarin Oriental, Doha's illuminated exterior facing Barahat Msheireb at dusk",
+    imageCredit: { prefix: "Credits", label: "Mandarin Oriental Doha" },
     bookingUrl: "https://www.booking.com/hotel/qa/mandarin-oriental-doha.en-gb.html",
     directBookingUrl: "https://www.mandarinoriental.com/en/doha/msheireb",
     quickFacts: [
@@ -96,7 +96,11 @@ export const novemberMiddleEastReviews: Hotel[] = [
     ],
     relatedReading: [{ label: "Where to stay in Doha", url: "/guides/where-to-stay-in-doha" }],
     sections: [
-      { heading: "The reason I remember this hotel", body: [
+      { heading: "The reason I remember this hotel", image: {
+        src: "/hotels/mandarin-oriental-doha-press-lobby.jpg",
+        alt: "Geometric ceiling and reception area in the lobby of Mandarin Oriental, Doha",
+        caption: "The lobby at Mandarin Oriental, Doha",
+      }, body: [
         "Doha has newer-looking buildings and more dramatic waterfront silhouettes than Mandarin Oriental's address in Msheireb. Yet service was the highlight of my stay here. That is a more useful endorsement than a claim that the hotel has the city's most photogenic façade. I felt the difference in the ease of the experience: the sort of attention that makes a guest feel accompanied without being shepherded. A good location can be read from a map; good service is what allows me to use that location without the hotel becoming another task to manage.",
         "Msheireb is an unusually sensible base for a first Doha visit. The district is close to Souq Waqif and the four Msheireb Museums houses, while the metro's lines meet nearby. I could structure a day around the city rather than a taxi timetable and still come back to a substantial hotel with restaurants and a spa. This is an urban retreat, not a beach resort in disguise. I would book it when I want Doha at the door and hospitality that makes moving through it feel simple."
       ] },
@@ -104,7 +108,11 @@ export const novemberMiddleEastReviews: Hotel[] = [
         "Msheireb is carefully planned, and I would not pretend it has the same texture as the older lanes of the Souq. Its value is how those worlds meet. I can begin in contemporary public spaces, reach the historic houses, then let the Souq take over the evening. That sequence gives a short trip variety without asking me to change hotels. The location also suits work: I would rather have a useful central base and a free hour to wander than a distant resort suite whose glamour dissolves in traffic.",
         "The trade-off is that a city-facing hotel cannot offer the private sand of West Bay. If swimming with an open sea horizon is the purpose of the trip, I would choose a different address. The rooftop and spa can still give me breathing room, but they are pauses within Doha rather than an escape from it. That distinction is the reason the hotel works so well for me: the city remains available, and the hotel does not need to replace it."
       ] },
-      { heading: "Which room would I choose?", body: [
+      { heading: "Which room would I choose?", image: {
+        src: "/hotels/mandarin-oriental-doha-press-room.jpg",
+        alt: "A guest bedroom at Mandarin Oriental, Doha with patterned ceiling and seating area",
+        caption: "A bedroom at Mandarin Oriental, Doha; layouts vary by category",
+      }, body: [
         "The hotel offers rooms, suites, serviced apartments and larger accommodation, with different outlooks and degrees of space. I would not pay for a vague promise of a 'better view'. Some categories look towards Barahat Msheireb, others over the city; the published Premier Room adds a corner position, broad outlook and balcony. That is a specific category, not a feature to assume from every floor-to-ceiling window. I would ask which direction my exact room faces and whether I expect to spend enough time there to make the view worth the upgrade.",
         "For two nights with full days outside, a well-planned room may be the most sensible choice. For a longer stay or a trip with work hours in the hotel, extra living space changes the day. Mandarin Oriental publishes both suites and apartments, and I would clarify housekeeping, breakfast and other inclusions rather than assume every accommodation type carries the same arrangements. A room decision should follow the trip's rhythm, not merely the rate ladder."
       ] },
@@ -112,7 +120,11 @@ export const novemberMiddleEastReviews: Hotel[] = [
         "I have stayed in expensive hotels that offer a great deal of hardware and very little feeling of being understood. Mandarin Oriental, Doha made the opposite impression. Service is what I would return for, and it is what turns the property's practical merits into something memorable. I do not need to invent a theatrical anecdote to explain that judgment. The cumulative experience of being looked after can matter more than a single flourish, particularly in a city hotel that is asked to support both appointments and exploration.",
         "This is also why I would be reluctant to reduce the hotel to a checklist of facilities. There are many Doha addresses with a pool, a suite and a handsome lobby. What sets one apart in use is how readily its people help me spend the day I actually want. At Mandarin Oriental, that human quality was the strongest part of the stay. I would still put specific requests in writing when booking, especially for room view or an important reservation, rather than expect even excellent service to infer them from silence."
       ] },
-      { heading: "Nine ways to stay in for dinner", body: [
+      { heading: "Nine ways to stay in for dinner", image: {
+        src: "/hotels/mandarin-oriental-doha-press-ambar.jpg",
+        alt: "Ambar bar at Mandarin Oriental, Doha with warm lighting and a bartender behind the counter",
+        caption: "Ambar, one of the hotel's dining and drinking spaces",
+      }, body: [
         "The hotel currently lists nine dining outlets, from Liang's Cantonese menu and IZU's French Mediterranean cooking to Mosaic's broad, open-kitchen approach and Baraha Lounge overlooking the square. That range makes an unscheduled evening easy. I would choose one place that genuinely interests me and let the rest of the trip belong to Doha. A substantial hotel can accidentally become a sealed itinerary; Msheireb's strongest advantage is the ability to leave it and come back.",
         "I would check opening days and seasonal closures before promising myself a particular rooftop evening. The hotel's current dining page marks some venues seasonal, and restaurants can change hours quickly. I would reserve a sought-after table, confirm whether breakfast comes with the room and leave at least one meal for the Souq or another neighbourhood. The strength of the in-house choice is that it gives me freedom, not an obligation to stay inside."
       ] },

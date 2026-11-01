@@ -25,7 +25,7 @@ export interface Section {
   heading?: string;
   body: string[]; // paragraphs
   /** Optional inline photograph rendered after this section's body. */
-  image?: { src: string; caption?: string };
+  image?: { src: string; alt?: string; caption?: string };
 }
 
 export interface Hotel extends EditorialReferences {
@@ -49,7 +49,7 @@ export interface Hotel extends EditorialReferences {
   cardImage: string;
   /** Human-readable description of the photograph, shared by page and card images. */
   imageAlt?: string;
-  imageCredit?: { label: string; url?: string; kind?: "Photograph" | "Illustration" };
+  imageCredit?: { label: string; url?: string; kind?: "Photograph" | "Illustration"; prefix?: "Credits" };
   heroObjectPosition?: string;
   quickFacts: { label: string; value: string }[];
   standout: string;
