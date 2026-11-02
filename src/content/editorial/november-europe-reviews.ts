@@ -77,7 +77,7 @@ export const novemberEuropeReviews: Hotel[] = [
     heroImage: "/hotels/the-newt-somerset-official.jpg",
     cardImage: "/hotels/the-newt-somerset-official.jpg",
     imageAlt: "Hadspen House at The Newt in Somerset, lit at dusk on the estate",
-    imageCredit: { label: "The Newt in Somerset, official photography", url: "https://thenewtinsomerset.com/hotel/hadspen-house" },
+    imageCredit: { prefix: "Credits", label: "The Newt in Somerset" },
     directBookingUrl: "https://thenewtinsomerset.com/hotel/",
     quickFacts: [
       { label: "Setting", value: "Hadspen estate near Bruton, Somerset" },
@@ -97,7 +97,7 @@ export const novemberEuropeReviews: Hotel[] = [
         "I had been told to think of The Newt as a garden hotel. In winter, that description feels too small. The estate does not rely on a perfect summer border to make its case: the bare structure of the orchards, the shape of the paths and the decision to spend an afternoon between a walk and a fire give the stay its own season. Winter on the estate felt magical to me. What stayed with me was not one photogenic room but the sense that the hotel had thought about how a guest might spend a whole day here, even when the weather was less accommodating.",
         "That is the crucial difference between The Newt and a country house where the grounds are merely an attractive approach. Here the gardens, working estate, restaurants and spa form the journey. I would not book it as a single night between two other stops. Too much of the pleasure lies in letting one plan give way to another: a garden path after breakfast, an indoor pause when the light fades, dinner without feeling that I have exhausted the property. Give it two nights; three would allow the estate to become a rhythm rather than a tour."
       ] },
-      { heading: "Which Newt are you booking?", body: [
+      { heading: "Which Newt are you booking?", image: { src: "/hotels/the-newt-room-supplied.jpg", alt: "Hadspen House bedroom at The Newt in Somerset with a lit wood stove and a view into the bathroom", caption: "A Hadspen House bedroom. Credits: The Newt in Somerset" }, body: [
         "The hotel is not one uniform block of rooms. Hadspen House, a seventeenth-century house later remade in Georgian style, has a small collection of bedrooms near the principal gardens and spa. The Stable Yard keeps details of its previous life and offers different layouts. The Farmyard makes a separate case for a more informal, agricultural part of the estate. I would start with the question of where I want to wake up and what I want within an easy walk, rather than assume all accommodation categories are interchangeable because they share a booking page.",
         "Hadspen House would be my choice if I wanted the house, library and main garden setting to frame the stay. A Stable Yard room might suit someone drawn to more idiosyncratic design or a family needing a different plan. I would ask for the exact room layout and how far it sits from dinner and the spa, especially in winter rain. The estate offers buggies on designated routes, but I would not build a long weekend around the assumption that every transition will be effortless. The distances are part of the pleasure until they become a surprise."
       ] },
