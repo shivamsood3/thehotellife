@@ -27,7 +27,7 @@ export async function generateMetadata({
     title: article.title,
     alternates: { canonical: `/the-edit/${article.slug}` },
     description: article.excerpt,
-    keywords: [article.kicker, "luxury hotel editorial", "hotel advice", "The Hotel Life"],
+    keywords: article.keywords ?? [article.kicker, "luxury hotel editorial", "hotel advice", "The Hotel Life"],
     openGraph: {
       title: article.title,
       description: article.excerpt,

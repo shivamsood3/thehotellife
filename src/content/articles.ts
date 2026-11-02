@@ -10,6 +10,7 @@ import { editorialAuthorForIndex } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberReportedFeatures } from "./editorial/september-reported-features";
+import { novemberEdit } from "./editorial/november-edit";
 
 export interface ArticleSection {
   heading?: string;
@@ -22,6 +23,7 @@ export interface Article extends EditorialReferences {
   kicker: string; // small label above the headline
   dek: string;
   excerpt: string;
+  keywords?: string[];
   author: string;
   readTime: number;
   date: string;
@@ -388,6 +390,7 @@ const existingArticles: Article[] = articleCatalogue.map((article, index) => {
 });
 
 export const articles: Article[] = [
+  ...novemberEdit,
   ...septemberReportedFeatures.map((article) => ({
     ...article,
     readTime: Math.ceil(article.sections.flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
