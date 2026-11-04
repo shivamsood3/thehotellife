@@ -166,8 +166,8 @@ singita-sabi-sand
 # and exact photographer bylines were requested from each property and are pending.
 # Hôtel de Crillon — Rosewood Hotels official hotel page
 # https://picasso.rosewoodhotelgroup.com/transform/64cef34e-c14d-4be5-a32b-a8c538252670/RWCRI_Global_3-0_Brand-com_Assets_Hero_facade_2
-# The Newt in Somerset — official Hadspen House page
-# https://res.cloudinary.com/babylon/image/upload/w_1280,q_auto:eco/v1/thenewt/statamic/gzjnry2tko33umguppzb
+# The Newt in Somerset — Hadspen House landscape cover, supplied through Bella Taylor's shared library
+# Google Drive source: https://drive.google.com/file/d/1snqh490I_GK1KXVOYsXp8lqLqg71kSpR/view
 # The Newt in Somerset — Hadspen House Room With Fire, supplied by Bella Taylor on 2 November 2026
 # Google Drive library: https://drive.google.com/file/d/1qH_tyDhSPUzX-BSAttoOX0ppjlnP9ahQ/view
 # The Newt in Somerset — Hadspen House Christmas, Hadspen House with Kitchen Garden,
