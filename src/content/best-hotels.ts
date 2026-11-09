@@ -13,6 +13,7 @@ export interface BestHotelEntry {
   description: string;
   caveat: string;
   officialUrl: string;
+  affiliateBooking?: { url: string; network: string };
   eventUrl?: string;
   reviewSlug?: string;
 }

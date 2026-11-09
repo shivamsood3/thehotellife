@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { bestHotelsLists, getBestHotelsList } from "@/content/best-hotels";
 import { getHotel } from "@/content/hotels";
 import { authorPath } from "@/content/authors";
-import { hotelsComAffiliateLink, primaryBookingLink } from "@/lib/affiliate";
+import { hotelsComAffiliateLink, primaryBookingLink, type BookingLink } from "@/lib/affiliate";
 import JsonLd, {
   bestHotelsListSchema,
   breadcrumbSchema,
@@ -174,7 +174,12 @@ export default async function BestHotelsPage({
         <section className="mt-16 border-t border-line">
           {list.hotels.map((hotel) => {
             const review = hotel.reviewSlug ? getHotel(hotel.reviewSlug) : undefined;
-            const booking = review ? primaryBookingLink(review) : hotelsComAffiliateLink({
+            const booking: BookingLink = hotel.affiliateBooking ? {
+              url: hotel.affiliateBooking.url,
+              network: hotel.affiliateBooking.network,
+              tracked: true,
+              destinationType: "property",
+            } : review ? primaryBookingLink(review) : hotelsComAffiliateLink({
               slug: hotel.reviewSlug ?? `${list.slug}-${hotel.rank}`,
               name: hotel.name,
               city: hotel.city ?? list.destination,
@@ -220,14 +225,14 @@ export default async function BestHotelsPage({
                         Read the THL review
                       </Link>
                     )}
-                    <a
+                    {!hotel.affiliateBooking && <a
                       href={hotel.officialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-full border border-ink px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-ink hover:bg-ink hover:text-paper"
                     >
                       Visit official site ↗
-                    </a>
+                    </a>}
                     {hotel.eventUrl && (
                       <a
                         href={hotel.eventUrl}
@@ -244,7 +249,7 @@ export default async function BestHotelsPage({
                       rel="sponsored nofollow noopener noreferrer"
                       className="rounded-full border border-brass-deep px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-brass-deep hover:bg-brass-deep hover:text-white"
                     >
-                      {booking.destinationType === "search" ? "Search partner availability" : booking.destinationType === "official" ? "Check direct availability" : "Compare rates"} ↗
+                      {hotel.affiliateBooking ? `Book with ${hotel.affiliateBooking.network}` : booking.destinationType === "search" ? "Search partner availability" : booking.destinationType === "official" ? "Check direct availability" : "Compare rates"} ↗
                     </a>
                   </div>
                 </div>
@@ -290,8 +295,9 @@ export default async function BestHotelsPage({
           <p className="eyebrow text-paper/50">Editorial note</p>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-paper/70">
             This list is independently selected and contains no paid placements.
-            Official-site buttons are untracked. Hotels.com comparison buttons are
-            affiliate links, and THL may earn a commission at no cost to you. Paid
+            Some booking buttons use affiliate links to Hotels.com, Booking.com or IHG;
+            THL may earn a commission at no cost to you. Other official-site buttons
+            are untracked. Paid
             relationships never determine inclusion or rank. Hotels evolve, so confirm
             current facilities and policies directly before booking. Read <Link href="/how-we-review" className="underline underline-offset-2 hover:text-white">how we review and select hotels</Link>.
           </p>
