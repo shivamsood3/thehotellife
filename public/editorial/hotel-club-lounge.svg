@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Quiet hotel lounge overlooking a city at dusk">
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#211c27"/><stop offset="1" stop-color="#50333e"/></linearGradient>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#17243d"/><stop offset=".62" stop-color="#6d5062"/><stop offset="1" stop-color="#d79578"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#3c2932"/><stop offset="1" stop-color="#1d1a24"/></linearGradient>
+    <linearGradient id="chair" x2="0" y2="1"><stop stop-color="#8a5960"/><stop offset="1" stop-color="#4c303b"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#f5d1a3" stop-opacity=".5"/><stop offset="1" stop-color="#f5d1a3" stop-opacity="0"/></radialGradient>
+    <clipPath id="window"><rect x="470" y="135" width="920" height="555" rx="8"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#wall)"/>
+  <rect x="470" y="135" width="920" height="555" rx="8" fill="url(#sky)" stroke="#c69b75" stroke-width="18"/>
+  <g clip-path="url(#window)">
+    <path d="M470 575 Q700 550 900 568 T1390 545 V690 H470Z" fill="#362e3b"/>
+    <path d="M480 610h70v-80h33v80h33v-140h39v140h54v-105h40v105h40v-175h52v175h42v-110h34v110h58v-150h48v150h40v-65h36v65h53v-115h55v115h49v-175h52v175h60v80H470Z" fill="#232b37"/>
+    <path d="M482 618h110v-55h32v55h83v-115h40v115h79v-70h28v70h85v-135h44v135h68v-83h34v83h78v-98h42v98h92v-63h36v63h85v72H482Z" fill="#18222e"/>
+    <g fill="#e7b88d" opacity=".74"><rect x="548" y="550" width="7" height="12"/><rect x="635" y="552" width="6" height="11"/><rect x="739" y="510" width="7" height="13"/><rect x="825" y="555" width="7" height="12"/><rect x="949" y="494" width="7" height="12"/><rect x="1060" y="547" width="7" height="12"/><rect x="1193" y="529" width="7" height="11"/><rect x="1330" y="568" width="7" height="11"/></g>
+  </g>
+  <path d="M780 135v555M1080 135v555" stroke="#d1aa84" stroke-width="16"/>
+  <path d="M470 690h920" stroke="#d1aa84" stroke-width="22"/>
+  <path d="M0 690h1600v310H0Z" fill="url(#floor)"/>
+  <path d="M0 700h1600" stroke="#bb8f77" stroke-width="7" opacity=".55"/>
+  <ellipse cx="815" cy="935" rx="680" ry="67" fill="#14141b" opacity=".32"/>
+  <ellipse cx="815" cy="900" rx="570" ry="145" fill="#75565a" opacity=".32"/>
+  <path d="M0 300h330v410H0Z" fill="#30222c"/>
+  <path d="M315 0v690" stroke="#b88d78" stroke-width="10" opacity=".65"/>
+  <path d="M113 0v425" stroke="#d8a879" stroke-width="4"/>
+  <circle cx="113" cy="450" r="110" fill="url(#light)"/>
+  <path d="M79 425h68l-12 68H91Z" fill="#ebc59e"/>
+  <ellipse cx="113" cy="432" rx="35" ry="9" fill="#ffe0b6"/>
+  <path d="M1240 0v327" stroke="#d8a879" stroke-width="4"/>
+  <circle cx="1240" cy="363" r="122" fill="url(#light)"/>
+  <path d="M1200 335h80l-16 77h-48Z" fill="#ebc59e"/>
+  <ellipse cx="1240" cy="343" rx="40" ry="9" fill="#ffe0b6"/>
+  <path d="M304 676q0-104 90-104h194q92 0 92 104v180H304Z" fill="url(#chair)" stroke="#b7867c" stroke-width="9"/>
+  <path d="M320 728q-68 0-75 66v86q0 37 43 37h388q43 0 43-37v-86q-7-66-75-66h-53q-72 0-111 33-39-33-111-33Z" fill="#734a54" stroke="#aa7777" stroke-width="8"/>
+  <path d="M334 908v66m337-66v66" stroke="#c59a78" stroke-width="17"/>
+  <path d="M1005 668q0-95 82-95h171q82 0 82 95v191h-335Z" fill="url(#chair)" stroke="#b7867c" stroke-width="9"/>
+  <path d="M1020 727q-63 0-70 63v92q0 35 40 35h346q40 0 40-35v-92q-7-63-70-63h-45q-61 0-96 33-36-33-95-33Z" fill="#734a54" stroke="#aa7777" stroke-width="8"/>
+  <path d="M1036 908v66m278-66v66" stroke="#c59a78" stroke-width="17"/>
+  <ellipse cx="856" cy="806" rx="130" ry="22" fill="#c79871"/>
+  <path d="M741 806h230l-36 28H777Z" fill="#9b694f"/>
+  <path d="M831 827v134m50-134v134" stroke="#b78461" stroke-width="13"/>
+  <ellipse cx="856" cy="972" rx="74" ry="11" fill="#9c6d52"/>
+  <path d="M796 779q-15-22 0-42h29q15 20 0 42Z" fill="#e6c08f"/>
+  <path d="M800 739h22" stroke="#fff2d1" stroke-width="5"/>
+  <path d="M900 770h20l9-37h-38Z" fill="#c47b67"/>
+  <path d="M905 750q-6-12 1-23m7 23q-6-12 1-23" stroke="#ebc4a0" stroke-width="3" opacity=".75" fill="none"/>
+</svg>

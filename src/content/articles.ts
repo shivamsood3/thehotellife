@@ -11,6 +11,7 @@ import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberReportedFeatures } from "./editorial/september-reported-features";
 import { novemberEdit } from "./editorial/november-edit";
+import { clubLoungeEdit } from "./editorial/club-lounge-edit";
 
 export interface ArticleSection {
   heading?: string;
@@ -390,6 +391,7 @@ const existingArticles: Article[] = articleCatalogue.map((article, index) => {
 });
 
 export const articles: Article[] = [
+  ...clubLoungeEdit,
   ...novemberEdit,
   ...septemberReportedFeatures.map((article) => ({
     ...article,
