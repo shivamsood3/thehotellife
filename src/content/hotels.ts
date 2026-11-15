@@ -17,6 +17,7 @@ import { septemberCommissionedHotels } from "./editorial/september-commissioned-
 import { octoberCommissionedHotels } from "./editorial/october-commissioned-hotels";
 import { novemberEuropeReviews } from "./editorial/november-europe-reviews";
 import { novemberMiddleEastReviews } from "./editorial/november-middle-east-reviews";
+import { novemberEuropeAmericasReviews } from "./editorial/november-europe-americas-reviews";
 import { reviewVoice } from "./editorial/review-voice";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
@@ -2315,7 +2316,7 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
   };
 });
 
-export const hotels: Hotel[] = [...novemberEuropeReviews, ...novemberMiddleEastReviews, ...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
+export const hotels: Hotel[] = [...novemberEuropeAmericasReviews, ...novemberEuropeReviews, ...novemberMiddleEastReviews, ...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
   const voice = reviewVoice[hotel.slug];
   if (!voice) return hotel;
   if (voice.length !== hotel.sections.length) {

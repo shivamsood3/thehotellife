@@ -112,8 +112,9 @@ export default async function HotelPage({
   );
   const booking = primaryBookingLink(hotel);
   const bestFor = hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "best for")?.value;
+  const locationDetail = hotel.quickFacts.find((fact) => ["address", "location", "setting"].includes(fact.label.toLowerCase()))?.value;
   const hotelFaq = [
-    { question: `Where is ${hotel.name}?`, answer: `${hotel.name} is in ${hotel.city}, ${hotel.country}. ${hotel.quickFacts.find((fact) => fact.label.toLowerCase() === "location")?.value ?? "See the review for neighbourhood and arrival advice."}` },
+    { question: `Where is ${hotel.name}?`, answer: `${hotel.name} is in ${hotel.city}, ${hotel.country}.${locationDetail ? ` ${locationDetail}.` : ""}` },
     ...(hotel.rating !== undefined ? [{ question: `What is The Hotel Life's rating for ${hotel.name}?`, answer: `Our editors rate ${hotel.name} ${hotel.rating.toFixed(1)} out of 5 after assessing its sense of place, rooms, service, food, design and value.` }] : []),
     { question: `Who is ${hotel.name} best for?`, answer: bestFor ? `${hotel.name} is particularly well suited to ${bestFor.toLowerCase()}.` : `${hotel.name} suits travellers looking for a distinctive luxury stay in ${hotel.city}.` },
     { question: `How much does ${hotel.name} cost?`, answer: hotel.priceFrom !== undefined ? `Our ${hotel.year} review recorded an indicative starting rate of USD ${hotel.priceFrom.toLocaleString()} per night. Rates vary by date, room, taxes and availability; confirm a live quote before booking.` : "Check availability for your dates and room category. Request a total including taxes, meals and transfers before comparing offers." },
