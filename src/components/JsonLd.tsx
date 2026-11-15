@@ -75,7 +75,7 @@ export const websiteSchema = {
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   name: "The Hotel Life",
-  alternateName: ["THL", "thehotellife.com"],
+  alternateName: "THL",
   url: SITE_URL,
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "en-GB",
