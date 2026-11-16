@@ -3,39 +3,33 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/how-we-review" },
-  title: "How We Review · The Hotel Life",
+  title: "How We Review",
   description:
-    "How The Hotel Life turns personal hotel experiences into accountable, independently scored reviews, with named writers and clearly dated fact checks.",
+    "How The Hotel Life turns personal hotel experiences into accountable reviews, with named writers, practical fact checks and clearly explained ratings.",
 };
 
 const criteria = [
   {
-    weight: "25%",
     title: "The Room",
     body: "Space, light, bed and bathroom, soundproofing, the small details of comfort, and, crucially, the gap between the entry-level room and the suite the press shots always show.",
   },
   {
-    weight: "20%",
     title: "Sense of Place",
     body: "Does the hotel feel like it could only exist here? We reward architecture, design and food that reflect their setting, and mark down anonymous international gloss.",
   },
   {
-    weight: "20%",
     title: "Service",
     body: "Warmth over stiffness, anticipation over box-ticking. We test it in small ways, with a special request, an odd hour or a problem, and see how the hotel responds.",
   },
   {
-    weight: "15%",
     title: "Food & Drink",
     body: "Breakfast is the meal that reveals a hotel. We also assess the flagship restaurant and the bar, the room where a hotel shows its personality.",
   },
   {
-    weight: "10%",
     title: "The Extras",
     body: "Spa, pool, grounds, and the signature experiences: the things that turn a good night's sleep into a reason to travel.",
   },
   {
-    weight: "10%",
     title: "Value",
     body: "Not whether it's cheap, because almost nothing we cover is, but whether the price is honest for what you actually get.",
   },
@@ -50,8 +44,8 @@ export default function HowWeReview() {
           How We Review
         </h1>
         <p className="mt-4 text-lg leading-relaxed text-ink-soft">
-          Every hotel on The Hotel Life is scored against the same six criteria, whether
-          it&apos;s a $200 boutique or a $3,000 palace suite. Here&apos;s exactly how it works.
+          We consider the same six questions in every hotel review. Some reviews carry
+          an overall rating; the written verdict remains the clearest account of why.
         </p>
       </header>
 
@@ -89,9 +83,11 @@ export default function HowWeReview() {
           <p>
             When a stay is hosted or complimentary, that support is disclosed on the review.
             Affiliate booking links are commercial links, not editorial evidence, and never
-            alter a score. Prices are clearly labelled as indications because rates move. The
-            numeric rating preserves the decimal result of the six weighted criteria below
-            rather than rounding a good hotel up to a more flattering row of full stars.
+            alter a verdict. We do not publish undated sample rates as current prices.
+            Where an overall rating appears, it is an editorial judgement out of five,
+            informed by the six questions below and shown to one decimal place. It is
+            not a mathematical average of six published sub-scores. A review without a
+            rating has no numerical score; its recommendation is in the prose.
           </p>
         </div>
       </div>
@@ -101,7 +97,7 @@ export default function HowWeReview() {
         <div className="border-b border-line pb-4">
           <span className="eyebrow">The Score</span>
           <h2 className="font-display mt-1 text-3xl font-medium text-ink">
-            Six criteria, out of five stars
+            Six questions behind each verdict
           </h2>
         </div>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -109,7 +105,6 @@ export default function HowWeReview() {
             <div key={c.title} className="rounded-md border border-line bg-white p-6">
               <div className="flex items-baseline justify-between">
                 <h3 className="font-display text-xl font-medium text-ink">{c.title}</h3>
-                <span className="text-sm font-semibold text-brass-deep">{c.weight}</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.body}</p>
             </div>

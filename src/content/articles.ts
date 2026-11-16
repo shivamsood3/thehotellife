@@ -6,7 +6,6 @@
 import { expansionArticles } from "./editorial/expansion-articles";
 import { septemberArticles } from "./editorial/september-features";
 import { legacyArticleAdditions } from "./editorial/legacy-enrichment";
-import { editorialAuthorForIndex } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberReportedFeatures } from "./editorial/september-reported-features";
@@ -333,7 +332,7 @@ const articleCatalogue: Article[] = [
     date: "August 2026",
     heroImage: U("1553062407-98eeb64c6a62", 2000),
     cardImage: U("1553062407-98eeb64c6a62", 1000),
-    hotelSlugs: ["singita-sabi-sand", "the-oberoi-udaivilas", "claridges-london"],
+    hotelSlugs: ["singita-sabi-sand", "oberoi-udaivilas-udaipur", "claridges-london"],
     sections: [
       {
         body: [
@@ -380,12 +379,12 @@ const articleCatalogue: Article[] = [
   },
 ];
 
-const existingArticles: Article[] = articleCatalogue.map((article, index) => {
+const existingArticles: Article[] = articleCatalogue.map((article) => {
   const sections = [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])];
   const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
   return {
     ...article,
-    author: editorialAuthorForIndex(index),
+    author: article.author,
     readTime: Math.max(3, Math.ceil(words / 200)),
     sections,
   };

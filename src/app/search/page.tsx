@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Search from "@/components/Search";
 
 export const metadata: Metadata = {
-  title: "Search · The Hotel Life",
+  title: "Search",
   description: "Search The Hotel Life's reviews and guides by hotel, city, country or region.",
   robots: { index: false },
 };

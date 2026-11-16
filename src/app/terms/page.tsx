@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/terms" },
-  title: "Terms of Use · The Hotel Life",
+  title: "Terms of Use",
   description: "The terms that govern your use of The Hotel Life.",
 };
 

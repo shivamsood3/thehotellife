@@ -69,7 +69,7 @@ export const legacyHotelAdditions: Record<string, Section[]> = {
   "park-hyatt-tokyo": [
     { heading: "Before you book", body: [
       "The Park Hyatt's power lies in proportion, views and cultural memory rather than an endless sense of newness. The Shinjuku location sits above the city's western business district, requiring a walk or car to many evening addresses. The vertical plan also makes lifts part of every journey.",
-      "Room category and orientation determine how much Tokyo enters the experience. On clear days, distant mountains matter more than decorative updates. Ask about current renovation status and facility access for the exact dates, because a legend should still be judged as an operating hotel."
+      "Room category and orientation determine how much Tokyo enters the experience. On clear days, distant mountains matter more than a more impressive category name. Confirm the exact outlook and current access to the facilities you intend to use, because a legend should still be judged as an operating hotel."
     ]},
     { heading: "Who it is for", body: [
       "Film romantics, architecture enthusiasts and travellers who want a view-driven refuge will still understand it immediately. Guests prioritising immediate street life, tiny bars and train convenience should choose a lower, more central base. The hotel's spell is real, but it works through altitude and remove."

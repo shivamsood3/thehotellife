@@ -6,13 +6,13 @@ import type { Region } from "./hotels";
 import { expansionGuides } from "./editorial/expansion-guides";
 import { septemberGuides } from "./editorial/september-features";
 import { legacyGuideAdditions } from "./editorial/legacy-enrichment";
-import { editorialAuthorForIndex } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberDecisionGuides } from "./editorial/september-decision-guides";
 import { octoberCityGuides } from "./editorial/october-city-guides";
 import { newCityGuides } from "./editorial/new-city-guides";
 import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
+import { priorityGuideRewrites } from "./editorial/priority-guide-rewrites";
 
 export interface GuideSection {
   heading?: string;
@@ -819,14 +819,14 @@ const guideCatalogue: Guide[] = [
   },
 ];
 
-const existingGuides: Guide[] = guideCatalogue.map((guide, index) => {
-  const revision = septemberGuideRewrites[guide.slug];
+const existingGuides: Guide[] = guideCatalogue.map((guide) => {
+  const revision = priorityGuideRewrites[guide.slug] ?? septemberGuideRewrites[guide.slug];
   const sections = revision?.sections ?? [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])];
   const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
   return {
     ...guide,
     ...revision,
-    author: editorialAuthorForIndex(index),
+    author: guide.author,
     readTime: Math.max(3, Math.ceil(words / 200)),
     sections,
   };

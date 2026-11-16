@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/advertise" },
-  title: "Advertise · The Hotel Life",
+  title: "Advertise",
   description:
     "Reach an affluent, high-intent travel audience. Display, sponsorship and newsletter formats on The Hotel Life.",
 };

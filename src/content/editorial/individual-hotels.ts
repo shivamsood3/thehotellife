@@ -11,8 +11,6 @@ export const individualHotels: Hotel[] = [
     tagline: "Philippe Starck theatre, rooftop Los Angeles and a lobby that turns arrival into a scene",
     excerpt: "SLS Beverly Hills is unapologetically dramatic: a Philippe Starck-designed hotel where the lobby performs, the rooms play tricks with reflection and the rooftop keeps Los Angeles close.",
     rating: 4.6,
-    priceFrom: 435,
-    priceNote: "Indicative only; taxes and mandatory charges can materially increase the total",
     year: "September 2026",
     author: "Shivam Sood",
     factChecked: "September 4, 2026",

@@ -10,7 +10,7 @@ import { individualHotels } from "./editorial/individual-hotels";
 import { individualReviewAdditions } from "./editorial/individual-review-additions";
 import { individualReviewFinishes } from "./editorial/individual-review-finishes";
 import { commissioningNotes } from "./editorial/commissioning-notes";
-import { editorialAuthorForIndex, type HotelEditorialAuthor } from "./authors";
+import type { HotelEditorialAuthor } from "./authors";
 import { assertSectionDepth } from "./editorial/quality";
 import type { EditorialReferences } from "./editorial/references";
 import { septemberCommissionedHotels } from "./editorial/september-commissioned-hotels";
@@ -19,6 +19,7 @@ import { novemberEuropeReviews } from "./editorial/november-europe-reviews";
 import { novemberMiddleEastReviews } from "./editorial/november-middle-east-reviews";
 import { novemberEuropeAmericasReviews } from "./editorial/november-europe-americas-reviews";
 import { reviewVoice } from "./editorial/review-voice";
+import { priorityReviewRewrites } from "./editorial/priority-review-rewrites";
 
 export type Region = "Europe" | "Asia" | "The Americas" | "Middle East & Africa";
 
@@ -91,13 +92,17 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Thirty-three floors above Otemachi, Aman took the top of a corporate tower and made it the calmest room in Tokyo. It works because of everything it leaves out.",
     rating: 4.9,
-    priceFrom: 1150,
     year: "August 2026",
     directBookingUrl: "https://www.aman.com/hotels/aman-tokyo",
     heroImage: "/hotels/aman-tokyo-official.jpg",
     cardImage: "/hotels/aman-tokyo-official.jpg",
+    imageAlt: "Aman Tokyo guest room with pale wood interiors and a wide view over the city",
+    factCheckSources: [
+      { label: "Aman Tokyo: wellness facilities and 30-metre pool", url: "https://www.aman.com/hotels/aman-tokyo/wellness" },
+      { label: "Aman Tokyo: official hotel overview", url: "https://www.aman.com/hotels/aman-tokyo" },
+    ],
     standout:
-      "The 30-metre onsen bath, walled in black granite, with the Imperial Palace gardens laid out below it at dawn.",
+      "The 30-metre indoor pool above Tokyo, with the onsen-style baths close by: two very different reasons to slow down on the 33rd floor.",
     quickFacts: [
       { label: "Location", value: "Otemachi, Tokyo" },
       { label: "Rooms", value: "84 rooms & suites" },
@@ -138,7 +143,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "After a four-year restoration, the address on Place Vendôme is once again the most romantic (and most photographed) hotel in France.",
     rating: 4.8,
-    priceFrom: 1400,
     year: "July 2026",
     directBookingUrl: "https://www.ritzparis.com/",
     heroImage: "/hotels/the-ritz-paris.jpg",
@@ -187,7 +191,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Three towers, a ship balanced on top, and the most famous rooftop pool on earth. It's a spectacle, and it earns the hype.",
     rating: 4.5,
-    priceFrom: 520,
     year: "June 2026",
     heroImage: "/hotels/marina-bay-sands.jpg",
     cardImage: "/hotels/marina-bay-sands.jpg",
@@ -233,7 +236,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "It calls itself seven stars. It isn't (there's no such thing), but the sheer gold-leafed audacity of the place is a destination in its own right.",
     rating: 4.4,
-    priceFrom: 1600,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/ae/burj-al-arab.html",
     hotelsUrl: "https://www.hotels.com/ho172396/",
@@ -272,7 +274,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Behind the ramparts of the medina sits a 200-year-old garden and a hotel that has hosted everyone from Winston Churchill to the entire fashion set.",
     rating: 4.7,
-    priceFrom: 750,
     year: "April 2026",
     directBookingUrl: "https://www.mamounia.com/",
     heroImage: "/hotels/la-mamounia.jpg",
@@ -312,7 +313,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A French Renaissance landmark at Fifth and 59th: equal parts fairy tale, film set, and living piece of New York mythology.",
     rating: 4.3,
-    priceFrom: 895,
     year: "March 2026",
     bookingUrl: "https://www.booking.com/hotel/us/the-plaza.html",
     hotelsUrl: "https://www.hotels.com/ho105314/",
@@ -354,7 +354,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A thousand feet above the Tyrrhenian Sea, a former bishop's palace holds the most photographed infinity pool in Italy, and a view that ruins you for anywhere else.",
     rating: 4.9,
-    priceFrom: 1300,
     year: "August 2026",
     heroImage: "/hotels/belmond-hotel-caruso-official.jpg",
     cardImage: "/hotels/belmond-hotel-caruso-official.jpg",
@@ -393,8 +392,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Conservation-first safari at its most refined: glass-walled suites, a private reserve full of leopard, and service that feels almost telepathic.",
     rating: 4.9,
-    priceFrom: 2100,
-    priceNote: "all-inclusive",
     year: "July 2026",
     directBookingUrl: "https://singita.com/region-sabi-sand/",
     heroImage: "/hotels/singita-sabi-sand.jpg",
@@ -435,7 +432,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "On the tip of Giudecca, the Cipriani offers the one thing Venice never can: space. An Olympic-length pool, Casanova's old garden, and no crowds at breakfast.",
     rating: 4.8,
-    priceFrom: 1450,
     year: "August 2026",
     heroImage: "/hotels/hotel-cipriani-venice.jpg",
     cardImage: "/hotels/hotel-cipriani-venice.jpg",
@@ -483,7 +479,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Royalty checks in under pseudonyms, the foyer pours the best afternoon tea in London, and the service runs like a Swiss watch in white gloves.",
     rating: 4.8,
-    priceFrom: 990,
     year: "July 2026",
     heroImage: "/hotels/claridges-london.jpg",
     cardImage: "/hotels/claridges-london.jpg",
@@ -521,8 +516,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Twenty-two acres of pine and palm on the tip of Cap d'Antibes, a seawater pool blasted into the rock, and a cash-only history of impossible glamour.",
     rating: 4.7,
-    priceFrom: 1800,
-    priceNote: "high season",
     year: "June 2026",
     directBookingUrl: "https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/",
     heroImage: "/hotels/hotel-du-cap-eden-roc.jpg",
@@ -564,15 +557,19 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A fairy-tale silhouette above a frozen lake, where the Engadine light, the Cresta Run and 130 years of aristocratic après-ski all still hold court.",
     rating: 4.6,
-    priceFrom: 1250,
     year: "January 2026",
     heroImage: "/hotels/badrutts-palace-st-moritz.jpg",
     cardImage: "/hotels/badrutts-palace-st-moritz.jpg",
+    imageAlt: "Badrutt's Palace entrance and arched portico in St. Moritz",
+    factCheckSources: [
+      { label: "Badrutt's Palace: current room categories", url: "https://badruttspalace.com/en/winter/accommodation/rooms/" },
+      { label: "Badrutt's Palace: seasons and facilities", url: "https://badruttspalace.com/en/summer/" },
+    ],
     standout:
       "Skiing back to the door as the alpenglow turns the Engadine peaks rose-pink, then thawing out by the fire in the Renaissance Bar with a glass of something Swiss and expensive.",
     quickFacts: [
       { label: "Location", value: "St. Moritz, Engadine" },
-      { label: "Rooms", value: "155 rooms & suites" },
+      { label: "Rooms", value: "Inventory varies by season" },
       { label: "Opened", value: "1896" },
       { label: "Best for", value: "Winter sport, mountain glamour" },
     ],
@@ -604,7 +601,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Since 1928 the Peninsula has been Kowloon's answer to the grand hotels of Europe: a colonnaded lobby, harbour views, and a helipad on the roof.",
     rating: 4.7,
-    priceFrom: 780,
     year: "May 2026",
     heroImage: "/hotels/peninsula-hong-kong.jpg",
     cardImage: "/hotels/peninsula-hong-kong.jpg",
@@ -644,11 +640,14 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "The resort that taught the Maldives that barefoot could mean luxurious. Vast Robinson Crusoe villas, an open-air cinema, and some of the best diving in the Indian Ocean.",
     rating: 4.9,
-    priceFrom: 2200,
-    priceNote: "villa, full board",
     year: "April 2026",
     heroImage: "/hotels/soneva-fushi-maldives.jpg",
     cardImage: "/hotels/soneva-fushi-maldives.jpg",
+    imageAlt: "Jungle foliage framing the turquoise lagoon at Soneva Fushi in the Maldives",
+    factCheckSources: [
+      { label: "Soneva Fushi: official resort and villa overview", url: "https://soneva.com/resorts/soneva-fushi/" },
+      { label: "Soneva Fushi: transfers, taxes and dining plan FAQ", url: "https://soneva.com/resorts/soneva-fushi/your-journey-soneva-fushi/" },
+    ],
     standout:
       "Snorkelling straight off your villa's stretch of house reef at dawn, then eating breakfast with your feet in the sand while a manta ray glides past the jetty.",
     quickFacts: [
@@ -686,7 +685,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Built the way a maharana's residence would have been, with domes, courtyards and reflecting pools mirrored in the lake. Regularly voted among the finest hotels on earth.",
     rating: 4.9,
-    priceFrom: 900,
     year: "March 2026",
     heroImage: "/hotels/oberoi-udaivilas-udaipur.jpg",
     cardImage: "/hotels/oberoi-udaivilas-udaipur.jpg",
@@ -723,33 +721,36 @@ const hotelCatalogue: Hotel[] = [
     country: "Japan",
     region: "Asia",
     category: "Urban Retreat",
-    tagline: "The Lost in Translation hotel, floating above Shinjuku in a haze of jazz and cloud",
+    tagline: "A Tokyo icon renewed above Shinjuku, still defined by its view",
     excerpt:
-      "Fifty-two floors up, the New York Bar still swings, the pool still floats under a glass vault, and the whole place still hums with cinematic melancholy.",
+      "Reopened after a 19-month restoration in December 2025, the hotel pairs redesigned rooms with the high-floor calm and New York Bar that made it a Tokyo landmark.",
     rating: 4.6,
-    priceFrom: 720,
     year: "February 2026",
     heroImage: "/hotels/park-hyatt-tokyo.jpg",
     cardImage: "/hotels/park-hyatt-tokyo.jpg",
+    factCheckSources: [
+      { label: "Hyatt: Park Hyatt Tokyo restoration and reopening", url: "https://newsroom.hyatt.com/120925-Park-Hyatt-Tokyo-Reopens-Following-19-Month-Renovation" },
+      { label: "Park Hyatt Tokyo: current rooms and facilities", url: "https://www.hyatt.com/park-hyatt/en-US/tyoph-park-hyatt-tokyo" },
+    ],
     standout:
       "A Suntory whisky in the New York Bar as the pianist plays and Tokyo spreads out fifty-two floors below, the exact frame Sofia Coppola made famous.",
     quickFacts: [
       { label: "Location", value: "Shinjuku, Tokyo" },
-      { label: "Rooms", value: "155 rooms & suites" },
+      { label: "Rooms", value: "171 rooms & suites" },
       { label: "Opened", value: "1994" },
       { label: "Best for", value: "Cinephiles, city views, jazz" },
     ],
     sections: [
       {
         body: [
-          "For a whole generation of travellers this hotel is inseparable from a film. Lost in Translation turned the Park Hyatt's top floors, the cloud-level pool, the wood-lined library, the New York Bar with its wall of glass, into a mood as much as a place: jet-lagged, sleepless, quietly romantic.",
-          "What's striking is how well it has aged. Where newer Tokyo hotels shout, the Park Hyatt murmurs, in warm timber and soft light. The rooms are huge by Tokyo standards, with deep tubs and windows that frame Mount Fuji on clear winter mornings.",
+          "I cannot enter Park Hyatt Tokyo without remembering the film that made its high floors famous. Lost in Translation gave the library, pool and New York Bar a cinematic afterlife. But I want to know what the hotel offers when I leave that memory at the door. It reopened in December 2025 after a 19-month restoration, so the relevant question is how the renewed rooms and public spaces work for a stay now.",
+          "The height still changes the pace. Tokyo fills the windows while the interior asks me to slow down. Hyatt now lists 171 redesigned rooms and suites, including 29 suites; room orientation matters more to my booking than a promise of cinematic atmosphere. I would ask for the exact view and category, then plan enough time upstairs to use what I am paying for.",
         ],
       },
       {
         heading: "The Verdict",
         body: [
-          "It no longer holds the title of Tokyo's most cutting-edge hotel, and it isn't trying to. What it offers is something rarer, which is atmosphere, and few hotels anywhere have more of it.",
+          "I would book the renewed Park Hyatt for its combination of space, altitude and a city view that changes with the weather. I would not book it solely to replay a film scene. The restoration gives me a reason to judge the present hotel on its own terms, including how its service and redesigned room hold up after the first impressive ascent.",
         ],
       },
     ],
@@ -765,8 +766,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Aman built into the raw geology of the Colorado Plateau: a minimalist compound where a central pool curls around a 165-million-year-old rock.",
     rating: 4.9,
-    priceFrom: 3400,
-    priceNote: "suite",
     year: "August 2026",
     directBookingUrl: "https://www.aman.com/resorts/amangiri",
     heroImage: "/hotels/amangiri-utah.jpg",
@@ -806,7 +805,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Bungalows, banana-leaf wallpaper, and a poolside where studio history was written. A touch faded now, but the myth is fully intact.",
     rating: 4.4,
-    priceFrom: 850,
     year: "July 2026",
     bookingUrl: "https://www.booking.com/hotel/us/the-beverly-hills.html",
     hotelsUrl: "https://www.hotels.com/ho124056/",
@@ -846,8 +844,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "On stilts at the far edge of Newfoundland, a social-enterprise hotel where every dollar goes back into the community and every window frames raw, roaring ocean.",
     rating: 4.8,
-    priceFrom: 1975,
-    priceNote: "full board, all-inclusive",
     year: "August 2026",
     directBookingUrl: "https://fogoislandinn.ca/",
     heroImage: "/hotels/fogo-island-inn.jpg",
@@ -888,16 +884,19 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Inside Torres del Paine National Park, an all-inclusive base camp for serious hikers, with guided treks by day and a spa over the water by night.",
     rating: 4.7,
-    priceFrom: 2600,
-    priceNote: "all-inclusive, 4-night min",
     year: "August 2026",
     heroImage: "/hotels/explora-patagonia-official.jpg",
     cardImage: "/hotels/explora-patagonia-official.jpg",
+    imageAlt: "Explora Torres del Paine guest room overlooking Lake Pehoé and the Paine peaks",
+    factCheckSources: [
+      { label: "Explora Torres del Paine: lodge and inclusions", url: "https://www.explora.com/lodge/torres-del-paine-lodge/" },
+      { label: "Explora Torres del Paine: transfer planning", url: "https://www.explora.com/torres-del-paine-getting-there/" },
+    ],
     standout:
       "Coming back from an eight-hour trek to the base of the granite towers, muscles aching, to a hot tub perched over the Salto Chico waterfall as condors wheel overhead.",
     quickFacts: [
       { label: "Location", value: "Torres del Paine, Patagonia" },
-      { label: "Rooms", value: "49 rooms" },
+      { label: "Rooms", value: "50 rooms" },
       { label: "Opened", value: "1993" },
       { label: "Best for", value: "Hikers, wild landscapes" },
     ],
@@ -929,7 +928,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A polished marina resort at the foot of Table Mountain, with island spa suites, a serious wine list, and one of the best views of any city on earth.",
     rating: 4.6,
-    priceFrom: 640,
     year: "August 2026",
     heroImage: "/hotels/one-and-only-cape-town-official.jpg",
     cardImage: "/hotels/one-and-only-cape-town-official.jpg",
@@ -965,14 +963,15 @@ const hotelCatalogue: Hotel[] = [
     category: "Boutique Manor",
     tagline: "The 1930s manor where the giraffes join you for breakfast",
     excerpt:
-      "A creeper-clad country house on the edge of Nairobi where a herd of endangered Rothschild's giraffes pokes its heads through the windows at breakfast.",
+      "A creeper-clad country house on the edge of Nairobi where the resident Nubian giraffes may visit the breakfast rooms.",
     rating: 4.7,
-    priceFrom: 1450,
-    priceNote: "full board",
     year: "August 2026",
     directBookingUrl: "https://www.thesafaricollection.com/properties/giraffe-manor/",
     heroImage: "/hotels/giraffe-manor-nairobi.jpg",
     cardImage: "/hotels/giraffe-manor-nairobi.jpg",
+    factCheckSources: [
+      { label: "The Safari Collection: Giraffe Manor booking and conservation FAQ", url: "https://www.thesafaricollection.com/properties/giraffe-manor/" },
+    ],
     standout:
       "A giraffe's improbably long, dark tongue reaching in through the dining-room window to take a pellet from your palm, its eyelashes almost comically enormous.",
     quickFacts: [
@@ -984,8 +983,8 @@ const hotelCatalogue: Hotel[] = [
     sections: [
       {
         body: [
-          "There's exactly one reason Giraffe Manor is one of the most photographed hotels on the planet, and it's every bit as magical as the pictures suggest. The resident herd of Rothschild's giraffes, an endangered subspecies the estate helps protect, wanders up from the neighbouring sanctuary each morning and evening and angles its heads through the manor's windows in search of treats.",
-          "Beyond the giraffes, the manor itself is a lovely 1930s stone house, all fireplaces, chintz and colonial-era charm, with just twelve rooms. It books out a year ahead, and the wait is worth it.",
+          "I understand why the breakfast photograph draws people here, but I do not want to mistake it for a promise of a staged encounter. The resident Nubian giraffes, formerly classified as Rothschild's giraffes, roam the neighbouring sanctuary and may visit the manor in the morning and evening. Their movements, rather than a guest's camera, set the terms of the meeting.",
+          "Beyond the animals, I find a 1930s house with fireplaces and a small scale that rewards a slower stay. There are twelve rooms across the Historic and Garden manors. Demand is intense, so I would enquire early, but I would not tell a reader that a room is impossible inside a year: the operator sometimes releases remaining rooms within four weeks of arrival.",
         ],
       },
       {
@@ -1010,7 +1009,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Kashmir's grandest mountain hotel sits right by the Gulmarg gondola, wrapped in deodar forest and snow for half the year. Ski in winter, trek in summer, and warm up by the fire either way.",
     rating: 4.6,
-    priceFrom: 300,
     year: "January 2026",
     heroImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
     cardImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
@@ -1053,7 +1051,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Overlooking the gentle crescent of Weligama Bay, this is an easy, family-friendly base for the island's best beaches, whale watching off Mirissa, and learning to surf.",
     rating: 4.6,
-    priceFrom: 240,
     year: "February 2026",
     heroImage: "/hotels/weligama-bay-marriott.jpeg",
     cardImage: "/hotels/weligama-bay-marriott.jpeg",
@@ -1135,10 +1132,13 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A gentler, greener alternative to Jaipur's grander palace hotels, this Taj property wraps you in history and formal gardens a short drive from the bazaars and forts.",
     rating: 4.6,
-    priceFrom: 200,
     year: "March 2026",
     heroImage: "/hotels/jai-mahal-palace-jaipur-official.jpg",
     cardImage: "/hotels/jai-mahal-palace-jaipur-official.jpg",
+    imageAlt: "Jai Mahal Palace and its formal gardens in Jaipur",
+    factCheckSources: [
+      { label: "Taj: Jai Mahal Palace facilities, rooms and dining", url: "https://www.tajhotels.com/en-in/hotels/jai-mahal-palace-jaipur" },
+    ],
     standout:
       "A gin and tonic on the lawn at dusk as the palace facade turns amber and peacocks pick their way across eighteen acres of clipped Mughal garden.",
     quickFacts: [
@@ -1175,8 +1175,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Twelve private stone cottages above a wooded valley in Madhya Pradesh, and one of the best chances in central India to track tiger, leopard and the gharial-rich Ken River.",
     rating: 4.7,
-    priceFrom: 320,
-    priceNote: "full board",
     year: "April 2026",
     heroImage: "/hotels/pashan-garh-taj-safari.jpeg",
     cardImage: "/hotels/pashan-garh-taj-safari.jpeg",
@@ -1216,7 +1214,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "After a top-to-bottom rebuild, the Oberoi is once again the address in Delhi: serene, tech-forward, and run with the quiet precision the group is famous for.",
     rating: 4.7,
-    priceFrom: 300,
     year: "May 2026",
     heroImage: "/hotels/oberoi-new-delhi-official.jpg",
     cardImage: "/hotels/oberoi-new-delhi-official.jpg",
@@ -1258,7 +1255,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Bold colour, a clifftop pool and a DJ-driven beach club, all above one of North Goa's best beaches. This is the loud, glamorous end of the Goan spectrum, and it's a lot of fun.",
     rating: 4.5,
-    priceFrom: 300,
     year: "August 2026",
     heroImage: "/hotels/w-goa-official.jpg",
     cardImage: "/hotels/w-goa-official.jpg",
@@ -1300,8 +1296,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Every room here is a private pool villa, spilling down a lush hillside to a white-sand beach and one of the island's best beach bars. Design-forward, high-energy, and genuinely spectacular.",
     rating: 4.7,
-    priceFrom: 500,
-    priceNote: "pool villa",
     year: "June 2026",
     heroImage: "/hotels/w-koh-samui-official.jpg",
     cardImage: "/hotels/w-koh-samui-official.jpg",
@@ -1344,7 +1338,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Detox programmes, an enormous spa and a calm, garden-filled campus near Rawai make this one of the best-value wellbeing resorts in Southeast Asia.",
     rating: 4.6,
-    priceFrom: 80,
     year: "July 2026",
     heroImage: "/hotels/stay-phuket-official.jpg",
     cardImage: "/hotels/stay-phuket-official.jpg",
@@ -1386,7 +1379,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Peacocks on the lawns, marble corridors, and suites once lived in by a maharaja. This Taj flagship is the full Rajasthani fantasy, and it delivers on every inch of it.",
     rating: 4.9,
-    priceFrom: 480,
     year: "March 2026",
     heroImage: "/hotels/rambagh-palace-jaipur.jpg",
     cardImage: "/hotels/rambagh-palace-jaipur.jpg",
@@ -1427,7 +1419,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "An immense Art Deco palace on a hill above the Blue City, part royal residence, part museum, part Taj hotel. Staying here is like being a guest of the Maharaja, because in a sense you are.",
     rating: 4.9,
-    priceFrom: 650,
     year: "April 2026",
     heroImage: "/hotels/umaid-bhawan-jodhpur.jpg",
     cardImage: "/hotels/umaid-bhawan-jodhpur.jpg",
@@ -1469,7 +1460,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "After a careful restoration, the all-suite Raffles is back to its shuttered, palm-filled, ceiling-fan best. Order a Sling at the Long Bar and let the peanut shells fall where they may.",
     rating: 4.8,
-    priceFrom: 750,
     year: "May 2026",
     updated: "October 20, 2026",
     factChecked: "October 20, 2026",
@@ -1514,7 +1504,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "On a quiet stretch of Bali's east coast, thatched pavilions step down a jungled cliff to one of the most photographed pools in Asia and a private beach club below.",
     rating: 4.9,
-    priceFrom: 1050,
     year: "June 2026",
     directBookingUrl: "https://www.aman.com/resorts/amankila",
     heroImage: "/hotels/amankila-bali.jpg",
@@ -1556,7 +1545,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "You cross a bridge to a rooftop lotus pond, then descend into the jungle canopy of the Ayung River valley. This is Ubud's most dramatic arrival, and one of Bali's great spa retreats.",
     rating: 4.8,
-    priceFrom: 850,
     year: "June 2026",
     heroImage: "/hotels/four-seasons-bali-sayan-official.jpg",
     cardImage: "/hotels/four-seasons-bali-sayan-official.jpg",
@@ -1596,7 +1584,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "On Langkawi's north-west tip, The Datai sits inside one of the oldest rainforests on earth, where hornbills and dusky langurs share the trees and the Andaman Sea laps a perfect beach.",
     rating: 4.8,
-    priceFrom: 700,
     year: "July 2026",
     heroImage: "/hotels/the-datai-langkawi.jpg",
     cardImage: "/hotels/the-datai-langkawi.jpg",
@@ -1636,8 +1623,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A famous private left-hand wave, horses cantering along an empty beach, and a spa reached by a two-hour trek. Nihi Sumba is barefoot luxury at its wildest and most soulful.",
     rating: 4.9,
-    priceFrom: 1400,
-    priceNote: "villa, full board",
     year: "August 2026",
     heroImage: "/hotels/nihi-sumba.jpg",
     cardImage: "/hotels/nihi-sumba.jpg",
@@ -1676,7 +1661,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A riverside legend since 1889, with an American Bar that pours some of the world's most famous cocktails and a location in the very thick of the West End.",
     rating: 4.7,
-    priceFrom: 800,
     year: "July 2026",
     bookingUrl: "https://www.booking.com/hotel/gb/the-savoy.html",
     hotelsUrl: "https://www.hotels.com/ho172847/",
@@ -1718,7 +1702,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Once a doge's residence, the Gritti puts you right on the Grand Canal opposite Santa Maria della Salute, with a terrace made for lingering and Venetian antiques at every turn.",
     rating: 4.8,
-    priceFrom: 950,
     year: "August 2026",
     heroImage: "/hotels/gritti-palace-venice.jpg",
     cardImage: "/hotels/gritti-palace-venice.jpg",
@@ -1758,7 +1741,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "A 1928 Art Deco landmark a step from the Champs-Elysees, celebrated for extravagant floral displays, faultless service, and more Michelin stars than any other hotel in the world.",
     rating: 4.9,
-    priceFrom: 1600,
     year: "July 2026",
     heroImage: "/hotels/four-seasons-george-v-paris.jpg",
     cardImage: "/hotels/four-seasons-george-v-paris.jpg",
@@ -1796,7 +1778,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "On its own island minutes from downtown, the Bulgari trades Dubai's usual gold-and-glitz for sleek Italian restraint, a superyacht marina, and a beach club that draws the city's stylish set.",
     rating: 4.7,
-    priceFrom: 1100,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/ae/bulgari-resorts-dubai.html",
     hotelsUrl: "https://www.hotels.com/ho661582464/",
@@ -1836,7 +1817,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Andre Fu's serene interiors, unusually large rooms, and a top-floor restaurant with harbour views make this the thinking traveller's Hong Kong hotel. Quiet luxury, done to perfection.",
     rating: 4.8,
-    priceFrom: 550,
     year: "May 2026",
     bookingUrl: "https://www.booking.com/hotel/hk/the-upper-house.html",
     hotelsUrl: "https://www.hotels.com/ho327104/",
@@ -1877,7 +1857,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "The largest five-star hotel on Hong Kong Island, folded into the landmark Hopewell Centre II above Wan Chai, with big, high-floor rooms and sweeping views over the city and the harbour.",
     rating: 4.4,
-    priceFrom: 150,
     year: "August 2026",
     heroImage: "/hotels/hopewell-hotel-hong-kong-official.jpg",
     cardImage: "/hotels/hopewell-hotel-hong-kong-official.jpg",
@@ -1924,7 +1903,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Ninety-something years on the Avenida Atlantica and still the most consequential address in Brazil, with a pool that has hosted more decisive conversations than most boardrooms.",
     rating: 4.8,
-    priceFrom: 500,
     year: "August 2026",
     heroImage: "/hotels/copacabana-palace-rio-official.jpg",
     cardImage: "/hotels/copacabana-palace-rio-official.jpg",
@@ -1986,7 +1964,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "The hotel that more or less invented Asian luxury hospitality, sitting on the river with a staff-to-guest ratio and an institutional memory that nothing built since has matched.",
     rating: 4.9,
-    priceFrom: 420,
     year: "August 2026",
     heroImage: "/hotels/mandarin-oriental-bangkok-official.jpg",
     cardImage: "/hotels/mandarin-oriental-bangkok-official.jpg",
@@ -2048,7 +2025,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Commissioned by Mohammed VI and executed by 1,500 Moroccan craftsmen, this is less a hotel than a walled medina of private houses, with the entire service operation hidden underground.",
     rating: 4.9,
-    priceFrom: 1300,
     year: "August 2026",
     heroImage: "/hotels/royal-mansour-marrakech-official.jpg",
     cardImage: "/hotels/royal-mansour-marrakech-official.jpg",
@@ -2107,7 +2083,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Red brick and impeccable manners on a quiet Mayfair corner, with a martini trolley that has become a pilgrimage and service that has never needed to raise its voice.",
     rating: 4.8,
-    priceFrom: 950,
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/gb/the-connaught-mayfair.html",
     hotelsUrl: "https://www.hotels.com/ho172846/",
@@ -2168,7 +2143,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "Adults only, no televisions, and a set of timber and glass cabins built into a Big Sur ridge so carefully that from the road you cannot see the hotel at all.",
     rating: 4.8,
-    priceFrom: 1600,
     year: "August 2026",
     directBookingUrl: "https://www.postranchinn.com/",
     heroImage: "/hotels/post-ranch-inn-big-sur-official.jpg",
@@ -2228,8 +2202,6 @@ const hotelCatalogue: Hotel[] = [
     excerpt:
       "High on the hillside above the prettiest harbour in Italy, in a sixteenth-century monastery turned hotel, with terraced gardens dropping toward the sea.",
     rating: 4.8,
-    priceFrom: 1300,
-    priceNote: "seasonal, closed in winter",
     year: "August 2026",
     bookingUrl: "https://www.booking.com/hotel/it/splendido-amp-splendido-mare.html",
     hotelsUrl: "https://www.hotels.com/ho1004480/",
@@ -2281,14 +2253,16 @@ const hotelCatalogue: Hotel[] = [
   },
 ];
 
-const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
+const existingHotels: Hotel[] = hotelCatalogue.map((hotel) => {
   const additions = [
     ...(legacyHotelAdditions[hotel.slug] ?? []),
     ...(individualReviewAdditions[hotel.slug] ?? []),
     ...(individualReviewFinishes[hotel.slug] ?? []),
     ...(commissioningNotes[hotel.slug] ?? []),
   ];
-  const author = hotel.author ?? editorialAuthorForIndex(index);
+  // The publisher confirmed Zinnia stayed at the legacy properties. Do not
+  // assign personal bylines from an item's position in the catalogue.
+  const author = hotel.author ?? "Zinnia Thapar";
   const isIndividuallyChecked = Boolean(
     individualReviewAdditions[hotel.slug]?.length ||
     individualReviewFinishes[hotel.slug]?.length ||
@@ -2302,6 +2276,8 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
         : undefined
     ),
   };
+  const replacement = priorityReviewRewrites[hotel.slug];
+  if (replacement) return { ...hotel, author, ...trust, updated: "November 16, 2026", sections: replacement };
   if (!additions.length) return { ...hotel, author, ...trust };
   const finalSection = hotel.sections.slice(-1);
   return {
@@ -2317,6 +2293,7 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel, index) => {
 });
 
 export const hotels: Hotel[] = [...novemberEuropeAmericasReviews, ...novemberEuropeReviews, ...novemberMiddleEastReviews, ...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
+  if (priorityReviewRewrites[hotel.slug]) return hotel;
   const voice = reviewVoice[hotel.slug];
   if (!voice) return hotel;
   if (voice.length !== hotel.sections.length) {

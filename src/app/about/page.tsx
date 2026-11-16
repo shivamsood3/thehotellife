@@ -5,7 +5,7 @@ import { authorAnchor, authorProfiles } from "@/content/authors";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About · The Hotel Life",
+  title: "About",
   description:
     "The Hotel Life is an independent editorial guide to the world's most extraordinary hotels, with named writers and a public scoring methodology.",
 };
@@ -21,7 +21,7 @@ const values = [
   },
   {
     title: "We go deep, not wide",
-    body: "We'd rather publish one review we'd stake a name on than ten anonymous summaries. Every story has a named editorial owner and is held to the same published scoring framework.",
+    body: "We'd rather publish one review we'd stake a name on than ten anonymous summaries. Every story has a named editorial owner and is considered against the same six questions about the stay.",
   },
 ];
 

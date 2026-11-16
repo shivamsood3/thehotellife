@@ -116,6 +116,9 @@ export default async function BestHotelsPage({
         <p className="mb-7 text-sm text-ink-muted">
           Selected by <Link href={authorPath("Zinnia Thapar")} className="font-semibold text-brass-deep hover:underline">Zinnia Thapar</Link> · Updated {list.updated}
         </p>
+        <p className="mb-7 border-l-2 border-brass pl-4 text-sm leading-relaxed text-ink-soft">
+          The order weighs location, sense of place, the room decision and the compromises a guest should know before booking. A linked THL review gives our fuller account of a stay; an entry without one is a shortlist recommendation, not a published hotel review. Hotels cannot buy a place in the ranking.
+        </p>
         <div className="prose-editorial">
           {list.intro.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>

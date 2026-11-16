@@ -105,7 +105,7 @@ export const expansionGuides: Guide[] = [
     date: "August 2026",
     heroImage: U("1582719478250-c89cae4dc85b", 2000),
     cardImage: U("1582719478250-c89cae4dc85b", 1000),
-    hotelSlugs: ["passalacqua", "villa-deste-lake-como"],
+    hotelSlugs: ["passalacqua"],
     sections: [
       { body: [
         "Lake Como suffers from being too photogenic. The same view that once drew composers and convalescents now draws day boats, wedding parties and a continuous summer procession through Bellagio's narrow lanes. Yet the lake itself has not become less beautiful. At seven in the morning, when the surface is pewter and the first ferry cuts a white line between mountains, it can still feel startlingly private.",

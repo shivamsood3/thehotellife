@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
-  title: "Contact · The Hotel Life",
+  title: "Contact",
   description:
     "Email The Hotel Life about editorial tips, corrections, partnerships and press.",
 };
