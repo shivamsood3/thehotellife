@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Suitcase in a hotel lobby at dawn beside a clock and sunlit windows">
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#352432"/><stop offset="1" stop-color="#6b4650"/></linearGradient>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#626482"/><stop offset=".45" stop-color="#d19489"/><stop offset="1" stop-color="#efc8a0"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#a77875"/><stop offset="1" stop-color="#3a2936"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#f7d3a2" stop-opacity=".65"/><stop offset="1" stop-color="#f7d3a2" stop-opacity="0"/></radialGradient>
+    <clipPath id="pane"><rect x="770" y="120" width="655" height="585" rx="6"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#wall)"/>
+  <rect x="770" y="120" width="655" height="585" rx="6" fill="url(#sky)" stroke="#d3a688" stroke-width="18"/>
+  <g clip-path="url(#pane)">
+    <circle cx="1240" cy="460" r="86" fill="#f3d1a1"/>
+    <circle cx="1240" cy="460" r="205" fill="url(#glow)"/>
+    <path d="M770 590h78v-65h41v65h55v-125h45v125h50v-90h42v90h45v-175h50v175h43v-95h37v95h48v-145h50v145h71v115H770Z" fill="#493e50"/>
+    <path d="M770 630h62v-72h37v72h68v-110h32v110h91v-80h32v80h63v-130h36v130h75v-95h42v95h118v75H770Z" fill="#302e3f"/>
+    <path d="M770 666h655" stroke="#efc49e" stroke-width="7" opacity=".7"/>
+  </g>
+  <path d="M1095 120v585M770 705h655" stroke="#d3a688" stroke-width="18"/>
+  <path d="M0 705h1600v295H0Z" fill="url(#floor)"/>
+  <path d="M0 715h1600" stroke="#d6a98a" stroke-width="9" opacity=".8"/>
+  <ellipse cx="530" cy="905" rx="320" ry="48" fill="#332537" opacity=".35"/>
+  <circle cx="310" cy="290" r="130" fill="#e9d5b7" stroke="#ad7c75" stroke-width="21"/>
+  <circle cx="310" cy="290" r="108" fill="#faf0dc"/>
+  <path d="M310 190v20M410 290h-20M310 390v-20M210 290h20" stroke="#754c56" stroke-width="10" stroke-linecap="round"/>
+  <path d="M310 290v-60m0 60 43 24" stroke="#633a49" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <circle cx="310" cy="290" r="10" fill="#633a49"/>
+  <path d="M395 563q0-55 55-55h108q55 0 55 55v44h-32v-44q0-22-23-22H450q-23 0-23 22v44h-32Z" fill="#b98072"/>
+  <rect x="337" y="595" width="335" height="303" rx="33" fill="#4d2f43" stroke="#c4937b" stroke-width="15"/>
+  <path d="M365 650h280M365 844h280" stroke="#a16c70" stroke-width="8" opacity=".65"/>
+  <path d="M440 615v265m132-265v265" stroke="#b68478" stroke-width="7" opacity=".65"/>
+  <rect x="450" y="731" width="110" height="54" rx="7" fill="#dfc3a1"/>
+  <path d="M478 749h54m-54 16h39" stroke="#98686b" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="415" cy="919" r="24" fill="#342337"/>
+  <circle cx="595" cy="919" r="24" fill="#342337"/>
+  <path d="M0 0h128v705H0Z" fill="#2b2130" opacity=".7"/>
+  <path d="M665 0h25v705h-25Z" fill="#b6897c" opacity=".65"/>
+  <path d="M133 0v705" stroke="#b6897c" stroke-width="8" opacity=".45"/>
+  <path d="M1450 0h150v705h-150Z" fill="#2b2130" opacity=".7"/>
+</svg>

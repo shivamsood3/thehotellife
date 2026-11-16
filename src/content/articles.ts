@@ -12,6 +12,7 @@ import type { EditorialReferences } from "./editorial/references";
 import { septemberReportedFeatures } from "./editorial/september-reported-features";
 import { novemberEdit } from "./editorial/november-edit";
 import { clubLoungeEdit } from "./editorial/club-lounge-edit";
+import { earlyArrivalEdit } from "./editorial/early-arrival-edit";
 
 export interface ArticleSection {
   heading?: string;
@@ -392,6 +393,7 @@ const existingArticles: Article[] = articleCatalogue.map((article, index) => {
 
 export const articles: Article[] = [
   ...clubLoungeEdit,
+  ...earlyArrivalEdit,
   ...novemberEdit,
   ...septemberReportedFeatures.map((article) => ({
     ...article,
