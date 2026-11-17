@@ -2328,7 +2328,8 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel) => {
 });
 
 export const hotels: Hotel[] = [...novemberEuropeAmericasReviews, ...novemberEuropeReviews, ...novemberMiddleEastReviews, ...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
-  if (priorityReviewRewrites[hotel.slug]) return hotel;
+  const priority = priorityReviewRewrites[hotel.slug];
+  if (priority) return { ...hotel, sections: priority, updated: "November 17, 2026" };
   const voice = reviewVoice[hotel.slug];
   if (!voice) return hotel;
   if (voice.length !== hotel.sections.length) {
