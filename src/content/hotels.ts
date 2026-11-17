@@ -1012,6 +1012,11 @@ const hotelCatalogue: Hotel[] = [
     year: "January 2026",
     heroImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
     cardImage: "/hotels/khyber-himalayan-gulmarg.jpeg",
+    imageAlt: "The Khyber Himalayan Resort framed by snow-covered Gulmarg mountains",
+    factCheckSources: [
+      { label: "Official Khyber FAQs and room guidance", url: "https://www.khyberhotels.com/faqs" },
+      { label: "Official Khyber hotel website", url: "https://www.khyberhotels.com/" },
+    ],
     standout:
       "A butler lighting the wood stove in your room while fresh snow piles up on the balcony and the Pir Panjal range glows in the last of the light.",
     quickFacts: [
@@ -1054,6 +1059,10 @@ const hotelCatalogue: Hotel[] = [
     year: "February 2026",
     heroImage: "/hotels/weligama-bay-marriott.jpeg",
     cardImage: "/hotels/weligama-bay-marriott.jpeg",
+    imageAlt: "Weligama Bay Marriott Resort overlooking Sri Lanka's crescent surf beach",
+    factCheckSources: [
+      { label: "Marriott official: Weligama Bay Marriott", url: "https://www.marriott.com/en-us/hotels/cmbmc-weligama-bay-marriott-resort-and-spa/overview/" },
+    ],
     standout:
       "Breakfast on the terrace watching first-time surfers tumble off longboards in the calm bay, then a blue-whale boat out of nearby Mirissa.",
     quickFacts: [
@@ -1301,6 +1310,10 @@ const hotelCatalogue: Hotel[] = [
     cardImage: "/hotels/w-koh-samui-official.jpg",
     imageAlt:
       "Aerial view of W Koh Samui's hillside villas and northern shoreline",
+    factCheckSources: [
+      { label: "Marriott official: W Koh Samui overview", url: "https://www.marriott.com/en-us/hotels/usmwh-w-koh-samui/overview/" },
+      { label: "Marriott official: W Koh Samui dining", url: "https://www.marriott.com/en-us/hotels/usmwh-w-koh-samui/dining/" },
+    ],
     standout:
       "Slipping into your own villa pool at midnight, the lights of fishing boats strung across the Gulf of Thailand and the beach bar's bass drifting up the hill.",
     quickFacts: [
@@ -1548,6 +1561,12 @@ const hotelCatalogue: Hotel[] = [
     year: "June 2026",
     heroImage: "/hotels/four-seasons-bali-sayan-official.jpg",
     cardImage: "/hotels/four-seasons-bali-sayan-official.jpg",
+    imageAlt: "Four Seasons Resort Bali at Sayan's lotus pond arrival above the Ayung River valley",
+    factCheckSources: [
+      { label: "Four Seasons Sayan resort facts", url: "https://press.fourseasons.com/sayan/hotel-facts/" },
+      { label: "Four Seasons Sayan getting here", url: "https://www.fourseasons.com/sayan/getting-here/" },
+      { label: "Four Seasons Sayan accommodation", url: "https://www.fourseasons.com/sayan/accommodations/" },
+    ],
     standout:
       "Yoga at dawn on the deck as mist rises off the Ayung River and the terraced rice paddies wake up green and gold below you.",
     quickFacts: [
@@ -1587,6 +1606,11 @@ const hotelCatalogue: Hotel[] = [
     year: "July 2026",
     heroImage: "/hotels/the-datai-langkawi.jpg",
     cardImage: "/hotels/the-datai-langkawi.jpg",
+    imageAlt: "The Datai Langkawi beach and rainforest at Datai Bay",
+    factCheckSources: [
+      { label: "The Datai Nature Centre", url: "https://www.thedatai.com/facilities/the-nature-centre/" },
+      { label: "The Datai dining", url: "https://www.thedatai.com/dining/" },
+    ],
     standout:
       "A resident naturalist pointing out a great hornbill in the canopy on the walk to breakfast, then that first sight of the empty, jungle-fringed beach.",
     quickFacts: [
@@ -1626,6 +1650,12 @@ const hotelCatalogue: Hotel[] = [
     year: "August 2026",
     heroImage: "/hotels/nihi-sumba.jpg",
     cardImage: "/hotels/nihi-sumba.jpg",
+    imageAlt: "NIHI Sumba villa and wild coastline on Nihiwatu Beach",
+    factCheckSources: [
+      { label: "NIHI Sumba official site", url: "https://nihi.com/sumba/" },
+      { label: "NIHI rates and inclusions", url: "https://nihi.com/sumba/rates-inclusions/" },
+      { label: "NIHI Spa Safari", url: "https://nihi.com/sumba/experience/spa-safari/" },
+    ],
     standout:
       "Riding a horse bareback along the surf at dawn on an empty two-mile beach, the island's wild interior rising green and untouched behind you.",
     quickFacts: [
@@ -2088,6 +2118,11 @@ const hotelCatalogue: Hotel[] = [
     hotelsUrl: "https://www.hotels.com/ho172846/",
     heroImage: "/hotels/the-connaught-london-official.jpg",
     cardImage: "/hotels/the-connaught-london-official.jpg",
+    imageAlt: "The Connaught hotel entrance on Carlos Place in Mayfair, London",
+    factCheckSources: [
+      { label: "Maybourne official: The Connaught", url: "https://www.maybourne.com/en/the-connaught" },
+      { label: "The Connaught Bar", url: "https://www.maybourne.com/en/the-connaught/dining/the-connaught-bar" },
+    ],
     standout:
       "The martini trolley arriving at your table in the Connaught Bar, where the gin is poured from a height and the whole ritual takes exactly as long as it should.",
     quickFacts: [
