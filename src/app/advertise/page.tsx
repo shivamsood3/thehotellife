@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { hotels } from "@/content/hotels";
+import { guides } from "@/content/guides";
+import { bestHotelsLists } from "@/content/best-hotels";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/advertise" },
@@ -7,11 +10,16 @@ export const metadata: Metadata = {
     "Reach an affluent, high-intent travel audience. Display, sponsorship and newsletter formats on The Hotel Life.",
 };
 
+/**
+ * Counted from the published content rather than typed in. The figures here had
+ * drifted a long way behind the site, which is the last thing a rate card should
+ * do, so they are now derived and cannot go stale again.
+ */
 const stats = [
-  { value: "63", label: "Hotel reviews" },
-  { value: "24", label: "Travel guides" },
-  { value: "4", label: "Ranked city lists" },
-  { value: "4", label: "Regions covered" },
+  { value: `${hotels.length}`, label: "Hotel reviews" },
+  { value: `${guides.length}`, label: "Travel guides" },
+  { value: `${bestHotelsLists.length}`, label: "Ranked city lists" },
+  { value: `${new Set(hotels.map((hotel) => hotel.country)).size}`, label: "Countries covered" },
 ];
 
 const formats = [
