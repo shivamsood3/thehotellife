@@ -97,4 +97,69 @@ export const guideEditorialEnrichments: Record<string, GuideSection[]> = {
       "I do not schedule Marrakech tightly. The souks take longer than a map suggests, a hammam should not be squeezed between two timed visits and the afternoon heat changes the city's pace. I keep one cool hour at the riad or hotel, then return to the streets when the light softens.",
       "That margin also makes the city kinder to navigate. I can accept a wrong turn, stop for tea or follow a recommendation without losing the evening. Marrakech rewards attention more than efficiency, and the best itinerary leaves enough space for the senses to catch up." ] },
   ],
+  "where-to-stay-in-dubai": [
+    { heading: "The city is a sequence, not a single stay", body: [
+      "I choose Dubai by the days I am actually planning. A Downtown base gives me restaurants, the mall and an easy first look at the skyline; Jumeirah is better when the beach and a slower morning matter; the Creek and old quarters offer a more textured relationship with the city's history. No hotel can make those areas feel adjacent, so I stop pretending the map is the itinerary.",
+      "For a short visit, I would rather choose one district and explore it properly than spend every evening in a car. I check the hotel's shade, pool hours and transfer times before I compare room categories. Dubai is exceptionally good at looking effortless. The best stay is the one that makes the effort feel deliberate." ] },
+  ],
+  "where-to-stay-in-doha": [
+    { heading: "Match the district to the hour", body: [
+      "I think about Doha in light: the Corniche at dusk, Msheireb after dinner, Katara when the air softens and the desert when the city falls behind. A central hotel makes the first three easier; a resort changes the trip into a slower, more contained proposition. Neither is universally better, but the distance between them matters more than a booking page suggests.",
+      "I ask about shade, beach access, museum transfers and where I can eat without arranging a car. Doha is compact by Gulf standards but still hot enough to make a short walk a planning decision. A good base lets me move between air-conditioned calm and the city outside without turning every outing into an expedition." ] },
+  ],
+  "where-to-stay-in-hong-kong": [
+    { heading: "The hotel should solve the vertical city", body: [
+      "I choose a Hong Kong hotel for the return journey. The best room is not only the one with the skyline; it is the one I can reach after a wet crossing, a long day on foot or a late meal in another district. Kowloon gives me the harbour and Tsim Sha Tsui's density, while Central and Admiralty put the island's rail lines, galleries and business life close at hand.",
+      "I check the route from the lift to the street, the nearest MTR entrance and whether the view comes with traffic noise. Hong Kong rewards height, but it also rewards a base that makes the city feel legible. I would trade a little square footage for a room that understands the geography outside it." ] },
+  ],
+  "where-to-stay-in-singapore": [
+    { heading: "Use the weather as an editor", body: [
+      "I plan Singapore around the rain and the heat rather than treating them as interruptions. A hotel near the MRT or a covered route gives me options when a storm arrives; a resort on Sentosa changes the trip into a more self-contained holiday. Both can be right, but they answer different questions about how much city I want to enter.",
+      "I also decide whether food is the point of the stay. A central base puts hawker centres, neighbourhood restaurants and cocktail bars within easy reach, while a quieter address gives the room and pool more weight. Singapore is efficient enough to make both possible, provided I choose the hotel before I begin adding day trips." ] },
+  ],
+  "where-to-stay-in-bangkok-river-or-city": [
+    { heading: "Choose your return journey", body: [
+      "I decide between the river and the city by asking where I want to land at the end of the day. Riverside hotels give me boats, older temples and a slower horizon; Sukhumvit and Silom bring rail lines, restaurants and a quicker connection to Bangkok's modern life. The right choice is the one that makes the return feel like part of the holiday rather than another transfer.",
+      "I leave one day open for the opposite experience. From the river, I take the train into the city; from a tower, I book a boat and watch the skyline recede. That contrast is more useful than trying to find a hotel that claims to be equally close to everything." ] },
+  ],
+  "rajasthan-by-road": [
+    { heading: "How to make the road feel luxurious", body: [
+      "I keep the driving days short enough to leave something of the place at the other end. Rajasthan's distances look clean on a map, but roads, village traffic and photo stops expand them quickly. A good driver is not simply a person behind the wheel; they are the person who knows when to stop, when to change the route and when a roadside pause is better than another fort.",
+      "I also avoid changing hotels for the sake of collecting palaces. Two nights in a place can turn an arrival into a stay, while one-night check-ins leave me remembering luggage and headlights. The road is the thread of the journey, not its whole story." ] },
+  ],
+  "new-york-for-people-who-have-done-new-york": [
+    { heading: "Stay for the neighbourhood texture", body: [
+      "I return to New York for the small changes: a new bakery on a familiar block, a gallery that moved upstairs, a bar that finally understands its own music. The hotel matters because it gives me a local radius. I want to be able to leave without a plan and still find a reason to keep walking.",
+      "That is why I resist the urge to book the most famous address every time. A grand hotel can be the right choice for a first visit or a particular celebration, but a second or third trip often improves when the room sits inside the neighbourhood I am curious about. The city does the rest." ] },
+  ],
+  "lake-como-without-the-circus": [
+    { heading: "The lake is a timetable", body: [
+      "I check the ferry route before I choose the hotel. A beautiful address on the wrong side of the lake can turn every dinner, villa visit or market morning into a negotiation with a timetable. Como, Bellagio and the smaller western towns each give the trip a different rhythm, and the water is the connection only when the boats are running for the day I need.",
+      "I prefer one unplanned afternoon to a string of private transfers. The lake's real luxury is watching the weather move across the mountains, not proving that I can reach every famous garden before lunch. A quieter base often reveals more than a crowded itinerary ever could." ] },
+  ],
+  "mexicos-pacific-coast-punta-mita-mandarina": [
+    { heading: "Decide how much infrastructure you want", body: [
+      "I choose between Punta Mita, Mandarina and the smaller coastal towns by deciding how much of the holiday should be handled for me. Punta Mita offers polished residences, golf and dependable logistics; Mandarina makes the landscape feel more present; the towns beyond them give me a closer relationship with local restaurants and roads.",
+      "None of those choices is a moral one. I simply ask whether I want to leave the property for dinner, whether a child or older traveller needs easy access and how much time I want to spend in a car. The Pacific coast is beautiful enough to carry different kinds of luxury, provided the booking matches the desired level of friction." ] },
+  ],
+  "kyoto-at-the-quiet-hours": [
+    { heading: "Quiet is an itinerary", body: [
+      "I do not chase an empty Kyoto. I choose the hour when a place feels most like itself: a shrine before the tour buses, a lane after the shops open, a garden in rain. That means sleeping near the neighbourhood I want to experience and accepting that an early start is sometimes the price of calm.",
+      "I keep one major sight per half-day and give the rest to the city between them. The reward is not a photograph without people; it is the chance to hear footsteps, notice a carpenter's doorway and understand why Kyoto's restraint takes work." ] },
+  ],
+  "french-polynesia-decoded": [
+    { heading: "Island choice before room choice", body: [
+      "I choose the island before I compare overwater villas. Tahiti is useful for arrival and a taste of city life; Moorea gives me mountains, drives and an easier sense of movement; Bora Bora makes the lagoon the main event. The room matters, but it cannot change the geography beyond the pontoon.",
+      "I also check the transfer, meal plan and weather for the actual dates. An island holiday has fewer substitutes when rain arrives, so I want a hotel whose food, spa and excursions can carry a quiet day. The most beautiful villa is still the wrong choice if the island does not match the way I want to spend my time." ] },
+  ],
+  "48-hours-in-tokyo": [
+    { heading: "The honest two-day version", body: [
+      "I would leave Tokyo with whole districts unseen. That is not a failure; it is the reason the two-day route works. I choose two contrasting neighbourhoods, reserve one meal and let the train system handle the rest. A first visit becomes more memorable when I can describe the texture of a street rather than list every place I passed through.",
+      "I keep the final morning deliberately light. A coffee, a last walk and a room that lets me leave without panic are worth more than a final museum sprint. Tokyo will still be there on the next trip, and the best itinerary makes returning feel inevitable." ] },
+  ],
+  "sri-lanka-in-ten-days": [
+    { heading: "Keep the south coast spacious", body: [
+      "I build ten days in Sri Lanka around two or three bases, not a new hotel every night. The hill country, cultural triangle and south coast each need time to reveal themselves, and the roads are part of the experience rather than a neutral line between attractions. A driver can make the route humane, but only if the itinerary leaves room for weather and conversation.",
+      "I would protect the final beach days from an overambitious transfer. Sri Lanka rewards a little fatigue at the beginning and a lot of space at the end. The point is to leave with a sense of the island's changing pace, not merely a gallery of check-in photographs." ] },
+  ],
 };

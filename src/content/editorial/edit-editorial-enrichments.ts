@@ -67,4 +67,39 @@ export const editEditorialEnrichments: Record<string, ArticleSection[]> = {
       "I am interested in the Indian hotels that treat modernity as a local question rather than an imported look. The best new rooms use stone, craft, climate and food to make a place legible, while still giving me the bed, bathroom and service I expect from an international luxury stay.",
       "That is the standard I bring to a grand reopening or a new address. I want the hotel to understand the city outside its gates, employ expertise with confidence and make the old idea of Indian hospitality feel alive rather than ceremonial. The comeback matters only when the guest can feel the future inside it." ] },
   ],
+  "is-hotel-club-lounge-access-worth-it": [
+    { heading: "The breakfast test", body: [
+      "I decide whether club access is useful by pricing the mornings I will actually spend in the hotel. If I am leaving before breakfast, eating in the city or travelling with a child who needs a proper meal, the lounge may be a convenience rather than a saving. If I have a late arrival, a workday inside the building or a long afternoon between trains, the same access can become the calmest room in the itinerary.",
+      "I also check the rules. Some lounges welcome children only at certain hours, some include evening drinks but not a full dinner and some close between services. The best value is not the largest spread; it is the freedom to change plans without having to buy another decision." ] },
+  ],
+  "hotel-early-check-in-after-overnight-flight": [
+    { heading: "What to do between landing and keys", body: [
+      "I plan the hours after an overnight flight as part of the stay rather than treating them as a problem the front desk must solve. I confirm whether the hotel can sell early access, ask about a day room or spa, and keep a change of clothes and toiletries in the hand luggage. That small preparation turns a six-hour wait into something I can control.",
+      "When early check-in is not possible, I ask for a quiet place to sit, a shower if one is available and a realistic estimate rather than a promise. A hotel earns trust by being candid about room readiness. I would rather know the truth at nine in the morning than be told to wait five more minutes for an hour." ] },
+  ],
+  "when-is-a-refundable-hotel-rate-worth-it": [
+    { heading: "When flexibility is the product", body: [
+      "I pay for a refundable rate when the trip has a moving part I cannot control: a connecting flight, a visa, a family decision or a destination with weather that can close the road. The premium is not insurance against indecision; it is the price of keeping the itinerary alive while the facts settle.",
+      "I compare the cancellation deadline with the moment I will genuinely know. A rate that becomes non-refundable thirty days out may offer less practical freedom than a cheaper option that holds until the week before. I put the date in my calendar and read the conditions again before I assume I am protected." ] },
+  ],
+  "hotel-breakfast-has-lost-the-plot": [
+    { heading: "The buffet reveals priorities", body: [
+      "I can tell what a hotel thinks breakfast is for by watching the first ten minutes. Is the room designed to feed people well, or to move them through a display of abundance? Good coffee, hot food that is cooked in small batches and a table that does not feel like a holding pen matter more to me than a pastry tower built for photographs.",
+      "The best breakfasts leave room for local appetite. I want to see the dish the city actually eats, not only an international buffet with a token garnish. A hotel can be generous without being noisy, and breakfast is often where that difference becomes visible." ] },
+  ],
+  "room-service-club-sandwich-test": [
+    { heading: "Temperature and timing", body: [
+      "I judge room service before I judge the sandwich. Does the tray arrive when promised, with the right cutlery, a drink that is still cold and a plate that has not spent twenty minutes in a corridor? The club sandwich is useful because it exposes every handoff between kitchen, lift and room.",
+      "I also notice whether the menu understands the hour. A late-night order should be comforting, not a reduced version of lunch with a surcharge. When the hotel gets this small ritual right, I trust it with a more complicated request. When it gets it wrong, no amount of marble can hide the distance between the kitchen and the guest." ] },
+  ],
+  "can-a-hotel-be-sustainable-at-2000-a-night": [
+    { heading: "Ask for proof, not adjectives", body: [
+      "I look for the practical evidence behind a sustainability claim: water treatment, energy sources, food purchasing, waste measurement and the way a property treats its staff and neighbours. A beautiful paragraph about nature is not a system. The hotel does not need to be perfect, but it should be specific about what it measures and where it still falls short.",
+      "The guest's role is smaller but real. I reuse what makes sense, avoid demanding a daily linen change and ask whether an excursion supports local conservation rather than simply borrowing its language. Responsible luxury is not a mood. It is the accumulation of decisions that remain true when no one is photographing them." ] },
+  ],
+  "why-every-luxury-hotel-looks-the-same": [
+    { heading: "The regional answer", body: [
+      "I can forgive a familiar room when the hotel gives me a strong sense of where I am. That can come through food, materials, staff knowledge, a view or the way the building meets the climate. Design does not need to be loud to be local. It needs to be specific enough that I could not move the room to another city without losing something important.",
+      "The hotels I remember are not always the most expensive. They are the ones that make a confident decision and carry it through the door handle, breakfast, bath and bar. A single local gesture is not enough. Place has to be structural, not decorative." ] },
+  ],
 };
