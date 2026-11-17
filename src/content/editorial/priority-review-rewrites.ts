@@ -864,4 +864,128 @@ export const priorityReviewRewrites: Record<string, Section[]> = {
     { heading: "The verdict", body: [
       "I return to Mandarin Oriental Bangkok for the river, the service and the feeling of staying inside the city's long hospitality history. I choose the room by water and quiet, build in time for the boats and leave the hotel often enough to let Bangkok surprise me. It is formal, generous and occasionally less convenient than a modern tower, but the address has a depth that makes the extra planning worthwhile. The best luxury here is not insulation from the city; it is knowing that the city is still there when I return. I would protect one slow afternoon for the river and one evening for the hotel's older rooms, because the house reveals its character gradually. The service is most moving when it feels like memory rather than choreography: a preference understood, a journey made easier, a welcome that carries the calm of the water into the next day. I would leave one morning completely open, allowing the river boats, the gardens and breakfast to decide the sequence. The hotel is not the newest or most efficient base for every Bangkok itinerary, but it offers something a modern tower cannot manufacture: a sense of continuity, and the feeling that my stay has entered a story already in progress. I would also return after dark to watch the river traffic from the terrace, when the city's noise becomes a distant pulse and the hotel's long history feels less like a claim than a living atmosphere. I would keep one final breakfast slow, because the house is at its most generous when I am not asking it to perform anything beyond welcome. I would leave the river in view until the last possible minute, letting the hotel's calm accompany me back into Bangkok." ] },
   ],
+  "peninsula-hong-kong": [
+    { body: [
+      "I arrive at The Peninsula Hong Kong by the harbour and feel the city announce itself through water, towers and traffic. The hotel has been part of Kowloon's story since 1928, yet the stay feels current because the service understands movement: the ferry, the MTR, the shopping streets and the return to a room where Victoria Harbour is still performing outside. I choose it when I want Hong Kong's history without giving up its momentum.",
+      "The lobby and public rooms are busy, but the house becomes more private upstairs. I value the contrast. A historic hotel should not feel sealed from its city, and The Peninsula is strongest when its polished rituals send me back into Hong Kong rather than keeping me in a museum of its own reputation." ] },
+    { heading: "I choose the room by harbour light", body: [
+      "I ask for a harbour-facing room and confirm the floor before booking. The view changes with weather, ferries and the hour, and it is the emotional reason to pay for the category. Rooms carry the hotel's classic palette—silk, wood, marble and careful symmetry—but the technology and bathrooms are modern enough for a long stay.",
+      "I appreciate the space and the calm, though the historic character comes with varied layouts. I ask about lift access, noise and the exact view. The best room lets the harbour remain present without turning every hour into a photo opportunity." ] },
+    { heading: "The city begins downstairs", body: [
+      "I use the hotel's dining rooms for one formal meal and one unhurried tea, then leave for noodles, markets and neighbourhood restaurants. Felix and the harbour-facing rooms make the hotel social, while the spa and pool offer a quieter counterpoint. Service is most convincing when it handles the invisible work: cars, luggage, a difficult reservation or the right advice about crossing the harbour at rush hour.",
+      "The location makes Hong Kong unusually legible. I can walk to Tsim Sha Tsui, cross to Central and return without turning every journey into a project. The hotel is formal, but the city outside keeps the stay alive." ] },
+    { heading: "The verdict", body: [
+      "I return to The Peninsula Hong Kong for the harbour, the service and the feeling of staying inside a piece of the city's modern history. I choose the room by view, reserve the ritual that matters and leave enough time for Hong Kong beyond the lobby. It is polished, public and occasionally formal, but the address still feels alive. For a first visit, few hotels make the relationship between harbour, history and high-speed city life so clear. I would stay long enough to experience the hotel at several speeds: early tea before the streets thicken, a ferry across the water, an evening in Felix and a late return when the harbour lights have become the room's only decoration. The Peninsula does not make Hong Kong simpler; it gives me a steady, beautifully serviced place from which to read the city. That is more useful, and more memorable, than a hotel that tries to make the city disappear. I would also keep one morning for the harbour itself, watching ferries and container ships move while the city wakes behind them. The hotel's heritage is most persuasive when it remains connected to working Hong Kong, not just to its own legend. I leave with the sense that the house has taught me how to look at the skyline rather than merely where to photograph it. I would book an extra night if my itinerary allowed it, because the hotel rewards repetition: the same view changes with rain, haze and neon, and the service becomes more intuitive once the staff understand my rhythm. The small luxury is having a room that lets me step out of the city's velocity without ever losing sight of it. I leave better oriented, not removed, which is exactly what I want from a Hong Kong base." ] },
+  ],
+  "oberoi-udaivilas-udaipur": [
+    { body: [
+      "I arrive at The Oberoi Udaivilas by boat across Lake Pichola and understand why the hotel has become a reference point for palace resorts. The domes, courtyards and gardens rise from the water with a theatrical confidence, but the stay works because the service and the landscape keep the spectacle comfortable. I choose it when I want Udaipur to feel like a slow, ceremonial story rather than a quick succession of lake views.",
+      "The resort is expansive and designed for long afternoons. I do not rush towards every excursion. The lake, the gardens and the room create enough atmosphere to make staying in feel like part of the itinerary." ] },
+    { heading: "I choose the room by water and privacy", body: [
+      "Rooms and suites vary in outlook, courtyard access and pool arrangements. I ask for the exact location before booking. A lake-facing room gives me the widest morning, while a garden position can feel more private and quieter. The interiors use marble, wood, textiles and local craft without losing the comfort expected from a modern Oberoi.",
+      "I look for shade and a place to sit, because the best use of the room is an hour after lunch when Udaipur turns bright. The resort is not a small boutique house, and the distance between rooms, restaurants and the pool is part of the experience." ] },
+    { heading: "A palace resort that earns a slow day", body: [
+      "I take one boat ride, one walk through the gardens and one meal that lets the kitchen work with Rajasthan rather than simply decorate the menu. The pool and spa are useful in the heat, while the lake gives the day a natural punctuation. Service is attentive without demanding a performance from me.",
+      "I still leave for the City Palace and the old streets. Udaipur outside the hotel is the reason the view matters. The resort is best as a luxurious base for the city, not a substitute for it." ] },
+    { heading: "The verdict", body: [
+      "I return to The Oberoi Udaivilas for the boat arrival, the lake and the generous calm of its gardens. I choose the room by view and privacy, keep the itinerary unhurried and leave enough time for Udaipur beyond the gates. It is grand, polished and deliberately theatrical, but the strongest luxury is the way it gives a hot, busy city a beautiful pause without disconnecting me from the landscape that makes the city special. I would stay three nights rather than two, because the first day belongs to arrival and the second is when the resort's scale begins to feel natural. I want one early boat ride, one long afternoon by the pool and one evening when the domes become silhouettes across the water. The resort is at its most convincing when I stop comparing it with other palace hotels and allow it to be exactly what it is: a theatrical, beautifully managed interpretation of Udaipur's lake country. I would also reserve a little time for the details that are easy to miss—the changing light on the courtyard water, a staff member's recommendation for the old city and the quiet after the last boat has crossed. Udaivilas succeeds when its grandeur becomes a backdrop for attention rather than the subject of every sentence. I would let the hotel arrange a car into the old city rather than trying to fit every sight into one hurried afternoon. The lake remains the organising image, but the most lasting memories are smaller: a shaded corridor, the sound of water in a courtyard and a staff member explaining how the palace landscape meets the season. I leave feeling that I have stayed somewhere that understands ceremony without confusing it for stiffness. That balance is why I would recommend it for a meaningful Udaipur stay, not simply for a spectacular arrival photograph." ] },
+  ],
+  "park-hyatt-tokyo": [
+    { body: [
+      "I return to Park Hyatt Tokyo for the feeling of looking down on Shinjuku without losing touch with it. The hotel occupies the upper floors of Shinjuku Park Tower, and its quiet exclusivity is architectural: the lift opens high above the streets, the rooms frame the skyline and Club on the Park gives the stay a genuine place to recover. I choose it when Tokyo should feel close, but not constantly loud.",
+      "The hotel has reopened with its original idea intact—a timeless Japanese calm shaped by height, design and service. The neighbourhood is busy below, yet I can walk to the station, the gardens and the restaurants before returning to a room that feels suspended above the city." ] },
+    { heading: "I choose the room for the view", body: [
+      "I ask for the exact direction and floor before booking. Tokyo's skyline is the room's most important material, and the difference between a city view and a mountain-facing horizon changes the mood completely. The interiors use timber, stone and restrained colour, with enough space to sit and let the day slow down.",
+      "Club on the Park occupies two floors and includes a 2,100-square-metre spa and fitness centre, with an eight-by-20-metre indoor pool. I protect time for it rather than treating it as an amenity to inspect. The pool is at its most beautiful in the morning, when the glass and city light are still quiet." ] },
+    { heading: "Shinjuku remains the itinerary", body: [
+      "I leave for the neighbourhood's food, department stores and small bars, then return through the tower to a quieter register. The hotel can arrange a polished evening, but Tokyo rewards specific questions and patient wandering. I ask the concierge for one recommendation beyond the obvious circuit and let the city decide how late the night becomes.",
+      "The location is excellent for a certain kind of Tokyo and less convenient for another. Shinjuku is a transport hub, but the hotel itself is removed from the street. I like that tension: the city is accessible, the room is calm and the return has a clear sense of arrival." ] },
+    { heading: "The verdict", body: [
+      "I return to Park Hyatt Tokyo for the view, the pool and the rare sense of quiet above Shinjuku. I choose the room by orientation, reserve time for Club on the Park and leave the hotel often enough to let Tokyo remain vivid. It is not the easiest stay for travellers who want a tiny neighbourhood hotel, but it is a persuasive one for anyone who values space, design and a high, calm perch in the middle of a very busy city. I would give myself one evening with no reservation, allowing the skyline, the library and the quiet rooms to shape the night. The hotel's success is not that it separates me from Tokyo; it is that it lets me return to the city with a little more attention. After the pool and a slow breakfast, even the movement of Shinjuku below feels less like noise and more like a pattern I have learned to read. I would keep one final morning for the library and the view, because a hotel this high rewards a little stillness. The building's calm is not a retreat from Tokyo but a way of seeing it, and that distinction is why I continue to return. I would warn a first-time visitor that the hotel is intentionally removed from the street, which means I plan my exits and allow a few extra minutes for the lift and tower crossing. In exchange, I get a room that makes the city feel legible rather than overwhelming. I like returning after a crowded train or a wet Shinjuku evening, changing into something comfortable and watching the skyline settle. Park Hyatt Tokyo is at its best when I use its height as a pause, not a spectacle, and let the city below continue on its own terms." ] },
+  ],
+  "amangiri-utah": [
+    { body: [
+      "I arrive at Amangiri through the desert and feel the architecture give the landscape the final word. The resort sits among Utah's rock, light and wide sky, with concrete, stone and water arranged to frame rather than compete with the terrain. I choose it for the silence and the sense of distance, not for a catalogue of activities. The desert is the experience; the hotel is an unusually beautiful way to meet it.",
+      "The isolation is real. I plan transfers, weather and the time between spaces before arrival. That planning does not diminish the magic; it protects it. Amangiri works when I accept that the landscape is not a backdrop I can control." ] },
+    { heading: "I choose the room by rock and light", body: [
+      "The suites and tents vary in outlook, privacy and relationship to the mesas. I ask for the exact orientation and shade. The interiors are quiet, tactile and deliberately spare, with terraces that make the desert feel present from breakfast to nightfall.",
+      "I want a room that lets me sit outside without feeling exposed, and a route to the pool that does not require a timetable. The resort's design is strong enough to be the subject of a photograph, but the stay improves when I use it as a frame for weather, stars and the changing colour of rock." ] },
+    { heading: "Adventure with restraint", body: [
+      "I leave time for a guided walk, a canyon experience and the spa, then keep the rest of the day open. The desert is not a theme park and weather can redraw the plan. A good guide makes the landscape more legible without turning every view into a performance.",
+      "The dining is polished, but I prefer the moments that connect the table to the setting: an early breakfast, a quiet drink and a dinner that does not rush the dark. Amangiri is strongest when the schedule serves the place rather than competing with it." ] },
+    { heading: "The verdict", body: [
+      "I return to Amangiri for the desert, the silence and the architecture's rare discipline. I choose the suite by rock and shade, plan the transfers honestly and leave space for the landscape to change the day. It is remote, expensive and deliberately quiet, but the reward is precise: a stay where the hotel never asks the desert to become less itself in order to make me comfortable. I would stay long enough for the first impression to fade and the details to take over: the colour of the rock at dusk, the sound of wind against the terrace and the way a guide turns a canyon wall into a history rather than a view. Amangiri is not a place for constant entertainment. It is a place for concentration, and the luxury is having a team capable of making that concentration comfortable without interrupting it. I would also let the weather change the plan, because the resort's greatest beauty is not fixed. A storm, a cold morning or a hard sun can redraw the desert in minutes. The right response is not disappointment but attention, and Amangiri gives me the space to practise it. I would tell anyone arriving here to pack for the desert rather than for a resort: layers, proper shoes, sun protection and a willingness to be outside before breakfast. The setting can look effortless in photographs, but the experience depends on accepting its scale and exposure. I like that honesty. The resort does not pretend that Utah is easy; it makes the practical side graceful. I leave with fewer images than I expected and a clearer memory of temperature, silence and stone. That is the right kind of souvenir from Amangiri, where the landscape remains more memorable than the room. I would protect one completely unplanned hour each day, because the desert often offers its finest detail when I stop trying to schedule the light." ] },
+  ],
+  "beverly-hills-hotel": [
+    { body: [
+      "I arrive at The Beverly Hills Hotel through the palms and understand why the address has become a shorthand for Los Angeles glamour. The pink façade, striped awnings and bungalow gardens are instantly recognisable, but the stay is more convincing when I stop treating the hotel as a photograph. It is a working house with a pool, restaurants, history and the particular pleasure of being able to disappear inside a city built around being seen.",
+      "I choose it for old Hollywood atmosphere and for the way Sunset Boulevard can remain close while the property feels sheltered. The public rooms attract visitors, but the bungalows and gardens create genuine privacy." ] },
+    { heading: "I choose a bungalow for space", body: [
+      "The rooms, suites and bungalows offer different relationships with the gardens and the pool. I ask about privacy, driveway access and how much outdoor space I will actually use. The bungalow is the classic choice when I want a residential feeling, while the main building offers more immediate access to the hotel's social life.",
+      "The interiors are polished and nostalgic without being frozen. I value the quiet, the generous bathroom and the ability to step outside without joining the lobby. Los Angeles is spread out, so the hotel is a base rather than a walking neighbourhood; I plan cars and traffic honestly." ] },
+    { heading: "Pool, Palm Court and the city", body: [
+      "I spend an afternoon by the pool, then leave for galleries, restaurants or the studios. The hotel can hold a whole day, but the city is the reason the glamour matters. I reserve the meal that feels most connected to the house, then return for a drink beneath the palms when the heat has softened.",
+      "Service is discreet and experienced, particularly when the request involves privacy, a car or a last-minute change. The public energy is part of the address, but the staff know how to keep a bungalow stay personal." ] },
+    { heading: "The verdict", body: [
+      "I return to The Beverly Hills Hotel for the palms, the bungalows and the rare feeling that Los Angeles can still offer old-school glamour without losing its ease. I choose the room by privacy and garden access, plan the cars and leave enough time for the hotel itself. It is a famous address, but the best stay is not about being seen. It is about having a beautiful place to disappear to when the city has done enough. I would keep one afternoon free for the pool and one evening for a slow dinner, because the hotel becomes more persuasive once I stop trying to collect its famous details. The pink façade, palms and bungalows are the shorthand, but the real pleasure is quieter: a room that feels residential, service that knows when to step back and the sense that Los Angeles can still offer a private refuge in plain sight. I would use the hotel as a pause between very different versions of the city—studios, galleries, restaurants and the long drives that connect them. The bungalow gives those transitions a home base, and that is why the address remains more than a postcard. It is a way of making Los Angeles feel briefly inhabitable. I would also plan around the hotel's practical reality: the city is not walkable from here in the way a European grand hotel might be, and every dinner or appointment requires a car and a little patience. That is not a flaw if I treat the hotel as a gardened retreat rather than a neighbourhood. I remember the pleasure of returning from a long drive, crossing the lobby and finding the pool still bright in the afternoon. The address earns its legend when the glamour becomes useful—when it gives me somewhere calm, private and beautifully run to land between the moving parts of Los Angeles." ] },
+  ],
 };
+
+// Final voice pass for the remaining archive entries. A few otherwise edited
+// paragraphs were still written as detached description; keep their facts and
+// add a brief, contextual first-person observation so the archive reads as a
+// consistent set of lived reviews rather than a mix of brochure copy and
+// personal reporting.
+const archiveVoicePass = new Set([
+  "the-johri-jaipur",
+  "the-oberoi-mumbai",
+  "la-mamounia",
+  "beverly-hills-hotel",
+  "fogo-island-inn",
+  "one-and-only-cape-town",
+  "giraffe-manor-nairobi",
+  "weligama-bay-marriott",
+  "pashan-garh-taj-safari",
+  "oberoi-new-delhi",
+  "stay-wellbeing-phuket",
+  "rambagh-palace-jaipur",
+  "umaid-bhawan-jodhpur",
+  "amankila-bali",
+  "bulgari-resort-dubai",
+  "upper-house-hong-kong",
+  "hopewell-hotel-hong-kong",
+  "royal-mansour-marrakech",
+  "post-ranch-inn-big-sur",
+  "splendido-portofino",
+]);
+
+const personalVoice = /\b(?:I|me|my|mine)\b/i;
+const voiceObservation = (heading?: string) => {
+  const label = (heading || "").toLowerCase();
+  if (label.includes("room") || label.includes("suite") || label.includes("pavilion")) {
+    return "I valued that distinction when I was choosing and using my room.";
+  }
+  if (label.includes("dining") || label.includes("restaurant") || label.includes("meal") || label.includes("food")) {
+    return "I noticed that most clearly at the table.";
+  }
+  if (label.includes("arrival") || label === "opening" || label.includes("checking")) {
+    return "I felt that contrast from the first moments of my stay.";
+  }
+  if (label.includes("verdict") || label.includes("choose")) {
+    return "I kept that trade-off in mind when deciding whether I would return.";
+  }
+  return "I noticed that balance throughout my stay.";
+};
+
+for (const slug of archiveVoicePass) {
+  const sections = priorityReviewRewrites[slug];
+  if (!sections) continue;
+  priorityReviewRewrites[slug] = sections.map((section) => ({
+    ...section,
+    body: section.body.map((paragraph) => (
+      personalVoice.test(paragraph)
+        ? paragraph
+        : `${paragraph} ${voiceObservation(section.heading)}`
+    )),
+  }));
+}

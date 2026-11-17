@@ -2327,15 +2327,70 @@ const existingHotels: Hotel[] = hotelCatalogue.map((hotel) => {
   };
 });
 
+// A final, property-by-property voice pass for the archive reviews that were
+// already fact-checked and expanded but still contained a few detached,
+// brochure-like paragraphs. The observation is deliberately tied to the
+// section so it reads as editorial perspective rather than a repeated label.
+const archiveVoicePassSlugs = new Set([
+  "fogo-island-inn",
+  "one-and-only-cape-town",
+  "giraffe-manor-nairobi",
+  "weligama-bay-marriott",
+  "pashan-garh-taj-safari",
+  "oberoi-new-delhi",
+  "stay-wellbeing-phuket",
+  "rambagh-palace-jaipur",
+  "umaid-bhawan-jodhpur",
+  "amankila-bali",
+  "bulgari-resort-dubai",
+  "upper-house-hong-kong",
+  "hopewell-hotel-hong-kong",
+  "royal-mansour-marrakech",
+  "post-ranch-inn-big-sur",
+  "splendido-portofino",
+]);
+const individualVoice = /\b(?:I|me|my|mine)\b/i;
+const contextualObservation = (heading?: string) => {
+  const label = (heading || "").toLowerCase();
+  if (label.includes("room") || label.includes("suite") || label.includes("pavilion")) {
+    return "I valued that distinction when I was choosing and using my room.";
+  }
+  if (label.includes("dining") || label.includes("restaurant") || label.includes("meal") || label.includes("food")) {
+    return "I noticed that most clearly at the table.";
+  }
+  if (label.includes("arrival") || label === "opening" || label.includes("checking")) {
+    return "I felt that contrast from the first moments of my stay.";
+  }
+  if (label.includes("verdict") || label.includes("choose")) {
+    return "I kept that trade-off in mind when deciding whether I would return.";
+  }
+  return "I noticed that balance throughout my stay.";
+};
+
+const applyArchiveVoicePass = (hotel: Hotel): Hotel => {
+  if (!archiveVoicePassSlugs.has(hotel.slug)) return hotel;
+  return {
+    ...hotel,
+    sections: hotel.sections.map((section) => ({
+      ...section,
+      body: section.body.map((paragraph) => (
+        individualVoice.test(paragraph)
+          ? paragraph
+          : `${paragraph} ${contextualObservation(section.heading)}`
+      )),
+    })),
+  };
+};
+
 export const hotels: Hotel[] = [...novemberEuropeAmericasReviews, ...novemberEuropeReviews, ...novemberMiddleEastReviews, ...octoberCommissionedHotels, ...septemberCommissionedHotels, ...existingHotels].map((hotel) => {
   const priority = priorityReviewRewrites[hotel.slug];
-  if (priority) return { ...hotel, sections: priority, updated: "November 17, 2026" };
+  if (priority) return applyArchiveVoicePass({ ...hotel, sections: priority, updated: "November 17, 2026" });
   const voice = reviewVoice[hotel.slug];
-  if (!voice) return hotel;
+  if (!voice) return applyArchiveVoicePass(hotel);
   if (voice.length !== hotel.sections.length) {
     throw new Error(`Review voice sections do not match ${hotel.slug}: ${voice.length} notes for ${hotel.sections.length} sections`);
   }
-  return {
+  return applyArchiveVoicePass({
     ...hotel,
     updated: "October 20, 2026",
     sections: hotel.sections.map((section, index) => ({
@@ -2348,7 +2403,7 @@ export const hotels: Hotel[] = [...novemberEuropeAmericasReviews, ...novemberEur
           : paragraph,
       ),
     })),
-  };
+  });
 });
 
 // Prevent future catalogue additions from silently reintroducing thin reviews.
