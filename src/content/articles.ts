@@ -12,6 +12,7 @@ import { septemberReportedFeatures } from "./editorial/september-reported-featur
 import { novemberEdit } from "./editorial/november-edit";
 import { clubLoungeEdit } from "./editorial/club-lounge-edit";
 import { earlyArrivalEdit } from "./editorial/early-arrival-edit";
+import { editEditorialEnrichments } from "./editorial/edit-editorial-enrichments";
 
 export interface ArticleSection {
   heading?: string;
@@ -380,7 +381,11 @@ const articleCatalogue: Article[] = [
 ];
 
 const existingArticles: Article[] = articleCatalogue.map((article) => {
-  const sections = [...article.sections, ...(legacyArticleAdditions[article.slug] ?? [])];
+  const sections = [
+    ...article.sections,
+    ...(legacyArticleAdditions[article.slug] ?? []),
+    ...(editEditorialEnrichments[article.slug] ?? []),
+  ];
   const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
   return {
     ...article,

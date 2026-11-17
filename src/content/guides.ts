@@ -13,6 +13,7 @@ import { octoberCityGuides } from "./editorial/october-city-guides";
 import { newCityGuides } from "./editorial/new-city-guides";
 import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
 import { priorityGuideRewrites } from "./editorial/priority-guide-rewrites";
+import { guideEditorialEnrichments } from "./editorial/guide-editorial-enrichments";
 
 export interface GuideSection {
   heading?: string;
@@ -821,7 +822,11 @@ const guideCatalogue: Guide[] = [
 
 const existingGuides: Guide[] = guideCatalogue.map((guide) => {
   const revision = priorityGuideRewrites[guide.slug] ?? septemberGuideRewrites[guide.slug];
-  const sections = revision?.sections ?? [...guide.sections, ...(legacyGuideAdditions[guide.slug] ?? [])];
+  const sections = [
+    ...(revision?.sections ?? guide.sections),
+    ...(revision ? [] : (legacyGuideAdditions[guide.slug] ?? [])),
+    ...(guideEditorialEnrichments[guide.slug] ?? []),
+  ];
   const words = sections.flatMap((section) => section.body).join(" ").split(/\s+/).filter(Boolean).length;
   return {
     ...guide,
@@ -835,15 +840,18 @@ const existingGuides: Guide[] = guideCatalogue.map((guide) => {
 export const guides: Guide[] = [
   ...newCityGuides.map((guide) => ({
     ...guide,
-    readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
+    sections: [...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])],
+    readTime: Math.ceil([...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])].flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
   })),
   ...octoberCityGuides.map((guide) => ({
     ...guide,
-    readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
+    sections: [...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])],
+    readTime: Math.ceil([...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])].flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
   })),
   ...septemberDecisionGuides.map((guide) => ({
     ...guide,
-    readTime: Math.ceil(guide.sections.flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
+    sections: [...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])],
+    readTime: Math.ceil([...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])].flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
   })),
   ...existingGuides,
 ];
