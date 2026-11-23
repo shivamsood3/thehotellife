@@ -11,8 +11,8 @@ export const earlyArrivalEdit: Article[] = [
     author: "Zinnia Thapar",
     readTime: 8,
     date: "November 16, 2026",
-    heroImage: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2000&q=85",
-    cardImage: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=85",
+    heroImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85",
     imageAlt: "A calm hotel bedroom waiting for an early-arriving guest",
     hotelSlugs: [],
     sources: [

@@ -55,8 +55,8 @@ export const septemberArticles: Article[] = [
     author: "Shiv S",
     readTime: 8,
     date: "September 2026",
-    heroImage: U("1515003197210-e0cd71810b5f", 2000),
-    cardImage: U("1515003197210-e0cd71810b5f", 1000),
+    heroImage: U("1525610553991-2bede1c7360e", 2000),
+    cardImage: U("1525610553991-2bede1c7360e", 1000),
     imageAlt: "A warmly lit hotel bar prepared for evening service",
     hotelSlugs: ["claridges-london", "the-ritz-paris", "taj-mahal-palace-mumbai"],
     sections: [
@@ -95,8 +95,8 @@ export const septemberArticles: Article[] = [
     author: "Akash G",
     readTime: 7,
     date: "September 2026",
-    heroImage: U("1564501049412-61c2a3083791", 2000),
-    cardImage: U("1564501049412-61c2a3083791", 1000),
+    heroImage: U("1598928506311-c55ded91a20c", 2000),
+    cardImage: U("1598928506311-c55ded91a20c", 1000),
     imageAlt: "A hotel bedroom prepared for evening turndown service",
     hotelSlugs: ["the-oberoi-mumbai", "aman-tokyo", "the-leela-palace-new-delhi"],
     sections: [

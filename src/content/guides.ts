@@ -57,8 +57,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 8,
     date: "August 2026",
-    heroImage: U("1540959733332-eab4deabeeaf", 2000),
-    cardImage: U("1540959733332-eab4deabeeaf", 1000),
+    heroImage: U("1542051841857-5f90071e7989", 2000),
+    cardImage: U("1542051841857-5f90071e7989", 1000),
     hotelSlugs: ["aman-tokyo", "park-hyatt-tokyo"],
     sections: [
       {
@@ -100,8 +100,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 7,
     date: "July 2026",
-    heroImage: U("1582719478250-c89cae4dc85b", 2000),
-    cardImage: U("1582719478250-c89cae4dc85b", 1000),
+    heroImage: U("1544986587-efac024faf62", 2000),
+    cardImage: U("1544986587-efac024faf62", 1000),
     hotelSlugs: ["belmond-hotel-caruso"],
     sections: [
       {
@@ -182,8 +182,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 6,
     date: "May 2026",
-    heroImage: U("1499856871958-5b9627545d1a", 2000),
-    cardImage: U("1499856871958-5b9627545d1a", 1000),
+    heroImage: U("1522093007474-49732f8e6f2c", 2000),
+    cardImage: U("1522093007474-49732f8e6f2c", 1000),
     hotelSlugs: ["the-ritz-paris"],
     sections: [
       {
@@ -222,8 +222,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 7,
     date: "April 2026",
-    heroImage: U("1514282401047-d79a71a590e8", 2000),
-    cardImage: U("1514282401047-d79a71a590e8", 1000),
+    heroImage: U("1507525428034-b723cf961d3e", 2000),
+    cardImage: U("1507525428034-b723cf961d3e", 1000),
     hotelSlugs: ["soneva-fushi-maldives"],
     sections: [
       {
@@ -263,8 +263,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 6,
     date: "March 2026",
-    heroImage: U("1512453979798-5ea266f8880c", 2000),
-    cardImage: U("1512453979798-5ea266f8880c", 1000),
+    heroImage: U("1524498250077-0f8a8b6e5c6e", 2000),
+    cardImage: U("1524498250077-0f8a8b6e5c6e", 1000),
     hotelSlugs: ["la-mamounia"],
     sections: [
       {
@@ -708,8 +708,8 @@ const guideCatalogue: Guide[] = [
     author: "Shivam Sood",
     readTime: 8,
     date: "August 2026",
-    heroImage: U("1506905925346-21bda4d32df4", 2000),
-    cardImage: U("1506905925346-21bda4d32df4", 1000),
+    heroImage: U("1511497584788-876760111969", 2000),
+    cardImage: U("1511497584788-876760111969", 1000),
     hotelSlugs: ["post-ranch-inn-big-sur"],
     sections: [
       {

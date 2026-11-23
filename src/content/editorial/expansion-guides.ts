@@ -193,8 +193,8 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 13,
     date: "August 2026",
-    heroImage: U("1540959733332-eab4deabeeaf", 2000),
-    cardImage: U("1540959733332-eab4deabeeaf", 1000),
+    heroImage: U("1530789253388-582c481c54b0", 2000),
+    cardImage: U("1530789253388-582c481c54b0", 1000),
     hotelSlugs: ["park-hyatt-kyoto"],
     sections: [
       { body: [

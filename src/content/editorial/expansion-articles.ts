@@ -13,8 +13,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 10,
     date: "August 2026",
-    heroImage: U("1520250497591-112f2f40a3f4", 2000),
-    cardImage: U("1520250497591-112f2f40a3f4", 1000),
+    heroImage: U("1504674900247-0877df9cc836", 2000),
+    cardImage: U("1504674900247-0877df9cc836", 1000),
     hotelSlugs: ["claridges-london", "passalacqua", "aman-tokyo"],
     featured: true,
     sections: [
@@ -57,8 +57,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 9,
     date: "August 2026",
-    heroImage: U("1445019980597-93fa8acb246c", 2000),
-    cardImage: U("1445019980597-93fa8acb246c", 1000),
+    heroImage: U("1551882547-ff40c63fe5fa", 2000),
+    cardImage: U("1551882547-ff40c63fe5fa", 1000),
     hotelSlugs: ["aman-new-york", "capella-bangkok", "the-plaza-new-york"],
     sections: [
       { body: [
@@ -100,8 +100,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 10,
     date: "August 2026",
-    heroImage: U("1571003123894-1f0594d2b5d9", 2000),
-    cardImage: U("1571003123894-1f0594d2b5d9", 1000),
+    heroImage: U("1522708323590-d24dbb6b0267", 2000),
+    cardImage: U("1522708323590-d24dbb6b0267", 1000),
     hotelSlugs: ["aman-tokyo", "the-brando", "six-senses-fort-barwara"],
     sections: [
       { body: [
@@ -143,8 +143,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 12,
     date: "August 2026",
-    heroImage: U("1514282401047-d79a71a590e8", 2000),
-    cardImage: U("1514282401047-d79a71a590e8", 1000),
+    heroImage: U("1540541338287-41700207dee6", 2000),
+    cardImage: U("1540541338287-41700207dee6", 1000),
     hotelSlugs: ["the-brando", "fogo-island-inn", "soneva-fushi-maldives"],
     sections: [
       { body: [
@@ -190,8 +190,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 11,
     date: "August 2026",
-    heroImage: U("1590490360182-c33d57733427", 2000),
-    cardImage: U("1590490360182-c33d57733427", 1000),
+    heroImage: U("1566665797739-1674de7a421a", 2000),
+    cardImage: U("1566665797739-1674de7a421a", 1000),
     hotelSlugs: ["rosewood-sao-paulo", "la-mamounia", "the-datai-langkawi"],
     sections: [
       { body: [
@@ -237,8 +237,8 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 10,
     date: "August 2026",
-    heroImage: U("1553062407-98eeb64c6a62", 2000),
-    cardImage: U("1553062407-98eeb64c6a62", 1000),
+    heroImage: U("1556742049-0cfed4f6a45d", 2000),
+    cardImage: U("1556742049-0cfed4f6a45d", 1000),
     hotelSlugs: ["park-hyatt-kyoto", "capella-bangkok", "aman-new-york"],
     sections: [
       { body: [
