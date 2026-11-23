@@ -11,9 +11,9 @@ export const novemberEdit: Article[] = [
     author: "Zinnia Thapar",
     readTime: 7,
     date: "November 2, 2026",
-    heroImage: "/editorial/refundable-hotel-rate.png",
-    cardImage: "/editorial/refundable-hotel-rate.png",
-    imageAlt: "Illustration of two hotel reservation cards, one flexible and one fixed, beside a calendar",
+    heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A refined hotel bedroom with soft light and layered white linen",
     hotelSlugs: [],
     sources: [
       { label: "Marriott: terms on property and rate-specific cancellation rules", url: "https://www.marriott.com/en-gb/about/terms-of-use-modal.mi" },

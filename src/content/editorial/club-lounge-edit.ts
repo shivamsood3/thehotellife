@@ -11,9 +11,9 @@ export const clubLoungeEdit: Article[] = [
     author: "Zinnia Thapar",
     readTime: 8,
     date: "November 9, 2026",
-    heroImage: "/editorial/hotel-club-lounge.svg",
-    cardImage: "/editorial/hotel-club-lounge.svg",
-    imageAlt: "Illustration of a quiet hotel lounge with armchairs, a small table and a city view at dusk",
+    heroImage: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A quietly lit hotel lounge and bar prepared for evening service",
     hotelSlugs: ["jw-marriott-hotel-hong-kong"],
     sources: [
       { label: "Marriott Bonvoy: loyalty terms and lounge access", url: "https://www.marriott.com/loyalty/terms/default.mi" },

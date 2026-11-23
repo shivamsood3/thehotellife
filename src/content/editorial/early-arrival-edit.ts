@@ -11,9 +11,9 @@ export const earlyArrivalEdit: Article[] = [
     author: "Zinnia Thapar",
     readTime: 8,
     date: "November 16, 2026",
-    heroImage: "/editorial/hotel-early-arrival.png",
-    cardImage: "/editorial/hotel-early-arrival.png",
-    imageAlt: "Illustration of a traveller's suitcase in a hotel lobby at dawn, with a clock beside a sunlit window",
+    heroImage: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A calm hotel bedroom waiting for an early-arriving guest",
     hotelSlugs: [],
     sources: [
       { label: "Marriott: early check-in requests and the previous-night booking option", url: "https://help.marriott.com/s/article/marriott-early-check-in-late-check-out" },
