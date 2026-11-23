@@ -13,6 +13,7 @@ import { novemberEdit } from "./editorial/november-edit";
 import { clubLoungeEdit } from "./editorial/club-lounge-edit";
 import { earlyArrivalEdit } from "./editorial/early-arrival-edit";
 import { editEditorialEnrichments } from "./editorial/edit-editorial-enrichments";
+import { weeklyEditNovember23 } from "./editorial/weekly-edit-november-23";
 
 export interface ArticleSection {
   heading?: string;
@@ -399,6 +400,7 @@ export const articles: Article[] = [
   ...clubLoungeEdit,
   ...earlyArrivalEdit,
   ...novemberEdit,
+  ...weeklyEditNovember23,
   ...septemberReportedFeatures.map((article) => ({
     ...article,
     readTime: Math.ceil(article.sections.flatMap((s) => s.body).join(" ").split(/\s+/).length / 200),
