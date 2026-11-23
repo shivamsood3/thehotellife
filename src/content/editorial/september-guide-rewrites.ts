@@ -11,7 +11,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "The Maldives, Decoded: Choose the Island Before the Villa",
     dek: "Reef, transfer, meal plan, beach: the decisions that matter more than an overwater photograph.",
     excerpt: "How to choose a Maldives resort: compare island size, reef access, transfers, beach and overwater villas, meal plans and the real total cost.",
-    heroImage: "/hotels/soneva-fushi-maldives.jpg", cardImage: "/hotels/soneva-fushi-maldives.jpg", imageAlt: "Soneva Fushi resort in the Maldives",
+    heroImage: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85", imageAlt: "A quiet Maldivian lagoon and low coral island on the horizon",
     sources: [{ label: "Seaplane planning and baggage", url: "https://www.transmaldivian.com/faq/" }, { label: "Visit Maldives", url: "https://visitmaldives.com/" }],
     sections: [
       s("The photograph does not choose the holiday",
@@ -35,7 +35,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Your First Safari: Spend on the Guiding, Not Just the Lodge",
     dek: "Choose one landscape, allow enough nights and understand what a game drive actually involves.",
     excerpt: "Plan a first safari with practical advice on national parks versus private reserves, guiding, nights per camp, family rules and realistic expectations.",
-    hotelSlugs: ["singita-sabi-sand"], heroImage: "/hotels/singita-sabi-sand.jpg", cardImage: "/hotels/singita-sabi-sand.jpg", imageAlt: "Singita accommodation in the Sabi Sand reserve, South Africa",
+    hotelSlugs: ["singita-sabi-sand"], heroImage: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=85", imageAlt: "Golden grassland and acacia trees in a South African reserve",
     sources: [{ label: "SANParks game-drive information", url: "https://www.sanparks.org/parks/kruger/what-to-do/activities/game-drives" }, { label: "Kruger visitor rules", url: "https://www.sanparks.org/parks/kruger/useful-information/vital-information" }],
     sections: [
       s("Begin with a place, not a species checklist",
@@ -59,7 +59,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Sri Lanka in Ten Days: A Route With Room to Breathe",
     dek: "Culture, hills and the south coast—plus what to cut when the journey starts doing too much.",
     excerpt: "A ten-day, nine-night Sri Lanka route covering the Cultural Triangle, Kandy, the hills and Ahangama, with realistic choices and seasonal caveats.",
-    hotelSlugs: ["abode-by-the-beach-sri-lanka", "weligama-bay-marriott"], heroImage: "/hotels/abode-by-the-beach-official.webp", cardImage: "/hotels/abode-by-the-beach-official.webp", imageAlt: "Rock Suite at Abode by the Beach on Sri Lanka's south coast",
+    hotelSlugs: ["abode-by-the-beach-sri-lanka", "weligama-bay-marriott"], heroImage: "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1000&q=85", imageAlt: "A tropical Sri Lankan coastline with palms and clear water",
     sources: [{ label: "Sri Lanka's cultural heritage", url: "https://srilanka.travel/cultural_heritage" }, { label: "Beach regions and seasons", url: "https://www.srilanka.travel/pristine-beach-holidays" }],
     relatedReading: [{ label: "Abode by the Beach review", url: "/hotels/abode-by-the-beach-sri-lanka" }],
     sections: [
@@ -84,7 +84,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Marrakech: A Better Plan Than Getting Lost",
     dek: "Choose your base, organise the first arrival and leave enough space for the city to become intelligible.",
     excerpt: "Marrakech planning advice: medina riad versus resort, arrival logistics, official garden tickets, souk visits and a balanced three-day stay.",
-    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "/hotels/royal-mansour-marrakech-official.jpg", cardImage: "/hotels/royal-mansour-marrakech-official.jpg", imageAlt: "Architecture and gardens at Royal Mansour Marrakech",
+    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85", imageAlt: "Marrakech medina walls and palms in late afternoon light",
     sources: [{ label: "Marrakech destination information", url: "https://www.visitmorocco.com/en/travel/marrakesh" }, { label: "Official Jardin Majorelle tickets", url: "https://www.jardinmajorelle.com/lejardinmajorelle/" }],
     sections: [
       s("Choose what happens when you step outside",
@@ -108,7 +108,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Where to Stay on the Amalfi Coast: Choose Your Vertical", 
     dek: "The view is only half the address. The other half is how you get back to your room.",
     excerpt: "Compare Positano, Amalfi, Ravello, Minori and Maiori for an Amalfi Coast stay, with honest advice on stairs, ferries, transfers and hotel location.",
-    heroImage: "/hotels/belmond-hotel-caruso-official.jpg", cardImage: "/hotels/belmond-hotel-caruso-official.jpg", imageAlt: "Belmond Hotel Caruso overlooking the Amalfi Coast from Ravello",
+    heroImage: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=85", imageAlt: "The Amalfi Coast's villages and cliffs above the Mediterranean",
     sources: [{ label: "Travelmar ferry questions", url: "https://www.travelmar.it/en/faq" }, { label: "Travelmar connections for the Path of the Gods", url: "https://www.travelmar.it/en/how-to-reach-path-of-gods" }],
     sections: [
       s("The postcard leaves out the return journey",
@@ -132,7 +132,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Paris for Grown-Ups: Fewer Reservations, Better Days",
     dek: "Choose a neighbourhood, give one museum your attention and stop treating dinner as a competitive sport.",
     excerpt: "A considered Paris city break: choosing a hotel neighbourhood, planning museums, making useful restaurant reservations and leaving room to explore.",
-    heroImage: "/hotels/the-ritz-paris.jpg", cardImage: "/hotels/the-ritz-paris.jpg", imageAlt: "Ritz Paris on Place Vendôme",
+    heroImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85", imageAlt: "Paris rooftops and the Eiffel Tower under soft evening light",
     sources: [{ label: "Paris by district", url: "https://parisjetaime.com/eng/paris-by-district-i153" }, { label: "Musée d'Orsay visitor information", url: "https://www.musee-orsay.fr/en/visit" }],
     sections: [
       s("A city break is not an examination",

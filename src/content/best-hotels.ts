@@ -51,7 +51,8 @@ export const bestHotelsLists: BestHotelsList[] = [
     dek: "Ten exceptional ways to stay in the Pink City, from a maharaja's former residence and an eight-suite bazaar hideaway to a wilderness camp beneath the Aravallis.",
     updated: "August 2026",
     updatedISO: "2026-08-30",
-    heroImage: "/hotels/rambagh-palace-jaipur.jpg",
+    heroImage: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=2000&q=85",
+    heroAlt: "Pink City architecture and streets in Jaipur, Rajasthan",
     intro: [
       "Jaipur makes choosing a hotel unusually consequential. Stay inside the walled city and the bazaars, temples and observatories arrive at the front door, along with traffic, noise and the magnificent disorder of a place still busy being itself. Choose a palace beyond the walls and the city becomes a day trip framed by gardens, pools and ceremony. Retreat towards the Aravallis and Jaipur recedes further still, replaced by birdsong, scrub forest and a sense of space that the centre cannot provide.",
       "This is therefore not a ranking of thread counts. It is a shortlist of the ten Jaipur hotels with the clearest reason to exist. We favour buildings with a strong relationship to place, service that improves the journey and restaurants or experiences worth returning for. The order reflects overall distinction, but the right choice depends on whether you want palace theatre, design intimacy, family infrastructure or immediate access to the old city.",
@@ -204,7 +205,7 @@ export const bestHotelsLists: BestHotelsList[] = [
     quickAnswer: "For a full-service beach resort, I would begin with The St. Regis Goa or Taj Exotica; for a livelier North Goa resort, W Goa is a better fit. Ahilya by the Sea is my pick for a small, art-filled waterfront stay, but its rocky shore is not a swimming beach. The Postcard Cuelim makes most sense when village quiet matters more than sand at the door.",
     updated: "August 2026",
     updatedISO: "2026-08-30",
-    heroImage: "/hotels/ahilya-by-the-sea-official.jpg",
+    heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=2000&q=85",
     heroAlt: "Palm gardens and waterfront villas at Ahilya by the Sea in Goa",
     intro: [
       "Goa is not one destination but a long, complicated coastline stitched to villages, river islands, forest and an increasingly ambitious restaurant scene. North Goa carries the energy—Vagator sunsets, Assagao tables and late nights—while the south opens into longer beaches, larger resorts and a slower calendar. The most interesting small hotels often sit elsewhere entirely: above a hidden bay, behind paddy fields or inside a fort at the state's northern edge.",
@@ -359,7 +360,7 @@ export const bestHotelsLists: BestHotelsList[] = [
     dek: "Ten exceptional Delhi stays, from an Art Deco grande dame and a Lutyens-era landmark to a Mughal-inspired palace and the old city's most atmospheric haveli.",
     updated: "September 2026",
     updatedISO: "2026-09-04",
-    heroImage: "https://tablecells.com/api/v1/files/public/01KY9WNE0247F8D82ED5JQCY7A-the-imperial-india-hero-image.png",
+    heroImage: "https://images.unsplash.com/photo-1587474260584-2d37d18f5b06?auto=format&fit=crop&w=2000&q=85",
     heroAlt: "The white heritage façade and entrance of The Imperial New Delhi on Janpath",
     intro: [
       "Delhi asks more of a hotel than most cities. Its distances are considerable, its traffic can redraw an afternoon, and its layers—Sultanate, Mughal, colonial and urgently contemporary—refuse to sit in one tidy centre. The right address is therefore not simply a handsome room. It is a base that makes the capital legible, with a concierge who understands timing, a pool that can restore a hot day and restaurants good enough to keep you in when the city has exhausted you.",
@@ -397,7 +398,7 @@ export const bestHotelsLists: BestHotelsList[] = [
     dek: "The Mumbai hotels that understand the city best, from an Indo-Saracenic icon on the harbour to sea-facing modern classics, a members' house and Colaba's cleverest boutique stay.",
     updated: "September 2026",
     updatedISO: "2026-09-04",
-    heroImage: "https://live.staticflickr.com/1510/26119514800_9bb7893876_o.jpg",
+    heroImage: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=2000&q=85",
     heroAlt: "The Taj Mahal Palace façade beside the Gateway of India in Mumbai",
     intro: [
       "Mumbai is a city where location can matter more than the room. South Mumbai holds Colaba, Kala Ghoda, Marine Drive and the great civic architecture; Bandra brings restaurants, studios and a more contemporary social life; Lower Parel places you among towers and malls; the airport corridor makes sense only when the next flight is the point. Crossing between them can consume hours. Choose the Mumbai you need before choosing the hotel you want.",

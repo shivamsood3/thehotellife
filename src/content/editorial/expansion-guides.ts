@@ -14,8 +14,9 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 14,
     date: "August 2026",
-    heroImage: "/hotels/rambagh-palace-jaipur.jpg",
-    cardImage: "/hotels/rambagh-palace-jaipur.jpg",
+    heroImage: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A road winding through Rajasthan's dry hills and historic landscape",
     hotelSlugs: ["rambagh-palace-jaipur", "the-johri-jaipur", "six-senses-fort-barwara", "oberoi-udaivilas-udaipur", "umaid-bhawan-jodhpur"],
     featured: true,
     sections: [
@@ -59,8 +60,9 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 13,
     date: "August 2026",
-    heroImage: "/hotels/the-plaza-new-york.jpg",
-    cardImage: "/hotels/the-plaza-new-york.jpg",
+    heroImage: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A New York street framed by brownstones and late afternoon light",
     hotelSlugs: ["aman-new-york", "the-plaza-new-york"],
     sections: [
       { body: [

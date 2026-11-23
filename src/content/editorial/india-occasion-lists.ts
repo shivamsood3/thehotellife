@@ -15,8 +15,8 @@ export const indiaOccasionLists: BestHotelsList[] = [
     quickAnswer: "For a palace wedding with the strongest sense of occasion, begin with The Oberoi Udaivilas, Umaid Bhawan Palace and Rambagh Palace. For a smaller lakeside gathering, consider Taj Lake Palace; for a contemporary seaside programme, W Goa or Taj Exotica Goa. I would shortlist by guest count and logistics before I fell in love with a photograph.",
     updated: "October 2026",
     updatedISO: "2026-10-27",
-    heroImage: "/hotels/rambagh-palace-jaipur.jpg",
-    heroAlt: "Rambagh Palace in Jaipur, one of India's distinguished palace wedding hotels",
+    heroImage: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85",
+    heroAlt: "An elegant outdoor wedding table set beneath warm evening light in India",
     intro: [
       "A wedding hotel has two jobs. It must make the photographs look effortless, and it must keep a hundred invisible things from becoming the story: a late arrival, an elderly relative crossing a lawn, a sudden shower, a vendor looking for power, a vegetarian kitchen preparing dinner while another function is still clearing. The most beautiful hotel in India is not necessarily the best venue for your wedding. The best is the one whose rooms, event spaces and team can carry the particular celebration you are planning.",
       "I have resisted treating every photogenic palace as a wedding venue. Each hotel here publishes an official weddings or events offering, and each earns its place for a different reason. Rajasthan provides the grandest architectural stages, Hyderabad brings a different courtly tradition, Goa offers both barefoot energy and formal resort infrastructure, and Bekal makes a compelling case for Kerala's greener coastline. Their capacities, noise rules and available areas change with the date and setup, so these are starting points for a serious venue conversation, not promises of what a particular package includes.",
@@ -56,8 +56,8 @@ export const indiaOccasionLists: BestHotelsList[] = [
     quickAnswer: "For the fullest luxury resort stay on Lake Pichola, I would begin with The Oberoi Udaivilas. Choose Taj Lake Palace for the singular island arrival, RAAS Devigarh for a countryside palace and Trident Udaipur for an easier family base. Raffles sits on Udaisagar Lake, not Lake Pichola; that distinction changes the trip.",
     updated: "October 2026",
     updatedISO: "2026-10-27",
-    heroImage: "/hotels/oberoi-udaivilas-udaipur.jpg",
-    heroAlt: "The Oberoi Udaivilas beside Lake Pichola in Udaipur",
+    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=85",
+    heroAlt: "Lake Pichola and Udaipur's palaces in Rajasthan",
     intro: [
       "There is a moment in Udaipur when the day's heat leaves the stone and every white facade takes on the colour of the lake. Hotels have been built around that moment for decades. Some give you a balcony above Lake Pichola; some put you in the middle of it; others step away from the waterfront and use the Aravalli hills or a smaller village as their argument. They are not substitutes for one another, however persuasive their sunset photographs may be.",
       "The first decision is not which palace has the most elaborate lobby. It is how you want to spend the hours before and after the view. A central address makes the City Palace, galleries and old-town lanes feel like part of daily life. A west-shore resort gives you grass, pools and a long look back across the water. A hotel outside town makes a different promise: privacy and a wider landscape, purchased with car journeys whenever you want Udaipur's streets. I would decide that first, then choose a room category that actually delivers the outlook you came for.",
@@ -97,8 +97,8 @@ export const indiaOccasionLists: BestHotelsList[] = [
     quickAnswer: "For a landmark occasion, Umaid Bhawan Palace is unmatched; for the strongest connection to the old city, I would book RAAS Jodhpur. The Rohet House and Daspan House suit travellers who prefer a smaller address, while Mihir Garh is a desert retreat, not a convenient base for repeated trips into town.",
     updated: "October 2026",
     updatedISO: "2026-10-27",
-    heroImage: "/hotels/umaid-bhawan-jodhpur.jpg",
-    heroAlt: "Umaid Bhawan Palace overlooking Jodhpur, Rajasthan",
+    heroImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=2000&q=85",
+    heroAlt: "The blue city and Mehrangarh Fort in Jodhpur",
     intro: [
       "Jodhpur has a skyline that makes poor hotel decisions particularly painful. Mehrangarh Fort seems to hover over the old city, the blue houses turn the lanes into an intricate map, and the great dome of Umaid Bhawan Palace stands apart on its hill. A hotel may give you one of those views, put you inside the bustle that produces them, or remove you from both and offer desert silence. Each is a different journey. Choosing by star rating alone misses the point.",
       "My instinct on a first visit is to spend at least part of the trip close to the old city. I want to walk out after breakfast, follow a lane without a fixed destination and feel the fort change as the light moves. That puts RAAS or a heritage haveli in a very different category from a garden resort whose principal gift is escape. A palace stay, meanwhile, can be the event around which the rest of the journey is arranged. I would not make these hotels compete on identical terms: one wins for access, another for room to exhale, another for the sheer improbable scale of its architecture.",

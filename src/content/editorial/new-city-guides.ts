@@ -11,9 +11,9 @@ export const newCityGuides: Guide[] = [
     author: "Zinnia Thapar",
     readTime: 7,
     date: "October 31, 2026",
-    heroImage: "/hotels/bulgari-resort-dubai-official.jpg",
-    cardImage: "/hotels/bulgari-resort-dubai-official.jpg",
-    imageAlt: "The Bulgari Resort Dubai on Jumeira Bay Island, a private-feeling Dubai waterfront address",
+    heroImage: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "Dubai skyline and waterfront architecture at sunset",
     hotelSlugs: ["bulgari-resort-dubai", "burj-al-arab"],
     sources: [
       { label: "Visit Dubai: Dubai neighbourhoods", url: "https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods" },
