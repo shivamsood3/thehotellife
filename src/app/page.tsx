@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroBackgroundVideo from "@/components/HeroBackgroundVideo";
 import { hotels, getFeatured, regions, type Region } from "@/content/hotels";
-import HotelCard, { Stars } from "@/components/HotelCard";
+import HotelCard from "@/components/HotelCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import { bestHotelsLists } from "@/content/best-hotels";
@@ -48,7 +48,6 @@ const REGION_PATHS: Record<Region, string> = {
 
 export default function Home() {
   const featured = getFeatured();
-  const hero = featured.find((hotel) => hotel.slug === "raffles-singapore") ?? featured[0];
   const collection = hotels.slice(1, 7);
   const editorPick = featured[3] ?? hotels[4];
 
@@ -63,22 +62,19 @@ export default function Home() {
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
             <span className="eyebrow eyebrow-hero text-sm sm:text-xs">
-              The Hotel Life<span className="hidden sm:inline"> · Featured Stay</span>
+              The Hotel Life<span className="hidden sm:inline"> · Independent Hotel Reviews</span>
             </span>
             <h2 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              {hero.tagline}
+              The places we go. The hotels we remember.
             </h2>
-            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/85">
-              <Stars rating={hero.rating} />
-              <span className="text-sm">
-                {hero.name}, {hero.city}, {hero.country}
-              </span>
-            </div>
+            <p className="mt-5 max-w-2xl text-base text-white/90 sm:text-lg">
+              The details a photograph can&apos;t tell you.
+            </p>
             <Link
-              href={`/hotels/${hero.slug}`}
+              href="/hotels"
               className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-widest text-ink transition-transform hover:translate-x-0.5"
             >
-              Read the review →
+              Explore the hotels →
             </Link>
           </div>
         </div>
