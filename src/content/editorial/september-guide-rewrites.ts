@@ -84,7 +84,7 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Marrakech: A Better Plan Than Getting Lost",
     dek: "Choose your base, organise the first arrival and leave enough space for the city to become intelligible.",
     excerpt: "Marrakech planning advice: medina riad versus resort, arrival logistics, official garden tickets, souk visits and a balanced three-day stay.",
-    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85", imageAlt: "Marrakech medina walls and palms in late afternoon light",
+    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "/hotels/royal-mansour-marrakech-official.jpg", cardImage: "/hotels/royal-mansour-marrakech-official.jpg", imageAlt: "A Royal Mansour Marrakech arrival framed by carved ochre arches",
     sources: [{ label: "Marrakech destination information", url: "https://www.visitmorocco.com/en/travel/marrakesh" }, { label: "Official Jardin Majorelle tickets", url: "https://www.jardinmajorelle.com/lejardinmajorelle/" }],
     sections: [
       s("Choose what happens when you step outside",

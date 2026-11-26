@@ -38,7 +38,7 @@ export const septemberDecisionGuides: Guide[] = [
     ...common, slug: "where-to-stay-in-mumbai", title: "Where to Stay in Mumbai: The Neighbourhood Comes First", destination: "Mumbai, India",
     dek: "Colaba, Marine Drive, Bandra or Juhu? A better Mumbai stay begins by refusing to cross the city unnecessarily.",
     excerpt: "Choose between South Mumbai, Bandra, Juhu and business districts, with hotel recommendations and a practical way to plan a short city stay.",
-    heroImage: "https://images.unsplash.com/photo-1529253355930-5f3df8e0b6cc?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1529253355930-5f3df8e0b6cc?auto=format&fit=crop&w=1000&q=85", imageAlt: "Mumbai's coastal road and high-rise skyline at blue hour",
+    heroImage: "/hotels/soho-house-mumbai-official.png", cardImage: "/hotels/soho-house-mumbai-official.png", imageAlt: "A patterned bedroom and balcony at Soho House Mumbai",
     hotelSlugs: ["soho-house-mumbai", "taj-mahal-palace-mumbai", "the-oberoi-mumbai"],
     sources: [{ label: "Mumbai destination guide", url: "https://www.incredibleindia.gov.in/en/maharashtra/mumbai" }, { label: "Mumbai in 48 hours", url: "https://www.incredibleindia.gov.in/en/trips/trip-listing/48-hours-in-mumbai" }],
     relatedReading: [{ label: "Ten hotels in Mumbai", url: "/best-hotels/mumbai" }],

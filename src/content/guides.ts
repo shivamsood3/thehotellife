@@ -101,8 +101,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 7,
     date: "July 2026",
-    heroImage: U("1544986587-efac024faf62", 2000),
-    cardImage: U("1544986587-efac024faf62", 1000),
+    heroImage: "/hotels/belmond-hotel-caruso-official.jpg",
+    cardImage: "/hotels/belmond-hotel-caruso-official.jpg",
     hotelSlugs: ["belmond-hotel-caruso"],
     sections: [
       {
@@ -183,8 +183,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 6,
     date: "May 2026",
-    heroImage: U("1522093007474-49732f8e6f2c", 2000),
-    cardImage: U("1522093007474-49732f8e6f2c", 1000),
+    heroImage: "/hotels/four-seasons-george-v-paris.jpg",
+    cardImage: "/hotels/four-seasons-george-v-paris.jpg",
     hotelSlugs: ["the-ritz-paris"],
     sections: [
       {
@@ -264,8 +264,8 @@ const guideCatalogue: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 6,
     date: "March 2026",
-    heroImage: U("1524498250077-0f8a8b6e5c6e", 2000),
-    cardImage: U("1524498250077-0f8a8b6e5c6e", 1000),
+    heroImage: "/hotels/royal-mansour-marrakech-official.jpg",
+    cardImage: "/hotels/royal-mansour-marrakech-official.jpg",
     hotelSlugs: ["la-mamounia"],
     sections: [
       {

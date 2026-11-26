@@ -32,7 +32,7 @@ export const novemberEuropeReviews: Hotel[] = [
     factCheckSources: [
       { label: "Hôtel de Crillon: official overview and accommodation", url: "https://www.rosewoodhotels.com/en/hotel-de-crillon" },
       { label: "Hôtel de Crillon: current dining", url: "https://www.rosewoodhotels.com/en/hotel-de-crillon/dining" },
-      { label: "Hôtel de Crillon: official fact sheet", url: "https://www.rosewoodhotels.com/content/dam/rosewoodhotels/property/hotel-de-crillon/en/documents/media/RWCRI-Fact-Sheet.pdf" },
+      { label: "Hôtel de Crillon: official hotel overview", url: "https://www.rosewoodhotels.com/en/hotel-de-crillon" },
     ],
     relatedReading: [{ label: "Our review of The Ritz Paris", url: "/hotels/the-ritz-paris" }],
     sections: [

@@ -362,8 +362,8 @@ export const bestHotelsLists: BestHotelsList[] = [
     dek: "Ten exceptional Delhi stays, from an Art Deco grande dame and a Lutyens-era landmark to a Mughal-inspired palace and the old city's most atmospheric haveli.",
     updated: "September 2026",
     updatedISO: "2026-09-04",
-    heroImage: "https://images.unsplash.com/photo-1587474260584-2d37d18f5b06?auto=format&fit=crop&w=2000&q=85",
-    heroAlt: "The white heritage façade and entrance of The Imperial New Delhi on Janpath",
+    heroImage: "/hotels/oberoi-new-delhi-official.jpg",
+    heroAlt: "The Oberoi New Delhi's modernist façade, pool and landscaped garden",
     intro: [
       "Delhi asks more of a hotel than most cities. Its distances are considerable, its traffic can redraw an afternoon, and its layers—Sultanate, Mughal, colonial and urgently contemporary—refuse to sit in one tidy centre. The right address is therefore not simply a handsome room. It is a base that makes the capital legible, with a concierge who understands timing, a pool that can restore a hot day and restaurants good enough to keep you in when the city has exhausted you.",
       "Our ten choices reward a distinct sense of place, persuasive service and a reason to return after the first photograph. The ranking favours complete experiences, but there is no universal winner: The Imperial has history and swagger, The Oberoi precision and views, The Lodhi privacy, and Haveli Dharampura the thrilling inconvenience of Old Delhi at the door. Choose according to the Delhi you actually want to meet.",
