@@ -11,8 +11,8 @@ export const novemberEdit: Article[] = [
     author: "Zinnia Thapar",
     readTime: 7,
     date: "November 2, 2026",
-    heroImage: "https://images.unsplash.com/photo-1512914890255-9f6be42e8c9b?auto=format&fit=crop&w=2000&q=85",
-    cardImage: "https://images.unsplash.com/photo-1512914890255-9f6be42e8c9b?auto=format&fit=crop&w=1000&q=85",
+    heroImage: "/hotels/hotel-de-crillon-commons.jpg",
+    cardImage: "/hotels/hotel-de-crillon-commons.jpg",
     imageAlt: "A refined hotel bedroom with soft light and layered white linen",
     hotelSlugs: [],
     sources: [
