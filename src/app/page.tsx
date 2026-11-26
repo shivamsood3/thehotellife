@@ -61,10 +61,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[rgba(74,29,52,0.35)]" aria-hidden="true" />
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
-            <span className="eyebrow eyebrow-hero text-sm sm:text-xs">
-              The Hotel Life<span className="hidden sm:inline"> · Independent Hotel Reviews</span>
-            </span>
-            <h2 className="hero-text font-display mt-3 max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="hero-text font-display max-w-3xl text-4xl font-medium leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               The places we go. The hotels we remember.
             </h2>
             <p className="mt-5 max-w-2xl text-base text-white/90 sm:text-lg">
