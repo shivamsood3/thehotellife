@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroBackgroundVideo from "@/components/HeroBackgroundVideo";
 import { hotels, getFeatured, regions, type Region } from "@/content/hotels";
 import HotelCard, { Stars } from "@/components/HotelCard";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -57,14 +58,8 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section className="relative mt-6 overflow-hidden rounded-md">
         <div className="relative aspect-[3/4] min-h-[30rem] w-full sm:aspect-[16/8] sm:min-h-[26rem] lg:aspect-[16/7] lg:min-h-[34rem]">
-          <Image
-            src={hero.heroImage}
-            alt={`${hero.name}, ${hero.city}, ${hero.country}`}
-            fill
-            preload
-            className="object-cover"
-            sizes="100vw"
-          />
+          <HeroBackgroundVideo />
+          <div className="absolute inset-0 bg-[rgba(74,29,52,0.35)]" aria-hidden="true" />
           <div className="hero-scrim absolute inset-0" />
           <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
             <span className="eyebrow eyebrow-hero text-sm sm:text-xs">
