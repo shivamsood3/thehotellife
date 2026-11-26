@@ -588,8 +588,11 @@ const guideCatalogue: Guide[] = [
     author: "Shivam Sood",
     readTime: 8,
     date: "August 2026",
-    heroImage: U("1513694203232-719a280e022f", 2000),
-    cardImage: U("1513694203232-719a280e022f", 1000),
+    heroImage: U("1772032057758-903b8fa1bd5d", 2000),
+    cardImage: U("1772032057758-903b8fa1bd5d", 1000),
+    imageAlt: "Pedestrians passing ornate façades on Regent Street in central London",
+    imageCredit: "Michael Gluzman / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/busy-street-with-blurred-pedestrians-and-ornate-buildings-Qx686hzrjok",
     hotelSlugs: ["the-connaught-london", "claridges-london", "the-savoy-london"],
     sections: [
       {
@@ -709,8 +712,11 @@ const guideCatalogue: Guide[] = [
     author: "Shivam Sood",
     readTime: 8,
     date: "August 2026",
-    heroImage: U("1511497584788-876760111969", 2000),
-    cardImage: U("1511497584788-876760111969", 1000),
+    heroImage: U("1794343398719-bf9080a0cd47", 2000),
+    cardImage: U("1794343398719-bf9080a0cd47", 1000),
+    imageAlt: "Highway 1 winding along the cliffs above the Pacific at Big Sur, California",
+    imageCredit: "Megan Waksmundzki / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/bixby-creek-bridge-on-big-sur-coast-pjB0zkVDmmE",
     hotelSlugs: ["post-ranch-inn-big-sur"],
     sections: [
       {

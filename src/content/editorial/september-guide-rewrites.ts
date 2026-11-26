@@ -59,7 +59,8 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Sri Lanka in Ten Days: A Route With Room to Breathe",
     dek: "Culture, hills and the south coast—plus what to cut when the journey starts doing too much.",
     excerpt: "A ten-day, nine-night Sri Lanka route covering the Cultural Triangle, Kandy, the hills and Ahangama, with realistic choices and seasonal caveats.",
-    hotelSlugs: ["abode-by-the-beach-sri-lanka", "weligama-bay-marriott"], heroImage: "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1000&q=85", imageAlt: "A tropical Sri Lankan coastline with palms and clear water",
+    hotelSlugs: ["abode-by-the-beach-sri-lanka", "weligama-bay-marriott"], heroImage: "https://images.unsplash.com/photo-1772791615983-c13f6e773082?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1772791615983-c13f6e773082?auto=format&fit=crop&w=1000&q=85", imageAlt: "Fishing boats on the palm-lined sand at Wadduwa Beach, Sri Lanka",
+    imageCredit: "Sajith Sukumaran / Unsplash", imageCreditUrl: "https://unsplash.com/photos/boats-lined-up-on-a-sandy-beach-with-palm-trees-Udb75nXcBJ0",
     sources: [{ label: "Sri Lanka's cultural heritage", url: "https://srilanka.travel/cultural_heritage" }, { label: "Beach regions and seasons", url: "https://www.srilanka.travel/pristine-beach-holidays" }],
     relatedReading: [{ label: "Abode by the Beach review", url: "/hotels/abode-by-the-beach-sri-lanka" }],
     sections: [
@@ -84,7 +85,8 @@ export const septemberGuideRewrites: Record<string, Revision> = {
     updated, title: "Marrakech: A Better Plan Than Getting Lost",
     dek: "Choose your base, organise the first arrival and leave enough space for the city to become intelligible.",
     excerpt: "Marrakech planning advice: medina riad versus resort, arrival logistics, official garden tickets, souk visits and a balanced three-day stay.",
-    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "/hotels/royal-mansour-marrakech-official.jpg", cardImage: "/hotels/royal-mansour-marrakech-official.jpg", imageAlt: "A Royal Mansour Marrakech arrival framed by carved ochre arches",
+    hotelSlugs: ["la-mamounia", "royal-mansour-marrakech"], heroImage: "https://images.unsplash.com/photo-1769717476835-e1de627b16ea?auto=format&fit=crop&w=2000&q=85", cardImage: "https://images.unsplash.com/photo-1769717476835-e1de627b16ea?auto=format&fit=crop&w=1000&q=85", imageAlt: "People walking through a narrow shopping lane in the Marrakech medina",
+    imageCredit: "Zoltan Fekeshazy / Unsplash", imageCreditUrl: "https://unsplash.com/photos/people-walking-through-a-narrow-market-alleyway-EP0riOCqb_M",
     sources: [{ label: "Marrakech destination information", url: "https://www.visitmorocco.com/en/travel/marrakesh" }, { label: "Official Jardin Majorelle tickets", url: "https://www.jardinmajorelle.com/lejardinmajorelle/" }],
     sections: [
       s("Choose what happens when you step outside",

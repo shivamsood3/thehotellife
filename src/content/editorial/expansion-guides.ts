@@ -14,9 +14,11 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 14,
     date: "August 2026",
-    heroImage: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=2000&q=85",
-    cardImage: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "A road winding through Rajasthan's dry hills and historic landscape",
+    heroImage: "https://images.unsplash.com/photo-1693712157177-38634ba6799e?auto=format&fit=crop&w=2000&q=85",
+    cardImage: "https://images.unsplash.com/photo-1693712157177-38634ba6799e?auto=format&fit=crop&w=1000&q=85",
+    imageAlt: "A sandy track crossing the dunes near Osian in Rajasthan",
+    imageCredit: "RAMBABU MEENA / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/a-dirt-road-in-the-middle-of-a-desert-SQK0nBB4-hQ",
     hotelSlugs: ["rambagh-palace-jaipur", "the-johri-jaipur", "six-senses-fort-barwara", "oberoi-udaivilas-udaipur", "umaid-bhawan-jodhpur"],
     featured: true,
     sections: [
@@ -105,8 +107,11 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 12,
     date: "August 2026",
-    heroImage: U("1582719478250-c89cae4dc85b", 2000),
-    cardImage: U("1582719478250-c89cae4dc85b", 1000),
+    heroImage: U("1697653664649-936ed36b3c8c", 2000),
+    cardImage: U("1697653664649-936ed36b3c8c", 1000),
+    imageAlt: "A lakeside villa and motorboat on Lake Como, Italy",
+    imageCredit: "Kristaps Dokans / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/a-house-on-the-shore-of-a-lake-gI67EMO0i5w",
     hotelSlugs: ["passalacqua"],
     sections: [
       { body: [
@@ -149,8 +154,11 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 12,
     date: "August 2026",
-    heroImage: U("1506905925346-21bda4d32df4", 2000),
-    cardImage: U("1506905925346-21bda4d32df4", 1000),
+    heroImage: U("1585880888712-4838e98f9d00", 2000),
+    cardImage: U("1585880888712-4838e98f9d00", 1000),
+    imageAlt: "Sand and surf at La Lancha near Punta Mita on Mexico's Pacific coast",
+    imageCredit: "Fernando Gutierrez / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/brown-sand-beach-during-daytime-EZMCDwtlL6w",
     hotelSlugs: ["one-and-only-mandarina"],
     sections: [
       { body: [
@@ -193,8 +201,11 @@ export const expansionGuides: Guide[] = [
     author: "The Hotel Life Editors",
     readTime: 13,
     date: "August 2026",
-    heroImage: U("1530789253388-582c481c54b0", 2000),
-    cardImage: U("1530789253388-582c481c54b0", 1000),
+    heroImage: U("1573047330192-4e6bb1594325", 2000),
+    cardImage: U("1573047330192-4e6bb1594325", 1000),
+    imageAlt: "A pagoda above a lantern-lit lane in Kyoto's Higashiyama district",
+    imageCredit: "Zion C / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/brown-and-gray-temple-Qiw63GpWN6w",
     hotelSlugs: ["park-hyatt-kyoto"],
     sections: [
       { body: [

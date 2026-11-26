@@ -112,6 +112,12 @@ export default async function BestHotelsPage({
         </div>
       </header>
 
+      {list.heroCredit && list.heroCreditUrl && (
+        <p className="mt-2 text-xs text-ink-muted">
+          Image: <a href={list.heroCreditUrl} target="_blank" rel="noopener noreferrer" className="underline">{list.heroCredit}</a>
+        </p>
+      )}
+
       <div className="mx-auto mt-12 max-w-4xl">
         <p className="mb-7 text-sm text-ink-muted">
           Selected by <Link href={authorPath("Zinnia Thapar")} className="font-semibold text-brass-deep hover:underline">Zinnia Thapar</Link> · Updated {list.updated}

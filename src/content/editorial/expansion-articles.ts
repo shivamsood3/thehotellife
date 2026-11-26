@@ -57,8 +57,11 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 9,
     date: "August 2026",
-    heroImage: U("1551882547-ff40c63fe5fa", 2000),
-    cardImage: U("1551882547-ff40c63fe5fa", 1000),
+    heroImage: U("1684581263006-9cc59c4c0f5c", 2000),
+    cardImage: U("1684581263006-9cc59c4c0f5c", 1000),
+    imageAlt: "A club sandwich and chips served at a restaurant table",
+    imageCredit: "AH S. / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/a-plate-with-a-sandwich-and-chips-on-a-table-38dvfpMZhSk",
     hotelSlugs: ["aman-new-york", "capella-bangkok", "the-plaza-new-york"],
     sections: [
       { body: [
@@ -237,8 +240,11 @@ export const expansionArticles: Article[] = [
     author: "Shivam Sood",
     readTime: 10,
     date: "August 2026",
-    heroImage: U("1556742049-0cfed4f6a45d", 2000),
-    cardImage: U("1556742049-0cfed4f6a45d", 1000),
+    heroImage: U("1748959503873-c4598e3c28db", 2000),
+    cardImage: U("1748959503873-c4598e3c28db", 1000),
+    imageAlt: "A quiet hotel-room window looking out over a city",
+    imageCredit: "ZENG YILI / Unsplash",
+    imageCreditUrl: "https://unsplash.com/photos/a-window-offers-a-view-of-the-city-JHvqBgzyMC8",
     hotelSlugs: ["park-hyatt-kyoto", "capella-bangkok", "aman-new-york"],
     sections: [
       { body: [

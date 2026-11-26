@@ -34,6 +34,8 @@ export interface BestHotelsList {
   updatedISO: string;
   heroImage: string;
   heroAlt?: string;
+  heroCredit?: string;
+  heroCreditUrl?: string;
   intro: string[];
   planning: { heading: string; body: string }[];
   hotels: BestHotelEntry[];
@@ -362,8 +364,10 @@ export const bestHotelsLists: BestHotelsList[] = [
     dek: "Ten exceptional Delhi stays, from an Art Deco grande dame and a Lutyens-era landmark to a Mughal-inspired palace and the old city's most atmospheric haveli.",
     updated: "September 2026",
     updatedISO: "2026-09-04",
-    heroImage: "/hotels/oberoi-new-delhi-official.jpg",
-    heroAlt: "The Oberoi New Delhi's modernist façade, pool and landscaped garden",
+    heroImage: "https://images.unsplash.com/photo-1743136648410-a73d5c9dbaab?auto=format&fit=crop&w=2000&q=85",
+    heroAlt: "Visitors at India Gate on Kartavya Path in New Delhi",
+    heroCredit: "rachnalok_ / Unsplash",
+    heroCreditUrl: "https://unsplash.com/photos/india-gate-in-delhi-with-people-p89qFukxbUE",
     intro: [
       "Delhi asks more of a hotel than most cities. Its distances are considerable, its traffic can redraw an afternoon, and its layers—Sultanate, Mughal, colonial and urgently contemporary—refuse to sit in one tidy centre. The right address is therefore not simply a handsome room. It is a base that makes the capital legible, with a concierge who understands timing, a pool that can restore a hot day and restaurants good enough to keep you in when the city has exhausted you.",
       "Our ten choices reward a distinct sense of place, persuasive service and a reason to return after the first photograph. The ranking favours complete experiences, but there is no universal winner: The Imperial has history and swagger, The Oberoi precision and views, The Lodhi privacy, and Haveli Dharampura the thrilling inconvenience of Old Delhi at the door. Choose according to the Delhi you actually want to meet.",
@@ -401,7 +405,7 @@ export const bestHotelsLists: BestHotelsList[] = [
     updated: "September 2026",
     updatedISO: "2026-09-04",
     heroImage: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=2000&q=85",
-    heroAlt: "The Taj Mahal Palace façade beside the Gateway of India in Mumbai",
+    heroAlt: "The Gateway of India beside Mumbai's harbour at sunset",
     intro: [
       "Mumbai is a city where location can matter more than the room. South Mumbai holds Colaba, Kala Ghoda, Marine Drive and the great civic architecture; Bandra brings restaurants, studios and a more contemporary social life; Lower Parel places you among towers and malls; the airport corridor makes sense only when the next flight is the point. Crossing between them can consume hours. Choose the Mumbai you need before choosing the hotel you want.",
       "The best properties do more than insulate guests from the city's velocity. They frame it: harbour light from the Taj, the Queen's Necklace from The Oberoi, Arabian Sea sunsets at Soho House and the compressed creative energy of Abode. Our ranking balances character, service, food, location and the ability to make Mumbai feel exhilarating rather than exhausting. The caveats are deliberate; in this city, an honest compromise is more useful than a perfect photograph.",

@@ -33,6 +33,8 @@ export interface Article extends EditorialReferences {
   heroImage: string;
   cardImage: string;
   imageAlt?: string;
+  imageCredit?: string;
+  imageCreditUrl?: string;
   hotelSlugs: string[]; // related reviews
   sections: ArticleSection[];
   featured?: boolean;

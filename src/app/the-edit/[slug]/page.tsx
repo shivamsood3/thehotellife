@@ -97,6 +97,12 @@ export default async function ArticlePage({
         </div>
       </div>
 
+      {article.imageCredit && article.imageCreditUrl && (
+        <p className="mt-2 text-xs text-ink-muted">
+          Image: <a href={article.imageCreditUrl} target="_blank" rel="noopener noreferrer" className="underline">{article.imageCredit}</a>
+        </p>
+      )}
+
       {/* Byline */}
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line pb-6 text-sm text-ink-muted">
         <span>By {article.author}</span>

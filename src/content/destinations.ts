@@ -26,7 +26,8 @@ export const destinations: Destination[] = [
       "Europe is where the modern luxury hotel was born, in the gilded salons of Paris, the palazzos of Venice, the alpine castles of the Engadine. To travel the continent well is to move between these institutions, each a small nation of its own with its own rituals, its own regulars, and its own century of stories.",
       "From a garden hideaway two minutes by boat from St Mark's to a Riviera legend that Fitzgerald made immortal, these are the European stays we'd cross a border for.",
     ],
-    heroImage: U("1499856871958-5b9627545d1a", 2000),
+    // Venice's Grand Canal. Photo: Lina Bob / Unsplash.
+    heroImage: U("1768680288748-3886fa60f6ae", 2000),
   },
   {
     slug: "asia",
@@ -48,7 +49,8 @@ export const destinations: Destination[] = [
       "The Americas trade in scale and drama. A hotel here might be carved into 165-million-year-old sandstone in the Utah desert, balanced on stilts against the North Atlantic, or planted beneath the granite towers of Patagonia, landscapes so vast they redefine what a room with a view can mean.",
       "And then there is the mythology: the pink stucco of old Hollywood, the deal-making booths, the century of glamour. From Sunset Boulevard to Torres del Paine, these are the stays that make the New World feel boundless.",
     ],
-    heroImage: U("1470071459604-3b5ec3a7fe05", 2000),
+    // Monument Valley, Arizona/Utah. Photo: Jeremy Bishop / Unsplash.
+    heroImage: U("1491591265187-110a92898729", 2000),
   },
   {
     slug: "mea",
