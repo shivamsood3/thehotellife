@@ -14,6 +14,7 @@ import { newCityGuides } from "./editorial/new-city-guides";
 import { septemberGuideRewrites } from "./editorial/september-guide-rewrites";
 import { priorityGuideRewrites } from "./editorial/priority-guide-rewrites";
 import { guideEditorialEnrichments } from "./editorial/guide-editorial-enrichments";
+import { novemberCityGuides } from "./editorial/november-city-guides";
 
 export interface GuideSection {
   heading?: string;
@@ -838,6 +839,10 @@ const existingGuides: Guide[] = guideCatalogue.map((guide) => {
 });
 
 export const guides: Guide[] = [
+  ...novemberCityGuides.map((guide) => ({
+    ...guide,
+    readTime: Math.ceil(guide.sections.flatMap((section) => section.body).join(" ").split(/\s+/).length / 200),
+  })),
   ...newCityGuides.map((guide) => ({
     ...guide,
     sections: [...guide.sections, ...(guideEditorialEnrichments[guide.slug] ?? [])],

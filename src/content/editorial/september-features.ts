@@ -55,9 +55,9 @@ export const septemberArticles: Article[] = [
     author: "Shiv S",
     readTime: 8,
     date: "September 2026",
-    heroImage: U("1525610553991-2bede1c7360e", 2000),
-    cardImage: U("1525610553991-2bede1c7360e", 1000),
-    imageAlt: "A warmly lit hotel bar prepared for evening service",
+    heroImage: "/hotels/mandarin-oriental-doha-press-ambar.jpg",
+    cardImage: "/hotels/mandarin-oriental-doha-press-ambar.jpg",
+    imageAlt: "A warmly lit hotel bar with a polished counter and amber light",
     hotelSlugs: ["claridges-london", "the-ritz-paris", "taj-mahal-palace-mumbai"],
     sections: [
       { body: [
