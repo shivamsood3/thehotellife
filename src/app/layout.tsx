@@ -76,9 +76,11 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
   },
   openGraph: {
-    title: "The Hotel Life | Independent Luxury Hotel Reviews",
-    description:
-      "An editorial guide to the world's most extraordinary hotels. Honest reviews, insider intelligence, and the stays worth crossing the planet for.",
+    // No title or description here on purpose. openGraph is merged shallowly,
+    // so anything set at the root is inherited wholesale by every page that
+    // does not declare its own openGraph - which gave /hotels, /about, /guides
+    // and the rest the homepage's og:title and og:description. Leaving them out
+    // lets each page's own title and description resolve into the OG tags.
     type: "website",
     siteName: "The Hotel Life",
     url: SITE_URL,
@@ -93,10 +95,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    // Likewise: card only, so twitter:title and twitter:description follow the page.
     card: "summary_large_image",
-    title: "The Hotel Life | Independent Luxury Hotel Reviews",
-    description:
-      "An editorial guide to the world's most extraordinary hotels.",
   },
   // Let Google show full-length previews and large image thumbnails.
   robots: {
