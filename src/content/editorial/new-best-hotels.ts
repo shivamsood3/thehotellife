@@ -15,7 +15,7 @@ export const newBestHotelsLists: BestHotelsList[] = [
     updated: "October 2026",
     updatedISO: "2026-10-31",
     heroImage: "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=2000&q=85",
-    heroAlt: "The Manhattan skyline viewed across the East River",
+    heroAlt: "The Empire State Building above the Manhattan skyline at sunset",
     intro: [
       "New York encourages a dangerous hotel habit: falling for a lobby and then spending the trip in taxis to escape its neighbourhood. I would reverse the process. For a first visit with museums, Broadway and Central Park in mind, an uptown or Midtown base can be genuinely useful. For gallery afternoons, late dinners and the pleasure of returning on foot, downtown has a stronger claim. The most beautiful room in the wrong part of Manhattan can become a rather expensive place to sleep between transfers.",
       "These ten addresses make different promises, and I have kept the distinctions sharp. The Greenwich Hotel gives me intimacy and a real sense of Tribeca; The Beekman turns a historic downtown atrium into a place to meet the city; The Carlyle offers a kind of old New York evening that is almost impossible to manufacture from scratch. I would not book them interchangeably. The ranking reflects character, service ambition and how persuasively each hotel uses its location, but every choice has a cost beyond its nightly rate: noise, distance, scale or the sacrifice of a larger room."

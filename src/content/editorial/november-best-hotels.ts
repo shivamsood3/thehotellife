@@ -25,7 +25,7 @@ export const novemberBestHotelsLists: BestHotelsList[] = [
     updated: "November 2026",
     updatedISO: "2026-11-26",
     heroImage: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=2000&q=85",
-    heroAlt: "A Parisian street with classic façades and the Eiffel Tower in the distance",
+    heroAlt: "Pont Alexandre III and its ornate lamps beside the Seine at dusk",
     intro: [
       "Paris is unusually good at making a hotel look like the whole trip. A grand entrance, a famous bar and a view towards a monument can be persuasive, but I still begin with the neighbourhood. The Ritz and Hôtel de Crillon give me the ceremonial centre; Le Bristol and George V offer a more residential version of palace life; Lutetia puts the Left Bank's cafés and galleries into the morning. Cheval Blanc and La Réserve are less interested in being museum pieces, which can be exactly the point.",
       "This is not a list of the ten most expensive rooms in the city. I have ranked hotels by the strength of the complete stay: the building, the bedroom, the food, the service and the daily pleasure of walking out into Paris. Every choice has a compromise. A view can cost more than space, a palace can feel public, and a small hotel can ask you to give up a pool. Read the caveat as carefully as the praise.",

@@ -46,6 +46,21 @@ const REGION_PATHS: Record<Region, string> = {
   "Middle East & Africa": "/destinations/mea",
 };
 
+const CITY_RANKING_IMAGES: Record<string, string> = {
+  "new-york": "/cities/new-york.jpg",
+  paris: "/cities/paris.jpg",
+  london: "/cities/london.jpg",
+  "hong-kong": "/cities/hong-kong.jpg",
+  singapore: "/cities/singapore.jpg",
+  bangkok: "/cities/bangkok.jpg",
+  udaipur: "/cities/udaipur.jpg",
+  jodhpur: "/cities/jodhpur.jpg",
+  jaipur: "/cities/jaipur.jpg",
+  goa: "/cities/goa.jpg",
+  "new-delhi": "/cities/new-delhi.jpg",
+  mumbai: "/cities/mumbai.jpg",
+};
+
 export default function Home() {
   const featured = getFeatured();
   const collection = hotels.slice(1, 7);
@@ -206,14 +221,23 @@ export default function Home() {
             Best Hotels, City by City
           </h2>
         </div>
-        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {bestHotelsLists.filter((list) => !list.theme).map((list) => (
             <Link
               key={list.slug}
               href={`/best-hotels/${list.slug}`}
-              className="group block border-t border-line pt-4"
+              className="group block"
             >
-              <span className="eyebrow text-ink-muted">{list.country}</span>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-paper-2">
+                <Image
+                  src={CITY_RANKING_IMAGES[list.slug] ?? list.heroImage}
+                  alt={list.heroAlt ?? `${list.destination}, ${list.country}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              <span className="eyebrow mt-4 block text-ink-muted">{list.country}</span>
               <h3 className="font-display mt-1 text-xl font-medium text-ink group-hover:text-brass-deep">
                 10 Best Hotels in {list.destination}
               </h3>

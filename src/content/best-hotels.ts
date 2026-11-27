@@ -209,8 +209,10 @@ export const bestHotelsLists: BestHotelsList[] = [
     quickAnswer: "For a full-service beach resort, I would begin with The St. Regis Goa or Taj Exotica; for a livelier North Goa resort, W Goa is a better fit. Ahilya by the Sea is my pick for a small, art-filled waterfront stay, but its rocky shore is not a swimming beach. The Postcard Cuelim makes most sense when village quiet matters more than sand at the door.",
     updated: "August 2026",
     updatedISO: "2026-08-30",
-    heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=2000&q=85",
-    heroAlt: "Palm gardens and waterfront villas at Ahilya by the Sea in Goa",
+    heroImage: "/cities/goa.jpg",
+    heroAlt: "Palm-lined beach and turquoise water on the Goa coast",
+    heroCredit: "Alexey Turenkov / Unsplash",
+    heroCreditUrl: "https://unsplash.com/photos/blue-body-of-water-under-sunny-sky-bWJiSZjIgTM",
     intro: [
       "Goa is not one destination but a long, complicated coastline stitched to villages, river islands, forest and an increasingly ambitious restaurant scene. North Goa carries the energy—Vagator sunsets, Assagao tables and late nights—while the south opens into longer beaches, larger resorts and a slower calendar. The most interesting small hotels often sit elsewhere entirely: above a hidden bay, behind paddy fields or inside a fort at the state's northern edge.",
       "Our ten choices are deliberately mixed. A 206-room resort and a nine-room seaside house answer different questions, yet each needs a distinct sense of place, consistently thoughtful hospitality and a reason to stay after the photograph has been taken. Beach quality matters, but so do food, privacy, architecture and what happens during the monsoon. This is an editorial ranking, not a price comparison, and the caveat beneath each entry is as important as the praise.",
